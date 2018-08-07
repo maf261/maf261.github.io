@@ -10,12 +10,16 @@ description: Página com as aulas da disciplina.
 ---
 
 * [Aula 1][aula1] 
+* [Aula 2][aula2]
+* [Aula 3][aula3]
 
 ---
 
-[Repositório das aulas][maf105-gh].
+[Repositório das aulas][maf261-gh].
 
 ---
 
-[maf105-gh]:https://github.com/maf105
-[aula1]:    https://rawgit.com/maf105/maf105.github.io/master/Aulas_MAF105/Aula1.pdf
+[maf261-gh]:https://github.com/maf261
+[aula1]:    https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula1/Aula1.pdf
+[aula2]:    https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula2/Aula2.pdf
+[aula3]:    https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula3/Aula3.pdf
