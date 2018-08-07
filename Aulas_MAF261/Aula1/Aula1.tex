@@ -1,0 +1,1380 @@
+\documentclass[14pt,aspectratio=1610]{beamer}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\mathchardef\hyphenmathcode=\mathcode`\-
+\usepackage{listings}
+%\usepackage{xr-hyper}
+
+\usepackage{sansmathaccent}
+\pdfmapfile{+sansmathaccent.map}
+\usepackage{amsbsy}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[toc,page,title,titletoc]{appendix}
+\usepackage[fixlanguage]{babelbib}
+%\usepackage[pdftex]{color}
+\usepackage{dsfont}
+\usepackage{esvect}
+\usepackage[labelfont=bf]{caption}
+\usepackage{float}
+\usepackage[Glenn]{fncychap}%Sonny %Conny %Lenny %Glenn %Renje %Bjarne %Bjornstrup
+%\usepackage{geometry, calc, color, setspace}%
+%\geometry{a4paper, headsep=1.0cm, footskip=1cm, lmargin=3cm, rmargin=2cm, tmargin=3cm, bmargin=2cm}
+\usepackage{graphicx}
+\usepackage{indentfirst}%Para indentar os parágrafos automáticamente
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{natbib}
+\bibliographystyle{abbrvnat3}
+\usepackage[figuresright]{rotating}
+\usepackage{spalign}
+%\usepackage{pgfpages}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{color, colortbl}
+\usepackage{ragged2e}%para justificar o texto dentro de algum ambiente
+\definecolor{Gray}{gray}{0.9}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+
+
+\usepackage[all]{xy}
+\usepackage{hyperref,bookmark}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=red,
+  filecolor=blue,
+  urlcolor=blue,
+}
+
+
+%\setcitestyle{authoryear, open={(},close={)}}
+%\usepackage{pgf}
+%\usepackage[small,bf,singlelinecheck=off]{caption}
+%\usepackage[figuresright]{rotating}
+
+%\usepackage[font=Times,timeinterval=10, timeduration=2.0, timedeath=0, fillcolorwarningsecond=white!60!yellow,
+%timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usetheme{Madrid}
+\usecolortheme[RGB={193,0,0}]{structure}
+
+%\setbeamertemplate{footline}[frame number]
+%\setbeamertemplate{footline}[text line]{%
+%  \parbox{\linewidth}{\vspace*{-8pt}\hfill\date{}\hfill\insertshortauthor\hfill\insertpagenumber}}
+\beamertemplatenavigationsymbolsempty
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Proposicao}{Proposição}
+\newtheorem{Definicao}{Definição}
+\newtheorem{Corolario}{Corolário}
+\newtheorem{Demonstracao}{Demonstração}
+\newcommand{\bx}{\ensuremath{\bar{x}}}
+\newcommand{\Ho}{\ensuremath{H_{0}}}
+\newcommand{\Hi}{\ensuremath{H_{1}}}
+
+
+\apptocmd{\frame}{}{\justifying}{} % Allow optional arguments after frame.
+
+\title{MAF 261 - Estatística Experimental}
+\author{Prof. Fernando de Souza Bastos}
+\institute{Instituto de Ciências Exatas e Tecnológicas\texorpdfstring{\\ Universidade Federal de Viçosa}{}\texorpdfstring{\\ Campus UFV - Florestal}{}}
+\date{03/05/2018}
+\newcommand\mytext{Aula 1}
+\newcommand\mytextt{Fernando de Souza Bastos}
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\mytext
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\mytextt
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+
+\providecommand{\arcsin}{} \renewcommand{\arcsin}{\hspace{2pt}\textrm{arcsen}}
+\providecommand{\sin}{} \renewcommand{\sin}{\hspace{2pt}\textrm{sen}}
+%\newtheorem{Teorema}{Teorema}
+%\newtheorem{Proposicao}{Proposição}
+%\newtheorem{Definicao}{Definição}
+%\newtheorem{Corolario}{Corolário}
+%\newtheorem{Demonstracao}{Demonstração}
+
+% Layout da pagina
+\hypersetup{pdfpagelayout=SinglePage}
+\begin{document}
+
+
+
+
+\frame{\titlepage}
+
+\begin{frame}{}
+\frametitle{\bf Sumário}
+\tableofcontents
+\end{frame}
+
+
+\begin{frame}{}
+\frametitle{}
+
+\begin{block}{Filosofia do Curso:}
+\begin{itemize}
+    \item Tomar ciência da importância em aprender Estatística;\pause
+    \item Importância de aprender a trabalhar com softwares para análises estatísticas;\pause
+    \item Os exercícios devem ser replicados em softwares;\pause
+    \item O estudo e a prática levam a perfeição!
+\end{itemize}
+\end{block}
+\end{frame}
+\section{Introdução}
+\begin{frame}{}
+\frametitle{Introdução}
+\begin{block}{}
+\justifying
+Experimentação é uma área da estatística que estuda o planejamento, coleta de dados, execução, análise e interpretação de resultados provenientes de experimentos. 
+Ela oferece suporte probabilístico ao pesquisador e lhe permite, com grau de incerteza conhecido, fazer inferências sobre o comportamento de diferentes fenômenos 
+da natureza.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Experimento:}
+\begin{block}{}
+\justifying
+É a ação ou o efeito de experimentar; É conhecimento adquirido pela prática da observação ou exercício; São ensaios, tentativas para verificar ou demonstrar qualquer 
+coisa. Pode também ser definido como um teste ou um conjunto de testes realizados com a finalidade de verificar uma hipótese ou induzir uma hipótese a partir da 
+observação de um fenômeno natural ou provocado. É importante ressaltar que experimentos são executados em todas as áreas do conhecimento com objetivos variados.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Objetivos do Experimento:}
+\begin{block}{}
+Em geral, os objetivos de um experimento são:
+\begin{itemize}
+    \item Determinar quais fatores mais afetam a variável de interesse;\pause
+    \item Determinar os valores necessários dos fatores controláveis de forma a obter a saída mais próxima do valor nominal desejado;\pause
+    \item Determinar que valores atribuir aos fatores controláveis do processo, de forma a tornar pequena a variabilidade na saída;\pause
+    \item Determinar que valores atribuir aos fatores controláveis do processo, de forma a torna-lo mais robusto aos efeitos das variáveis não controláveis;\pause
+%    \item Determinar os valores ótimos dos fatores controláveis do processo, para torna-lo mais econômico ou para melhorar as características tecnológicas do produto 
+%		resultante;\pause
+    \item Diminuição de custos, melhoria de processos, aumento da produção, diminuição da variabilidade e diversos outros.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Diretrizes para o planejamento de um experimento}
+\begin{block}{}
+\justifying
+O planejamento e a correta execução de um experimento são pontos essenciais para o seu sucesso. Sem planejamento, a avaliação dos resultados e a inferência podem 
+ser prejudicadas ou inviabilizadas. 
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Diretrizes para o planejamento de um experimento}
+\begin{block}{Reconhecimento, relato do problema, conjectura!}
+\justifying
+Torna-se bastante difícil reconhecer e aceitar a existência de um problema, se não ficar claro para todos qual é o problema e quais os objetivos a serem alcançados com 
+a solução do mesmo. Neste ponto, é importante conversar com todos os envolvidos no processo e elaborar uma hipótese original que motivará o experimento.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Diretrizes para o planejamento de um experimento}
+\begin{block}{Escolha dos fatores, dos níveis, da variável resposta e o planejamento experimental.}
+\justifying
+É importante investigar todos os fatores que possam ser importantes no desenvolvimento do processo ou produto, a variável que queremos medir e o delineamento 
+(metodologia) utilizada para investigar e tentar responder a conjectura.
+\end{block}
+\end{frame}
+
+%\begin{frame}{}
+%\frametitle{Diretrizes para o planejamento de um experimento}
+%\begin{block}{Seleção da variável resposta}
+%O que queremos medir?
+%\end{block}
+%\end{frame}
+
+%\begin{frame}{}
+%\frametitle{Diretrizes para o planejamento de um experimento}
+%\begin{block}{Escolha do planejamento experimental}
+%A escolha do planejamento envolve consideração pelo tamanho da amostra (número de %replicações), seleção de uma ordem adequada de rodadas para as tentativas experimentais, %ou se a formação de blocos ou outras restrições de aleatorização estão envolvidas.
+%\end{block}
+%\end{frame}
+
+\begin{frame}{}
+\frametitle{Diretrizes para o planejamento de um experimento}
+\begin{block}{Experimento}
+\justifying
+Quando da realização do experimento, é de vital importância monitorar o processo, para garantir que tudo esteja sendo feito de acordo com o planejamento. Erros no 
+procedimento experimental neste estágio, em geral, destruirão a validade do experimento.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Diretrizes para o planejamento de um experimento}
+\begin{block}{Análise dos dados}
+\justifying
+Métodos estatísticos devem ser usados para analisar os dados, de modo que os resultados e conclusões sejam objetivos. Se o experimento foi planejado corretamente 
+e se foi realizado de acordo com o planejamento, então os tipos de métodos estatísticos exigidos não são
+complicados.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Diretrizes para o planejamento de um experimento}
+\begin{block}{Conclusões e recomendações}
+\justifying
+Uma vez analisados os dados, o experimento deve acarretar conclusões práticas sobre os resultados e recomendar um curso de ação. Métodos gráficos são, em geral, 
+usados neste estágio, particularmente na apresentação dos resultados para outras pessoas. Sequências de acompanhamento e testes de confirmação podem ser também 
+realizados para validar as conclusões do experimento.
+\end{block}
+\end{frame}
+
+%\begin{frame}{}
+%\frametitle{Fases de um experimento}
+%\begin{block}{}
+%Podemos dividir um experimento em quatro fases:
+%\begin{description}
+% \item[P:] Planejamento do experimento, também conhecido como delineamento do %experimento;
+% \item[D:] É a realização do experimento, de acordo com o que foi planejado;
+% \item[C:] Análise dos resultados obtidos no experimento via estudos estatísticos e %análise de variância;
+% \item[A:] Conclusões e recomendações.
+%\end{description}
+%\end{block}
+%\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+ {\bf Todos os experimentos devem ser bem planejados.} Infelizmente, muitos não seguem este princípio e, como resultado, fontes valiosas de recursos, de tempo e 
+de mão de obra são perdidos. Experimentos estatisticamente bem planejados permitem ganhos de eficiência e economia no processo experimental e o uso de métodos 
+estatísticos na avaliação de resultados resulta na objetividade cientifica na obtenção de conclusões.
+ \end{block}
+\end{frame}
+
+\section{Inferência Estatística}
+\begin{frame}{}
+\frametitle{Inferência Estatística}
+\begin{block}{}
+\justifying
+A inferência estatística consiste em métodos usados para tomar decisões ou tirar 
+conclusões acerca de uma população. Para tirar conclusões, esses métodos utilizam a 
+informação contida em uma amostra proveniente da população. Dividimos a inferência em 
+duas grande áreas: Estimação de parâmetros e teste de hipóteses. Vejamos exemplos 
+para diferenciar estas áreas! 
+ \end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Estimação de parâmetros}
+\begin{block}{}
+\justifying
+ Um candidato a um cargo público pode desejar estimar a verdadeira proporção de eleitores 
+ a seu favor ao obter as opiniões de uma amostra aleatória de 100 eleitores. A quantidade 
+ de eleitores na amostra que favorece o candidato poderia ser utilizada como uma 
+ estimativa da verdadeira proporção de eleitores na população. Se tivermos conhecimento 
+ da distribuição amostral da variável proporção de candidatos podemos estabelecer o 
+ grau de certeza da estimação. Por isso, esse problema faz parte da área de estimação.
+ \end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Teste de hipóteses}
+\begin{block}{}
+\justifying
+ O mesmo candidato ao cargo público pode desejar saber se a proporção de eleitores que 
+ o favorece no bairro A é maior que a proporção de eleitores que o favorece no bairro B. 
+ Temos aqui um problema de teste de hipóteses.
+ \end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Estimação de parâmetros}
+\begin{block}{}
+\justifying
+Qual a distribuição da altura dos alunos da UFV? É razoável pensar num modelo Normal, a
+questão agora é identificar os parâmetros $(\mu,\sigma^{2})$ para que a distribuição 
+fique completamente especificada. Como fazer isso?
+\begin{itemize}
+\item Podemos medir a altura de todos os alunos da UFV? Neste caso não é necessário usar 
+Inferência Estatística!\pause
+ \item Ou podemos escolher estrategicamente uma amostra $(X_{1},X_{2},\cdots, X_{n})$ da 
+população de alunos e através dessa amostra inferir sobre os parâmetros 
+$(\mu,\sigma^{2})$ da população. O resultado vai depender da qualidade da amostra e do processo de amostragem. 
+\end{itemize}
+Esse é um problema básico da área de Estimação.
+ \end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+Suponha agora que desejamos saber se a média da altura dos alunos do Campus UFV - Florestal é maior que a dos alunos do Campus de Rio Paranaíba $(1,7m)$?
+\begin{itemize}
+\item Para tomarmos uma decisão, escolhemos estrategicamente uma amostra 
+ $(X_{1},X_{2},\cdots, X_{n})$ da população de alunos do campus UFV - Florestal e através dessa amostra avaliamos se $\mu>1,7m$ com alta probabilidade?
+\end{itemize}
+Esse é um problema básico de Testes de hipóteses.
+ \end{block}
+\end{frame}
+
+\section{Testes de hipóteses}
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Em geral, o problema enfrentado pelo cientista ou pesquisador não é tanto a estimação dos parâmetros populacionais, mas a formação de um procedimento com base 
+em dados que possa produzir uma conclusão sobre algum sistema cientifico. Por exemplo:
+\begin{itemize}
+    \item Um pesquisador da área médica pode decidir, com base em evidências experimentais, se ingerir café aumenta o risco de câncer;\pause
+    \item Um engenheiro pode ter de decidir, com base em dados amostrais, se há diferença na acurácia de dois medidores;\pause
+    \item Um sociólogo pode querer coletar dados para decidir se o tipo sanguíneo e cor dos olhos de uma pessoa são variáveis aleatórias independentes;
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Em cada um desses casos, são feitas conjecturas sobre o problema. E a tomada de decisões deve ser realizada com base nos dados experimentais. Formalmente, 
+em cada caso, a conjectura pode ser colocada na forma de hipótese estatística. Procedimentos que levam a rejeição ou não de hipóteses estatísticas compreendem 
+a área de Testes de hipóteses que vamos relembrar a partir de agora.
+ \end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Muitos problemas em engenharia requerem que decidamos qual das duas afirmações competitivas acerca do valor de algum parâmetro é verdadeira. As afirmações 
+são chamadas de \textbf{hipóteses}, e o procedimento de tomada de decisão sobre a hipótese é chamado de \textbf{teste de hipóteses}. Esse é um dos mais úteis 
+aspectos da inferência estatística, uma vez que muitos tipos de problemas de tomada de decisão, teste, ou experimentos no mundo da engenharia podem ser formulados 
+como problemas de teste de hipóteses.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{Exemplo prático (Para lembrar durante as aulas):}
+\justifying
+Suponha que um engenheiro esteja projetando um sistema de escape da tripulação de uma aeronave, que consiste em um assento de ejeção e um motor de foguete 
+que energiza o assento. O motor de foguete contém um propelente. Para o assento de ejeção funcionar apropriadamente, o propelente deve ter uma taxa mínima de 
+queima de $50$ cm/s. Se a taxa de queima for muito baixa, o assento de ejeção poderá não funcionar apropriadamente, levando a uma ejeção não segura. Taxas maiores 
+de queima podem implicar instabilidade no propelente ou um assento de ejeção muito potente, levando outra vez a insegurança da injeção. Dessa maneira, a questão 
+prática de engenharia que tem de ser respondida é: a taxa média de queima do propelente é igual a $50$ cm/s ou é igual a algum outro valor 
+(maior ou menor)?
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{Hipótese Estatística:}
+Uma hipótese estatística é uma afirmação sobre os parâmetros de uma ou mais populações.
+ \end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Considere o sistema de escape da tripulação descrito no exemplo anterior. Suponha que estejamos interessados na taxa de queima do propelente sólido. Agora, a taxa de 
+queima é uma variável aleatória que pode ser descrita por uma distribuição de probabilidades. Suponha que nosso interesse esteja focado na taxa média de queima 
+(um parâmetro dessa distribuição). Especificamente, estamos interessados em decidir se a taxa média de queima é ou não 50 centímetros por segundo. Podemos 
+expressar isso formalmente como:
+\begin{align}\label{H0eH1}
+\centering
+H_{0}: \mu&=50 cm/s\\
+\nonumber H_{1}:\mu &\neq 50 cm/s
+\end{align}
+ \end{block}
+\end{frame}
+%\begin{frame}{}
+%\frametitle{Testes de hipóteses}
+%\begin{block}{}
+%Em algumas situações, podemos desejar formular uma hipótese alternativa unilateral, como em:
+%\begin{align}
+%\centering
+%\nonumber  H_{0}: \mu=50 cm/s  &&                  &&H_{0}: \mu&=50 cm/s\\
+                    %H_{1}:\mu> 50 cm/s  &&\textrm{ou}&&H_{1}:\mu &< 50 cm/s
+%\end{align}
+%\end{block}
+%\end{frame}
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+A afirmação $H_{0}: \mu=50$ centímetros por segundo na Equação \ref{H0eH1} é chamada de hipótese nula, e a afirmação $H_{1}:\mu \neq 50$ centímetros por segundo 
+é chamada de hipótese alternativa. Uma vez que a hipótese alternativa especifica valores de $\mu$ que poderiam ser maiores ou menores do que $50$ centímetros por 
+segundo, ela é chamada de hipótese alternativa bilateral.
+\end{block}
+\pause
+\begin{block}{}
+Em algumas situações, podemos desejar formular uma hipótese alternativa unilateral, como em:
+\begin{flalign}
+\begin{aligned} 
+	\begin{cases}
+H_{0}: \mu=50 cm/s\\
+H_{1}:\mu> 50 cm/s
+\end{cases}
+\end{aligned}
+\quad\textrm{ou}\quad
+\begin{aligned}
+\begin{cases}
+H_{0}: \mu=50 cm/s\\
+H_{1}:\mu< 50 cm/s
+\end{cases} \\
+\end{aligned}
+\end{flalign}
+ \end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+
+\begin{block}{}
+\justifying
+Sempre estabeleceremos a hipótese nula como uma reivindicação de igualdade. Entretanto, quando a hipótese alternativa for estabelecida com o sinal $<,$ a reivindicação 
+implícita na hipótese nula será $\geq$ e quando a hipótese alternativa for estabelecida com o sinal $>,$ a reivindicação implícita na hipótese nula será $\leq.$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+É importante lembrar que hipóteses são sempre afirmações sobre a população ou distribuição sob estudo, não afirmações sobre a amostra. O valor do parâmetro 
+especificado da população na hipótese nula (50 centímetros por segundo no exemplo anterior) é geralmente determinado em uma das três maneiras. 
+\begin{enumerate}
+\item experiência passada, conhecimento do processo ou experimentos prévios. O objetivo nesse caso é determinar se o valor do parâmetro variou;\pause
+\item alguma teoria ou modelo relativo ao processo sob estudo. Aqui, o objetivo do teste é verificar a teoria ou modelo;\pause
+\item considerações externas, tais como projeto ou especificações de engenharia, ou a partir de obrigações contratuais. Nessa situação, o objetivo usual é avaliar a 
+correção das especificações.
+\end{enumerate}
+ \end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Teste de hipóteses se apoiam no uso de informações de uma amostra aleatória proveniente da população de interesse. É importante ressaltar que a verdade ou falsidade 
+de uma hipótese particular pode nunca ser conhecida com certeza, a menos que possamos examinar a população inteira. Isso é geralmente impossível 
+em muitas situações práticas. Desse modo, um procedimento de teste de hipóteses deveria ser desenvolvido, tendo-se em mente a probabilidade de alcançar uma 
+conclusão errada. Testar uma hipótese envolve: 
+\begin{itemize}
+\item considerar uma amostra aleatória; \pause
+\item computar uma estatística de teste a partir de dados amostrais \pause
+\item e então usar a estatística de teste para tomar uma decisão a respeito da hipótese nula.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{ Testes de Hipóteses Estatísticas}
+\begin{block}{}
+\justifying
+Considere o problema da taxa de queima do propelente, introduzido anteriormente. A hipótese nula corresponde à taxa média de queima ser igual a 50 centímetros por 
+segundo e a alternativa corresponde a essa taxa não ser igual a $50$ centímetros por segundo. Ou seja, desejamos testar
+\begin{align*}
+\centering
+H_{0}: \mu=50 cm/s &&\textrm{contra}&& H_{1}:\mu \neq 50 cm/s
+\end{align*}
+Suponha que uma amostra de $n = 10$ espécimes seja testada e que a taxa média $\bar{x}$ seja observada. A média amostral é uma estimativa de $\mu.$ Um valor de 
+$\bar{x}$ que caia próximo a $\mu = 50$ cm/s é uma evidência de que $\mu$ é realmente $50$ cm/s. Por outro lado, 
+uma média amostral que seja consideravelmente diferente de $50$ cm/s evidencia a validade da hipótese alternativa $H_{1}.$ Assim, a média amostral 
+é a estatística de teste nesse caso.
+\end{block}
+\end{frame}
+
+\section{tikz}
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+A média amostral pode assumir muitos valores diferentes. Suponha que se $48,5 \leq \bar{x}\leq 51,5,$ não rejeitaremos a hipótese nula $H_{0}:\mu = 50$ e se 
+$\bar{x} < 48,5$ ou $\bar{x} > 51,5,$ rejeitaremos a hipótese nula em favor da hipótese alternativa $H_{1}:\mu \neq 50.$ Isso é ilustrado na Figura abaixo:
+ \end{block}\pause
+\begin{block}{}
+\begin{figure}
+\centering
+\begin{tikzpicture}[xscale=1.5, yscale=1.5, <->=triangle 45]
+\draw [>=stealth] (-5,0) -- (5,0);
+\node [below right] at (4.7,0) {$\bar{x}$} ;
+\draw [-] (-2,0) -- (-2,1.5) ;
+\node [below] at (-2,0) {$48.5$} ;
+\node [above] at (-3.5,0.7) {Rejeita $H_{0}$};
+\node [above] at (-3.5,0.2) {$\mu\neq 50$ cm/s};
+\draw [-] (0,0) -- (0,0.1) ;
+\node [below] at (0,0) {$50$} ;
+\node [above] at (0,0.7) {Falha em rejeitar $H_{0}$};
+\node [above] at (0,0.2) {$\mu= 50$ cm/s};
+\draw [-] (2,0) -- (2,1.5) ;
+\node [below] at (2,0) {$51.5$} ;
+\node [above] at (3.5,0.7) {Rejeita $H_{0}$};
+\node [above] at (3.5,0.2) {$\mu\neq 50$ cm/s};
+\end{tikzpicture}
+\caption{Critérios de decisão para testar $H_{0}:\mu = 50$ cm/s versus $H_{1}: \mu \neq 50$ cm/s.} \label{fig:M1}
+\end{figure}
+ \end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Os valores de $\bar{x}$ que forem menores do que $48,5$ e maiores do que $51,5$ constituem a \textbf{região crítica} para o teste, enquanto todos os valores que estejam 
+no intervalo $48,5 \leq \bar{x}\leq 51,5$ formam uma região para a qual falharemos em rejeitar a hipótese nula. Por convenção, ela geralmente é chamada de 
+\textbf{região de aceitação}. Os limites entre as regiões críticas e a região de aceitação são chamados de valores críticos. Em nosso exemplo, os valores críticos são 
+$48,5$ e $51,5.$ É comum estabelecer conclusões relativas à hipótese nula $H_{0}.$ Logo, rejeitaremos $H_{0}$ em favor de $H_{1}$, se a estatística de teste cair 
+na região crítica e falhamos em rejeitar $H_{0}$ por sua vez se a estatística de teste cair na região de aceitação.
+ \end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Esse procedimento pode levar a duas conclusões erradas. Por exemplo, a taxa média verdadeira de queima do propelente poderia ser igual a 50 centímetros por segundo. 
+Entretanto, para as amostras de propelente, selecionados aleatoriamente, que são testados, poderíamos observar um valor de estatística de teste $\bar{x}$ que 
+caísse na região crítica. Rejeitaríamos então a hipótese nula $H_{0}$ em favor da alternativa $H_{1},$ quando, de fato, $H_{0}$ seria realmente verdadeira. Esse tipo de 
+conclusão errada é chamado de \textbf{erro tipo I}.
+ \end{block}
+\pause
+\begin{block}{Erro Tipo I}
+\begin{tikzpicture}
+\node[draw,align=center, fill=gray!30] at (0,-1) {A rejeição da hipótese nula $H_{0}$ quando ela for verdadeira é definida como\\ \textbf{erro tipo I}.};
+\end{tikzpicture}
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Agora, suponha que a taxa média verdadeira de queima seja diferente de 50 centímetros por segundo, mesmo que a média amostral $\bar{x}$ caia na região de 
+aceitação. Nesse caso, falharíamos em rejeitar $H_{0}$, quando ela fosse falsa. Esse tipo de conclusão errada é chamado de \textbf{erro tipo II}.
+\end{block}
+\pause
+\begin{block}{Erro Tipo II}
+\begin{tikzpicture}
+\node[draw,align=center, fill=gray!30] at (0,-1) {A falha em rejeitar a hipótese nula, quando ela é falsa, é definida como\\ \textbf{erro tipo II}.};
+\end{tikzpicture}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Assim, testando qualquer hipótese estatística, quatro situações diferentes determinam se a decisão final está correta ou errada. Essas situações estão apresentadas 
+na Tabela abaixo. Pelo fato de a nossa decisão estar baseada em variáveis aleatórias, probabilidades podem ser associadas aos erros tipo I e tipo II. A 
+probabilidade de cometer o erro tipo I é denotada pela letra grega $\alpha$.
+ \end{block}
+
+\begin{block}{}
+\begin{center}
+\begin{table}[]
+\begin{tabular}{c|c|c}
+&&\\
+                          \textbf{Decisão}                   &\textbf{$H_{0}\,$ é verdadeira}                         &\textbf{$H_{0}$ é falsa}\\ \hline
+ \multirow{2}{*}{\textbf{Não rejeita $H_{0}$}}&Correta                                                               &Erro Tipo II\\
+                                                                        &\textbf{Probabilidade $=\left(1-\alpha \right)$} &\textbf{Probabilidade $=\beta$}\\ \hline
+\multirow{2}{*}{\textbf{Rejeita $H_{0}$}}       &Erro Tipo I                                                          &  Correta\\
+                                                                        &\textbf{Nível de significância $\alpha$}            &\textbf{Poder $=\left( 1-\beta\right)$}\\ \hline
+\end{tabular}
+\end{table}
+\end{center}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+A probabilidade do erro tipo I é chamada de \textbf{nível de significância}, ou \textbf{erro $\alpha$}, ou \textbf{tamanho do teste}. No exemplo da taxa de queima de 
+propelente, um \textbf{erro tipo I} ocorrerá quando $ \bx> 51,5$ ou $\bx < 48,5,$ quando a taxa média verdadeira de queima do propelente for $\mu = 50$ cm/s. 
+Suponha que o desvio-padrão da taxa de queima seja $\sigma = 2,5$ centímetros por segundo e que a taxa de queima tenha uma distribuição para a qual as condições do 
+\textbf{teorema central do limite} se aplicam; logo, a distribuição da média amostral é aproximadamente normal, com média $\mu = 50$ e desvio-padrão 
+$\dfrac{\sigma}{\sqrt{n}}=\dfrac{2.5}{\sqrt{10}}=0.79$. A probabilidade de cometer o \textbf{erro tipo I} (ou o nível de significância de nosso teste) é igual à soma das 
+áreas sombreadas nas extremidades da distribuição normal na Figura abaixo:
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\begin{figure}
+\centering
+\begin{tikzpicture}[xscale=1.5, yscale=7, declare function={stdnorm(\x) = 1/(sqrt(2*pi))*exp(-0.5*(pow(\x,2)));}]
+\fill[gray!30] (-2.5,0) -- plot [domain=-2.5:-3/2, samples=50] (\x, {stdnorm(\x)}) -- (-3/2,0) -- cycle;
+\fill[gray!30] (3/2,0) -- plot [domain=3/2:5/2, samples=50] (\x, {stdnorm(\x)}) -- (5/2,0) -- cycle;
+\draw [thick, domain=-2.5:2.5, samples=50] plot (\x, {stdnorm(\x)});
+\draw [->] (-3,0) -- (3,0) ;
+\node [below right] at (3,0) {$\bar{x}$} ;
+\draw [dashed] (0,0) -- (0,{stdnorm(0)}) ;
+\draw [dashed] (-3/2,0) -- (-3/2,{stdnorm(-3/2)}) ;
+\draw [dashed] (3/2,0) -- (3/2,{stdnorm(3/2)}) ;
+\node [below] at (0,0) {$50$};
+\node [below] at (-3/2,0) {$48.5$};
+\node [below] at (3/2,0) {$51.5$};
+\node [above] at (-3,0.1) {\small{$\alpha/2=0.0287$}};
+\node [above] at (3,0.1) {\small{$\alpha/2=0.0287$}};
+%\draw[->] (-2.7,0.15) .. controls (.-2,.2) .. (-1.9, 0.03);
+\draw[->] (-2.2,0.15) to [out=20,in=90] (-1.9,0.02);
+\draw[->] (2.2,0.15) to [out=160,in=90] (1.9,0.02);
+%\draw [->,thick] (2.7,0.15) to [out=120,in=0] (2.3,0.3)
+%to [out=0,in=90] (1.9,0.03);
+%\draw (0,0) .. controls (0,4) and (4,0) .. (4,4)
+%\draw[->] ( 3,0.15) .. controls (. 30,.2) .. (1.9, 0.03);
+%\node at (1.8,{stdnorm(2.3)}) {\small{$\alpha/2$}};
+%\node at (-1.8,{stdnorm(2.3)}){\small{$\alpha/2$}};
+\end{tikzpicture}
+\caption{Região crítica para $\Ho: \mu = 50$ versus $\Hi: \mu \neq 50$ e $n = 10$}
+\end{figure}
+\end{block}
+\pause
+\begin{block}{}
+Podemos achar essa probabilidade como:
+$$\alpha=P(\bar{X}<48.5\quad \textrm{quando}\quad \mu=50)+P(\bar{X}>51.5\quad \textrm{quando}\quad \mu=50)$$
+\end{block}
+\end{frame}
+
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Os valores de z que correspondem aos valores críticos $48,5$ e $51,5$ são
+
+\begin{align*}
+z_{1}=\dfrac{\bx-\mu}{\dfrac{\sigma}{\sqrt{n}}}=\dfrac{48.5-50}{0.79}=-1.9\quad \textrm{e}\quad z_{2}=\dfrac{\bx-\mu}{\dfrac{\sigma}{\sqrt{n}}}=\dfrac{51.5-50}{0.79}=1.9
+\end{align*}
+Logo,
+
+$$\alpha=P(z<-1.90)+P(z>1.90)=0.0287+0.0287=0.0574$$
+
+Essa é a probabilidade do erro tipo I. Isso implica que $5,74\%$ de todas as amostras aleatórias conduziriam à rejeição da hipótese $\Ho: \mu = 50$ cm/s, quando a 
+taxa média verdadeira de queima fosse realmente 50 centímetros por segundo.Da inspeção da Figura anterior, notamos que podemos reduzir $\alpha$ alargando a 
+região de aceitação.
+\end{block}
+\end{frame}
+
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+%
+%\begin{frame}{}
+%\frametitle{}
+%\begin{block}{}
+%\justifying
+%
+%\end{block}
+%\end{frame}
+
+
+\end{document}
+
+
