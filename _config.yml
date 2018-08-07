@@ -1,7 +1,7 @@
-title: Long Haul
-description: Long Form Jekyll theme built with SASS / COMPASS / SUSY
+title: MAF 105
+description: Página da disciplina de Estatística Básica oferecida a alunos da UFV - Campus Florestal
 
-url: http://brianmaierjr.github.com/long-haul
+url: https://github.com/maf105
 baseurl: ""
 paginate_path: "blog/page:num/"
 permalink: blog/:title/
@@ -12,17 +12,21 @@ gems: [jekyll-paginate]
 paginate: 5
 
 navigation:
- - title: Home
+ - title: Inicio
    url: /index.html
- - title: About
-   url: /about
- - title: Contact
-   url: /contact
+ - title: Cronograma
+   url: /cronograma
+ - title: Contato
+   url: /contato
+ - title: Aulas
+   url: /aulas
+ - title: Exercícios
+   url: /exercicios
 
 social:
-   github: brianmaierjr
-   twitter: brianmaierjr
-   facebook: brianmaierjr
-   email: brimaidesigns@gmail.com
+   github: maf105
+   twitter: 
+   facebook: 
+   email: ufv.florestal.maf105@gmail.com
 
 google_analytics: "UA-58263416-1"
