@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  8 AUG 2018 23:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  8 AUG 2018 23:48
 entering extended mode
 **./Teste_Hipotese.tex
 (Teste_Hipotese.tex
@@ -615,8 +615,7 @@ Package: exercise 2014/10/20 v1.6 Exercise package (P.Pichaureau)
 \tempskipa=\skip91
 \tempskipb=\skip92
 \@savedmathindent=\skip93
-)
-No file Teste_Hipotese.aux.
+) (Teste_Hipotese.aux)
 \openout1 = `Teste_Hipotese.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
@@ -631,6 +630,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
+
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count316
@@ -699,9 +699,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {C:/Users/fsbma/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Figuras/brasaoufv-eps-converted-to.pdf>]
 [2] [3] [4] [5] [6] [7] (Teste_Hipotese.aux) ) 
 Here is how much of TeX's memory you used:
- 15228 strings out of 492973
- 275164 string characters out of 3135932
- 403981 words of memory out of 12000000
+ 15230 strings out of 492973
+ 275256 string characters out of 3135932
+ 403979 words of memory out of 12000000
  18941 multiletter control sequences out of 15000+200000
  539140 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -714,7 +714,7 @@ ccc1440.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pf
 e1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Teste_Hipotese.pdf (7 pages, 141730 bytes).
+Output written on Teste_Hipotese.pdf (7 pages, 142020 bytes).
 PDF statistics:
  222 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
