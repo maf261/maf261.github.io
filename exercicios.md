@@ -10,23 +10,24 @@ description: Página com listas de exercícios.
 
 ---
 
-* [Lista 1][Introducao] - Lista sobre tipo de variáveis, somatório e produtório.
-* [Lista 2][Medidas] - Lista sobre medidas de posição e dispersão, gráficos e assuntos introdutórios.
-* [Lista 3][Probabilidade] - Lista sobre probabilidade.
-* [Lista 4][Variaveis] - Lista sobre Variáveis aleatórias (discretas e continuas).
-* [Lista 5][Distribuicoes] - Lista sobre Distribuições (discretas e continuas).
-* [Lista 6][Regressao] - Lista sobre regressão linear.
-* [Lista 7][Testes] - Lista sobre Testes de hipóteses.
+* [Lista 1][testes] - Lista sobre testes de hipóteses.
+* [Lista 2][principios] - Lista sobre princípios básicos da experimentação.
+* [Lista 3][contrastes] - Lista contrastes.
+* [Lista 4][delineamentos] - Lista sobre DIC, DBC, DQL e testes de Tukey, Duncan, Scheffé e t.
+* [Lista 5][fatorial] - Lista sobre Experimento fatorial.
+* [Lista 6][subdivididas] - Lista sobre Parcelas Subdivididas.
+* [Lista 7][regressao] - Lista sobre regressão linear.
 
 <p class="intro">Bancos de dados utilizados na disciplina e na resolução dos exercícios:</p>
 
-* [dados 1][Introducao] - 
-* [dados 2][Medidas] - 
-* [dados 3][Probabilidade] - 
-* [dados 4][Variaveis] - 
-* [dados 5][Distribuicoes] - 
-* [dados 6][Regressao] - 
-* [dados 7][Testes] - 
+* [dados 1][Introducao1] - 
+* [dados 2][Medidas1] - 
+* [dados 3][Probabilidade1] - 
+* [dados 4][Variaveis1] - 
+* [dados 5][Distribuicoes1] - 
+* [dados 6][Regressao1] - 
+* [dados 7][Testes1] - 
 
 ---
    
+[testes]:https://rawgit.com/maf261/maf261.github.io/master/Exercicios/Teste_Hipotese.pdf
