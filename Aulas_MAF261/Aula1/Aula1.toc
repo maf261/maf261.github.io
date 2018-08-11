@@ -1,5 +1,5 @@
 \babel@toc {brazil}{}
 \beamer@sectionintoc {1}{Introdu\IeC {\c c}\IeC {\~a}o}{7}{0}{1}
-\beamer@sectionintoc {2}{Infer\IeC {\^e}ncia Estat\IeC {\'\i }stica}{21}{0}{2}
-\beamer@sectionintoc {3}{Testes de hip\IeC {\'o}teses}{27}{0}{3}
-\beamer@sectionintoc {4}{tikz}{45}{0}{4}
+\beamer@sectionintoc {2}{Infer\IeC {\^e}ncia Estat\IeC {\'\i }stica}{23}{0}{2}
+\beamer@sectionintoc {3}{Testes de hip\IeC {\'o}teses}{29}{0}{3}
+\beamer@sectionintoc {4}{tikz}{47}{0}{4}

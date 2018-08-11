@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  6 AUG 2018 23:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  11 AUG 2018 18:36
 entering extended mode
 **./Aula2.tex
 (Aula2.tex
@@ -1411,31 +1411,39 @@ Package xypdf Info: Line width: 0.57597pt on input line 121.
 
 ] [14
 
-]
-Overfull \vbox (10.05064pt too high) detected at line 314
- []
-
-[15
+] [15
 
 ] [16
 
-]
-Overfull \vbox (9.24065pt too high) detected at line 352
- []
-
-[17
+] [17
 
 ] [18
 
 ] [19
 
-] [20
+]
+Overfull \vbox (9.24065pt too high) detected at line 444
+ []
 
-] [21
+[20
 
-] [22
+]
+Overfull \vbox (9.24065pt too high) detected at line 444
+ []
 
-] [23
+[21
+
+]
+Overfull \vbox (9.24065pt too high) detected at line 444
+ []
+
+[22
+
+]
+Overfull \vbox (9.24065pt too high) detected at line 444
+ []
+
+[23
 
 ] [24
 
@@ -1463,11 +1471,7 @@ Overfull \vbox (9.24065pt too high) detected at line 352
 
 ] [36
 
-]
-Overfull \vbox (37.5711pt too high) detected at line 607
- []
-
-[37
+] [37
 
 ] [38
 
@@ -1475,47 +1479,20 @@ Overfull \vbox (37.5711pt too high) detected at line 607
 
 ] [40
 
-]
-Overfull \vbox (1.24065pt too high) detected at line 657
- []
+] [41
 
-[41
+] [42
 
-]
-Overfull \vbox (1.24065pt too high) detected at line 657
- []
+] [43
 
-[42
+] [44
+
+] [45
 
 ]
-Overfull \vbox (1.24065pt too high) detected at line 657
- []
-
-[43
-
-]
-Overfull \vbox (1.24065pt too high) detected at line 657
- []
-
-[44
-
-]
-Overfull \vbox (1.24065pt too high) detected at line 657
- []
-
-[45
-
-]
-Overfull \vbox (1.24065pt too high) detected at line 657
- []
-
 [46
 
-]
-Overfull \vbox (1.24065pt too high) detected at line 657
- []
-
-[47
+] [47
 
 ] [48
 
@@ -1527,9 +1504,63 @@ Overfull \vbox (1.24065pt too high) detected at line 657
 
 ] [52
 
-] [53
+]
+Overfull \vbox (1.24065pt too high) detected at line 804
+ []
 
-] [54
+[53
+
+]
+Overfull \vbox (1.24065pt too high) detected at line 804
+ []
+
+[54
+
+]
+Overfull \vbox (1.24065pt too high) detected at line 804
+ []
+
+[55
+
+]
+Overfull \vbox (1.24065pt too high) detected at line 804
+ []
+
+[56
+
+]
+Overfull \vbox (1.24065pt too high) detected at line 804
+ []
+
+[57
+
+]
+Overfull \vbox (1.24065pt too high) detected at line 804
+ []
+
+[58
+
+]
+Overfull \vbox (1.24065pt too high) detected at line 804
+ []
+
+[59
+
+] [60
+
+] [61
+
+] [62
+
+] [63
+
+] [64
+
+] [65
+
+] [66
+
+] (Aula2.bbl) [67
 
 ]
 \tf@nav=\write6
@@ -1541,34 +1572,35 @@ Overfull \vbox (1.24065pt too high) detected at line 657
 \tf@snm=\write8
 \openout8 = `Aula2.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1085.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1085.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1231.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1231.
  (Aula2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1085.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1085.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1231.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1231.
  ) 
 Here is how much of TeX's memory you used:
- 38888 strings out of 492973
- 857686 string characters out of 3135932
- 1182768 words of memory out of 12000000
- 41834 multiletter control sequences out of 15000+200000
- 27692 words of font info for 82 fonts, out of 3000000 for 9000
+ 39252 strings out of 492973
+ 868825 string characters out of 3135932
+ 1238211 words of memory out of 12000000
+ 42166 multiletter control sequences out of 15000+200000
+ 28516 words of font info for 83 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,25n,98p,3248b,1017s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\fsbma\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\Users\fsbma\AppData\Loca
-l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1000.pk> <C:\Users\fsbma\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\ecrm1440.pk> <C:\Users\fsbma\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1200.pk> <
-C:\Users\fsbma\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1200.pk> <C:\Users\fsbma\AppData\Local\Mi
-KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx2074.pk> <C:\Users\fsbma\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
-en\ec\dpi600\ecss0600.pk> <C:\Users\fsbma\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0800.pk> <C:\U
-sers\fsbma\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1440.pk> <C:\Users\fsbma\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Aula2.pdf (54 pages, 277156 bytes).
+ 73i,25n,102p,3248b,1963s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\fsbma\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1440.pk> <C:\Users\fsbma\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\Users\fsbma\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecss1000.pk> <C:\Users\fsbma\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <
+C:\Users\fsbma\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1200.pk> <C:\Users\fsbma\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1200.pk> <C:\Users\fsbma\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
+en\ec\dpi600\ecsx2074.pk> <C:\Users\fsbma\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0600.pk> <C:\U
+sers\fsbma\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0800.pk> <C:\Users\fsbma\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1440.pk> <C:\Users\fsbma\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
+c\dpi600\ecss2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb>
+Output written on Aula2.pdf (67 pages, 322960 bytes).
 PDF statistics:
- 671 PDF objects out of 1000 (max. 8388607)
- 113 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 786 PDF objects out of 1000 (max. 8388607)
+ 141 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
