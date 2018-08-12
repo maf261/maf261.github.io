@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  7 AUG 2018 00:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  11 AUG 2018 22:16
 entering extended mode
 **./Aula3.tex
 (Aula3.tex
@@ -1896,32 +1896,41 @@ Package xypdf Info: Line width: 0.57597pt on input line 111.
 
 ]
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <12> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 216.
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 215.
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <8> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 216.
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 215.
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <6> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 216.
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 215.
  [7
 
 ] [8
 
 ] [9
 
-]
-Overfull \vbox (19.1585pt too high) detected at line 245
- []
-
-[10
+] [10
 
 ] [11
 
-] [12
+]
+\openout4 = `Aula3.vrb'.
+
+ (Aula3.vrb
+<Aula3-001.pdf, id=110, 433.62pt x 433.62pt>
+File: Aula3-001.pdf Graphic file (type pdf)
+<use Aula3-001.pdf>
+Package pdftex.def Info: Aula3-001.pdf  used on input line 5.
+(pdftex.def)             Requested size: 213.52455pt x 213.52768pt.
+) [12
+
+ <./Aula3-001.pdf>] [13
+
+] [14
 
 ]
-Overfull \vbox (10.72708pt too high) detected at line 289
+Overfull \vbox (10.72708pt too high) detected at line 296
  []
 
-[13
+[15
 
 ]
 \openout4 = `Aula3.vrb'.
@@ -1931,32 +1940,28 @@ LaTeX Font Info:    Try loading font information for T1+aett on input line 5.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 ))
-[14
+[16
 
 ]
 \openout4 = `Aula3.vrb'.
 
  (Aula3.vrb
-<Aula3-plot.pdf, id=127, 433.62pt x 433.62pt>
+<Aula3-plot.pdf, id=144, 433.62pt x 433.62pt>
 File: Aula3-plot.pdf Graphic file (type pdf)
 <use Aula3-plot.pdf>
-Package pdftex.def Info: Aula3-plot.pdf  used on input line 8.
+Package pdftex.def Info: Aula3-plot.pdf  used on input line 9.
 (pdftex.def)             Requested size: 213.52455pt x 213.52768pt.
 )
-Overfull \vbox (3.1093pt too high) detected at line 326
+Overfull \vbox (5.1093pt too high) detected at line 333
  []
 
-[15
+[17
 
  <./Aula3-plot.pdf>]
-Overfull \vbox (3.81897pt too high) detected at line 358
+Overfull \vbox (3.81897pt too high) detected at line 365
  []
 
-[16
-
-] [17
-
-] [18
+[18
 
 ] [19
 
@@ -1982,31 +1987,31 @@ Overfull \vbox (3.81897pt too high) detected at line 358
 
 ] [30
 
-]
-[31
+] [31
+
+] [32
 
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 568.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 568.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 568.
-
-LaTeX Font Info:    Font shape `T1/aess/m/it' in size <20.74> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 587.
-[32
-
-] [33
+[33
 
 ] [34
 
-] [35
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 579.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 579.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 579.
+
+LaTeX Font Info:    Font shape `T1/aess/m/it' in size <20.74> not available
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 598.
+[35
 
 ] [36
 
@@ -2018,685 +2023,688 @@ LaTeX Font Info:    Font shape `T1/aess/m/it' in size <20.74> not available
 
 ] [40
 
-]
-Overfull \vbox (38.04059pt too high) detected at line 731
- []
-
-[41
+] [41
 
 ] [42
 
 ] [43
 
-]
-\openout4 = `Aula3.vrb'.
+] [44
 
- (Aula3.vrb) [44
+] [45
+
+] [46
 
 ]
 \openout4 = `Aula3.vrb'.
 
  (Aula3.vrb)
-Overfull \vbox (9.95851pt too high) detected at line 801
- []
-
-[45
+[47
 
 ]
 \openout4 = `Aula3.vrb'.
 
- (Aula3.vrb) [46
+ (Aula3.vrb)
+Overfull \vbox (9.95851pt too high) detected at line 807
+ []
+
+[48
+
+]
+\openout4 = `Aula3.vrb'.
+
+ (Aula3.vrb) [49
 
 ]
 \openout4 = `Aula3.vrb'.
 
  (Aula3.vrb
-<exemplos/qnorm1.png, id=315, 501.875pt x 250.9375pt>
+<exemplos/qnorm1.png, id=338, 501.875pt x 250.9375pt>
 File: exemplos/qnorm1.png Graphic file (type png)
 <use exemplos/qnorm1.png>
 Package pdftex.def Info: exemplos/qnorm1.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm1.png> <a0,fr0>
-<exemplos/qnorm2.png, id=324, 501.875pt x 250.9375pt>
+<exemplos/qnorm2.png, id=347, 501.875pt x 250.9375pt>
 File: exemplos/qnorm2.png Graphic file (type png)
 <use exemplos/qnorm2.png>
 Package pdftex.def Info: exemplos/qnorm2.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm2.png> <a0,fr1>
-<exemplos/qnorm3.png, id=333, 501.875pt x 250.9375pt>
+<exemplos/qnorm3.png, id=356, 501.875pt x 250.9375pt>
 File: exemplos/qnorm3.png Graphic file (type png)
 <use exemplos/qnorm3.png>
 Package pdftex.def Info: exemplos/qnorm3.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm3.png> <a0,fr2>
-<exemplos/qnorm4.png, id=342, 501.875pt x 250.9375pt>
+<exemplos/qnorm4.png, id=365, 501.875pt x 250.9375pt>
 File: exemplos/qnorm4.png Graphic file (type png)
 <use exemplos/qnorm4.png>
 Package pdftex.def Info: exemplos/qnorm4.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm4.png>
 <a0,fr3>
-<exemplos/qnorm5.png, id=351, 501.875pt x 250.9375pt>
+<exemplos/qnorm5.png, id=374, 501.875pt x 250.9375pt>
 File: exemplos/qnorm5.png Graphic file (type png)
 <use exemplos/qnorm5.png>
 Package pdftex.def Info: exemplos/qnorm5.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm5.png> <a0,fr4>
-<exemplos/qnorm6.png, id=360, 501.875pt x 250.9375pt>
+<exemplos/qnorm6.png, id=383, 501.875pt x 250.9375pt>
 File: exemplos/qnorm6.png Graphic file (type png)
 <use exemplos/qnorm6.png>
 Package pdftex.def Info: exemplos/qnorm6.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm6.png> <a0,fr5>
-<exemplos/qnorm7.png, id=369, 501.875pt x 250.9375pt>
+<exemplos/qnorm7.png, id=392, 501.875pt x 250.9375pt>
 File: exemplos/qnorm7.png Graphic file (type png)
 <use exemplos/qnorm7.png>
 Package pdftex.def Info: exemplos/qnorm7.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm7.png> <a0,fr6>
-<exemplos/qnorm8.png, id=378, 501.875pt x 250.9375pt>
+<exemplos/qnorm8.png, id=401, 501.875pt x 250.9375pt>
 File: exemplos/qnorm8.png Graphic file (type png)
 <use exemplos/qnorm8.png>
 Package pdftex.def Info: exemplos/qnorm8.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm8.png> <a0,fr7>
-<exemplos/qnorm9.png, id=387, 501.875pt x 250.9375pt>
+<exemplos/qnorm9.png, id=410, 501.875pt x 250.9375pt>
 File: exemplos/qnorm9.png Graphic file (type png)
 <use exemplos/qnorm9.png>
 Package pdftex.def Info: exemplos/qnorm9.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm9.png> <a0,fr8>
-<exemplos/qnorm10.png, id=396, 501.875pt x 250.9375pt>
+<exemplos/qnorm10.png, id=419, 501.875pt x 250.9375pt>
 File: exemplos/qnorm10.png Graphic file (type png)
 <use exemplos/qnorm10.png>
 Package pdftex.def Info: exemplos/qnorm10.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm10.png> <a0,fr9>
-<exemplos/qnorm11.png, id=405, 501.875pt x 250.9375pt>
+<exemplos/qnorm11.png, id=428, 501.875pt x 250.9375pt>
 File: exemplos/qnorm11.png Graphic file (type png)
 <use exemplos/qnorm11.png>
 Package pdftex.def Info: exemplos/qnorm11.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm11.png>
 <a0,fr10>
-<exemplos/qnorm12.png, id=414, 501.875pt x 250.9375pt>
+<exemplos/qnorm12.png, id=437, 501.875pt x 250.9375pt>
 File: exemplos/qnorm12.png Graphic file (type png)
 <use exemplos/qnorm12.png>
 Package pdftex.def Info: exemplos/qnorm12.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm12.png> <a0,fr11>
-<exemplos/qnorm13.png, id=423, 501.875pt x 250.9375pt>
+<exemplos/qnorm13.png, id=446, 501.875pt x 250.9375pt>
 File: exemplos/qnorm13.png Graphic file (type png)
 <use exemplos/qnorm13.png>
 Package pdftex.def Info: exemplos/qnorm13.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm13.png>
 <a0,fr12>
-<exemplos/qnorm14.png, id=432, 501.875pt x 250.9375pt>
+<exemplos/qnorm14.png, id=455, 501.875pt x 250.9375pt>
 File: exemplos/qnorm14.png Graphic file (type png)
 <use exemplos/qnorm14.png>
 Package pdftex.def Info: exemplos/qnorm14.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm14.png> <a0,fr13>
-<exemplos/qnorm15.png, id=441, 501.875pt x 250.9375pt>
+<exemplos/qnorm15.png, id=464, 501.875pt x 250.9375pt>
 File: exemplos/qnorm15.png Graphic file (type png)
 <use exemplos/qnorm15.png>
 Package pdftex.def Info: exemplos/qnorm15.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm15.png>
 <a0,fr14>
-<exemplos/qnorm16.png, id=450, 501.875pt x 250.9375pt>
+<exemplos/qnorm16.png, id=473, 501.875pt x 250.9375pt>
 File: exemplos/qnorm16.png Graphic file (type png)
 <use exemplos/qnorm16.png>
 Package pdftex.def Info: exemplos/qnorm16.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm16.png> <a0,fr15>
-<exemplos/qnorm17.png, id=459, 501.875pt x 250.9375pt>
+<exemplos/qnorm17.png, id=482, 501.875pt x 250.9375pt>
 File: exemplos/qnorm17.png Graphic file (type png)
 <use exemplos/qnorm17.png>
 Package pdftex.def Info: exemplos/qnorm17.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm17.png>
 <a0,fr16>
-<exemplos/qnorm18.png, id=468, 501.875pt x 250.9375pt>
+<exemplos/qnorm18.png, id=491, 501.875pt x 250.9375pt>
 File: exemplos/qnorm18.png Graphic file (type png)
 <use exemplos/qnorm18.png>
 Package pdftex.def Info: exemplos/qnorm18.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm18.png> <a0,fr17>
-<exemplos/qnorm19.png, id=477, 501.875pt x 250.9375pt>
+<exemplos/qnorm19.png, id=500, 501.875pt x 250.9375pt>
 File: exemplos/qnorm19.png Graphic file (type png)
 <use exemplos/qnorm19.png>
 Package pdftex.def Info: exemplos/qnorm19.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm19.png>
 <a0,fr18>
-<exemplos/qnorm20.png, id=486, 501.875pt x 250.9375pt>
+<exemplos/qnorm20.png, id=509, 501.875pt x 250.9375pt>
 File: exemplos/qnorm20.png Graphic file (type png)
 <use exemplos/qnorm20.png>
 Package pdftex.def Info: exemplos/qnorm20.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm20.png> <a0,fr19>
-<exemplos/qnorm21.png, id=495, 501.875pt x 250.9375pt>
+<exemplos/qnorm21.png, id=518, 501.875pt x 250.9375pt>
 File: exemplos/qnorm21.png Graphic file (type png)
 <use exemplos/qnorm21.png>
 Package pdftex.def Info: exemplos/qnorm21.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm21.png>
 <a0,fr20>
-<exemplos/qnorm22.png, id=504, 501.875pt x 250.9375pt>
+<exemplos/qnorm22.png, id=527, 501.875pt x 250.9375pt>
 File: exemplos/qnorm22.png Graphic file (type png)
 <use exemplos/qnorm22.png>
 Package pdftex.def Info: exemplos/qnorm22.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm22.png> <a0,fr21>
-<exemplos/qnorm23.png, id=513, 501.875pt x 250.9375pt>
+<exemplos/qnorm23.png, id=536, 501.875pt x 250.9375pt>
 File: exemplos/qnorm23.png Graphic file (type png)
 <use exemplos/qnorm23.png>
 Package pdftex.def Info: exemplos/qnorm23.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm23.png>
 <a0,fr22>
-<exemplos/qnorm24.png, id=522, 501.875pt x 250.9375pt>
+<exemplos/qnorm24.png, id=545, 501.875pt x 250.9375pt>
 File: exemplos/qnorm24.png Graphic file (type png)
 <use exemplos/qnorm24.png>
 Package pdftex.def Info: exemplos/qnorm24.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm24.png> <a0,fr23>
-<exemplos/qnorm25.png, id=531, 501.875pt x 250.9375pt>
+<exemplos/qnorm25.png, id=554, 501.875pt x 250.9375pt>
 File: exemplos/qnorm25.png Graphic file (type png)
 <use exemplos/qnorm25.png>
 Package pdftex.def Info: exemplos/qnorm25.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm25.png>
 <a0,fr24>
-<exemplos/qnorm26.png, id=540, 501.875pt x 250.9375pt>
+<exemplos/qnorm26.png, id=563, 501.875pt x 250.9375pt>
 File: exemplos/qnorm26.png Graphic file (type png)
 <use exemplos/qnorm26.png>
 Package pdftex.def Info: exemplos/qnorm26.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm26.png> <a0,fr25>
-<exemplos/qnorm27.png, id=549, 501.875pt x 250.9375pt>
+<exemplos/qnorm27.png, id=572, 501.875pt x 250.9375pt>
 File: exemplos/qnorm27.png Graphic file (type png)
 <use exemplos/qnorm27.png>
 Package pdftex.def Info: exemplos/qnorm27.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm27.png>
 <a0,fr26>
-<exemplos/qnorm28.png, id=558, 501.875pt x 250.9375pt>
+<exemplos/qnorm28.png, id=581, 501.875pt x 250.9375pt>
 File: exemplos/qnorm28.png Graphic file (type png)
 <use exemplos/qnorm28.png>
 Package pdftex.def Info: exemplos/qnorm28.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm28.png> <a0,fr27>
-<exemplos/qnorm29.png, id=567, 501.875pt x 250.9375pt>
+<exemplos/qnorm29.png, id=590, 501.875pt x 250.9375pt>
 File: exemplos/qnorm29.png Graphic file (type png)
 <use exemplos/qnorm29.png>
 Package pdftex.def Info: exemplos/qnorm29.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm29.png>
 <a0,fr28>
-<exemplos/qnorm30.png, id=576, 501.875pt x 250.9375pt>
+<exemplos/qnorm30.png, id=599, 501.875pt x 250.9375pt>
 File: exemplos/qnorm30.png Graphic file (type png)
 <use exemplos/qnorm30.png>
 Package pdftex.def Info: exemplos/qnorm30.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm30.png> <a0,fr29>
-<exemplos/qnorm31.png, id=585, 501.875pt x 250.9375pt>
+<exemplos/qnorm31.png, id=608, 501.875pt x 250.9375pt>
 File: exemplos/qnorm31.png Graphic file (type png)
 <use exemplos/qnorm31.png>
 Package pdftex.def Info: exemplos/qnorm31.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm31.png>
 <a0,fr30>
-<exemplos/qnorm32.png, id=594, 501.875pt x 250.9375pt>
+<exemplos/qnorm32.png, id=617, 501.875pt x 250.9375pt>
 File: exemplos/qnorm32.png Graphic file (type png)
 <use exemplos/qnorm32.png>
 Package pdftex.def Info: exemplos/qnorm32.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm32.png> <a0,fr31>
-<exemplos/qnorm33.png, id=603, 501.875pt x 250.9375pt>
+<exemplos/qnorm33.png, id=626, 501.875pt x 250.9375pt>
 File: exemplos/qnorm33.png Graphic file (type png)
 <use exemplos/qnorm33.png>
 Package pdftex.def Info: exemplos/qnorm33.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm33.png>
 <a0,fr32>
-<exemplos/qnorm34.png, id=612, 501.875pt x 250.9375pt>
+<exemplos/qnorm34.png, id=635, 501.875pt x 250.9375pt>
 File: exemplos/qnorm34.png Graphic file (type png)
 <use exemplos/qnorm34.png>
 Package pdftex.def Info: exemplos/qnorm34.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm34.png> <a0,fr33>
-<exemplos/qnorm35.png, id=621, 501.875pt x 250.9375pt>
+<exemplos/qnorm35.png, id=644, 501.875pt x 250.9375pt>
 File: exemplos/qnorm35.png Graphic file (type png)
 <use exemplos/qnorm35.png>
 Package pdftex.def Info: exemplos/qnorm35.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm35.png>
 <a0,fr34>
-<exemplos/qnorm36.png, id=630, 501.875pt x 250.9375pt>
+<exemplos/qnorm36.png, id=653, 501.875pt x 250.9375pt>
 File: exemplos/qnorm36.png Graphic file (type png)
 <use exemplos/qnorm36.png>
 Package pdftex.def Info: exemplos/qnorm36.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm36.png> <a0,fr35>
-<exemplos/qnorm37.png, id=639, 501.875pt x 250.9375pt>
+<exemplos/qnorm37.png, id=662, 501.875pt x 250.9375pt>
 File: exemplos/qnorm37.png Graphic file (type png)
 <use exemplos/qnorm37.png>
 Package pdftex.def Info: exemplos/qnorm37.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm37.png>
 <a0,fr36>
-<exemplos/qnorm38.png, id=648, 501.875pt x 250.9375pt>
+<exemplos/qnorm38.png, id=671, 501.875pt x 250.9375pt>
 File: exemplos/qnorm38.png Graphic file (type png)
 <use exemplos/qnorm38.png>
 Package pdftex.def Info: exemplos/qnorm38.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm38.png> <a0,fr37>
-<exemplos/qnorm39.png, id=657, 501.875pt x 250.9375pt>
+<exemplos/qnorm39.png, id=680, 501.875pt x 250.9375pt>
 File: exemplos/qnorm39.png Graphic file (type png)
 <use exemplos/qnorm39.png>
 Package pdftex.def Info: exemplos/qnorm39.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm39.png>
 <a0,fr38>
-<exemplos/qnorm40.png, id=666, 501.875pt x 250.9375pt>
+<exemplos/qnorm40.png, id=689, 501.875pt x 250.9375pt>
 File: exemplos/qnorm40.png Graphic file (type png)
 <use exemplos/qnorm40.png>
 Package pdftex.def Info: exemplos/qnorm40.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm40.png> <a0,fr39>
-<exemplos/qnorm41.png, id=675, 501.875pt x 250.9375pt>
+<exemplos/qnorm41.png, id=698, 501.875pt x 250.9375pt>
 File: exemplos/qnorm41.png Graphic file (type png)
 <use exemplos/qnorm41.png>
 Package pdftex.def Info: exemplos/qnorm41.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm41.png>
 <a0,fr40>
-<exemplos/qnorm42.png, id=684, 501.875pt x 250.9375pt>
+<exemplos/qnorm42.png, id=707, 501.875pt x 250.9375pt>
 File: exemplos/qnorm42.png Graphic file (type png)
 <use exemplos/qnorm42.png>
 Package pdftex.def Info: exemplos/qnorm42.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm42.png> <a0,fr41>
-<exemplos/qnorm43.png, id=693, 501.875pt x 250.9375pt>
+<exemplos/qnorm43.png, id=716, 501.875pt x 250.9375pt>
 File: exemplos/qnorm43.png Graphic file (type png)
 <use exemplos/qnorm43.png>
 Package pdftex.def Info: exemplos/qnorm43.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm43.png>
 <a0,fr42>
-<exemplos/qnorm44.png, id=702, 501.875pt x 250.9375pt>
+<exemplos/qnorm44.png, id=725, 501.875pt x 250.9375pt>
 File: exemplos/qnorm44.png Graphic file (type png)
 <use exemplos/qnorm44.png>
 Package pdftex.def Info: exemplos/qnorm44.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm44.png> <a0,fr43>
-<exemplos/qnorm45.png, id=711, 501.875pt x 250.9375pt>
+<exemplos/qnorm45.png, id=734, 501.875pt x 250.9375pt>
 File: exemplos/qnorm45.png Graphic file (type png)
 <use exemplos/qnorm45.png>
 Package pdftex.def Info: exemplos/qnorm45.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm45.png>
 <a0,fr44>
-<exemplos/qnorm46.png, id=720, 501.875pt x 250.9375pt>
+<exemplos/qnorm46.png, id=743, 501.875pt x 250.9375pt>
 File: exemplos/qnorm46.png Graphic file (type png)
 <use exemplos/qnorm46.png>
 Package pdftex.def Info: exemplos/qnorm46.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm46.png> <a0,fr45>
-<exemplos/qnorm47.png, id=729, 501.875pt x 250.9375pt>
+<exemplos/qnorm47.png, id=752, 501.875pt x 250.9375pt>
 File: exemplos/qnorm47.png Graphic file (type png)
 <use exemplos/qnorm47.png>
 Package pdftex.def Info: exemplos/qnorm47.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm47.png>
 <a0,fr46>
-<exemplos/qnorm48.png, id=738, 501.875pt x 250.9375pt>
+<exemplos/qnorm48.png, id=761, 501.875pt x 250.9375pt>
 File: exemplos/qnorm48.png Graphic file (type png)
 <use exemplos/qnorm48.png>
 Package pdftex.def Info: exemplos/qnorm48.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm48.png> <a0,fr47>
-<exemplos/qnorm49.png, id=747, 501.875pt x 250.9375pt>
+<exemplos/qnorm49.png, id=770, 501.875pt x 250.9375pt>
 File: exemplos/qnorm49.png Graphic file (type png)
 <use exemplos/qnorm49.png>
 Package pdftex.def Info: exemplos/qnorm49.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm49.png>
 <a0,fr48>
-<exemplos/qnorm50.png, id=756, 501.875pt x 250.9375pt>
+<exemplos/qnorm50.png, id=779, 501.875pt x 250.9375pt>
 File: exemplos/qnorm50.png Graphic file (type png)
 <use exemplos/qnorm50.png>
 Package pdftex.def Info: exemplos/qnorm50.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm50.png> <a0,fr49>
-<exemplos/qnorm51.png, id=765, 501.875pt x 250.9375pt>
+<exemplos/qnorm51.png, id=788, 501.875pt x 250.9375pt>
 File: exemplos/qnorm51.png Graphic file (type png)
 <use exemplos/qnorm51.png>
 Package pdftex.def Info: exemplos/qnorm51.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm51.png>
 <a0,fr50>
-<exemplos/qnorm52.png, id=774, 501.875pt x 250.9375pt>
+<exemplos/qnorm52.png, id=797, 501.875pt x 250.9375pt>
 File: exemplos/qnorm52.png Graphic file (type png)
 <use exemplos/qnorm52.png>
 Package pdftex.def Info: exemplos/qnorm52.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm52.png> <a0,fr51>
-<exemplos/qnorm53.png, id=783, 501.875pt x 250.9375pt>
+<exemplos/qnorm53.png, id=806, 501.875pt x 250.9375pt>
 File: exemplos/qnorm53.png Graphic file (type png)
 <use exemplos/qnorm53.png>
 Package pdftex.def Info: exemplos/qnorm53.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm53.png>
 <a0,fr52>
-<exemplos/qnorm54.png, id=792, 501.875pt x 250.9375pt>
+<exemplos/qnorm54.png, id=815, 501.875pt x 250.9375pt>
 File: exemplos/qnorm54.png Graphic file (type png)
 <use exemplos/qnorm54.png>
 Package pdftex.def Info: exemplos/qnorm54.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm54.png> <a0,fr53>
-<exemplos/qnorm55.png, id=801, 501.875pt x 250.9375pt>
+<exemplos/qnorm55.png, id=824, 501.875pt x 250.9375pt>
 File: exemplos/qnorm55.png Graphic file (type png)
 <use exemplos/qnorm55.png>
 Package pdftex.def Info: exemplos/qnorm55.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm55.png>
 <a0,fr54>
-<exemplos/qnorm56.png, id=810, 501.875pt x 250.9375pt>
+<exemplos/qnorm56.png, id=833, 501.875pt x 250.9375pt>
 File: exemplos/qnorm56.png Graphic file (type png)
 <use exemplos/qnorm56.png>
 Package pdftex.def Info: exemplos/qnorm56.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm56.png> <a0,fr55>
-<exemplos/qnorm57.png, id=819, 501.875pt x 250.9375pt>
+<exemplos/qnorm57.png, id=842, 501.875pt x 250.9375pt>
 File: exemplos/qnorm57.png Graphic file (type png)
 <use exemplos/qnorm57.png>
 Package pdftex.def Info: exemplos/qnorm57.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm57.png>
 <a0,fr56>
-<exemplos/qnorm58.png, id=828, 501.875pt x 250.9375pt>
+<exemplos/qnorm58.png, id=851, 501.875pt x 250.9375pt>
 File: exemplos/qnorm58.png Graphic file (type png)
 <use exemplos/qnorm58.png>
 Package pdftex.def Info: exemplos/qnorm58.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm58.png> <a0,fr57>
-<exemplos/qnorm59.png, id=837, 501.875pt x 250.9375pt>
+<exemplos/qnorm59.png, id=860, 501.875pt x 250.9375pt>
 File: exemplos/qnorm59.png Graphic file (type png)
 <use exemplos/qnorm59.png>
 Package pdftex.def Info: exemplos/qnorm59.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm59.png>
 <a0,fr58>
-<exemplos/qnorm60.png, id=846, 501.875pt x 250.9375pt>
+<exemplos/qnorm60.png, id=869, 501.875pt x 250.9375pt>
 File: exemplos/qnorm60.png Graphic file (type png)
 <use exemplos/qnorm60.png>
 Package pdftex.def Info: exemplos/qnorm60.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm60.png> <a0,fr59>
-<exemplos/qnorm61.png, id=855, 501.875pt x 250.9375pt>
+<exemplos/qnorm61.png, id=878, 501.875pt x 250.9375pt>
 File: exemplos/qnorm61.png Graphic file (type png)
 <use exemplos/qnorm61.png>
 Package pdftex.def Info: exemplos/qnorm61.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm61.png>
 <a0,fr60>
-<exemplos/qnorm62.png, id=864, 501.875pt x 250.9375pt>
+<exemplos/qnorm62.png, id=887, 501.875pt x 250.9375pt>
 File: exemplos/qnorm62.png Graphic file (type png)
 <use exemplos/qnorm62.png>
 Package pdftex.def Info: exemplos/qnorm62.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm62.png> <a0,fr61>
-<exemplos/qnorm63.png, id=873, 501.875pt x 250.9375pt>
+<exemplos/qnorm63.png, id=896, 501.875pt x 250.9375pt>
 File: exemplos/qnorm63.png Graphic file (type png)
 <use exemplos/qnorm63.png>
 Package pdftex.def Info: exemplos/qnorm63.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm63.png>
 <a0,fr62>
-<exemplos/qnorm64.png, id=882, 501.875pt x 250.9375pt>
+<exemplos/qnorm64.png, id=905, 501.875pt x 250.9375pt>
 File: exemplos/qnorm64.png Graphic file (type png)
 <use exemplos/qnorm64.png>
 Package pdftex.def Info: exemplos/qnorm64.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm64.png> <a0,fr63>
-<exemplos/qnorm65.png, id=891, 501.875pt x 250.9375pt>
+<exemplos/qnorm65.png, id=914, 501.875pt x 250.9375pt>
 File: exemplos/qnorm65.png Graphic file (type png)
 <use exemplos/qnorm65.png>
 Package pdftex.def Info: exemplos/qnorm65.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm65.png>
 <a0,fr64>
-<exemplos/qnorm66.png, id=900, 501.875pt x 250.9375pt>
+<exemplos/qnorm66.png, id=923, 501.875pt x 250.9375pt>
 File: exemplos/qnorm66.png Graphic file (type png)
 <use exemplos/qnorm66.png>
 Package pdftex.def Info: exemplos/qnorm66.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm66.png> <a0,fr65>
-<exemplos/qnorm67.png, id=909, 501.875pt x 250.9375pt>
+<exemplos/qnorm67.png, id=932, 501.875pt x 250.9375pt>
 File: exemplos/qnorm67.png Graphic file (type png)
 <use exemplos/qnorm67.png>
 Package pdftex.def Info: exemplos/qnorm67.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm67.png>
 <a0,fr66>
-<exemplos/qnorm68.png, id=918, 501.875pt x 250.9375pt>
+<exemplos/qnorm68.png, id=941, 501.875pt x 250.9375pt>
 File: exemplos/qnorm68.png Graphic file (type png)
 <use exemplos/qnorm68.png>
 Package pdftex.def Info: exemplos/qnorm68.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm68.png> <a0,fr67>
-<exemplos/qnorm69.png, id=927, 501.875pt x 250.9375pt>
+<exemplos/qnorm69.png, id=950, 501.875pt x 250.9375pt>
 File: exemplos/qnorm69.png Graphic file (type png)
 <use exemplos/qnorm69.png>
 Package pdftex.def Info: exemplos/qnorm69.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm69.png>
 <a0,fr68>
-<exemplos/qnorm70.png, id=936, 501.875pt x 250.9375pt>
+<exemplos/qnorm70.png, id=959, 501.875pt x 250.9375pt>
 File: exemplos/qnorm70.png Graphic file (type png)
 <use exemplos/qnorm70.png>
 Package pdftex.def Info: exemplos/qnorm70.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm70.png> <a0,fr69>
-<exemplos/qnorm71.png, id=945, 501.875pt x 250.9375pt>
+<exemplos/qnorm71.png, id=968, 501.875pt x 250.9375pt>
 File: exemplos/qnorm71.png Graphic file (type png)
 <use exemplos/qnorm71.png>
 Package pdftex.def Info: exemplos/qnorm71.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm71.png>
 <a0,fr70>
-<exemplos/qnorm72.png, id=954, 501.875pt x 250.9375pt>
+<exemplos/qnorm72.png, id=977, 501.875pt x 250.9375pt>
 File: exemplos/qnorm72.png Graphic file (type png)
 <use exemplos/qnorm72.png>
 Package pdftex.def Info: exemplos/qnorm72.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm72.png> <a0,fr71>
-<exemplos/qnorm73.png, id=963, 501.875pt x 250.9375pt>
+<exemplos/qnorm73.png, id=986, 501.875pt x 250.9375pt>
 File: exemplos/qnorm73.png Graphic file (type png)
 <use exemplos/qnorm73.png>
 Package pdftex.def Info: exemplos/qnorm73.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm73.png>
 <a0,fr72>
-<exemplos/qnorm74.png, id=972, 501.875pt x 250.9375pt>
+<exemplos/qnorm74.png, id=995, 501.875pt x 250.9375pt>
 File: exemplos/qnorm74.png Graphic file (type png)
 <use exemplos/qnorm74.png>
 Package pdftex.def Info: exemplos/qnorm74.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm74.png> <a0,fr73>
-<exemplos/qnorm75.png, id=981, 501.875pt x 250.9375pt>
+<exemplos/qnorm75.png, id=1004, 501.875pt x 250.9375pt>
 File: exemplos/qnorm75.png Graphic file (type png)
 <use exemplos/qnorm75.png>
 Package pdftex.def Info: exemplos/qnorm75.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm75.png>
 <a0,fr74>
-<exemplos/qnorm76.png, id=990, 501.875pt x 250.9375pt>
+<exemplos/qnorm76.png, id=1013, 501.875pt x 250.9375pt>
 File: exemplos/qnorm76.png Graphic file (type png)
 <use exemplos/qnorm76.png>
 Package pdftex.def Info: exemplos/qnorm76.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm76.png> <a0,fr75>
-<exemplos/qnorm77.png, id=999, 501.875pt x 250.9375pt>
+<exemplos/qnorm77.png, id=1022, 501.875pt x 250.9375pt>
 File: exemplos/qnorm77.png Graphic file (type png)
 <use exemplos/qnorm77.png>
 Package pdftex.def Info: exemplos/qnorm77.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm77.png>
 <a0,fr76>
-<exemplos/qnorm78.png, id=1008, 501.875pt x 250.9375pt>
+<exemplos/qnorm78.png, id=1031, 501.875pt x 250.9375pt>
 File: exemplos/qnorm78.png Graphic file (type png)
 <use exemplos/qnorm78.png>
 Package pdftex.def Info: exemplos/qnorm78.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm78.png> <a0,fr77>
-<exemplos/qnorm79.png, id=1017, 501.875pt x 250.9375pt>
+<exemplos/qnorm79.png, id=1040, 501.875pt x 250.9375pt>
 File: exemplos/qnorm79.png Graphic file (type png)
 <use exemplos/qnorm79.png>
 Package pdftex.def Info: exemplos/qnorm79.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm79.png>
 <a0,fr78>
-<exemplos/qnorm80.png, id=1026, 501.875pt x 250.9375pt>
+<exemplos/qnorm80.png, id=1049, 501.875pt x 250.9375pt>
 File: exemplos/qnorm80.png Graphic file (type png)
 <use exemplos/qnorm80.png>
 Package pdftex.def Info: exemplos/qnorm80.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm80.png> <a0,fr79>
-<exemplos/qnorm81.png, id=1035, 501.875pt x 250.9375pt>
+<exemplos/qnorm81.png, id=1058, 501.875pt x 250.9375pt>
 File: exemplos/qnorm81.png Graphic file (type png)
 <use exemplos/qnorm81.png>
 Package pdftex.def Info: exemplos/qnorm81.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm81.png>
 <a0,fr80>
-<exemplos/qnorm82.png, id=1044, 501.875pt x 250.9375pt>
+<exemplos/qnorm82.png, id=1067, 501.875pt x 250.9375pt>
 File: exemplos/qnorm82.png Graphic file (type png)
 <use exemplos/qnorm82.png>
 Package pdftex.def Info: exemplos/qnorm82.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm82.png> <a0,fr81>
-<exemplos/qnorm83.png, id=1053, 501.875pt x 250.9375pt>
+<exemplos/qnorm83.png, id=1076, 501.875pt x 250.9375pt>
 File: exemplos/qnorm83.png Graphic file (type png)
 <use exemplos/qnorm83.png>
 Package pdftex.def Info: exemplos/qnorm83.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm83.png>
 <a0,fr82>
-<exemplos/qnorm84.png, id=1062, 501.875pt x 250.9375pt>
+<exemplos/qnorm84.png, id=1085, 501.875pt x 250.9375pt>
 File: exemplos/qnorm84.png Graphic file (type png)
 <use exemplos/qnorm84.png>
 Package pdftex.def Info: exemplos/qnorm84.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm84.png> <a0,fr83>
-<exemplos/qnorm85.png, id=1071, 501.875pt x 250.9375pt>
+<exemplos/qnorm85.png, id=1094, 501.875pt x 250.9375pt>
 File: exemplos/qnorm85.png Graphic file (type png)
 <use exemplos/qnorm85.png>
 Package pdftex.def Info: exemplos/qnorm85.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm85.png>
 <a0,fr84>
-<exemplos/qnorm86.png, id=1080, 501.875pt x 250.9375pt>
+<exemplos/qnorm86.png, id=1103, 501.875pt x 250.9375pt>
 File: exemplos/qnorm86.png Graphic file (type png)
 <use exemplos/qnorm86.png>
 Package pdftex.def Info: exemplos/qnorm86.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm86.png> <a0,fr85>
-<exemplos/qnorm87.png, id=1089, 501.875pt x 250.9375pt>
+<exemplos/qnorm87.png, id=1112, 501.875pt x 250.9375pt>
 File: exemplos/qnorm87.png Graphic file (type png)
 <use exemplos/qnorm87.png>
 Package pdftex.def Info: exemplos/qnorm87.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm87.png>
 <a0,fr86>
-<exemplos/qnorm88.png, id=1098, 501.875pt x 250.9375pt>
+<exemplos/qnorm88.png, id=1121, 501.875pt x 250.9375pt>
 File: exemplos/qnorm88.png Graphic file (type png)
 <use exemplos/qnorm88.png>
 Package pdftex.def Info: exemplos/qnorm88.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm88.png> <a0,fr87>
-<exemplos/qnorm89.png, id=1107, 501.875pt x 250.9375pt>
+<exemplos/qnorm89.png, id=1130, 501.875pt x 250.9375pt>
 File: exemplos/qnorm89.png Graphic file (type png)
 <use exemplos/qnorm89.png>
 Package pdftex.def Info: exemplos/qnorm89.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm89.png>
 <a0,fr88>
-<exemplos/qnorm90.png, id=1116, 501.875pt x 250.9375pt>
+<exemplos/qnorm90.png, id=1139, 501.875pt x 250.9375pt>
 File: exemplos/qnorm90.png Graphic file (type png)
 <use exemplos/qnorm90.png>
 Package pdftex.def Info: exemplos/qnorm90.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm90.png> <a0,fr89>
-<exemplos/qnorm91.png, id=1125, 501.875pt x 250.9375pt>
+<exemplos/qnorm91.png, id=1148, 501.875pt x 250.9375pt>
 File: exemplos/qnorm91.png Graphic file (type png)
 <use exemplos/qnorm91.png>
 Package pdftex.def Info: exemplos/qnorm91.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm91.png>
 <a0,fr90>
-<exemplos/qnorm92.png, id=1134, 501.875pt x 250.9375pt>
+<exemplos/qnorm92.png, id=1157, 501.875pt x 250.9375pt>
 File: exemplos/qnorm92.png Graphic file (type png)
 <use exemplos/qnorm92.png>
 Package pdftex.def Info: exemplos/qnorm92.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm92.png> <a0,fr91>
-<exemplos/qnorm93.png, id=1143, 501.875pt x 250.9375pt>
+<exemplos/qnorm93.png, id=1166, 501.875pt x 250.9375pt>
 File: exemplos/qnorm93.png Graphic file (type png)
 <use exemplos/qnorm93.png>
 Package pdftex.def Info: exemplos/qnorm93.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm93.png>
 <a0,fr92>
-<exemplos/qnorm94.png, id=1152, 501.875pt x 250.9375pt>
+<exemplos/qnorm94.png, id=1175, 501.875pt x 250.9375pt>
 File: exemplos/qnorm94.png Graphic file (type png)
 <use exemplos/qnorm94.png>
 Package pdftex.def Info: exemplos/qnorm94.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm94.png> <a0,fr93>
-<exemplos/qnorm95.png, id=1161, 501.875pt x 250.9375pt>
+<exemplos/qnorm95.png, id=1184, 501.875pt x 250.9375pt>
 File: exemplos/qnorm95.png Graphic file (type png)
 <use exemplos/qnorm95.png>
 Package pdftex.def Info: exemplos/qnorm95.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm95.png>
 <a0,fr94>
-<exemplos/qnorm96.png, id=1170, 501.875pt x 250.9375pt>
+<exemplos/qnorm96.png, id=1193, 501.875pt x 250.9375pt>
 File: exemplos/qnorm96.png Graphic file (type png)
 <use exemplos/qnorm96.png>
 Package pdftex.def Info: exemplos/qnorm96.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm96.png> <a0,fr95>
-<exemplos/qnorm97.png, id=1179, 501.875pt x 250.9375pt>
+<exemplos/qnorm97.png, id=1202, 501.875pt x 250.9375pt>
 File: exemplos/qnorm97.png Graphic file (type png)
 <use exemplos/qnorm97.png>
 Package pdftex.def Info: exemplos/qnorm97.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm97.png>
 <a0,fr96>
-<exemplos/qnorm98.png, id=1188, 501.875pt x 250.9375pt>
+<exemplos/qnorm98.png, id=1211, 501.875pt x 250.9375pt>
 File: exemplos/qnorm98.png Graphic file (type png)
 <use exemplos/qnorm98.png>
 Package pdftex.def Info: exemplos/qnorm98.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm98.png> <a0,fr97>
-<exemplos/qnorm99.png, id=1197, 501.875pt x 250.9375pt>
+<exemplos/qnorm99.png, id=1220, 501.875pt x 250.9375pt>
 File: exemplos/qnorm99.png Graphic file (type png)
 <use exemplos/qnorm99.png>
 Package pdftex.def Info: exemplos/qnorm99.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
  <./exemplos/qnorm99.png>
 <a0,fr98>
-<exemplos/qnorm100.png, id=1206, 501.875pt x 250.9375pt>
+<exemplos/qnorm100.png, id=1229, 501.875pt x 250.9375pt>
 File: exemplos/qnorm100.png Graphic file (type png)
 <use exemplos/qnorm100.png>
 Package pdftex.def Info: exemplos/qnorm100.png  used on input line 5.
 (pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm100.png> <a0,fr99>) [47
+ <./exemplos/qnorm100.png> <a0,fr99>) [50
 
 ]
 \openout4 = `Aula3.vrb'.
@@ -2705,12 +2713,12 @@ Package pdftex.def Info: exemplos/qnorm100.png  used on input line 5.
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <5> not available
 (Font)              Font shape `T1/aess/m/sl' tried instead on input line 9.
 )
-Overfull \vbox (239.36012pt too high) detected at line 889
+Overfull \vbox (239.36012pt too high) detected at line 895
  []
 
-[48
+[51
 
-] [49
+] [52
 
 ]
 \tf@nav=\write7
@@ -2722,17 +2730,17 @@ Overfull \vbox (239.36012pt too high) detected at line 889
 \tf@snm=\write9
 \openout9 = `Aula3.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 899.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 899.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 905.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 905.
  (Aula3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 899.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 899.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 905.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 905.
  ) 
 Here is how much of TeX's memory you used:
- 50364 strings out of 492973
- 1076634 string characters out of 3135932
- 1417496 words of memory out of 12000000
- 53084 multiletter control sequences out of 15000+200000
+ 50381 strings out of 492973
+ 1076919 string characters out of 3135932
+ 1417780 words of memory out of 12000000
+ 53092 multiletter control sequences out of 15000+200000
  586721 words of font info for 134 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,25n,98p,3248b,1065s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2748,9 +2756,9 @@ mss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program
  Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Aula3.pdf (49 pages, 681948 bytes).
+Output written on Aula3.pdf (52 pages, 693596 bytes).
 PDF statistics:
- 1346 PDF objects out of 1440 (max. 8388607)
- 110 named destinations out of 1000 (max. 500000)
- 2522 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1369 PDF objects out of 1440 (max. 8388607)
+ 116 named destinations out of 1000 (max. 500000)
+ 2527 words of extra memory for PDF output out of 10000 (max. 10000000)
 

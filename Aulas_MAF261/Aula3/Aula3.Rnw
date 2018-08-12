@@ -123,9 +123,8 @@
 \frametitle{Testes para a Média de uma Distribuição Normal, Variância Conhecida}
 \begin{block}{}
 \justifying
-Consideraremos teste de hipóteses acerca da média $\mu$ de uma única população normal, em que a variância da população $\sigma^{2}$ é conhecida. Consideraremos 
-uma amostra aleatória $X_{1}, X_{2},\cdots, X_{n}$ sendo retirada da população. Baseado em nossa discussão prévia, a média amostral $\bar{X}$ é um estimador não 
-tendencioso de $\mu$ com variância $\dfrac{\sigma^{2}}{n}$
+Consideraremos teste de hipóteses acerca da média $\mu$ de uma única população normal, em que a variância da população $\sigma^{2}$ é conhecida. Consideraremos uma amostra aleatória $X_{1}, X_{2},\cdots, X_{n}$ sendo retirada da população. Lembre-se, a média amostral $\bar{X}$ é um estimador não tendencioso de $\mu$ com 
+variância $\dfrac{\sigma^{2}}{n}.$
 \end{block}
 \end{frame}
 
@@ -220,11 +219,12 @@ $\Ho$ ao nível de $\alpha=5\%$ de significância.
 \frametitle{Testes para a Média de uma Distribuição Normal, Variância desconhecida}
 \begin{block}{}
 \justifying
-A aplicação do teste t é indicada quando o tamanho amostral é igual ou inferior a 30 elementos. Para amostras com tamanho 
-superior a 30, recomenda-se o teste Z. O uso do teste t pressupõe que a característica em análise é normalmente distribuída 
-com variância populacional desconhecida. O teste t tem três aplicações principais: teste para uma média populacional, teste 
-para duas médias populacionais e teste para mais que duas médias populacionais. As duas primeiras aplicações vão ser 
-apresentadas neste em sequência. A terceira aplicação será apresentada no decorrer do curso.
+A aplicação do teste t é indicada quando o tamanho amostral é igual ou inferior a 30 elementos. Para amostras com tamanho superior a 30, recomenda-se o teste Z. 
+\end{block}
+\pause
+\begin{block}{}
+\justifying
+Ressalta-se que o uso do teste t pressupõe distribuição normal com variância populacional desconhecida. 
 \end{block}
 \end{frame}
 
@@ -239,9 +239,37 @@ Digamos que os elementos amostrais sejam; $X_{1},X_{2},\cdots,X_{n}.$ Com base n
 calculamos a sua média, $\bx$, e seu desvio padrão, $s$. Estas estatísticas são então utilizadas para calcular o valor de $t_{cal}$ 
 usando a expressão:
 $$t_{cal}=\dfrac{\bx-\mu}{\dfrac{s}{\sqrt{n}}}$$
-Esta estatística t, tem distribuição t de Student com $n-1$ graus de liberdade, ou seja, é uma distribuição de probabilidades 
-que depende do número de graus de liberdade associado. 
+Esta estatística t, tem distribuição t de Student com $n-1$ graus de liberdade. 
 \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{}
+\frametitle{Teste de hipóteses para uma média populacional}
+\begin{center}
+\setkeys{Gin}{width=0.5\linewidth}
+<<echo=FALSE,fig=TRUE, results=hide>>=
+#-----------------------------------------------
+# Display the Student's t distributions with various
+# degrees of freedom and compare to the normal distribution
+x <- seq(-4, 4, length=100)
+hx <- dnorm(x)
+degf <- c(1, 3, 8, 30)
+colors <- c("red", "blue", "darkgreen", "gold", "black")
+labels <- c("df=1", "df=3", "df=8", "df=30", "normal")
+
+plot(x, hx, type="l", lty=2, xlab="x",
+  ylab="Densidade", main="Comparação de distribuições t e normal")
+
+for (i in 1:4){
+  lines(x, dt(x,degf[i]), lwd=2, col=colors[i])
+}
+
+legend("topright", inset=.05, title="Distribuições",
+  labels, lwd=2, lty=c(1, 1, 1, 1, 2), col=colors)
+#dev.off()
+#-----------------------------------------------
+@ 
+\end{center}
 \end{frame}
 
 \begin{frame}{}
@@ -313,6 +341,7 @@ qqline(dados, lty = 2, col = "red")
 \frametitle{Exemplo}
 \begin{block}{}
 O gráfico de probabilidade normal dos dados suporta a suposição de que o coeficiente médio de restituição é normalmente distribuído.
+\end{block}
 \vspace{-1.2cm}
 \begin{center}
 \setkeys{Gin}{width=0.5\linewidth}
@@ -327,7 +356,6 @@ qqnorm(dados,
 qqline(dados, lty = 2, col = "red")
 @
 \end{center}
-\end{block}
 \end{frame}
 
 
@@ -461,8 +489,7 @@ O limite da região critíca é $t_{tab}=t_{0.05}(8)=1,86$\\
 \frametitle{Teste de hipóteses para o caso de duas amostras dependentes}
 \begin{block}{}
 \justifying
-Duas amostras de elementos são ditas serem dependentes quando existe algo que as relacione. Por exemplo, se os valores de duas amostras foram obtidos de um
-mesmo conjunto de elementos amostrais, podemos dizer que as duas amostras de valores são dependentes uma vez que foram tomados de um conjunto de elementos
+Duas amostras de elementos são ditas serem dependentes quando existe algo que as relacione. Por exemplo, se os valores de duas amostras foram obtidos de um mesmo conjunto de elementos amostrais, podemos dizer que as duas amostras de valores são dependentes uma vez que foram tomados de um conjunto de elementos
 amostrais comum.
 \end{block}
 \pause
@@ -479,10 +506,15 @@ mesmos nas duas condições.
 \frametitle{}
 \begin{block}{}
 \justifying
-Para verificar se houve alteração na média, avalia-se uma característica de interesse do pesquisador num conjunto de elementos amostrais tomados
-ao acaso na população quando a mesma esteja sob a condição 1. Digamos que a avaliação da característica resulte nos seguintes valores amostrais $X_{11},X_{12},\cdots,X_{1n}$.
-Depois de feita esta avaliação, os elementos amostrais que originaram a primeira amostra, sejam submetidos à condição 2. Os mesmos elementos amostrais são
-novamente avaliados para a mesma característica na nova condição 2. Digamos que esta nova avaliação resulte nos seguintes valores amostrais $X_{21},X_{22},\cdots,X_{2n}$. 
+Para verificar se houve alteração na média, avalia-se uma característica de interesse do pesquisador num conjunto de elementos amostrais tomados ao acaso na população quando a mesma esteja sob a condição 1. Digamos que a avaliação da característica resulte nos seguintes valores amostrais $X_{11},X_{12},\cdots,X_{1n}$.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Depois de feita esta avaliação, os elementos amostrais que originaram a primeira amostra, sejam submetidos à condição 2. Os mesmos elementos amostrais são novamente avaliados para a mesma característica na nova condição 2. Digamos que esta nova avaliação resulte nos seguintes valores amostrais $X_{21},X_{22},\cdots,X_{2n}$. 
 Se a condição 2 não tiver nenhum efeito, espera-se que em média os valores observados nas duas condições sejam iguais.
 \end{block}
 \end{frame}
@@ -594,7 +626,7 @@ usaremos a estatística de teste:
 \frametitle{Teste $\chi^{2}$ para a variância}
 \begin{block}{}
 \justifying
-Se a hipótese nula $H0: \sigma^{2}=\sigma_{0}^{2}$ for verdadeira, então a estatística de teste $\chi^{2}$ , definida na Equação (\ref{qui}), segue a distribuição qui-quadrado, 
+Se a hipótese nula $H_{0}: \sigma^{2}=\sigma_{0}^{2}$ for verdadeira, então a estatística de teste $\chi^{2}$ , definida na Equação (\ref{qui}), segue a distribuição qui-quadrado, 
 com $n - 1$ graus de liberdade.
 \end{block}
 \end{frame}
@@ -603,10 +635,7 @@ com $n - 1$ graus de liberdade.
 \frametitle{Exemplo}
 \begin{block}{}
 \justifying
-Uma máquina de enchimento automático é usada para encher garrafas com detergente líquido. Uma amostra aleatória de 20 garrafas resulta em uma variância amostral 
-de volume de enchimento de $ s^{2}= 0,0153$. Se a variância do volume de enchimento exceder 0,01, existirá uma proporção inaceitável de 
-garrafas cujo enchimento não foi completo e cujo enchimento foi em demasia. Há evidência nos dados da amostra sugerindo que o fabricante tenha um problema com 
-garrafas cheias com falta e excesso de detergente? Use $\alpha = 0,05$ e considere que o volume de enchimento tenha uma distribuição normal.
+Uma máquina de enchimento automático é usada para encher garrafas com detergente líquido. Uma amostra aleatória de 20 garrafas resulta em uma variância amostral de volume de enchimento de $ s^{2}= 0,0153 ml^{2}$. Se a variância do volume de enchimento exceder 0,01, existirá uma proporção inaceitável de garrafas cujo enchimento não foi completo e cujo enchimento foi em demasia. Há evidência nos dados da amostra sugerindo que o fabricante tenha um problema com garrafas cheias com falta e excesso de detergente? Use $\alpha = 0,05$ e considere que o volume de enchimento tenha uma distribuição normal.
 \end{block}
 \end{frame}
 
@@ -663,7 +692,7 @@ H_{1}:\sigma_{1}^{2}\neq\sigma_{2}^{2}
 \frametitle{}
 \begin{block}{}
 \justifying
-A estatística F usada para decidir entre Rejeitar ou Não-Rejeitar Ho é dada pelo quociente entre as duas estimativas de variância, ou seja:
+A estatística F usada para decidir entre Rejeitar ou Não-Rejeitar $\Ho$ é dada pelo quociente entre as duas estimativas de variância, ou seja:
 $$F_{cal}=\dfrac{S_{1}^{2}}{S_{2}^{2}}$$
 Sob a hipótese de nulidade, este quociente tem distribuição F, de Fisher-Snedecor, com $n_{1}$ e $n_{2}$ graus de liberdade, ou seja a distribuição de probabilidades 
 da estatística $F$ depende dos números de graus de liberdade $n_{1}$ e $n_{2}$. A conclusão do teste é feita mediante a comparação do valor de $F_{cal}$ com o 
@@ -724,8 +753,7 @@ Consideraremos o teste
 H_{0}: p=p_{0}\\
 H_{1}:p\neq p_{0}
 \end{align*}
-Um teste aproximado, baseado na aproximação da binomial pela normal, será dado. Esse procedimento aproximado será válido, desde que $p$ não esteja extremamente 
-próximo de 0 ou 1 ou o tamanho da amostra seja relativamente pequena. Seja $X$ o número de observações em uma amostra aleatória de tamanho $n$ que pertence 
+Seja $X$ o número de observações em uma amostra aleatória de tamanho $n$ que pertence 
 à classe associada a $p.$ Então, se a hipótese nula $\Ho: p = p_{0}$ for verdadeira, teremos $X \sim N[np_{0}, np_{0}(1 - p_{0})],$ aproximadamente. Para testar 
 $\Ho: p = p_{0},$ calcule a estatística de teste:
 \begin{align}\label{proporcao}
@@ -739,8 +767,7 @@ Se a hipótese nula $H0:p=p_{0}$ for verdadeira, então a estatística de teste 
 \frametitle{Exemplo}
 \begin{block}{}
 \justifying
-Um fabricante de semicondutores produz controladores usados em aplicações no motor de automóveis. O consumidor requer que a fração defeituosa em uma etapa 
-crítica de fabricação não exceda 0,05 e que o fabricante demonstre uma capacidade de processo nesse nível de qualidade, usando $\alpha = 0,05.$ O fabricante de 
+Um fabricante de semicondutores produz controladores usados em aplicações no motor de automóveis. O consumidor requer que a fração de\-fei\-tuo\-sa em uma etapa crítica de fabricação não exceda 0,05 e que o fabricante demonstre uma capacidade de processo nesse nível de qualidade, usando $\alpha = 0,05.$ O fabricante de 
 semicondutores retira uma amostra aleatória de 200 aparelhos e encontra que quatro deles são defeituosos. O fabricante pode demonstrar uma capacidade de processo 
 para o consumidor?
 \end{block}

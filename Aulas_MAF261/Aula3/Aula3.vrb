@@ -5,7 +5,7 @@
 \small\addtolength{\tabcolsep}{-3pt}
 {\footnotesize
 % latex table generated in R 3.4.3 by xtable 1.8-2 package
-% Tue Aug 07 00:13:58 2018
+% Sat Aug 11 22:16:48 2018
 \begin{tabular}{rrrrrrrrrrr}
   \hline
  & 0 & 0,01 & 0,02 & 0,03 & 0,04 & 0,05 & 0,06 & 0,07 & 0,08 & 0,09 \\
