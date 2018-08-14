@@ -10,7 +10,7 @@ description: Página com as aulas da disciplina.
 ---
 
 * [Aula 1][aula1]
-* [Aula de Distribuição Normal][normal]
+* [Aula 1.1 (Distribuição Normal)][normal]
 * [Aula 2][aula2]
 * [Aula 3][aula3]
 
