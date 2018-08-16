@@ -35,6 +35,14 @@ title: Materiais
 * [Ricardo Cappra](https://www.youtube.com/channel/UCog5skJem3L_roiqDjZ2_2Q)
 * [Curso Excel](https://www.youtube.com/watch?v=ZVURQLXZtIc&list=PLHz_AreHm4dkRZoc0-i4sQeot_62qKi4a)
 * [Power BI](https://www.youtube.com/channel/UCsx_ZsgsX6BIFueejCDBLkg)
+* [Planejamento e Análise de Experimentos no R - aula1](https://www.youtube.com/watch?v=0Y6v7vebYPU&list=PLXaDAv_nBDLdjd_k3vgQezne2HRc4flB8)
+* [Planejamento e Análise de Experimentos no R - aula2](https://www.youtube.com/watch?v=3QWmUhsSbsI&index=2&list=PLXaDAv_nBDLdjd_k3vgQezne2HRc4flB8)
+* [Planejamento e Análise de Experimentos no R - aula3](https://www.youtube.com/watch?v=4BEpj9mOimA&index=3&list=PLXaDAv_nBDLdjd_k3vgQezne2HRc4flB8)
+* [Planejamento e Análise de Experimentos no R - aula4](https://www.youtube.com/watch?v=a_2D8MJRNX4&index=4&list=PLXaDAv_nBDLdjd_k3vgQezne2HRc4flB8)
+* [Planejamento e Análise de Experimentos no R - aula5](https://www.youtube.com/watch?v=qCbK6ZKMxmY&list=PLXaDAv_nBDLdjd_k3vgQezne2HRc4flB8&index=5)
+* [Planejamento e Análise de Experimentos no R - aula6](https://www.youtube.com/watch?v=eSMyhCygfmo&index=6&list=PLXaDAv_nBDLdjd_k3vgQezne2HRc4flB8)
+* [Planejamento e Análise de Experimentos no R - aula7](https://www.youtube.com/watch?v=u8C80NXR-9I&index=7&list=PLXaDAv_nBDLdjd_k3vgQezne2HRc4flB8)
+* [Planejamento e Análise de Experimentos no R - aula8](https://www.youtube.com/watch?v=blh8nAgrdeI&list=PLXaDAv_nBDLdjd_k3vgQezne2HRc4flB8&index=8)
 
 ### Páginas com assuntos relacionados a disciplina
 
@@ -52,6 +60,7 @@ title: Materiais
 * [Teste de Hipóteses](https://data-flair.training/blogs/hypothesis-testing-in-r/)
 * [Ridículas](https://ridiculas.wordpress.com/)
 * [Como faz no R](http://dfalbel.github.io/)
+* [Curso-R](http://curso-r.com/)
 * [Teorema Central do Limite](https://gallery.shinyapps.io/CLT_mean/)
 * [Wiki R](https://www.ufrgs.br/wiki-r/index.php?title=Bem-vindo_%C3%A0_Wiki_R)
 * [Khan Academy](https://www.khanacademy.org/)
