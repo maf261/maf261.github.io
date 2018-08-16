@@ -22,7 +22,11 @@ navigation:
    url: /aulas
  - title: Exercícios
    url: /exercicios
-
+ - title: Materiais
+   url: /materiais
+ - title: Créditos
+   url: /creditos
+   
 social:
    github: maf261
    twitter: 
