@@ -1,0 +1,189 @@
+\documentclass{article}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+%\UseRawInputEncoding
+\usepackage[T1]{fontenc}
+\usepackage{Sweave}
+\usepackage{animate}
+\usepackage{amsbsy}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[toc,page,title,titletoc]{appendix}
+\usepackage[fixlanguage]{babelbib}
+%\usepackage[pdftex]{color}
+\usepackage{dsfont}
+\usepackage{esvect}
+\usepackage[labelfont=bf]{caption}
+\usepackage{float}
+\usepackage[Glenn]{fncychap}%Sonny %Conny %Lenny %Glenn %Renje %Bjarne %Bjornstrup
+%\usepackage{geometry, calc, color, setspace}%
+%\geometry{a4paper, headsep=1.0cm, footskip=1cm, lmargin=3cm, rmargin=2cm, tmargin=3cm, bmargin=2cm}
+\usepackage{graphicx}
+\usepackage{indentfirst}%Para indentar os parágrafos automáticamente
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{mathtools}
+\usepackage{listings}%Inserir codigo do R no latex
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{ifthen}
+\newboolean{firstanswerofthechapter}  
+\usepackage{natbib}
+\bibliographystyle{abbrvnat3}
+\usepackage[figuresright]{rotating}
+\usepackage{spalign}
+%\usepackage{pgfpages}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{tasks}
+\usepackage{color, colortbl}
+\usepackage{xcolor}
+\colorlet{lightcyan}{cyan!40!white}
+\usepackage{chngcntr}
+\usepackage{stackengine}
+\usepackage{ragged2e}%para justificar o texto dentro de algum ambiente
+\definecolor{Gray}{gray}{0.9}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+
+
+\usepackage[all]{xy}
+\usepackage{hyperref,bookmark}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=red,
+  filecolor=blue,
+  urlcolor=blue,
+}
+\newlength{\longestlabel}
+\settowidth{\longestlabel}{\bfseries viii.}
+
+\setcounter{secnumdepth}{0} \setlength{\topmargin}{0cm}
+\setlength{\headsep}{-0.3cm} \setlength{\textwidth}{17.5cm}
+\setlength{\textheight}{23cm} \setlength{\oddsidemargin}{-0.8cm}
+\setlength{\evensidemargin}{0cm} \setlength{\footskip}{-1.5cm}
+
+\usepackage[lastexercise,answerdelayed]{exercise}
+\renewcommand{\ExerciseName}{Exercícios}
+\renewcommand{\ExerciseHeader}{\noindent\def\stackalignment{l}% code from https://tex.stackexchange.com/a/195118/101651
+    \stackunder[0pt]{\colorbox{cyan}{\textcolor{white}{\textbf{\large\ExerciseName}}}}{\textcolor{lightcyan}{\rule{\linewidth}{2pt}}}\medskip}
+
+
+\begin{document}
+\input{fonte-concordance}
+
+\section{Teste z - Unilateral a Esquerda}
+
+% \begin{align*}
+% H_{0}: \mu&=AQUI \\ 
+% H_{1}: \mu&<AQUI\quad \textrm{(unilateral)}
+% \end{align*}
+% 
+% Dados:
+% 
+% $n=AQUI;\quad \bar{x}=AQUI;\quad \sigma=AQUI;\quad \alpha=AQUI\% \rightarrow z_{t}=AQUI$
+% 
+% $$z_{cal}=\dfrac{\bar{x}-\mu_{0}}{\dfrac{\sigma}{\sqrt{n}}}=\dfrac{AQUI-AQUI}{AQUI/\sqrt{AQUI}}=AQUI$$
+% $$p-valor=AQUI$$
+% \begin{center}
+% \setkeys{Gin}{width=0.5\linewidth}
+% <<echo=FALSE,fig.pos="h",fig=TRUE>>=
+% zt <- qnorm(AQUI)
+% zc <- (AQUI-AQUI)/(AQUI/sqrt(AQUI))
+% pvalor <- pnorm(zc)
+% curve(dnorm(x), from=-4.5, to=4.5, xlab="", ylab="")
+% polygon(cbind(c(zt,seq(zt,-4.5, l=100),-4.5), 
+%               c(0, dnorm(seq(zt, -4.5, l=100)), 
+%                 dnorm(-4.5))), 
+%         col="lightgray")
+% abline(v=zt, lty=2)
+% arrows(zc, 0.1, zc, 0)
+% zt <- format(zt,digits = 3)
+% Zt <- bquote(bold(z[t] == .(zt)))
+% zc <- format(zc,digits = 3)
+% Zc <- bquote(bold(z[c] == .(zc)))
+% text(zt, 0.1, Zt, pos=4)
+% text(zt, 0.2, "RNRH0", pos=4)
+% text(zc, 0.12, Zc, pos=3)
+% text(zc, 0.2, "RRH0", pos=3)
+% @
+% \end{center}
+% 
+% Decisão: %Como $|z_{cal}|>|z_{tab}|$ rejeita-se $H_{0}$ ao nível $\alpha=AQUI\%$ de significância.
+% %Como $|z_{cal}|>|z_{tab}|$ não rejeita-se $H_{0}$ ao nível $\alpha=AQUI\%$ de significância.
+% Comandos em R para soluções:
+% 
+% <<>>=
+% AQUI
+% RR <- "Rejeita-se H0 ao nível de 5% de significância"
+% RN <- "Não rejeita-se H0 ao nível de 5% de significância"
+% ##Resultado
+% ifelse(zc>zt,RR,RN)
+% ##Ou, equivalentemente:
+% ifelse(pvalor > AQUI, RN, RR)
+% ## estimativa pontual
+% (mu.est <- AQUI)
+% ## estimativa intervalar (95%)
+% (IC.mu <- mu.est + qnorm(c(0.025, 0.975)) * AQUI/sqrt(AQUI))
+% @
+
+\section{Teste z - Unilateral a Direita}
+
+% \begin{align*}
+% H_{0}: \mu&=AQUI \\ 
+% H_{1}: \mu&>AQUI\quad \textrm{(unilateral)}
+% \end{align*}
+% 
+% Dados:
+% 
+% $n=AQUI;\quad \bar{x}=AQUI;\quad \sigma=AQUI;\quad \alpha=AQUI\% \rightarrow z_{t}=AQUI$
+% 
+% $$z_{cal}=\dfrac{\bar{x}-\mu_{0}}{\dfrac{\sigma}{\sqrt{n}}}=\dfrac{AQUI-AQUI}{AQUI/\sqrt{AQUI}}=AQUI$$
+% $$p-valor=AQUI$$
+% \begin{center}
+% \setkeys{Gin}{width=0.5\linewidth}
+% <<echo=FALSE,fig.pos="h",fig=TRUE>>=
+% zt <- qnorm(AQUI)
+% zc <- (AQUI-AQUI)/(AQUI/sqrt(AQUI))
+% pvalor <- 1-pnorm(zc)
+% curve(dnorm(x), from=-4.5, to=4.5, xlab="", ylab="")
+% polygon(cbind(c(zt,seq(zt,4.5, l=100),4.5), 
+%               c(0, dnorm(seq(zt, 4.5, l=100)), 
+%                 dnorm(4.5))), 
+%         col="lightgray")
+% abline(v=zt, lty=2)
+% arrows(zc, 0.1, zc, 0)
+% zt <- format(zt,digits = 3)
+% Zt <- bquote(bold(z[t] == .(zt)))
+% zc <- format(zc,digits = 3)
+% Zc <- bquote(bold(z[c] == .(zc)))
+% text(zt, 0.1, Zt, pos=2)
+% text(zt, 0.2, "RNRH0", pos=2)
+% text(zc, 0.12, Zc, pos=4)
+% text(zc, 0.2, "RRH0", pos=4)
+% @
+% \end{center}
+% 
+% Decisão: Como %$|z_{cal}|>|z_{tab}|$ rejeita-se $H_{0}$ ao nível $\alpha=AQUI\%$ de significância.
+% %$|z_{cal}|<|z_{tab}|$ não rejeita-se $H_{0}$ ao nível $\alpha=AQUI\%$ de significância.
+% Comandos em R para soluções:
+% 
+% <<>>=
+% AQUI
+% RR <- "Rejeita-se H0 ao nível de 5% de significância"
+% RN <- "Não rejeita-se H0 ao nível de 5% de significância"
+% ##Resultado
+% ifelse(zc>zt,RR,RN)
+% ##Ou, equivalentemente:
+% ifelse(pvalor > AQUI, RN, RR)
+% ## estimativa pontual
+% (mu.est <- AQUI)
+% ## estimativa intervalar (95%)
+% (IC.mu <- mu.est + qnorm(c(0.025, 0.975)) * AQUI/sqrt(AQUI))
+% @
+
+
+\end{document}

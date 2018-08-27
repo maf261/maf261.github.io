@@ -66,7 +66,9 @@ title: Materiais
 * [Khan Academy](https://www.khanacademy.org/)
 * [Latex](https://en.wikibooks.org/wiki/LaTeX)
 * [onlinestatbook](http://onlinestatbook.com/)
-
+* [Gesem](https://stats4good.github.io/gesem/)
+* [Veraz](https://stats4good.github.io/veraz/)
+* [Stats4Good](https://stats4good.github.io/)
 
 ### Outras páginas de interesse
 
