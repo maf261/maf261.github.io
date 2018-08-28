@@ -75,8 +75,8 @@
 \title{MAF 261 - Estatística Experimental}
 \author{Prof. Fernando de Souza Bastos}
 \institute{Instituto de Ciências Exatas e Tecnológicas\texorpdfstring{\\ Universidade Federal de Viçosa}{}\texorpdfstring{\\ Campus UFV - Florestal}{}}
-\date{21/08/2018}
-\newcommand\mytext{Aula 1}
+\date{28/08/2018}
+\newcommand\mytext{Estatística Experimental}
 \newcommand\mytextt{Fernando de Souza Bastos}
 \makeatletter
 \setbeamertemplate{footline}
@@ -117,8 +117,8 @@
 \frametitle{\bf Sumário}
 \tableofcontents
 \end{frame}
-
-\section{Teste-z}
+\section{Teste de hipóteses para uma média populacional}
+\subsection{Teste-z}
 \begin{frame}{}
 \frametitle{Testes para a Média de uma Distribuição Normal, Variância Conhecida}
 \begin{block}{}
@@ -214,7 +214,7 @@ $\Ho$ ao nível de $\alpha=5\%$ de significância.
 \end{block}
 \end{frame}
 
-\section{Teste-t}
+\subsection{Teste-t}
 \begin{frame}{}
 \frametitle{Testes para a Média de uma Distribuição Normal, Variância desconhecida}
 \begin{block}{}
@@ -228,7 +228,6 @@ Ressalta-se que o uso do teste t pressupõe distribuição normal com variância
 \end{block}
 \end{frame}
 
-\subsection{Teste de hipóteses para uma média populacional}
 \begin{frame}{}
 \frametitle{Teste de hipóteses para uma média populacional}
 \begin{block}{}
@@ -364,27 +363,129 @@ O limite da região critíca é $t_{tab}=t_{0.05}(14)=1,76$
 \end{block}
 \end{frame}
 
-\subsection{Teste de hipóteses para duas médias populacionais}
+\section{Teste de hipóteses para duas médias populacionais}
 \begin{frame}{}
 \frametitle{Teste de hipóteses para duas médias populacionais}
 \begin{block}{}
 \justifying
-O objetivo deste teste é verificar se duas populações, digamos população 1 e população 2 apresentam um mesmo valor 
-médio para uma determinada característica, isto é deseja-se verificar se $\mu_{1}=\mu_{2}$. Com esta finalidade é 
-necessário obter uma amostra de cada população. Estas duas amostras podem ser relacionadas ou não, ou 
-seja, podem ser dependentes ou independentes uma da outra. Esta distinção no relacionamento das duas amostras gera 
-dois testes distintos.
+O objetivo deste teste é verificar se duas populações, digamos população 1 e população 2 apresentam um mesmo valor médio para uma determinada característica, isto é, deseja-se verificar se $\mu_{1}=\mu_{2}$. Com esta finalidade é necessário obter uma amostra de cada população. Estas duas amostras podem ser relacionadas ou não, ou seja, podem ser dependentes ou 
+independentes uma da outra. Esta distinção no relacionamento das duas amostras gera 
+dois testes distintos. Além disso, podemos ter variâncias populacionais conhecidas, iguais ou diferentes, ou variâncias populacionais desconhecidas, que também podem ser iguais ou 
+diferentes. Para cada caso também temos um teste. Antes de ver tais testes, precisamos conhecer o teste F de Snedecor.
 \end{block}
 \end{frame}
 
-\subsection{Teste de hipóteses para o caso de duas amostras independentes}
+\subsection{Teste F para Comparação de Variâncias de Duas Populações}
+\begin{frame}{}
+\frametitle{Teste F para Comparação de Variâncias de Duas Populações}
+\begin{block}{}
+\justifying
+Este teste é indicado para verificar se duas populações, digamos 1 e 2, apresentam igual valor para o parâmetro variância. Em termos de hipóteses estatísticas teríamos:
+
+\begin{flalign}
+\begin{aligned} 
+	\begin{cases}
+H_{0}: \sigma_{1}^{2}=\sigma_{2}^{2}\\
+H_{1}:\sigma_{1}^{2}>\sigma_{2}^{2}
+\end{cases}
+\end{aligned}
+\quad\textrm{ou}\quad
+\begin{aligned}
+\begin{cases}
+H_{0}: \sigma_{1}^{2}=\sigma_{2}^{2}\\
+H_{1}:\sigma_{1}^{2}<\sigma_{2}^{2}
+\end{cases} \\
+\end{aligned}
+\quad\textrm{ou}\quad
+\begin{aligned}
+\begin{cases}
+H_{0}: \sigma_{1}^{2}=\sigma_{2}^{2}\\
+H_{1}:\sigma_{1}^{2}\neq\sigma_{2}^{2}
+\end{cases} \\
+\end{aligned}
+\end{flalign}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+A estatística F usada para decidir entre Rejeitar ou Não-Rejeitar $\Ho$ é dada pelo quociente entre as duas estimativas de variância, ou seja:
+$$F_{cal}=\dfrac{S_{1}^{2}}{S_{2}^{2}}$$
+Sob a hipótese de nulidade, este quociente tem distribuição F, de Fisher-Snedecor, com $n_{1}$ e $n_{2}$ graus de liberdade, ou seja a distribuição de probabilidades 
+da estatística $F$ depende dos números de graus de liberdade $n_{1}$ e $n_{2}$. A conclusão do teste é feita mediante a comparação do valor de $F_{cal}$ com o 
+valor de $F_{tab}=F_{\alpha}(n_{1},n_{2}).$ Se $F_{cal}>F_{tab}$ Rejeita-se $\Ho$ ao nível $\alpha$ de probabilidade. Caso contrário Não-Rejeita-se $\Ho.$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Exemplo}
+\begin{block}{}
+\justifying
+Com o intuito de controlar a homogeneidade da produção de certas partes ao longo do tempo, amostras semanais são retiradas da produção corrente. Uma primeira 
+amostra, de dez elementos, forneceu média $\bx=284.55$ e desvio padrão $s_{1}=0.320$, ao passo que, numa segunda amostra, forneceu, nas mesmas unidades, os seguintes valores:
+\begin{table}[]
+\begin{tabular}{ccccccc}
+             284.6 & 283.9 & 284.8 & 285.2 & 284.3 & 283.7 & 284.0\\ 
+\end{tabular}
+\end{table}
+Ao nível de $5\%$ de significância, podemos concluir que a semana 2 apresentou maior variabilidade que a semana 1?
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Exemplo}
+\begin{block}{}
+\justifying
+\begin{align*}
+H_{0}: \sigma_{1}^{2}&=\sigma_{2}^{2} \\ 
+H_{1}: \sigma{1}^{2}&<\sigma_{2}^{2}
+\end{align*}
+\begin{align}
+F_{cal}=\dfrac{S_{1}^{2}}{S_{2}^{2}}=\dfrac{0,289}{0,1024}=2,82
+\end{align}
+O limite da região critíca é $F_{tab}=F_{6,9}(0,05)=3,37$\\
+\textbf{Conclusão:} Como $F_{cal}<F_{tab}$ não rejeita-se $\Ho$ ao nível de $\alpha=5\%$ de significância. 
+\end{block}
+\end{frame}
+
+\subsection{Variâncias populacionais conhecidas}
+\begin{frame}{Variâncias populacionais conhecidas}
+\frametitle{}
+\begin{block}{}
+\justifying
+Suponha $P_{1}\sim N(\mu_{1},\sigma_{1}^{2})$ e $P_{2}\sim N(\mu_{2},\sigma_{2}^{2}).$ Queremos testar a hipótese $H_{0}:\mu_{1}=\mu_{2}.$ Se as variâncias populacionais são conhecidas (iguais ou diferentes), a estatística $$Z_{cal}=\dfrac{\bar{X}-\bar{Y}}{\sqrt{\dfrac{\sigma_{1}^{2}}{n}+\dfrac{\sigma_{2}^{2}}{m}}}$$ tem distribuição normal padrão, sob a hipótese nula $H_{0},$ e poderia ser usada para testar $\Ho$ contra $\Hi$.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Contudo, nas situações de interesse prático, as variâncias não são conhecidas, devendo ser substituídas por estimativas convenientes. Aqui, a distribuição $t$ de Student desempenha papel importante. Vejamos os próximos slides!
+\end{block}
+\end{frame}
+
+\subsection{Variâncias Desconhecidas e Desiguais}
+\begin{frame}{Variâncias Desconhecidas e Desiguais}
+\frametitle{}
+\begin{block}{}
+\justifying
+Quando a hipótese de igualdade de variâncias for rejeitada pelo teste F, devemos usar a estatística $$t_{cal}=\dfrac{\bar{X}-\bar{Y}}{\sqrt{\dfrac{S_{1}^{2}}{n}+\dfrac{S_{2}^{2}}{m}}}$$ o número de graus de liberdade é dado aproximadamente por:
+$$df=\dfrac{(A+B)^{2}}{\dfrac{A^{2}}{n-1}+\dfrac{B^{2}}{m-1}},\ 
+A=\dfrac{S_{1}^{2}}{n},\ B=\dfrac{S_{2}^{2}}{m}$$
+Como esse valor é geralmente fracionário, arredonde para o inteiro mais próximo
+para obter o número de graus de liberdade.
+\end{block}
+\end{frame}
+
+\subsection{Variâncias Desconhecidas, porém iguais}
 \begin{frame}{}
 \frametitle{Teste de hipóteses para o caso de duas amostras independentes}
 \begin{block}{}
 \justifying
-Duas amostras são ditas serem independentes quando não existe nada que as relacione. Nesta situação, os valores 
-amostrais foram obtidos em conjuntos amostrais distintos, ou seja, os elementos amostrais que originaram os valores de 
-uma amostra são distintos dos elementos amostrais que originaram a segunda amostra.
+Duas amostras são ditas serem independentes quando não existe nada que as relacione. Nesta situação, os valores amostrais foram obtidos em conjuntos amostrais distintos, ou seja, os elementos amostrais que originaram os valores de uma amostra são distintos dos elementos amostrais que originaram a segunda amostra.
 \end{block}
 \end{frame}
 
@@ -392,12 +493,7 @@ uma amostra são distintos dos elementos amostrais que originaram a segunda amos
 \frametitle{}
 \begin{block}{}
 \justifying
-Conforme mencionado anteriormente, para comparar as médias das duas populações, toma-se uma amostra de cada 
-população. Suponha que as amostras geradas sejam $X_{11},X_{12},\cdots,X_{1n}$ e $X_{21},X_{22},\cdots,X_{2m}$, 
-onde o tamanho das amostras podem ser diferentes, ou seja, n pode ser diferente de m. Para cada amostra, então 
-calcula-se a sua média e variância. Um estimador comum para a variância é obtido tomando-se uma média ponderada das 
-estimativas de variância obtidas para as duas amostras. O tamanho da amostra é utilizado como um peso para o cálculo 
-desta variância média ponderada.
+Conforme mencionado anteriormente, para comparar as médias das duas populações, toma-se uma amostra de cada população. Suponha que as amostras geradas sejam $X_{11},X_{12},\cdots,X_{1n}$ e $X_{21},X_{22},\cdots,X_{2m}$, onde o tamanho das amostras podem ser diferentes, ou seja, n pode ser diferente de m. Para cada amostra, então calcula-se a sua média e variância. Se as variâncias populacionais são iguais (faça um teste f para verificar isso), um estimador comum para a variância é obtido tomando-se uma média ponderada das estimativas de variância obtidas para as duas amostras. O tamanho da amostra é utilizado como um peso para o cálculo desta variância média ponderada.
 \end{block}
 \end{frame}
 
@@ -405,10 +501,8 @@ desta variância média ponderada.
 \frametitle{}
 \begin{block}{}
 \justifying
-A obtenção de um estimador comum para a variância pressupõe que a variância das duas populações sejam idênticas, ou 
-seja $\sigma^{2}_{1}=\sigma^{2}_{2}.$ A fórmula do estimador comum é:
-$$s_{c}^{2}=\dfrac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2}$$
-em que $s_{1}^{2}$ e $s_{2}^{2}$ são as variâncias amostrais das populações 1 e 2, respectivamente. 
+A obtenção de um estimador comum para a variância pressupõe que a variância das duas populações sejam idênticas, ou seja $\sigma^{2}_{1}=\sigma^{2}_{2}.$ A fórmula do estimador comum é:
+$$s_{c}^{2}=\dfrac{(n_{1}-1)s_{1}^{2}+(n_{2}-1)s_{2}^{2}}{n_{1}+n_{2}-2}$$ em que $s_{1}^{2}$ e $s_{2}^{2}$ são as variâncias amostrais das populações 1 e 2, respectivamente. 
 \end{block}
 \end{frame}
 
@@ -458,7 +552,7 @@ O limite da região critíca é $t_{tab}=t_{0.05}(8)=1,86$\\
 \end{block}
 \end{frame}
 
-\subsection{Teste de hipóteses para o caso de duas amostras dependentes}
+\section{Teste de hipóteses para o caso de duas amostras dependentes}
 \begin{frame}{}
 \frametitle{Teste de hipóteses para o caso de duas amostras dependentes}
 \begin{block}{}
@@ -630,83 +724,8 @@ garrafas preenchidas incorretamente.
 \end{block}
 \end{frame}
 
-\section{Teste F para Comparação de Variâncias de Duas Populações}
-\begin{frame}{}
-\frametitle{Teste F para Comparação de Variâncias de Duas Populações}
-\begin{block}{}
-\justifying
-Este teste é indicado para verificar se duas populações, digamos 1 e 2, apresentam igual valor para o parâmetro variância. Em termos de hipóteses estatísticas teríamos:
-
-\begin{flalign}
-\begin{aligned} 
-	\begin{cases}
-H_{0}: \sigma_{1}^{2}=\sigma_{2}^{2}\\
-H_{1}:\sigma_{1}^{2}>\sigma_{2}^{2}
-\end{cases}
-\end{aligned}
-\quad\textrm{ou}\quad
-\begin{aligned}
-\begin{cases}
-H_{0}: \sigma_{1}^{2}=\sigma_{2}^{2}\\
-H_{1}:\sigma_{1}^{2}<\sigma_{2}^{2}
-\end{cases} \\
-\end{aligned}
-\quad\textrm{ou}\quad
-\begin{aligned}
-\begin{cases}
-H_{0}: \sigma_{1}^{2}=\sigma_{2}^{2}\\
-H_{1}:\sigma_{1}^{2}\neq\sigma_{2}^{2}
-\end{cases} \\
-\end{aligned}
-\end{flalign}
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-A estatística F usada para decidir entre Rejeitar ou Não-Rejeitar $\Ho$ é dada pelo quociente entre as duas estimativas de variância, ou seja:
-$$F_{cal}=\dfrac{S_{1}^{2}}{S_{2}^{2}}$$
-Sob a hipótese de nulidade, este quociente tem distribuição F, de Fisher-Snedecor, com $n_{1}$ e $n_{2}$ graus de liberdade, ou seja a distribuição de probabilidades 
-da estatística $F$ depende dos números de graus de liberdade $n_{1}$ e $n_{2}$. A conclusão do teste é feita mediante a comparação do valor de $F_{cal}$ com o 
-valor de $F_{tab}=F_{\alpha}(n_{1},n_{2}).$ Se $F_{cal}>F_{tab}$ Rejeita-se $\Ho$ ao nível $\alpha$ de probabilidade. Caso contrário Não-Rejeita-se $\Ho.$
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{Exemplo}
-\begin{block}{}
-\justifying
-Com o intuito de controlar a homogeneidade da produção de certas partes ao longo do tempo, amostras semanais são retiradas da produção corrente. Uma primeira 
-amostra, de dez elementos, forneceu média $\bx=284.55$ e desvio padrão $s_{1}=0.320$, ao passo que, numa segunda amostra, forneceu, nas mesmas unidades, os seguintes valores:
-\begin{table}[]
-\begin{tabular}{ccccccc}
-             284.6 & 283.9 & 284.8 & 285.2 & 284.3 & 283.7 & 284.0\\ 
-\end{tabular}
-\end{table}
-Ao nível de $5\%$ de significância, podemos concluir que a semana 2 apresentou maior variabilidade que a semana 1?
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{Exemplo}
-\begin{block}{}
-\justifying
-\begin{align*}
-H_{0}: \sigma_{1}^{2}&=\sigma_{2}^{2} \\ 
-H_{1}: \sigma_{1}^{2}&<\sigma_{2}^{2}
-\end{align*}
-\begin{align}
-F_{cal}=\dfrac{S_{2}^{2}}{S_{1}^{2}}=\dfrac{0,289}{0,1024}=2,82
-\end{align}
-O limite da região critíca é $F_{tab}=F_{6,9}(0,05)=3,37$\\
-\textbf{Conclusão:} Como $F_{cal}<F_{tab}$ não rejeita-se $\Ho$ ao nível de $\alpha=5\%$ de significância. 
-\end{block}
-\end{frame}
-
 \section{Testes para a Proporção de uma População}
-\begin{frame}{}
+\begin{frame}{Testes para a Proporção de uma População}
 \frametitle{}
 \begin{block}{}
 \justifying
@@ -764,142 +783,88 @@ menor do que 0,05 e, portanto, o processo é capaz.
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{}
-\frametitle{}
-\begin{block}{}
-\begin{Schunk}
-\begin{Sinput}
-> #------------------------------------------------
-> # dir.create("exemplos")
-> # png(file="exemplos/qnorm%1d.png", width=500, 
-> #height=250)
-> # par(mar=c(4,4,1,1))
-> #------------------------------------------------
-\end{Sinput}
-\end{Schunk}
-\end{block}
-\end{frame}
+% \begin{frame}[fragile]{}
+% \frametitle{}
+% \begin{block}{}
+% <<echo=TRUE, results=hide>>=
+% #------------------------------------------------
+% # dir.create("exemplos")
+% # png(file="exemplos/qnorm%1d.png", width=500, 
+% #height=250)
+% # par(mar=c(4,4,1,1))
+% #------------------------------------------------
+% @ 
+% \end{block}
+% \end{frame}
+% 
+% \begin{frame}[fragile]{}
+% \frametitle{}
+% \begin{block}{}
+% <<echo=TRUE, results=hide>>=
+% #-----------------------------------------------
+% for(q in seq(0, 4,l=100)){
+%   curve(dnorm(x, 0, 1), -5, 5, ylab="f(z)", xlab="z")
+%   x <- seq(0, q, by=0.01)
+%   fx <- dnorm(x, 0, 1)
+%   polygon(c(x, rev(x)),
+%           c(fx, rep(0, length(fx))),
+%           col="gray90")
+%   abline(v=0, lty=2)
+%   Pr <- round(pnorm(q, 0, 1)-0.5, digits=3)
+%   qq <- round(q, digits=3)
+%   legend("topleft", bty="n", fill="gray90",
+%          legend=substitute(P(0<~Z<=~q)==Pr, 
+%                            list(q=qq, Pr=Pr)))}
+% dev.off()
+% #-----------------------------------------------
+% @ 
+% \end{block}
+% \end{frame}
+% 
+% \begin{frame}[fragile]{}
+% \frametitle{}
+% \begin{block}{}
+% <<echo=TRUE, results=hide>>=
+% #-----------------------------------------------
+% require(xtable)
+% options(OutDec=",")
+% q <- seq(0,3.99,by=0.01)
+% p <- pnorm(q)-0.5
+% m <- matrix(p, byrow=TRUE, ncol=10)
+% rownames(m) <- gsub("\\.", ",", 
+%                     formatC(seq(0,3.9,0.1),
+%                             dig=1, format="f"))
+% colnames(m) <- 0:9/100
+% #-----------------------------------------------
+% @
+% \end{block}
+% \end{frame}
+% 
+% \begin{frame}[fragile]{}
+% \frametitle{}
+% \begin{block}{}
+% \begin{center}
+% \animategraphics[controls, loop, width=0.75\textwidth]{10}{exemplos/qnorm}{1}{100}
+% \end{center}
+% \end{block}
+% \end{frame}
+% 
+% \begin{frame}[fragile]{}
+% \frametitle{}
+% \begin{block}{}
+% \begin{center}
+% \small\addtolength{\tabcolsep}{-3pt}
+% {\footnotesize
+% <<echo=false, results=tex>>=
+% #-----------------------------------------------------------------------------
+% print(xtable(m, digits=5), floating=FALSE)
+% #-----------------------------------------------------------------------------
+% @ 
+% }
+% \end{center}
+% \end{block}
+% \end{frame}
 
-\begin{frame}[fragile]{}
-\frametitle{}
-\begin{block}{}
-\begin{Schunk}
-\begin{Sinput}
-> #-----------------------------------------------
-> for(q in seq(0, 4,l=100)){
-+   curve(dnorm(x, 0, 1), -5, 5, ylab="f(z)", xlab="z")
-+   x <- seq(0, q, by=0.01)
-+   fx <- dnorm(x, 0, 1)
-+   polygon(c(x, rev(x)),
-+           c(fx, rep(0, length(fx))),
-+           col="gray90")
-+   abline(v=0, lty=2)
-+   Pr <- round(pnorm(q, 0, 1)-0.5, digits=3)
-+   qq <- round(q, digits=3)
-+   legend("topleft", bty="n", fill="gray90",
-+          legend=substitute(P(0<~Z<=~q)==Pr, 
-+                            list(q=qq, Pr=Pr)))}
-> dev.off()
-> #-----------------------------------------------
-\end{Sinput}
-\end{Schunk}
-\end{block}
-\end{frame}
 
-\begin{frame}[fragile]{}
-\frametitle{}
-\begin{block}{}
-\begin{Schunk}
-\begin{Sinput}
-> #-----------------------------------------------
-> require(xtable)
-> options(OutDec=",")
-> q <- seq(0,3.99,by=0.01)
-> p <- pnorm(q)-0.5
-> m <- matrix(p, byrow=TRUE, ncol=10)
-> rownames(m) <- gsub("\\.", ",", 
-+                     formatC(seq(0,3.9,0.1),
-+                             dig=1, format="f"))
-> colnames(m) <- 0:9/100
-> #-----------------------------------------------
-\end{Sinput}
-\end{Schunk}
-\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{}
-\frametitle{}
-\begin{block}{}
-\begin{center}
-\animategraphics[controls, loop, width=0.75\textwidth]{10}{exemplos/qnorm}{1}{100}
-\end{center}
-\end{block}
-\end{frame}
-
-\begin{frame}[fragile]{}
-\frametitle{}
-\begin{block}{}
-\begin{center}
-\small\addtolength{\tabcolsep}{-3pt}
-{\footnotesize
-% latex table generated in R 3.4.3 by xtable 1.8-2 package
-% Sat Aug 11 22:16:48 2018
-\begin{tabular}{rrrrrrrrrrr}
-  \hline
- & 0 & 0,01 & 0,02 & 0,03 & 0,04 & 0,05 & 0,06 & 0,07 & 0,08 & 0,09 \\ 
-  \hline
-0,0 & 0,00000 & 0,00399 & 0,00798 & 0,01197 & 0,01595 & 0,01994 & 0,02392 & 0,02790 & 0,03188 & 0,03586 \\ 
-  0,1 & 0,03983 & 0,04380 & 0,04776 & 0,05172 & 0,05567 & 0,05962 & 0,06356 & 0,06749 & 0,07142 & 0,07535 \\ 
-  0,2 & 0,07926 & 0,08317 & 0,08706 & 0,09095 & 0,09483 & 0,09871 & 0,10257 & 0,10642 & 0,11026 & 0,11409 \\ 
-  0,3 & 0,11791 & 0,12172 & 0,12552 & 0,12930 & 0,13307 & 0,13683 & 0,14058 & 0,14431 & 0,14803 & 0,15173 \\ 
-  0,4 & 0,15542 & 0,15910 & 0,16276 & 0,16640 & 0,17003 & 0,17364 & 0,17724 & 0,18082 & 0,18439 & 0,18793 \\ 
-  0,5 & 0,19146 & 0,19497 & 0,19847 & 0,20194 & 0,20540 & 0,20884 & 0,21226 & 0,21566 & 0,21904 & 0,22240 \\ 
-  0,6 & 0,22575 & 0,22907 & 0,23237 & 0,23565 & 0,23891 & 0,24215 & 0,24537 & 0,24857 & 0,25175 & 0,25490 \\ 
-  0,7 & 0,25804 & 0,26115 & 0,26424 & 0,26730 & 0,27035 & 0,27337 & 0,27637 & 0,27935 & 0,28230 & 0,28524 \\ 
-  0,8 & 0,28814 & 0,29103 & 0,29389 & 0,29673 & 0,29955 & 0,30234 & 0,30511 & 0,30785 & 0,31057 & 0,31327 \\ 
-  0,9 & 0,31594 & 0,31859 & 0,32121 & 0,32381 & 0,32639 & 0,32894 & 0,33147 & 0,33398 & 0,33646 & 0,33891 \\ 
-  1,0 & 0,34134 & 0,34375 & 0,34614 & 0,34849 & 0,35083 & 0,35314 & 0,35543 & 0,35769 & 0,35993 & 0,36214 \\ 
-  1,1 & 0,36433 & 0,36650 & 0,36864 & 0,37076 & 0,37286 & 0,37493 & 0,37698 & 0,37900 & 0,38100 & 0,38298 \\ 
-  1,2 & 0,38493 & 0,38686 & 0,38877 & 0,39065 & 0,39251 & 0,39435 & 0,39617 & 0,39796 & 0,39973 & 0,40147 \\ 
-  1,3 & 0,40320 & 0,40490 & 0,40658 & 0,40824 & 0,40988 & 0,41149 & 0,41309 & 0,41466 & 0,41621 & 0,41774 \\ 
-  1,4 & 0,41924 & 0,42073 & 0,42220 & 0,42364 & 0,42507 & 0,42647 & 0,42785 & 0,42922 & 0,43056 & 0,43189 \\ 
-  1,5 & 0,43319 & 0,43448 & 0,43574 & 0,43699 & 0,43822 & 0,43943 & 0,44062 & 0,44179 & 0,44295 & 0,44408 \\ 
-  1,6 & 0,44520 & 0,44630 & 0,44738 & 0,44845 & 0,44950 & 0,45053 & 0,45154 & 0,45254 & 0,45352 & 0,45449 \\ 
-  1,7 & 0,45543 & 0,45637 & 0,45728 & 0,45818 & 0,45907 & 0,45994 & 0,46080 & 0,46164 & 0,46246 & 0,46327 \\ 
-  1,8 & 0,46407 & 0,46485 & 0,46562 & 0,46638 & 0,46712 & 0,46784 & 0,46856 & 0,46926 & 0,46995 & 0,47062 \\ 
-  1,9 & 0,47128 & 0,47193 & 0,47257 & 0,47320 & 0,47381 & 0,47441 & 0,47500 & 0,47558 & 0,47615 & 0,47670 \\ 
-  2,0 & 0,47725 & 0,47778 & 0,47831 & 0,47882 & 0,47932 & 0,47982 & 0,48030 & 0,48077 & 0,48124 & 0,48169 \\ 
-  2,1 & 0,48214 & 0,48257 & 0,48300 & 0,48341 & 0,48382 & 0,48422 & 0,48461 & 0,48500 & 0,48537 & 0,48574 \\ 
-  2,2 & 0,48610 & 0,48645 & 0,48679 & 0,48713 & 0,48745 & 0,48778 & 0,48809 & 0,48840 & 0,48870 & 0,48899 \\ 
-  2,3 & 0,48928 & 0,48956 & 0,48983 & 0,49010 & 0,49036 & 0,49061 & 0,49086 & 0,49111 & 0,49134 & 0,49158 \\ 
-  2,4 & 0,49180 & 0,49202 & 0,49224 & 0,49245 & 0,49266 & 0,49286 & 0,49305 & 0,49324 & 0,49343 & 0,49361 \\ 
-  2,5 & 0,49379 & 0,49396 & 0,49413 & 0,49430 & 0,49446 & 0,49461 & 0,49477 & 0,49492 & 0,49506 & 0,49520 \\ 
-  2,6 & 0,49534 & 0,49547 & 0,49560 & 0,49573 & 0,49585 & 0,49598 & 0,49609 & 0,49621 & 0,49632 & 0,49643 \\ 
-  2,7 & 0,49653 & 0,49664 & 0,49674 & 0,49683 & 0,49693 & 0,49702 & 0,49711 & 0,49720 & 0,49728 & 0,49736 \\ 
-  2,8 & 0,49744 & 0,49752 & 0,49760 & 0,49767 & 0,49774 & 0,49781 & 0,49788 & 0,49795 & 0,49801 & 0,49807 \\ 
-  2,9 & 0,49813 & 0,49819 & 0,49825 & 0,49831 & 0,49836 & 0,49841 & 0,49846 & 0,49851 & 0,49856 & 0,49861 \\ 
-  3,0 & 0,49865 & 0,49869 & 0,49874 & 0,49878 & 0,49882 & 0,49886 & 0,49889 & 0,49893 & 0,49896 & 0,49900 \\ 
-  3,1 & 0,49903 & 0,49906 & 0,49910 & 0,49913 & 0,49916 & 0,49918 & 0,49921 & 0,49924 & 0,49926 & 0,49929 \\ 
-  3,2 & 0,49931 & 0,49934 & 0,49936 & 0,49938 & 0,49940 & 0,49942 & 0,49944 & 0,49946 & 0,49948 & 0,49950 \\ 
-  3,3 & 0,49952 & 0,49953 & 0,49955 & 0,49957 & 0,49958 & 0,49960 & 0,49961 & 0,49962 & 0,49964 & 0,49965 \\ 
-  3,4 & 0,49966 & 0,49968 & 0,49969 & 0,49970 & 0,49971 & 0,49972 & 0,49973 & 0,49974 & 0,49975 & 0,49976 \\ 
-  3,5 & 0,49977 & 0,49978 & 0,49978 & 0,49979 & 0,49980 & 0,49981 & 0,49981 & 0,49982 & 0,49983 & 0,49983 \\ 
-  3,6 & 0,49984 & 0,49985 & 0,49985 & 0,49986 & 0,49986 & 0,49987 & 0,49987 & 0,49988 & 0,49988 & 0,49989 \\ 
-  3,7 & 0,49989 & 0,49990 & 0,49990 & 0,49990 & 0,49991 & 0,49991 & 0,49992 & 0,49992 & 0,49992 & 0,49992 \\ 
-  3,8 & 0,49993 & 0,49993 & 0,49993 & 0,49994 & 0,49994 & 0,49994 & 0,49994 & 0,49995 & 0,49995 & 0,49995 \\ 
-  3,9 & 0,49995 & 0,49995 & 0,49996 & 0,49996 & 0,49996 & 0,49996 & 0,49996 & 0,49996 & 0,49997 & 0,49997 \\ 
-   \hline
-\end{tabular}}
-\end{center}
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-
-\end{block}
-\end{frame}
 
 \end{document}

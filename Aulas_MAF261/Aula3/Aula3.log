@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  20 AUG 2018 18:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  28 AUG 2018 18:53
 entering extended mode
 **./Aula3.tex
 (Aula3.tex
@@ -108,9 +108,11 @@ Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
- ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
@@ -128,10 +130,9 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \pgfutil@tempdima=\dimen128
 \pgfutil@tempdimb=\dimen129
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-lists.tex"))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-lists.te
+x")) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def"
 \pgfutil@abb=\box34
-
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -145,7 +146,8 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 \pgfkeys@pathtoks=\toks17
 \pgfkeys@temptoks=\toks18
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.code.te
+x"
 \pgfkeys@tmptoks=\toks19
 ))
 \pgf@x=\dimen130
@@ -165,8 +167,7 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 \t@pgf@toka=\toks20
 \t@pgf@tokb=\toks21
 \t@pgf@tokc=\toks22
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
+ ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Driver file for pgf: pgfsys-pdftex.def
@@ -174,20 +175,23 @@ Driver file for pgf: pgfsys-pdftex.def
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.def"
 File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+"
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.t
+ex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
 \pgfsyssoftpath@smallbuffer@items=\count112
 \pgfsyssoftpath@bigbuffer@items=\count113
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.code.t
+ex"
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-))
-("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
- ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -200,7 +204,8 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex"
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex"
 Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"
@@ -215,18 +220,27 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 \pgfmath@stack@operation=\toks25
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.tex"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigonometric.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.random.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.comparison.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integerarithmetics.code.tex")))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic.code.
+tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigonometr
+ic.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.random.code
+.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.comparison.
+code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.code.t
+ex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round.code.
+tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.code.t
+ex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integerarit
+hmetics.code.tex")))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
 \c@pgfmathroundto@lastzeros=\count115
 ))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
+"
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen139
 \pgf@picmaxx=\dimen140
@@ -243,28 +257,33 @@ File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@zx=\dimen151
 \pgf@zy=\dimen152
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.c
+ode.tex"
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen153
 \pgf@path@lasty=\dimen154
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.
+tex"
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@end@additional=\dimen155
 \pgf@shorten@start@additional=\dimen156
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
+"
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box36
 \pgf@hbox=\box37
 \pgf@layerbox@main=\box38
 \pgf@picture@serial@count=\count116
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.co
+de.tex"
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 \pgflinewidth=\dimen157
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransformations
+.code.tex"
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 \pgf@pt@x=\dimen158
 \pgf@pt@y=\dimen159
@@ -273,13 +292,16 @@ File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.code.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.code.te
+x"
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathprocessing.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathprocessing.
+code.tex"
 File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
+"
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 \pgfarrowsep=\dimen161
 )
@@ -287,24 +309,27 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen162
 \pgf@sys@shading@range@num=\count117
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex"
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.te
+x"
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.code.t
+ex"
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
 \pgfexternal@startupbox=\box39
 ))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
+"
 File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransparency.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransparency.co
+de.tex"
 File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.code.t
+ex"
 File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
-)))
-("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\xxcolor.sty"
+))) ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\xxcolor.sty"
 Package: xxcolor 2003/10/24 ver 0.1
 \XC@nummixins=\count118
 \XC@countmixins=\count119
@@ -324,6 +349,7 @@ Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
+
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
@@ -341,13 +367,15 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO)
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
 Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
 Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
@@ -391,7 +419,8 @@ Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
 Package hyperref Info: Bookmarks ON on input line 4762.
 \c@Hy@tempcnt=\count123
- ("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -423,7 +452,8 @@ File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamerbaserequires.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamerbasecompatibility.sty")
@@ -540,11 +570,13 @@ Package: amsmath 2017/09/02 v2.17a AMS math features
 For additional information on amsmath, use the `?' option.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks32
 \ex@=\dimen179
-)) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen180
 )
@@ -588,7 +620,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks36
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks37
 \thm@bodyfont=\toks38
@@ -601,7 +634,8 @@ Package: amsthm 2017/10/31 v2.20.4
 \dth@everypar=\toks42
 )
 \c@theorem=\count154
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamerbasethemes.sty"))
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamerbasethemes.sty"))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamerthemedefault.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamerfontthemedefault.sty")
 ("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamercolorthemedefault.sty")
@@ -612,14 +646,16 @@ Package: amsthm 2017/10/31 v2.20.4
 ("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamerouterthemedefault.sty")))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2018/06/05 3.22 The Babel package
- ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\switch.def"
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\switch.def"
 File: switch.def 2018/06/05 3.22 Babel switching mechanism
 )
 *************************************
 * Local config file bblopts.cfg used
 *
 ("C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\babel-portuges\portuges.ldf"
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
@@ -628,37 +664,44 @@ Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 File: babel.def 2018/06/05 3.22 Babel common definitions
 \babel@savecnt=\count155
 \U@D=\dimen190
- ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\txtbabel.def")
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\txtbabel.def")
 LaTeX Info: Redefining \textlatin on input line 1915.
 \bbl@dirlevel=\count156
 )
 \l@brazil = a dialect from \language\l@portuges 
 Package babel Info: Making " an active character on input line 145.
-)) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks43
 \inpenc@posthook=\toks44
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) ("C:\Program Files\MiKTeX 2.9\tex\latex\Sweave\Sweave.sty"
+))
+(C:/PROGRA~1/R/R-34~1.3/share/texmf/tex/latex\Sweave.sty
 Package: Sweave 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\fancyvrb\fancyvrb.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fancyvrb\fancyvrb.sty"
 Package: fancyvrb 2008/02/07
-Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix <2008/02/07> (tvz)
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
 \FV@CodeLineNo=\count157
 \FV@InFile=\read2
 \FV@TabBox=\box53
 \c@FancyVerbLine=\count158
 \FV@StepNumber=\count159
 \FV@OutFile=\write5
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
 Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -672,7 +715,8 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
@@ -775,6 +819,7 @@ Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
 Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
 Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
 Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
 Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
 Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
 Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
@@ -812,18 +857,21 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\ae.sty"
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\ae\ae.sty"
 Package: ae 2001/02/12 1.3 Almost European Computer Modern
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )
@@ -831,7 +879,8 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 105.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aer.fd"
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
-)))) ("C:\Program Files\MiKTeX 2.9\tex\latex\animate\animate.sty"
+))))
+("C:\Program Files\MiKTeX 2.9\tex\latex\animate\animate.sty"
 Package: animate 2018/06/27 PDF animations from files and inline graphics
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
@@ -847,7 +896,8 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\ifdraft.sty"
 Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count161
 \calc@Bcount=\count162
@@ -860,7 +910,8 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count163
 \calc@Cskip=\skip59
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\media9\pdfbase.sty" ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\media9\pdfbase.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty"
 Package: expl3 2018-06-14 L3 programming layer (loader) 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex"
@@ -1017,7 +1068,8 @@ File: l3pdfmode.def 2018-06-14 v L3 Experimental driver: PDF mode
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty"
 Package: l3keys2e 2018-05-12 LaTeX2e option processing using LaTeX3 keys
 )
-Package: pdfbase 2018/06/07 v0.24 driver independent access to low-level PDF features
+Package: pdfbase 2018/06/07 v0.24 driver independent access to low-level PDF fe
+atures
 \g_pbs_page_int=\count315
 \g_pbs_oc_int=\count316
 )
@@ -1059,8 +1111,10 @@ Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 ("C:\Program Files\MiKTeX 2.9\tex\latex\esvect\esvect.sty"
 Package: esvect 
 \symesvector=\mathgroup6
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2018/05/01 v3.3-147 Customizing captions (AR)
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2018/05/27 v1.8a caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
@@ -1077,14 +1131,16 @@ Package caption Info: beamer document class.
 Package caption Info: hyperref package is loaded.
 Package caption Info: Hyperref support is turned off
 (caption)             because hyperref has stopped early.
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count335
 \float@exts=\toks47
 \float@box=\box71
 \@float@everytoks=\toks48
 \@floatcapt=\box72
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\fncychap\fncychap.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fncychap\fncychap.sty"
 Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 \RW=\skip66
 \mylen=\skip67
@@ -1097,10 +1153,12 @@ Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count336
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip74
 \LTright=\skip75
@@ -1218,13 +1276,15 @@ Package: multicol 2018/04/20 v1.8s multicolumn formatting (FMi)
 \mult@nat@firstbox=\box103
 \colbreak@box=\box104
 \mc@col@check@num=\count360
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip83
 \bibsep=\skip84
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count361
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\rotating.sty"
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 \c@r@tfl@t=\count362
 \rotFPtop=\skip85
@@ -1250,19 +1310,19 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.code.tex"
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
 \pgfnodeparttextbox=\box106
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.tex"
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.tex"
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.
+sty"
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen313
 \pgf@nodesepend=\dimen314
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.
+sty"
 Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
-))
-("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty"
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.sty"
@@ -1279,7 +1339,8 @@ Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex"
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothandlers.
+code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \pgf@plot@mark@count=\count365
 \pgfplotmarksize=\dimen317
@@ -1307,7 +1368,8 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 )
 \tikz@expandcount=\count373
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.code.tex"
@@ -1319,49 +1381,77 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 \c@pgfplots@coordindex=\count374
 \c@pgfplots@scanlineindex=\count375
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\sys\pgfplotssysgeneric.code.tex"))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\pgfplotslibrary.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpgfsupp_loader.code.tex"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfpu.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\sys\pgfplotssysgeneric.code.
+tex"))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\pgfplotslibrary.code.te
+x")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpg
+fsupp_loader.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfpu.code.tex"
+)
 Package pgfplots: loading complementary arithmetics for your pgf version...
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpgfsupp_pgflibraryfpu.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpgfsupp_pgfmathfloat.code.tex"
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpg
+fsupp_pgflibraryfpu.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpg
+fsupp_pgfmathfloat.code.tex"
 \c@pgfmathroundto@lastzeros=\count376
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpgfsupp_leq.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\oldpgfcompatib\pgfplotsoldpg
+fsupp_leq.code.tex"))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsutil.code.tex"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsliststructure.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsliststructureext.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsarray.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotslistst
+ructure.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotslistst
+ructureext.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsarray.
+code.tex"
 \c@pgfplotsarray@tmp=\count377
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsmatrix.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\numtable\pgfplotstableshared.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsmatrix
+.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\numtable\pgfplotstableshared
+.code.tex"
 \c@pgfplotstable@counta=\count378
 \t@pgfplotstable@a=\toks58
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsdeque.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsbinary.code.tex"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsbinary.data.code.tex"))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsutil.verb.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\pgflibrarypgfplots.surfshading.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\liststructure\pgfplotsdeque.
+code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsbinary.code.tex
+"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsbinary.data.cod
+e.tex"))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotsutil.verb.code.
+tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\libs\pgflibrarypgfplots.surf
+shading.code.tex"
 \c@pgfplotslibrarysurf@no=\count379
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\sys\pgflibrarypgfplots.surfshading.pgfsys-pdftex.def")))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotscolormap.code.tex"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotscolor.code.tex"))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsstackedplots.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsplothandlers.code.tex"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsmeshplothandler.code.tex"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsmeshplotimage.code.tex")))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\sys\pgflibrarypgfplots.surfs
+hading.pgfsys-pdftex.def")))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotscolormap.code.t
+ex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\util\pgfplotscolor.code.tex"
+))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsstackedplots.code.te
+x")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsplothandlers.code.te
+x"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsmeshplothandler.code
+.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsmeshplotimage.code.t
+ex")))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.scaling.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotscoordprocessing.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.errorbars.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.markers.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsticks.code.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotscoordprocessing.code
+.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.errorbars.code.tex"
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.markers.code.tex"
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplotsticks.code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgfplots\pgfplots.paths.code.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.code.tex"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecorations.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarydecorations.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduledecorations.code
+.tex"
 \pgfdecoratedcompleteddistance=\dimen325
 \pgfdecoratedremainingdistance=\dimen326
 \pgfdecoratedinputsegmentcompleteddistance=\dimen327
@@ -1373,10 +1463,14 @@ Package pgfplots: loading complementary arithmetics for your pgf version...
 )
 \tikz@lib@dec@box=\box111
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathmorphing.code.tex"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathmorphing.code.tex"))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex
-" ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathreplacing.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarydecorations.pathmorphing.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibraryd
+ecorations.pathmorphing.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+librarydecorations.pathreplacing.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\decorations\pgflibraryd
+ecorations.pathreplacing.code.tex"))
 \pgfplots@numplots=\count381
 \pgfplots@xmin@reg=\dimen332
 \pgfplots@xmax@reg=\dimen333
@@ -1385,15 +1479,17 @@ Package pgfplots: loading complementary arithmetics for your pgf version...
 \pgfplots@zmin@reg=\dimen336
 \pgfplots@zmax@reg=\dimen337
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryplotmarks.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+libraryplotmarks.code.tex"
 File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplotmarks.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplotmarks.cod
+e.tex"
 File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
-)))
-("C:\Program Files\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
+))) ("C:\Program Files\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
 Package: colortbl 2018/05/02 v1.0c Color table columns (DPC)
- ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \col@sep=\dimen338
 \ar@mcellbox=\box112
@@ -1405,9 +1501,11 @@ Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 )
 \everycr=\toks60
 \minrowclearance=\skip89
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
- ("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everysel.sty"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everysel.sty"
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
 \CenteringLeftskip=\skip90
@@ -1425,9 +1523,10 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 \RaggedRightParindent=\skip102
 \JustifyingParindent=\skip103
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xy.sty" ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xy.tex"
-Bootstrap'ing: catcodes, docmode, ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xyrecat.tex")
-("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xyidioms.tex")
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xy.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xy.tex" Bootstrap'ing:
+catcodes, docmode, ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xyrecat.tex"
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xyidioms.tex")
 
  Xy-pic version 3.8.9 <2013/10/06>
  Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
@@ -1473,17 +1572,21 @@ Loading kernel: messages; fonts; allocations: state,
 \xywrite@=\write6
 \csp@=\count385
 \quotPTK@=\dimen367
- utility macros; pictures: \xy, positions,
+
+utility macros; pictures: \xy, positions,
 \swaptoks@@=\toks63
 \connectobjectbox@@=\box116
  objects,
 \styletoks@=\toks64
-
-decorations; kernel objects: directionals, circles, text; options; algorithms: directions, edges, connections;
- Xy-pic loaded)
+ decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
 Package: xy 2013/10/06 Xy-pic version 3.8.9
- ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xyall.tex"  Xy-pic option: All features v.3.8
-("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xycurve.tex"  Xy-pic option: Curve and Spline extension v.3.12 curve,
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xyall.tex"
+ Xy-pic option: All features v.3.8
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xycurve.tex"
+ Xy-pic option: Curve and Spline extension v.3.12 curve,
 \crv@cnt@=\count386
 \crvpts@=\toks65
 \splinebox@=\box117
@@ -1491,18 +1594,24 @@ Package: xy 2013/10/06 Xy-pic version 3.8.9
 \splinedepth@=\dimen369
 \splinetol@=\dimen370
 \splinelength@=\dimen371
-
-circles,
+ circles,
 \L@=\dimen372
- loaded) ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xyframe.tex"
- Xy-pic option: Frame and Bracket extension v.3.14 loaded) ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xycmtip.tex"
- Xy-pic option: Computer Modern tip extension v.3.7 ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xytips.tex"
- Xy-pic option: More Tips extension v.3.11 loaded) loaded) ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xyline.tex"
+ loaded)
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xyframe.tex"
+ Xy-pic option: Frame and Bracket extension v.3.14 loaded)
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xycmtip.tex"
+ Xy-pic option: Computer Modern tip extension v.3.7
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xytips.tex"
+ Xy-pic option: More Tips extension v.3.11 loaded) loaded)
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xyline.tex"
  Xy-pic option: Line styles extension v.3.10
 \xylinethick@=\dimen373
- loaded) ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xyrotate.tex"
- Xy-pic option: Rotate and Scale extension v.3.8 loaded) ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xycolor.tex"
- Xy-pic option: Colour extension v.3.11 loaded) ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xymatrix.tex"
+ loaded)
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xyrotate.tex"
+ Xy-pic option: Rotate and Scale extension v.3.8 loaded)
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xycolor.tex"
+ Xy-pic option: Colour extension v.3.11 loaded)
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xymatrix.tex"
  Xy-pic option: Matrix feature v.3.14
 \Row=\count387
 \Col=\count388
@@ -1511,16 +1620,23 @@ circles,
 \qcount@=\count389
 \qcount@@=\count390
 \matrixsize@=\count391
- loaded) ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xyarrow.tex"
+ loaded)
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xyarrow.tex"
  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
-("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xygraph.tex"  Xy-pic option: Graph feature v.3.11 loaded) loaded)
-("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xypdf.tex"  Xy-pic option: PDF driver v.1.7
-Xy-pic pdf driver: `color' extension support ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xypdf-co.tex" loaded)
-Xy-pic pdf driver: `curve' extension support ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xypdf-cu.tex" loaded)
-Xy-pic pdf driver: `frame' extension support ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xypdf-fr.tex" loaded)
-Xy-pic pdf driver: `line' extension support ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xypdf-li.tex" loaded)
-Xy-pic pdf driver: `rotate' extension support ("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xypdf-ro.tex" loaded)
-loaded)) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\bookmark.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xygraph.tex"
+ Xy-pic option: Graph feature v.3.11 loaded) loaded)
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xypdf.tex"
+ Xy-pic option: PDF driver v.1.7 Xy-pic pdf driver: `color' extension support
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xypdf-co.tex" loaded)
+Xy-pic pdf driver: `curve' extension support
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xypdf-cu.tex" loaded)
+Xy-pic pdf driver: `frame' extension support
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xypdf-fr.tex" loaded)
+Xy-pic pdf driver: `line' extension support
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xypdf-li.tex" loaded)
+Xy-pic pdf driver: `rotate' extension support
+("C:\Program Files\MiKTeX 2.9\tex\generic\xypic\xypdf-ro.tex" loaded) loaded))
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\bookmark.sty"
 Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\bkm-pdftex.def"
@@ -1540,7 +1656,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 53.
 \c@Definicao=\count395
 \c@Corolario=\count396
 \c@Demonstracao=\count397
- (Aula3.aux)
+
+(Aula3.aux)
 \openout1 = `Aula3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
@@ -1560,12 +1677,14 @@ LaTeX Font Info:    ... okay on input line 111.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 111.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 111.
 LaTeX Font Info:    Try loading font information for T1+aess on input line 111.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aess.fd"
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aess.fd"
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
 *geometry* driver: auto-detecting
@@ -1621,11 +1740,14 @@ Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-) ABD: EveryShipout initializing macros
+)
+ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box119
 Package hyperref Info: Link coloring ON on input line 111.
 
@@ -1683,27 +1805,34 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  T1/aett/m/n --> T1/aett/bx/n on input line 111.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-basic-dictionary-English.dict"
+("C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-basic-dictionary-
+English.dict"
 Dictionary: translator-basic-dictionary, Language: English 
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-bibliography-dictionary-English.dict"
+("C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-bibliography-dict
+ionary-English.dict"
 Dictionary: translator-bibliography-dictionary, Language: English 
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-environment-dictionary-English.dict"
+("C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-environment-dicti
+onary-English.dict"
 Dictionary: translator-environment-dictionary, Language: English 
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-months-dictionary-English.dict"
+("C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-months-dictionary
+-English.dict"
 Dictionary: translator-months-dictionary, Language: English 
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-numbers-dictionary-English.dict"
+("C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-numbers-dictionar
+y-English.dict"
 Dictionary: translator-numbers-dictionary, Language: English 
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-theorem-dictionary-English.dict"
+("C:\Program Files\MiKTeX 2.9\tex\latex\translator\translator-theorem-dictionar
+y-English.dict"
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 babelbib: Set bibliography fall-back language to brazil
 ("C:\Program Files\MiKTeX 2.9\tex\latex\babelbib\portuguese.bdf"
-File: portuguese.bdf 2012/01/03 v1.31 babelbib: multilingual bibliographies (HH)
+File: portuguese.bdf 2012/01/03 v1.31 babelbib: multilingual bibliographies (HH
+)
 
 babelbib extension \btxifchangecaseoff added to \extrasbrazil
 )
@@ -1721,14 +1850,16 @@ Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count405
 
 
-Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider w
-riting \pgfplotsset{compat=1.16} into your preamble.
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
+your preamble.
  on input line 111.
 
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 111.
 LaTeX Font Info:    Try loading font information for U+msa on input line 111.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 111.
@@ -1736,8 +1867,10 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 111.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+esvect on input line 111.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\esvect\uesvect.fd"
+LaTeX Font Info:    Try loading font information for U+esvect on input line 111
+.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\esvect\uesvect.fd"
 File: uesvect.fd 
 )
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <14.4> not available
@@ -1747,11 +1880,11 @@ LaTeX Font Info:    Font shape `T1/aess/m/it' in size <10> not available
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <7> not available
 (Font)              Font shape `T1/aess/m/sl' tried instead on input line 111.
 Package xypdf Info: Line width: 0.57597pt on input line 111.
-
-(Aula3.nav) (Aula3-concordance.tex) [1
+ (Aula3.nav)
+(Aula3-concordance.tex) [1
 
 {C:/Users/fsbma/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Aula3.toc)
-[2
+ [2
 
 ] [3
 
@@ -1782,7 +1915,7 @@ LaTeX Font Info:    Font shape `T1/aess/m/it' in size <6> not available
 \openout4 = `Aula3.vrb'.
 
  (Aula3.vrb
-<Aula3-001.pdf, id=110, 433.62pt x 433.62pt>
+<Aula3-001.pdf, id=114, 433.62pt x 433.62pt>
 File: Aula3-001.pdf Graphic file (type pdf)
 <use Aula3-001.pdf>
 Package pdftex.def Info: Aula3-001.pdf  used on input line 5.
@@ -1794,7 +1927,7 @@ Package pdftex.def Info: Aula3-001.pdf  used on input line 5.
 ] [14
 
 ]
-Overfull \vbox (10.72708pt too high) detected at line 296
+Overfull \vbox (10.72708pt too high) detected at line 295
  []
 
 [15
@@ -1806,25 +1939,26 @@ Overfull \vbox (10.72708pt too high) detected at line 296
 LaTeX Font Info:    Try loading font information for T1+aett on input line 5.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-)) [16
+))
+[16
 
 ]
 \openout4 = `Aula3.vrb'.
 
  (Aula3.vrb
-<Aula3-plot.pdf, id=144, 433.62pt x 433.62pt>
+<Aula3-plot.pdf, id=148, 433.62pt x 433.62pt>
 File: Aula3-plot.pdf Graphic file (type pdf)
 <use Aula3-plot.pdf>
 Package pdftex.def Info: Aula3-plot.pdf  used on input line 9.
 (pdftex.def)             Requested size: 213.52455pt x 213.52768pt.
 )
-Overfull \vbox (5.1093pt too high) detected at line 333
+Overfull \vbox (5.1093pt too high) detected at line 332
  []
 
 [17
 
  <./Aula3-plot.pdf>]
-Overfull \vbox (3.81897pt too high) detected at line 365
+Overfull \vbox (3.81897pt too high) detected at line 364
  []
 
 [18
@@ -1843,7 +1977,11 @@ Overfull \vbox (3.81897pt too high) detected at line 365
 
 ] [25
 
-] [26
+]
+Overfull \vbox (18.60931pt too high) detected at line 481
+ []
+
+[26
 
 ] [27
 
@@ -1861,22 +1999,7 @@ Overfull \vbox (3.81897pt too high) detected at line 365
 
 ] [34
 
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 579.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 579.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 579.
-
-LaTeX Font Info:    Font shape `T1/aess/m/it' in size <20.74> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 598.
-[35
+] [35
 
 ] [36
 
@@ -1888,9 +2011,25 @@ LaTeX Font Info:    Font shape `T1/aess/m/it' in size <20.74> not available
 
 ] [40
 
-] [41
+]
+[41
 
-] [42
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 673.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 673.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 673.
+
+LaTeX Font Info:    Font shape `T1/aess/m/it' in size <20.74> not available
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 692.
+[42
 
 ] [43
 
@@ -1900,649 +2039,11 @@ LaTeX Font Info:    Font shape `T1/aess/m/it' in size <20.74> not available
 
 ] [46
 
-]
-\openout4 = `Aula3.vrb'.
+] [47
 
- (Aula3.vrb) [47
+] [48
 
-]
-\openout4 = `Aula3.vrb'.
-
- (Aula3.vrb)
-Overfull \vbox (9.95851pt too high) detected at line 807
- []
-
-[48
-
-]
-\openout4 = `Aula3.vrb'.
-
- (Aula3.vrb) [49
-
-]
-\openout4 = `Aula3.vrb'.
-
- (Aula3.vrb
-<exemplos/qnorm1.png, id=338, 501.875pt x 250.9375pt>
-File: exemplos/qnorm1.png Graphic file (type png)
-<use exemplos/qnorm1.png>
-Package pdftex.def Info: exemplos/qnorm1.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm1.png> <a0,fr0>
-<exemplos/qnorm2.png, id=347, 501.875pt x 250.9375pt>
-File: exemplos/qnorm2.png Graphic file (type png)
-<use exemplos/qnorm2.png>
-Package pdftex.def Info: exemplos/qnorm2.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm2.png> <a0,fr1>
-<exemplos/qnorm3.png, id=356, 501.875pt x 250.9375pt>
-File: exemplos/qnorm3.png Graphic file (type png)
-<use exemplos/qnorm3.png>
-Package pdftex.def Info: exemplos/qnorm3.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm3.png> <a0,fr2>
-<exemplos/qnorm4.png, id=365, 501.875pt x 250.9375pt>
-File: exemplos/qnorm4.png Graphic file (type png)
-<use exemplos/qnorm4.png>
-Package pdftex.def Info: exemplos/qnorm4.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm4.png> <a0,fr3>
-<exemplos/qnorm5.png, id=374, 501.875pt x 250.9375pt>
-File: exemplos/qnorm5.png Graphic file (type png)
-<use exemplos/qnorm5.png>
-Package pdftex.def Info: exemplos/qnorm5.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm5.png> <a0,fr4>
-<exemplos/qnorm6.png, id=383, 501.875pt x 250.9375pt>
-File: exemplos/qnorm6.png Graphic file (type png)
-<use exemplos/qnorm6.png>
-Package pdftex.def Info: exemplos/qnorm6.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm6.png> <a0,fr5>
-<exemplos/qnorm7.png, id=392, 501.875pt x 250.9375pt>
-File: exemplos/qnorm7.png Graphic file (type png)
-<use exemplos/qnorm7.png>
-Package pdftex.def Info: exemplos/qnorm7.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm7.png> <a0,fr6>
-<exemplos/qnorm8.png, id=401, 501.875pt x 250.9375pt>
-File: exemplos/qnorm8.png Graphic file (type png)
-<use exemplos/qnorm8.png>
-Package pdftex.def Info: exemplos/qnorm8.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm8.png> <a0,fr7>
-<exemplos/qnorm9.png, id=410, 501.875pt x 250.9375pt>
-File: exemplos/qnorm9.png Graphic file (type png)
-<use exemplos/qnorm9.png>
-Package pdftex.def Info: exemplos/qnorm9.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm9.png> <a0,fr8>
-<exemplos/qnorm10.png, id=419, 501.875pt x 250.9375pt>
-File: exemplos/qnorm10.png Graphic file (type png)
-<use exemplos/qnorm10.png>
-Package pdftex.def Info: exemplos/qnorm10.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm10.png>
-<a0,fr9>
-<exemplos/qnorm11.png, id=428, 501.875pt x 250.9375pt>
-File: exemplos/qnorm11.png Graphic file (type png)
-<use exemplos/qnorm11.png>
-Package pdftex.def Info: exemplos/qnorm11.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm11.png> <a0,fr10>
-<exemplos/qnorm12.png, id=437, 501.875pt x 250.9375pt>
-File: exemplos/qnorm12.png Graphic file (type png)
-<use exemplos/qnorm12.png>
-Package pdftex.def Info: exemplos/qnorm12.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm12.png> <a0,fr11>
-<exemplos/qnorm13.png, id=446, 501.875pt x 250.9375pt>
-File: exemplos/qnorm13.png Graphic file (type png)
-<use exemplos/qnorm13.png>
-Package pdftex.def Info: exemplos/qnorm13.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm13.png> <a0,fr12>
-<exemplos/qnorm14.png, id=455, 501.875pt x 250.9375pt>
-File: exemplos/qnorm14.png Graphic file (type png)
-<use exemplos/qnorm14.png>
-Package pdftex.def Info: exemplos/qnorm14.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm14.png> <a0,fr13>
-<exemplos/qnorm15.png, id=464, 501.875pt x 250.9375pt>
-File: exemplos/qnorm15.png Graphic file (type png)
-<use exemplos/qnorm15.png>
-Package pdftex.def Info: exemplos/qnorm15.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm15.png> <a0,fr14>
-<exemplos/qnorm16.png, id=473, 501.875pt x 250.9375pt>
-File: exemplos/qnorm16.png Graphic file (type png)
-<use exemplos/qnorm16.png>
-Package pdftex.def Info: exemplos/qnorm16.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm16.png> <a0,fr15>
-<exemplos/qnorm17.png, id=482, 501.875pt x 250.9375pt>
-File: exemplos/qnorm17.png Graphic file (type png)
-<use exemplos/qnorm17.png>
-Package pdftex.def Info: exemplos/qnorm17.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm17.png> <a0,fr16>
-<exemplos/qnorm18.png, id=491, 501.875pt x 250.9375pt>
-File: exemplos/qnorm18.png Graphic file (type png)
-<use exemplos/qnorm18.png>
-Package pdftex.def Info: exemplos/qnorm18.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm18.png> <a0,fr17>
-<exemplos/qnorm19.png, id=500, 501.875pt x 250.9375pt>
-File: exemplos/qnorm19.png Graphic file (type png)
-<use exemplos/qnorm19.png>
-Package pdftex.def Info: exemplos/qnorm19.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm19.png> <a0,fr18>
-<exemplos/qnorm20.png, id=509, 501.875pt x 250.9375pt>
-File: exemplos/qnorm20.png Graphic file (type png)
-<use exemplos/qnorm20.png>
-Package pdftex.def Info: exemplos/qnorm20.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm20.png> <a0,fr19>
-<exemplos/qnorm21.png, id=518, 501.875pt x 250.9375pt>
-File: exemplos/qnorm21.png Graphic file (type png)
-<use exemplos/qnorm21.png>
-Package pdftex.def Info: exemplos/qnorm21.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm21.png> <a0,fr20>
-<exemplos/qnorm22.png, id=527, 501.875pt x 250.9375pt>
-File: exemplos/qnorm22.png Graphic file (type png)
-<use exemplos/qnorm22.png>
-Package pdftex.def Info: exemplos/qnorm22.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm22.png> <a0,fr21>
-<exemplos/qnorm23.png, id=536, 501.875pt x 250.9375pt>
-File: exemplos/qnorm23.png Graphic file (type png)
-<use exemplos/qnorm23.png>
-Package pdftex.def Info: exemplos/qnorm23.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm23.png> <a0,fr22>
-<exemplos/qnorm24.png, id=545, 501.875pt x 250.9375pt>
-File: exemplos/qnorm24.png Graphic file (type png)
-<use exemplos/qnorm24.png>
-Package pdftex.def Info: exemplos/qnorm24.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm24.png> <a0,fr23>
-<exemplos/qnorm25.png, id=554, 501.875pt x 250.9375pt>
-File: exemplos/qnorm25.png Graphic file (type png)
-<use exemplos/qnorm25.png>
-Package pdftex.def Info: exemplos/qnorm25.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm25.png> <a0,fr24>
-<exemplos/qnorm26.png, id=563, 501.875pt x 250.9375pt>
-File: exemplos/qnorm26.png Graphic file (type png)
-<use exemplos/qnorm26.png>
-Package pdftex.def Info: exemplos/qnorm26.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm26.png> <a0,fr25>
-<exemplos/qnorm27.png, id=572, 501.875pt x 250.9375pt>
-File: exemplos/qnorm27.png Graphic file (type png)
-<use exemplos/qnorm27.png>
-Package pdftex.def Info: exemplos/qnorm27.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm27.png>
-<a0,fr26>
-<exemplos/qnorm28.png, id=581, 501.875pt x 250.9375pt>
-File: exemplos/qnorm28.png Graphic file (type png)
-<use exemplos/qnorm28.png>
-Package pdftex.def Info: exemplos/qnorm28.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm28.png> <a0,fr27>
-<exemplos/qnorm29.png, id=590, 501.875pt x 250.9375pt>
-File: exemplos/qnorm29.png Graphic file (type png)
-<use exemplos/qnorm29.png>
-Package pdftex.def Info: exemplos/qnorm29.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm29.png> <a0,fr28>
-<exemplos/qnorm30.png, id=599, 501.875pt x 250.9375pt>
-File: exemplos/qnorm30.png Graphic file (type png)
-<use exemplos/qnorm30.png>
-Package pdftex.def Info: exemplos/qnorm30.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm30.png> <a0,fr29>
-<exemplos/qnorm31.png, id=608, 501.875pt x 250.9375pt>
-File: exemplos/qnorm31.png Graphic file (type png)
-<use exemplos/qnorm31.png>
-Package pdftex.def Info: exemplos/qnorm31.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm31.png> <a0,fr30>
-<exemplos/qnorm32.png, id=617, 501.875pt x 250.9375pt>
-File: exemplos/qnorm32.png Graphic file (type png)
-<use exemplos/qnorm32.png>
-Package pdftex.def Info: exemplos/qnorm32.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm32.png> <a0,fr31>
-<exemplos/qnorm33.png, id=626, 501.875pt x 250.9375pt>
-File: exemplos/qnorm33.png Graphic file (type png)
-<use exemplos/qnorm33.png>
-Package pdftex.def Info: exemplos/qnorm33.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm33.png> <a0,fr32>
-<exemplos/qnorm34.png, id=635, 501.875pt x 250.9375pt>
-File: exemplos/qnorm34.png Graphic file (type png)
-<use exemplos/qnorm34.png>
-Package pdftex.def Info: exemplos/qnorm34.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm34.png> <a0,fr33>
-<exemplos/qnorm35.png, id=644, 501.875pt x 250.9375pt>
-File: exemplos/qnorm35.png Graphic file (type png)
-<use exemplos/qnorm35.png>
-Package pdftex.def Info: exemplos/qnorm35.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm35.png> <a0,fr34>
-<exemplos/qnorm36.png, id=653, 501.875pt x 250.9375pt>
-File: exemplos/qnorm36.png Graphic file (type png)
-<use exemplos/qnorm36.png>
-Package pdftex.def Info: exemplos/qnorm36.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm36.png> <a0,fr35>
-<exemplos/qnorm37.png, id=662, 501.875pt x 250.9375pt>
-File: exemplos/qnorm37.png Graphic file (type png)
-<use exemplos/qnorm37.png>
-Package pdftex.def Info: exemplos/qnorm37.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm37.png> <a0,fr36>
-<exemplos/qnorm38.png, id=671, 501.875pt x 250.9375pt>
-File: exemplos/qnorm38.png Graphic file (type png)
-<use exemplos/qnorm38.png>
-Package pdftex.def Info: exemplos/qnorm38.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm38.png> <a0,fr37>
-<exemplos/qnorm39.png, id=680, 501.875pt x 250.9375pt>
-File: exemplos/qnorm39.png Graphic file (type png)
-<use exemplos/qnorm39.png>
-Package pdftex.def Info: exemplos/qnorm39.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm39.png> <a0,fr38>
-<exemplos/qnorm40.png, id=689, 501.875pt x 250.9375pt>
-File: exemplos/qnorm40.png Graphic file (type png)
-<use exemplos/qnorm40.png>
-Package pdftex.def Info: exemplos/qnorm40.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm40.png> <a0,fr39>
-<exemplos/qnorm41.png, id=698, 501.875pt x 250.9375pt>
-File: exemplos/qnorm41.png Graphic file (type png)
-<use exemplos/qnorm41.png>
-Package pdftex.def Info: exemplos/qnorm41.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm41.png> <a0,fr40>
-<exemplos/qnorm42.png, id=707, 501.875pt x 250.9375pt>
-File: exemplos/qnorm42.png Graphic file (type png)
-<use exemplos/qnorm42.png>
-Package pdftex.def Info: exemplos/qnorm42.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm42.png> <a0,fr41>
-<exemplos/qnorm43.png, id=716, 501.875pt x 250.9375pt>
-File: exemplos/qnorm43.png Graphic file (type png)
-<use exemplos/qnorm43.png>
-Package pdftex.def Info: exemplos/qnorm43.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm43.png> <a0,fr42>
-<exemplos/qnorm44.png, id=725, 501.875pt x 250.9375pt>
-File: exemplos/qnorm44.png Graphic file (type png)
-<use exemplos/qnorm44.png>
-Package pdftex.def Info: exemplos/qnorm44.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm44.png>
-<a0,fr43>
-<exemplos/qnorm45.png, id=734, 501.875pt x 250.9375pt>
-File: exemplos/qnorm45.png Graphic file (type png)
-<use exemplos/qnorm45.png>
-Package pdftex.def Info: exemplos/qnorm45.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm45.png> <a0,fr44>
-<exemplos/qnorm46.png, id=743, 501.875pt x 250.9375pt>
-File: exemplos/qnorm46.png Graphic file (type png)
-<use exemplos/qnorm46.png>
-Package pdftex.def Info: exemplos/qnorm46.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm46.png> <a0,fr45>
-<exemplos/qnorm47.png, id=752, 501.875pt x 250.9375pt>
-File: exemplos/qnorm47.png Graphic file (type png)
-<use exemplos/qnorm47.png>
-Package pdftex.def Info: exemplos/qnorm47.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm47.png> <a0,fr46>
-<exemplos/qnorm48.png, id=761, 501.875pt x 250.9375pt>
-File: exemplos/qnorm48.png Graphic file (type png)
-<use exemplos/qnorm48.png>
-Package pdftex.def Info: exemplos/qnorm48.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm48.png> <a0,fr47>
-<exemplos/qnorm49.png, id=770, 501.875pt x 250.9375pt>
-File: exemplos/qnorm49.png Graphic file (type png)
-<use exemplos/qnorm49.png>
-Package pdftex.def Info: exemplos/qnorm49.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm49.png> <a0,fr48>
-<exemplos/qnorm50.png, id=779, 501.875pt x 250.9375pt>
-File: exemplos/qnorm50.png Graphic file (type png)
-<use exemplos/qnorm50.png>
-Package pdftex.def Info: exemplos/qnorm50.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm50.png> <a0,fr49>
-<exemplos/qnorm51.png, id=788, 501.875pt x 250.9375pt>
-File: exemplos/qnorm51.png Graphic file (type png)
-<use exemplos/qnorm51.png>
-Package pdftex.def Info: exemplos/qnorm51.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm51.png> <a0,fr50>
-<exemplos/qnorm52.png, id=797, 501.875pt x 250.9375pt>
-File: exemplos/qnorm52.png Graphic file (type png)
-<use exemplos/qnorm52.png>
-Package pdftex.def Info: exemplos/qnorm52.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm52.png> <a0,fr51>
-<exemplos/qnorm53.png, id=806, 501.875pt x 250.9375pt>
-File: exemplos/qnorm53.png Graphic file (type png)
-<use exemplos/qnorm53.png>
-Package pdftex.def Info: exemplos/qnorm53.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm53.png> <a0,fr52>
-<exemplos/qnorm54.png, id=815, 501.875pt x 250.9375pt>
-File: exemplos/qnorm54.png Graphic file (type png)
-<use exemplos/qnorm54.png>
-Package pdftex.def Info: exemplos/qnorm54.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm54.png> <a0,fr53>
-<exemplos/qnorm55.png, id=824, 501.875pt x 250.9375pt>
-File: exemplos/qnorm55.png Graphic file (type png)
-<use exemplos/qnorm55.png>
-Package pdftex.def Info: exemplos/qnorm55.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm55.png> <a0,fr54>
-<exemplos/qnorm56.png, id=833, 501.875pt x 250.9375pt>
-File: exemplos/qnorm56.png Graphic file (type png)
-<use exemplos/qnorm56.png>
-Package pdftex.def Info: exemplos/qnorm56.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm56.png> <a0,fr55>
-<exemplos/qnorm57.png, id=842, 501.875pt x 250.9375pt>
-File: exemplos/qnorm57.png Graphic file (type png)
-<use exemplos/qnorm57.png>
-Package pdftex.def Info: exemplos/qnorm57.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm57.png> <a0,fr56>
-<exemplos/qnorm58.png, id=851, 501.875pt x 250.9375pt>
-File: exemplos/qnorm58.png Graphic file (type png)
-<use exemplos/qnorm58.png>
-Package pdftex.def Info: exemplos/qnorm58.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm58.png> <a0,fr57>
-<exemplos/qnorm59.png, id=860, 501.875pt x 250.9375pt>
-File: exemplos/qnorm59.png Graphic file (type png)
-<use exemplos/qnorm59.png>
-Package pdftex.def Info: exemplos/qnorm59.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm59.png> <a0,fr58>
-<exemplos/qnorm60.png, id=869, 501.875pt x 250.9375pt>
-File: exemplos/qnorm60.png Graphic file (type png)
-<use exemplos/qnorm60.png>
-Package pdftex.def Info: exemplos/qnorm60.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm60.png> <a0,fr59>
-<exemplos/qnorm61.png, id=878, 501.875pt x 250.9375pt>
-File: exemplos/qnorm61.png Graphic file (type png)
-<use exemplos/qnorm61.png>
-Package pdftex.def Info: exemplos/qnorm61.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm61.png>
-<a0,fr60>
-<exemplos/qnorm62.png, id=887, 501.875pt x 250.9375pt>
-File: exemplos/qnorm62.png Graphic file (type png)
-<use exemplos/qnorm62.png>
-Package pdftex.def Info: exemplos/qnorm62.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm62.png> <a0,fr61>
-<exemplos/qnorm63.png, id=896, 501.875pt x 250.9375pt>
-File: exemplos/qnorm63.png Graphic file (type png)
-<use exemplos/qnorm63.png>
-Package pdftex.def Info: exemplos/qnorm63.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm63.png> <a0,fr62>
-<exemplos/qnorm64.png, id=905, 501.875pt x 250.9375pt>
-File: exemplos/qnorm64.png Graphic file (type png)
-<use exemplos/qnorm64.png>
-Package pdftex.def Info: exemplos/qnorm64.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm64.png> <a0,fr63>
-<exemplos/qnorm65.png, id=914, 501.875pt x 250.9375pt>
-File: exemplos/qnorm65.png Graphic file (type png)
-<use exemplos/qnorm65.png>
-Package pdftex.def Info: exemplos/qnorm65.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm65.png> <a0,fr64>
-<exemplos/qnorm66.png, id=923, 501.875pt x 250.9375pt>
-File: exemplos/qnorm66.png Graphic file (type png)
-<use exemplos/qnorm66.png>
-Package pdftex.def Info: exemplos/qnorm66.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm66.png> <a0,fr65>
-<exemplos/qnorm67.png, id=932, 501.875pt x 250.9375pt>
-File: exemplos/qnorm67.png Graphic file (type png)
-<use exemplos/qnorm67.png>
-Package pdftex.def Info: exemplos/qnorm67.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm67.png> <a0,fr66>
-<exemplos/qnorm68.png, id=941, 501.875pt x 250.9375pt>
-File: exemplos/qnorm68.png Graphic file (type png)
-<use exemplos/qnorm68.png>
-Package pdftex.def Info: exemplos/qnorm68.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm68.png> <a0,fr67>
-<exemplos/qnorm69.png, id=950, 501.875pt x 250.9375pt>
-File: exemplos/qnorm69.png Graphic file (type png)
-<use exemplos/qnorm69.png>
-Package pdftex.def Info: exemplos/qnorm69.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm69.png> <a0,fr68>
-<exemplos/qnorm70.png, id=959, 501.875pt x 250.9375pt>
-File: exemplos/qnorm70.png Graphic file (type png)
-<use exemplos/qnorm70.png>
-Package pdftex.def Info: exemplos/qnorm70.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm70.png> <a0,fr69>
-<exemplos/qnorm71.png, id=968, 501.875pt x 250.9375pt>
-File: exemplos/qnorm71.png Graphic file (type png)
-<use exemplos/qnorm71.png>
-Package pdftex.def Info: exemplos/qnorm71.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm71.png> <a0,fr70>
-<exemplos/qnorm72.png, id=977, 501.875pt x 250.9375pt>
-File: exemplos/qnorm72.png Graphic file (type png)
-<use exemplos/qnorm72.png>
-Package pdftex.def Info: exemplos/qnorm72.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm72.png> <a0,fr71>
-<exemplos/qnorm73.png, id=986, 501.875pt x 250.9375pt>
-File: exemplos/qnorm73.png Graphic file (type png)
-<use exemplos/qnorm73.png>
-Package pdftex.def Info: exemplos/qnorm73.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm73.png> <a0,fr72>
-<exemplos/qnorm74.png, id=995, 501.875pt x 250.9375pt>
-File: exemplos/qnorm74.png Graphic file (type png)
-<use exemplos/qnorm74.png>
-Package pdftex.def Info: exemplos/qnorm74.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm74.png> <a0,fr73>
-<exemplos/qnorm75.png, id=1004, 501.875pt x 250.9375pt>
-File: exemplos/qnorm75.png Graphic file (type png)
-<use exemplos/qnorm75.png>
-Package pdftex.def Info: exemplos/qnorm75.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm75.png> <a0,fr74>
-<exemplos/qnorm76.png, id=1013, 501.875pt x 250.9375pt>
-File: exemplos/qnorm76.png Graphic file (type png)
-<use exemplos/qnorm76.png>
-Package pdftex.def Info: exemplos/qnorm76.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm76.png> <a0,fr75>
-<exemplos/qnorm77.png, id=1022, 501.875pt x 250.9375pt>
-File: exemplos/qnorm77.png Graphic file (type png)
-<use exemplos/qnorm77.png>
-Package pdftex.def Info: exemplos/qnorm77.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm77.png> <a0,fr76>
-<exemplos/qnorm78.png, id=1031, 501.875pt x 250.9375pt>
-File: exemplos/qnorm78.png Graphic file (type png)
-<use exemplos/qnorm78.png>
-Package pdftex.def Info: exemplos/qnorm78.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm78.png>
-<a0,fr77>
-<exemplos/qnorm79.png, id=1040, 501.875pt x 250.9375pt>
-File: exemplos/qnorm79.png Graphic file (type png)
-<use exemplos/qnorm79.png>
-Package pdftex.def Info: exemplos/qnorm79.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm79.png> <a0,fr78>
-<exemplos/qnorm80.png, id=1049, 501.875pt x 250.9375pt>
-File: exemplos/qnorm80.png Graphic file (type png)
-<use exemplos/qnorm80.png>
-Package pdftex.def Info: exemplos/qnorm80.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm80.png> <a0,fr79>
-<exemplos/qnorm81.png, id=1058, 501.875pt x 250.9375pt>
-File: exemplos/qnorm81.png Graphic file (type png)
-<use exemplos/qnorm81.png>
-Package pdftex.def Info: exemplos/qnorm81.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm81.png> <a0,fr80>
-<exemplos/qnorm82.png, id=1067, 501.875pt x 250.9375pt>
-File: exemplos/qnorm82.png Graphic file (type png)
-<use exemplos/qnorm82.png>
-Package pdftex.def Info: exemplos/qnorm82.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm82.png> <a0,fr81>
-<exemplos/qnorm83.png, id=1076, 501.875pt x 250.9375pt>
-File: exemplos/qnorm83.png Graphic file (type png)
-<use exemplos/qnorm83.png>
-Package pdftex.def Info: exemplos/qnorm83.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm83.png> <a0,fr82>
-<exemplos/qnorm84.png, id=1085, 501.875pt x 250.9375pt>
-File: exemplos/qnorm84.png Graphic file (type png)
-<use exemplos/qnorm84.png>
-Package pdftex.def Info: exemplos/qnorm84.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm84.png> <a0,fr83>
-<exemplos/qnorm85.png, id=1094, 501.875pt x 250.9375pt>
-File: exemplos/qnorm85.png Graphic file (type png)
-<use exemplos/qnorm85.png>
-Package pdftex.def Info: exemplos/qnorm85.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm85.png> <a0,fr84>
-<exemplos/qnorm86.png, id=1103, 501.875pt x 250.9375pt>
-File: exemplos/qnorm86.png Graphic file (type png)
-<use exemplos/qnorm86.png>
-Package pdftex.def Info: exemplos/qnorm86.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm86.png> <a0,fr85>
-<exemplos/qnorm87.png, id=1112, 501.875pt x 250.9375pt>
-File: exemplos/qnorm87.png Graphic file (type png)
-<use exemplos/qnorm87.png>
-Package pdftex.def Info: exemplos/qnorm87.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm87.png> <a0,fr86>
-<exemplos/qnorm88.png, id=1121, 501.875pt x 250.9375pt>
-File: exemplos/qnorm88.png Graphic file (type png)
-<use exemplos/qnorm88.png>
-Package pdftex.def Info: exemplos/qnorm88.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm88.png> <a0,fr87>
-<exemplos/qnorm89.png, id=1130, 501.875pt x 250.9375pt>
-File: exemplos/qnorm89.png Graphic file (type png)
-<use exemplos/qnorm89.png>
-Package pdftex.def Info: exemplos/qnorm89.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm89.png> <a0,fr88>
-<exemplos/qnorm90.png, id=1139, 501.875pt x 250.9375pt>
-File: exemplos/qnorm90.png Graphic file (type png)
-<use exemplos/qnorm90.png>
-Package pdftex.def Info: exemplos/qnorm90.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm90.png> <a0,fr89>
-<exemplos/qnorm91.png, id=1148, 501.875pt x 250.9375pt>
-File: exemplos/qnorm91.png Graphic file (type png)
-<use exemplos/qnorm91.png>
-Package pdftex.def Info: exemplos/qnorm91.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm91.png> <a0,fr90>
-<exemplos/qnorm92.png, id=1157, 501.875pt x 250.9375pt>
-File: exemplos/qnorm92.png Graphic file (type png)
-<use exemplos/qnorm92.png>
-Package pdftex.def Info: exemplos/qnorm92.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm92.png> <a0,fr91>
-<exemplos/qnorm93.png, id=1166, 501.875pt x 250.9375pt>
-File: exemplos/qnorm93.png Graphic file (type png)
-<use exemplos/qnorm93.png>
-Package pdftex.def Info: exemplos/qnorm93.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm93.png> <a0,fr92>
-<exemplos/qnorm94.png, id=1175, 501.875pt x 250.9375pt>
-File: exemplos/qnorm94.png Graphic file (type png)
-<use exemplos/qnorm94.png>
-Package pdftex.def Info: exemplos/qnorm94.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm94.png> <a0,fr93>
-<exemplos/qnorm95.png, id=1184, 501.875pt x 250.9375pt>
-File: exemplos/qnorm95.png Graphic file (type png)
-<use exemplos/qnorm95.png>
-Package pdftex.def Info: exemplos/qnorm95.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm95.png>
-<a0,fr94>
-<exemplos/qnorm96.png, id=1193, 501.875pt x 250.9375pt>
-File: exemplos/qnorm96.png Graphic file (type png)
-<use exemplos/qnorm96.png>
-Package pdftex.def Info: exemplos/qnorm96.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm96.png> <a0,fr95>
-<exemplos/qnorm97.png, id=1202, 501.875pt x 250.9375pt>
-File: exemplos/qnorm97.png Graphic file (type png)
-<use exemplos/qnorm97.png>
-Package pdftex.def Info: exemplos/qnorm97.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm97.png> <a0,fr96>
-<exemplos/qnorm98.png, id=1211, 501.875pt x 250.9375pt>
-File: exemplos/qnorm98.png Graphic file (type png)
-<use exemplos/qnorm98.png>
-Package pdftex.def Info: exemplos/qnorm98.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm98.png> <a0,fr97>
-<exemplos/qnorm99.png, id=1220, 501.875pt x 250.9375pt>
-File: exemplos/qnorm99.png Graphic file (type png)
-<use exemplos/qnorm99.png>
-Package pdftex.def Info: exemplos/qnorm99.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm99.png> <a0,fr98>
-<exemplos/qnorm100.png, id=1229, 501.875pt x 250.9375pt>
-File: exemplos/qnorm100.png Graphic file (type png)
-<use exemplos/qnorm100.png>
-Package pdftex.def Info: exemplos/qnorm100.png  used on input line 5.
-(pdftex.def)             Requested size: 341.64058pt x 170.82668pt.
- <./exemplos/qnorm100.png> <a0,fr99>) [50
-
-]
-\openout4 = `Aula3.vrb'.
-
- (Aula3.vrb
-LaTeX Font Info:    Font shape `T1/aess/m/it' in size <5> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 9.
-)
-Overfull \vbox (239.36012pt too high) detected at line 895
- []
-
-[51
-
-] [52
+] [49
 
 ]
 \tf@nav=\write7
@@ -2554,31 +2055,35 @@ Overfull \vbox (239.36012pt too high) detected at line 895
 \tf@snm=\write9
 \openout9 = `Aula3.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 905.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 905.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 870.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 870.
  (Aula3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 905.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 905.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 870.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 870.
  ) 
 Here is how much of TeX's memory you used:
- 50381 strings out of 492973
- 1076921 string characters out of 3135932
- 1417780 words of memory out of 12000000
- 53092 multiletter control sequences out of 15000+200000
- 586721 words of font info for 134 fonts, out of 3000000 for 9000
+ 49438 strings out of 492973
+ 1057811 string characters out of 3135932
+ 1374412 words of memory out of 12000000
+ 52272 multiletter control sequences out of 15000+200000
+ 582929 words of font info for 127 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,25n,98p,3248b,1065s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsltt10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmssi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Aula3.pdf (52 pages, 693563 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsltt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmss17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Aula3.pdf (49 pages, 286633 bytes).
 PDF statistics:
- 1369 PDF objects out of 1440 (max. 8388607)
- 116 named destinations out of 1000 (max. 500000)
- 2527 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 433 PDF objects out of 1000 (max. 8388607)
+ 112 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
