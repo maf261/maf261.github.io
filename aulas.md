@@ -13,7 +13,7 @@ description: Página com as aulas da disciplina.
 * [Aula 2][aula2]
 * [Aula 3][aula3]
 * [Aula 4][aula4]
-* [Aula 5, 6 e 7][aula567]
+* [Aulas 5, 6 e 7][aulas567]
 
 ---
 
