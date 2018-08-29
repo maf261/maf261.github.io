@@ -9,7 +9,7 @@ description: Página com as aulas da disciplina.
 
 ---
 
-* [Aula 1][aula1]
+* [Aula 1 e 2][aula1]
 * [Aula 1.1 (Distribuição Normal)][normal]
 * [Aula 2][aula2]
 * [Aula 3][aula3]

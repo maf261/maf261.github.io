@@ -1,0 +1,2 @@
+\babel@toc {brazil}{}
+\beamer@sectionintoc {1}{Delineamento Inteiramente Casualizado}{3}{0}{1}
