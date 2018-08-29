@@ -725,6 +725,122 @@ garrafas preenchidas incorretamente.
 \end{frame}
 
 \section{Testes para a Proporção de uma População}
+\begin{frame}{Distribuição de Bernoulli}
+\frametitle{}
+\begin{block}{}
+\justifying
+Muitos experimentos são tais que os resultados apresentam ou não uma determinada
+característica. Por exemplo:
+\begin{enumerate}
+\item uma moeda é lançada: o resultado ou é cara, ou não (ocorrendo, então, coroa);\pause
+\item um dado é lançado: ou ocorre face 5 ou não (ocorrendo, então, uma das faces
+1, 2, 3, 4 ou 6);\pause
+\item uma peça é escolhida ao acaso de um lote contendo 500 peças: essa peça é
+defeituosa ou não;\pause
+\item uma pessoa escolhida ao acaso dentre 1.000 é ou não do sexo masculino;\pause
+\item uma pessoa é escolhida ao acaso entre os moradores de uma cidade e verifica-se
+se ela é favorável ou não a um projeto municipal.
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{Distribuição de Bernoulli}
+\frametitle{}
+\begin{block}{}
+\justifying
+Em todos esses casos, estamos interessados na ocorrência de sucesso (cara, face 5
+etc.) ou fracasso (coroa, face diferente de 5 etc.). Para cada experimento acima, podemos definir uma v.a. $X,$ que assume apenas dois valores: 1, se ocorrer sucesso, e 0, se ocorrer fracasso. Indicaremos por $p$ a probabilidade de sucesso, isto é, 
+$P(sucesso)=P(S) = p,\ 0<p<1.$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+{\bf Definição:} Uma variável aleatória $X,$ que assume apenas os valores $0$ e $1,$ com função de probabilidade $(x, p(x))$ tal que
+\begin{align*}
+p(0)&=P(X=0)=1-p;\\
+p(1)&=P(X=1)=p
+\end{align*}
+é chamada variável aleatória de Bernoulli. Note que,
+\begin{align*}
+E(X)&=p;\\
+V(X)&=p(1-p)
+\end{align*}
+\end{block}
+\pause
+\begin{block}{}
+{\bf Observação:} Experimentos que resultam numa v.a. de Bernoulli são chamados ensaios
+de Bernoulli. Usamos a notação $X\sim Ber(p)$ para indicar uma v.a. com distribuição de Bernoulli com parâmetro p. 
+\end{block}
+\end{frame}
+
+\begin{frame}{Distribuição Binomial}
+\frametitle{}
+\begin{block}{}
+\justifying
+Imagine, agora, que repetimos um ensaio de Bernoulli $n$ vezes, ou, de maneira
+alternativa, obtemos uma amostra de tamanho $n$ de uma distribuição de Bernoulli.
+Suponha ainda que as repetições sejam independentes, isto é, o resultado de um ensaio
+não tem influência nenhuma no resultado de qualquer outro ensaio. Uma amostra
+particular será constituída de uma seqüência de sucessos e fracassos, ou, alternativamente, de uns e zeros.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Distribuição Binomial}
+\begin{block}{}
+\justifying
+Imagine, agora, que repetimos um ensaio de Bernoulli $n$ vezes, ou, de maneira
+alternativa, obtemos uma amostra de tamanho $n$ de uma distribuição de Bernoulli.
+Suponha ainda que as repetições sejam independentes, isto é, o resultado de um ensaio
+não tem influência nenhuma no resultado de qualquer outro ensaio. Uma amostra
+particular será constituída de uma seqüência de sucessos e fracassos, ou, alternativamente, de uns e zeros.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Distribuição Binomial}
+\begin{block}{}
+\justifying
+Por exemplo, repetindo um ensaio de Bernoulli cinco vezes $(n = 5),$ um particular resultado pode ser FSSFS ou a quíntupla ordenada $(0, 1, 1, 0, 1).$ Usando a notação 
+$P(S) = p,$ a probabilidade de tal amostra será:
+$$(1-p)pp(1-p)p=p^{3}*(1-p^{2})$$
+O número de sucessos nessa amostra é igual a 3, sendo 2 o número de fracassos.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Distribuição Binomial}
+\begin{block}{}
+\justifying
+Designamos por $X$ o número total de sucessos em $n$ ensaios de Bernoulli, com
+probabilidade de sucesso $p, 0 < p < 1.$ Os possíveis valores de $X$ são $0, 1, 2, ..., n$ e os pares $(x, p(x)),$ onde $p(x) = P(X = x),$ constituem a chamada distribuição binomial.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Distribuição Binomial}
+\begin{block}{}
+\justifying
+Assim, numa seqüência de n ensaios de Bernoulli, a probabilidade de obter $x$ sucessos (e portanto $n-x$ fracassos), $x = 0,1,2, ..., n,$ com $P(S) = p, P(F) = 1-p = q,$ é dado por $p^{x}(1-p)^{n-x}=p^{x}q^{n-x},$ devido à independência dos ensaios. Mas qualquer seqüência com $x$ sucessos e $n-x$ fracassos terá a mesma probabilidade. Portanto resta saber quantas seqüências com a propriedade especificada podemos formar. É fácil ver que existem $$\binom{n}{x}=\dfrac{n!}{x!(n-x)!},$$ logo, 
+$$P(X=x)=\binom{n}{x}p^{x}q^{n-x},\ x = 0,1,2, ..., n.$$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Distribuição Binomial}
+\begin{block}{}
+\justifying
+Se X tem distribuição binomial com parâmetros $n$ e $p,$ indicamos $X\sim Bin(n,p).$ Nesse caso, 
+\begin{align*}
+E(X)&=np;\\
+V(X)&=np(1-p)
+\end{align*}
+\end{block}
+\end{frame}
+
 \begin{frame}{Testes para a Proporção de uma População}
 \frametitle{}
 \begin{block}{}
@@ -750,7 +866,7 @@ Seja $X$ o número de observações em uma amostra aleatória de tamanho $n$ que
 à classe associada a $p.$ Então, se a hipótese nula $\Ho: p = p_{0}$ for verdadeira, teremos $X \sim N[np_{0}, np_{0}(1 - p_{0})],$ aproximadamente. Para testar 
 $\Ho: p = p_{0},$ calcule a estatística de teste:
 \begin{align}\label{proporcao}
-z_{cal}=\dfrac{\bx-np_{0}}{\sqrt{np_{0}(1 - p_{0})}}
+z_{cal}=\dfrac{\bx-np_{0}}{\sqrt{np_{0}(1 - p_{0})}},\ \bx=n\hat{p}
 \end{align}
 Se a hipótese nula $H0:p=p_{0}$ for verdadeira, então a estatística de teste $z$ , definida na Equação (\ref{proporcao}), segue a distribuição normal padrão.
 \end{block}
