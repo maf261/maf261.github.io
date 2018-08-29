@@ -76,7 +76,7 @@
 \author{Prof. Fernando de Souza Bastos}
 \institute{Instituto de Ciências Exatas e Tecnológicas\texorpdfstring{\\ Universidade Federal de Viçosa}{}\texorpdfstring{\\ Campus UFV - Florestal}{}}
 \date{2018}
-\newcommand\mytext{Aula 1}
+\newcommand\mytext{Aula 8}
 \newcommand\mytextt{Fernando de Souza Bastos}
 \makeatletter
 \setbeamertemplate{footline}
@@ -118,12 +118,248 @@
 \tableofcontents
 \end{frame}
 
-\section{Delineamento em Blocos Casualizados}
+\section{Princípios básicos da experimentação e Contrastes}
 \begin{frame}{}
 \frametitle{}
 \begin{block}{}
 \justifying
+O estudo de contrastes é muito importante na Estatística Experimental, principalmente quando o experimento em análise é composto por mais do que dois tratamentos. Com o uso de contrastes é possível ao pesquisador estabelecer comparações, entre tratamentos ou grupos de tratamentos, que sejam de interesse. Vamos estudar os fundamentos para estabelecer grupos de contrastes, obter a estimativa para cada contraste estabelecido, bem com estimar a variabilidade associada a cada um destes contrastes. 
+\end{block}
+\end{frame}
 
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+ {\bf Definição:} Uma função linear de médias populacionais de tratamentos dada por $$C=a_{1}\mu_{1}+a_{2}\mu_{2}+\cdots+a_{n}\mu_{n}$$ é dita ser um contraste se satisfizer:
+$${\displaystyle \sum_{i=1}^{n}a_{i}=0}$$ 
+\end{block}
+\end{frame}
+
+\section{Estimador do Contraste}
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Na prática, geralmente não se conhece os valores das médias populacionais $\mu_{i}$,
+mas suas estimativas. Daí, em Estatística Experimental, não trabalhamos com o contraste
+$C$ mas com o seu estimador $\hat{C}$, que também é uma função linear de médias obtidas por meio de experimentos ou amostras. Assim tem-se que o estimador para o contraste de
+médias é dado por: 
+$$\hat{C}=a_{1}\hat{\mu}_{1}+a_{2}\hat{\mu}_{2}+\cdots+a_{n}\hat{\mu}_{n}$$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Exemplo}
+\begin{block}{}
+\justifying
+ É contraste?
+ \begin{enumerate}
+ \item $C_{1}=\mu_{1}-\mu_{2}$ \pause
+ \item $C_{2}=\mu_{1}+2\mu_{2}+5\mu_{3}-4\mu_{4}-3\mu_{5}$ \pause
+ \item $C_{1}=\mu_{1}+\mu_{2}-2\mu_{3}$
+ \end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+Num experimento de consórcio na cultura do abacaxi, com 5 repetições, as médias de
+produção de frutos de abacaxi (em t/ha), foram as seguintes:
+\begin{table}[]
+\begin{tabular}{lc}
+\hline
+Tratamentos&$\hat{\mu}_{i}$\\
+\hline
+$1 - $Abacaxi $(0,90\ x 0,30m)$ monocultivo& 53,5\\
+$2 - $Abacaxi $(0,80 x 0,30m)$ monocultivo& 56,5\\
+$3 - $Abacaxi $(0,80 x 0,30m) +$ amendoim & 62,0\\
+$4 - $Abacaxi $(0,80 x 0,30m) +$ feijão   & 60,4\\
+\hline
+\end{tabular}
+\end{table}
+Pede-se obter as estimativas dos seguintes contrastes:
+$$C_{1}=\mu_{1}+\mu_{2}-\mu_{3}-\mu_{4};\ C_{2}=\mu_{1}-\mu_{2};\ C_{3}=\mu_{3}-\mu_{4}$$
+\end{block}
+\end{frame}
+
+\section{variância do estimador de um contraste}
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+Considere o estimador do contraste C, dado por:
+$$\hat{C}=a_{1}\hat{\mu}_{1}+a_{2}\hat{\mu}_{2}+\cdots+a_{n}\hat{\mu}_{n}$$
+A variância do estimador do contraste é dada por:
+$$V(\hat{C})=V(a_{1}\hat{\mu}_{1}+a_{2}\hat{\mu}_{2}+\cdots+a_{n}\hat{\mu}_{n})$$
+Admitindo independência entre as médias, temos:
+\begin{align*}
+V(\hat{C})=V(a_{1}\hat{\mu}_{1})+V(a_{2}\hat{\mu}_{2})+\cdots+V(a_{n}\hat{\mu}_{n})\\
+\end{align*}
+Logo,
+\begin{align*}
+V(\hat{C})=a_{1}^{2}V(\hat{\mu}_{1})+a_{2}^{2}V(\hat{\mu}_{2})+\cdots+a_{n}^{2}V(\hat{\mu}_{n})
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Lembrando que $\hat{\mu}_{i}={\displaystyle \dfrac{\sum_{j=1}^{r_{i}}x_{j}}{r_{i}}}$ temos que $V(\hat{\mu}_{i})=\dfrac{\sigma_{i}^{2}}{r_{i}},$ assim:
+\begin{align*}
+V(\hat{C})=a_{1}^{2}\dfrac{\sigma_{1}^{2}}{r_{1}}+a_{2}^{2}\dfrac{\sigma_{2}^{2}}{r_{2}}+\cdots+a_{n}^{2}\dfrac{\sigma_{n}^{2}}{r_{n}}
+\end{align*}
+Admitindo-se homogeneidade de variâncias, ou seja, 
+$\sigma_{1}^{2}=\sigma_{2}^{2}=\cdots=\sigma_{n}^{2}=\sigma^{2}$, então
+\begin{align*}
+V(\hat{C})=\Biggl(\dfrac{a_{1}^{2}}{r_{1}}+\dfrac{a_{2}^{2}}{r_{2}}+\cdots+\dfrac{a_{n}^{2}}{r_{n}}\Biggl)\sigma^{2}=\sigma^{2}\sum_{i=1}^{n}\dfrac{a_{i}^{2}}{r_{i}}
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Na prática, geralmente, não se conhece a variância $\sigma^{2}$, mas sua estimativa a qual é obtida por meio de dados experimentais. Esta estimativa é denominada como estimador comum $S_{c}^{2}.$ Então, o que normalmente se obtém é o valor do estimador da variância do estimador do contraste, que é obtida por:
+$${\displaystyle \hat{V}(\hat{C})=S_{c}^{2}\sum_{i=1}^{n}\dfrac{a_{i}^{2}}{r_{i}}}$$
+\end{block}
+\end{frame}
+
+\section{Contrastes Ortogonais}
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Em algumas situações desejamos testar um grupo de contrastes relacionados com o experimento em estudo. Alguns tipos de testes indicados para este objetivo, necessitam
+que os contrastes, que compõem o grupo a ser testado, sejam ortogonais entre si. A ortogonalidade entre os contrastes indica independência linear na comparação estabelecida por um contraste com a comparação estabelecida pelos outros contrastes.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Sejam os estimadores dos contrastes de $C_{1}$ e $C_{2}$ dados, respectivamente, por:
+\begin{align*}
+\hat{C}_{1}&=a_{1}\hat{\mu}_{1}+a_{2}\hat{\mu}_{2}+\cdots+a_{n}\hat{\mu}_{n}\\
+\hat{C}_{2}&=b_{1}\hat{\mu}_{1}+b_{2}\hat{\mu}_{2}+\cdots+b_{n}\hat{\mu}_{n}
+\end{align*}
+A covariância entre $\hat{C}_{1}$ e $\hat{C}_{2},$ supondo independência entre tratamentos, é obtida por 
+$Cov(\hat{C}_{1},\hat{C}_{2})=a_{1}b_{1}V(\hat{\mu}_{1})+a_{2}b_{2}V(\hat{\mu}_{2})+
+\cdots+a_{n}b_{n}V(\hat{\mu}_{n}).$ E como já vimos, a variância da média amostral é dada por $V(\hat{\mu}_{i})=\frac{\sigma_{i}^{2}}{r_{i}},$ para $i=1,2,\cdots,n.$ Logo,
+$$Cov(\hat{C}_{1},\hat{C}_{2})=a_{1}b_{1}\dfrac{\sigma_{1}^{2}}{r_{1}}+a_{2}b_{2}\dfrac{\sigma_{2}^{2}}{r_{2}}+
+\cdots+a_{n}b_{n}\dfrac{\sigma_{n}^{2}}{r_{n}}.$$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Admitindo que exista homogeneidade de variâncias entre os tratamentos, ou seja, 
+$\sigma_{1}^{2}=\sigma_{2}^{2}=\cdots=\sigma_{n}^{2}=\sigma^{2}$, então,
+$$Cov(\hat{C}_{1},\hat{C}_{2})=\Biggl(\dfrac{a_{1}b_{1}}{r_{1}}+\dfrac{a_{2}b_{2}}{r_{2}}+\cdots+\dfrac{a_{n}b_{n}}{r_{n}}\Biggl)\sigma^{2}=\sigma^{2}{\displaystyle \sum_{i=1}^{n}\dfrac{a_{i}b_{i}}{r_{i}}}$$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Sabe-se ainda que, se duas variáveis aleatórias são independentes, a covariância entre
+elas é igual a zero. Assim, se $\hat{C}_{1}$ e $\hat{C}_{2}$ são independentes, a covariância entre eles é igual a zero, isto é: $$Cov(\hat{C}_{1},\hat{C}_{2})=0$$
+Para que a covariância seja nula, é necessário, portanto que:
+$${\displaystyle \sum_{i=1}^{n}\dfrac{a_{i}b_{i}}{r_{i}}}=0$$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Esta é a condição de ortogonalidade entre dois contrastes para um experimento
+com número diferente de repetições para os tratamentos. Para um experimento com o
+mesmo número de repetições, satisfazendo as mesmas pressuposições (médias
+independentes e homogeneidade de variâncias), a condição de ortogonalidade se resume
+a: $${\displaystyle \sum_{i=1}^{n}a_{i}b_{i}}=0$$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Para um experimento com $I$ tratamentos, podem ser formados vários grupos de
+contrastes ortogonais, no entanto cada grupo deverá conter no máximo $(I-1)$ contrastes
+ortogonais, o que corresponde ao número de graus de liberdade para tratamentos.
+Dentro de um grupo de contrastes ortogonais, todos os contrastes tomados dois a
+dois, serão também ortogonais.
+\end{block}
+\end{frame}
+
+\section{Métodos para obtenção de grupos de contrastes mutuamente ortogonais}
+\begin{frame}{}
+\frametitle{Obtenção por Meio de Sistema de Equações Lineares}
+\begin{block}{}
+\justifying
+Neste método, deve-se estabelecer, a princípio, um contraste que seja de interesse
+e, a partir deste é que os demais são obtidos. Por meio da imposição da condição de
+ortogonalidade e da condição para ser um contraste, obtém-se equações lineares, cujas
+incógnitas são os coeficientes das médias que compõem o contraste. Como o número de
+incógnitas é superior ao número de equações existentes, será sempre necessário atribuir
+valores a algumas incógnitas. É desejável que os valores a serem atribuídos, permitam
+que os coeficientes sejam números inteiros.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Por meio desta metodologia, é possível estabelecer facilmente um grupo de
+contrastes ortogonais. A metodologia pode ser resumida nos seguintes passos
+(BANZATTO e KRONKA, 1989):
+\begin{enumerate}
+\item Divide-se o conjunto das médias de todos os tratamentos do experimento em dois
+grupos. O primeiro contraste é obtido pela comparação das médias de um grupo contra
+as médias do outro grupo. Para isso atribui-se sinais positivos para membros de um grupo e negativos para membros do outro grupo.\pause
+\item Dentro de cada grupo formado no passo anterior, que possui mais que uma média,
+aplica-se o passo 1, subdividindo-os em subgrupos. Repete-se este passo até que se
+forme subgrupos com apenas uma média. Ao final, deveremos ter formado $(I-1)$
+comparações.
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Para se obter os coeficientes que multiplicam cada média que compõem os contrastes estabelecidos, deve-se, para cada contraste:
+\begin{enumerate}
+\item Verificar o número de parcelas experimentais envolvidas no $1^{\circ}$ grupo, digamos $g_{1},$ e o número de parcelas experimentais envolvidas no $2^{\circ}$ grupo, digamos $g_2.$ Calcula-se o mínimo múltiplo comum (m.m.c.) entre $g_1$ e $g_2.$ \pause
+\item Dividir o m.m.c. por $g_1.$ O resultado será o coeficiente de cada média do $1^{\circ}$ grupo. \pause
+\item Dividir o m.m.c. por $g_2.$ O resultado será o coeficiente de cada média do $2^{\circ}$ grupo. \pause
+\item Multiplicar os coeficientes obtidos pelo número de repetições da respectiva média. Se possível, simplificar os coeficientes obtidos por uma constante. No caso em que o
+número de repetições é igual para todos os tratamentos, este passo pode ser eliminado.
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Exemplo}
+\begin{block}{}
+\justifying
+\begin{align*}
+C_{1}&=(T_{1},T_{2},T_{3},T_{4})\ vs\ T_{5}\\
+C_{2}&=(T_{1},T_{2},T_{3})\ vs\ T_{4}\\
+C_{3}&=(T_{1},T_{2})\ vs\ T_{3}\\
+C_{4}&=(T_{1})\ vs\ T_{2}\\
+\end{align*}
+Em que $T_{1}$ possui 6 repetições, $T_{2}$ possui 6, $T_{3}$ possui 4, $T_{4}$ possui 5 e $T_{6}$ possui 6.
 \end{block}
 \end{frame}
 

@@ -23,4 +23,5 @@ Meu sonho é formar profissionais socialmente conscientes, com iniciativa de aç
 
 * BUSSAB, W.O. & MORETTIN, P.A. (2010) Estatística Básica. 6ª Edição, Editora Saraiva
 * MONTGOMERY, D.C. & RUNGER, G.C. (2016) Estatística aplicada e probabilidade para engenheiros. 6ª Edição, LTC Editora.
-* MAGALHÃES, M.N.; LIMA, A.C.P. (2004) Noções de Probabilidade e Estatística. 6ª edição. IME/SP. Editora EDUSP.
+* MAGALHÃES, M.N. & LIMA, A.C.P. (2004) Noções de Probabilidade e Estatística. 6ª edição. IME/SP. Editora EDUSP.
+* GRAFEN,A. & HAILS, R. (2002) Modern Statistics for the Life Sciences. 1ª edição. Oxford University Press.

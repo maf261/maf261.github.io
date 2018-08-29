@@ -1,2 +1,6 @@
 \babel@toc {brazil}{}
-\beamer@sectionintoc {1}{Delineamento em Blocos Casualizados}{3}{0}{1}
+\beamer@sectionintoc {1}{Princ\IeC {\'\i }pios b\IeC {\'a}sicos da experimenta\IeC {\c c}\IeC {\~a}o e Contrastes}{3}{0}{1}
+\beamer@sectionintoc {2}{Estimador do Contraste}{5}{0}{2}
+\beamer@sectionintoc {3}{vari\IeC {\^a}ncia do estimador de um contraste}{10}{0}{3}
+\beamer@sectionintoc {4}{Contrastes Ortogonais}{13}{0}{4}
+\beamer@sectionintoc {5}{M\IeC {\'e}todos para obten\IeC {\c c}\IeC {\~a}o de grupos de contrastes mutuamente ortogonais}{19}{0}{5}
