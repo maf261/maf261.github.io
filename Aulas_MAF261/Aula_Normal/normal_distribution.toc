@@ -1,3 +1,0 @@
-\babel@toc {brazil}{}
-\beamer@sectionintoc {1}{Introdu\IeC {\c c}\IeC {\~a}o}{3}{0}{1}
-\beamer@sectionintoc {2}{Uso da Tabela}{18}{0}{2}
