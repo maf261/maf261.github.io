@@ -73,28 +73,28 @@ title: Cronograma da Disciplina
 <tr>		
 <td valign="center" align="center">	09/08/2018	<BR></td>
 <td valign="center" align="center">	Quinta	<BR></td>
-<td valign="center" align="center">	Introdução aos testes de hipóteses	<BR></td>
+<td valign="center" align="center">	Distribuição normal	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	14/08/2018	<BR></td>
 <td valign="center" align="center">	Terça	<BR></td>
-<td valign="center" align="center">	Teste de hipótese de uma média populacional, Teste de hipótese que envolve diferença de médias populacionais	<BR></td>
+<td valign="center" align="center">	Introdução aos testes de hipóteses	<BR></td>
 <td valign="center" align="center">	3	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	16/08/2018	<BR></td>
 <td valign="center" align="center">	Quinta	<BR></td>
-<td valign="center" align="center">	Teste de hipótese para o caso de dados emparelhados, testes para variância, Teste de hipóteses para proporções	<BR></td>
+<td valign="center" align="center">	Prodimentos Gerais para Testes de Hipóteses	<BR></td>
 <td valign="center" align="center">	4	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	21/08/2018	<BR></td>
 <td valign="center" align="center">	Terça	<BR></td>
-<td valign="center" align="center">	Princípios básicos da experimentação	<BR></td>
+<td valign="center" align="center">	Teste de hipótese de uma média populacional, Teste de hipótese que envolve diferença de médias populacionais, Teste de hipótese para o caso de dados emparelhados, testes para variância, Teste de hipóteses para proporções 	<BR></td>
 <td valign="center" align="center">	5	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
@@ -108,42 +108,42 @@ title: Cronograma da Disciplina
 <tr>		
 <td valign="center" align="center">	28/08/2018	<BR></td>
 <td valign="center" align="center">	Terça	<BR></td>
-<td valign="center" align="center">	Contrastes	<BR></td>
+<td valign="center" align="center">	Teste de hipótese de uma média populacional, Teste de hipótese que envolve diferença de médias populacionais, Teste de hipótese para o caso de dados emparelhados, testes para variância, Teste de hipóteses para proporções 	<BR></td>
 <td valign="center" align="center">	7	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	30/08/2018	<BR></td>
 <td valign="center" align="center">	Quinta	<BR></td>
-<td valign="center" align="center">	Aula prática: Contrastes	<BR></td>
+<td valign="center" align="center">	Teste de hipótese de uma média populacional, Teste de hipótese que envolve diferença de médias populacionais, Teste de hipótese para o caso de dados emparelhados, testes para variância, Teste de hipóteses para proporções 	<BR></td>
 <td valign="center" align="center">	8	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	04/09/2018	<BR></td>
 <td valign="center" align="center">	Terça	<BR></td>
-<td valign="center" align="center">	Delineamento inteiramente casualizado, Exemplos de aplicação	<BR></td>
+<td valign="center" align="center">	Princípios básicos da experimentação e Contrastes	<BR></td>
 <td valign="center" align="center">	9	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	06/09/2018	<BR></td>
 <td valign="center" align="center">	Quinta	<BR></td>
-<td valign="center" align="center">	Aula prática: Delineamento inteiramente casualizado, Exemplos de aplicação	<BR></td>
+<td valign="center" align="center">	Princípios básicos da experimentação e Contrastes	<BR></td>
 <td valign="center" align="center">	10	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	11/09/2018	<BR></td>
 <td valign="center" align="center">	Terça	<BR></td>
-<td valign="center" align="center">	Procedimentos para comparações múltiplas: testes de Tukey, Duncan e Scheffé e t	<BR></td>
+<td valign="center" align="center">	Delineamento inteiramente casualizado, Exemplos de aplicação	<BR></td>
 <td valign="center" align="center">	11	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	13/09/2018	<BR></td>
 <td valign="center" align="center">	Quinta	<BR></td>
-<td valign="center" align="center">	Aula prática: Procedimentos para comparações múltiplas: testes de Tukey, Duncan e Scheffé e t	<BR></td>
+<td valign="center" align="center">	Procedimentos para comparações múltiplas: testes de Tukey, Duncan e Scheffé e t	<BR></td>
 <td valign="center" align="center">	12	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
@@ -315,6 +315,7 @@ title: Cronograma da Disciplina
 <td valign="center" align="center">	36	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
+	
 
 </TABLE>
 </CENTER></DIV>
