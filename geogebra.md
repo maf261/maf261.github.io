@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Exercicíos"
+title:  "Geogebra"
 date:   2018-08-07
 description: Página com applets do geogebra.
 ---
