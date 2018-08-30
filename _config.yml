@@ -26,6 +26,8 @@ navigation:
    url: /materiais
  - title: Créditos
    url: /creditos
+ - title: Geogebra
+   url: /geogebra
    
 social:
    github: maf261
