@@ -76,7 +76,7 @@
 \author{Prof. Fernando de Souza Bastos}
 \institute{Instituto de Ciências Exatas e Tecnológicas\texorpdfstring{\\ Universidade Federal de Viçosa}{}\texorpdfstring{\\ Campus UFV - Florestal}{}}
 \date{2018}
-\newcommand\mytext{Aula 1}
+\newcommand\mytext{Aula 9}
 \newcommand\mytextt{Fernando de Souza Bastos}
 \makeatletter
 \setbeamertemplate{footline}
@@ -118,13 +118,123 @@
 \tableofcontents
 \end{frame}
 
-\section{Delineamento em Quadrado Latino}
+\section{Introdução à Experimentação}
+\begin{frame}{}
+\frametitle{Introdução}
+\begin{block}{}
+\justifying
+A experimentação tem por objetivo o estudo dos experimentos, isto é, seu planejamento, execução, análise dos dados obtidos e interpretação dos resultados.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Conceitos Básicos}
+\begin{block}{}
+\justifying
+\begin{itemize}
+\item {\bf Tratamento ou fator:} é o método, elemento ou material cujo efeito desejamos medir ou comparar em um experimento. Exemplos: a) variedades de milho; b) níveis de proteína na ração e c) diferentes temperaturas de pasteurização do leite.
+\item {\bf Unidade experimental:} é a unidade que vai receber o tratamento e fornecer os dados que deverão refletir o seu efeito. Exemplos: a) uma fileira de plantas com 3
+metros de comprimento no campo; b) um leitão e c) um litro de leite.
+\end{itemize}
+\end{block}
+\end{frame}
+
 \begin{frame}{}
 \frametitle{}
 \begin{block}{}
 \justifying
 
+
 \end{block}
 \end{frame}
 
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
 \end{document}
