@@ -527,15 +527,15 @@ Comandos em R para soluções:
 
 \begin{align*}
 H_{0}: p&=0.32 \\
-H_{1}: p&\neq 0.32\quad \textrm{(bilateral)}
+H_{1}: p&< 0.32\quad \textrm{(unilateral)}
 \end{align*}
 
 Dados:
 
-$n=500;\quad \bar{x}=145;\quad p_{0}=0.32;\quad \alpha=2\% \rightarrow z_{t}=-2.326$
+$n=500;\quad \bar{x}=145;\quad p_{0}=0.32;\quad \alpha=2\% \rightarrow z_{t}=-2.054$
 
 $$z_{cal}=\dfrac{\bar{x}-np_{0}}{\sqrt{np_{0}(1-p_{0})}}=\dfrac{145-160}{\sqrt{160(0.68)}}=-1.43$$
-$$p-valor=0.1504172$$
+$$p-valor=0.07520861$$
 \begin{center}
 \setkeys{Gin}{width=0.5\linewidth}
 \includegraphics{TH-009}
@@ -553,10 +553,10 @@ Comandos em R para soluções:
 [1] 0.02
 \end{Soutput}
 \begin{Sinput}
-> (alpha <- 0.01)
+> (alpha <- 0.02)
 \end{Sinput}
 \begin{Soutput}
-[1] 0.01
+[1] 0.02
 \end{Soutput}
 \begin{Sinput}
 > (n <- 500)
@@ -580,7 +580,7 @@ Comandos em R para soluções:
 > (zt <- qnorm(alpha))
 \end{Sinput}
 \begin{Soutput}
-[1] -2.326348
+[1] -2.053749
 \end{Soutput}
 \begin{Sinput}
 > (zc <- (barx-(n*p0))/(sqrt(n*p0*(1-p0))))
@@ -589,10 +589,10 @@ Comandos em R para soluções:
 [1] -1.438059
 \end{Soutput}
 \begin{Sinput}
-> (pvalor <- 2*pnorm(zc))
+> (pvalor <- pnorm(zc))
 \end{Sinput}
 \begin{Soutput}
-[1] 0.1504172
+[1] 0.07520861
 \end{Soutput}
 \begin{Sinput}
 > curve(dnorm(x), from=-4.5, to=4.5, xlab="", ylab="")
@@ -600,29 +600,20 @@ Comandos em R para soluções:
 +               c(0, dnorm(seq(-4.5, zt, l=100)),
 +                 (0))),
 +         col="lightgray")
-> polygon(cbind(c(abs(zt), seq(abs(zt),4.5, l=100),4.5),
-+               c(0, dnorm(seq(abs(zt), 4.5, l=100)),
-+                 0)),
-+         col="lightgray")
 > abline(v=zt, lty=2)
-> abline(v=abs(zt), lty=2)
 > arrows(zc, 0.1, zc, 0)
 > zt1 <- format(zt,digits = 3)
 > Zt1 <- bquote(bold(z[t] == .(zt1)))
-> zt2 <- format(abs(zt),digits = 3)
-> Zt2 <- bquote(bold(z[t] == .(zt2)))
 > zc1 <- format(zc,digits = 3)
 > Zc1 <- bquote(bold(z[c] == .(zc1)))
-> text(zt1, 0.1, Zt, pos=2)
+> text(zt1, 0.1, Zt1, pos=2)
 > text(zt1, 0.2, "RRH0", pos=2)
-> text(zt2, 0.1, Zt2, pos=4)
-> text(zt2, 0.2, "RRH0", pos=4)
 > text(zc1, 0.12, Zc1, pos=4)
 > text(zc1, 0.2, "RNRH0", pos=4)
 > RR <- "Rejeita-se H0 ao nível de 2% de significância"
 > RN <- "Não rejeita-se H0 ao nível de 2% de significância"
 > ##Resultado
-> ifelse((zc<zt || zc>abs(zt)),RR,RN)
+> ifelse((zc<zt),RR,RN)
 \end{Sinput}
 \begin{Soutput}
 [1] "Não rejeita-se H0 ao nível de 2% de significância"
@@ -643,10 +634,10 @@ Comandos em R para soluções:
 \end{Soutput}
 \begin{Sinput}
 > ## estimativa intervalar (98%)
-> (IC.mu <- mu.est + qnorm(c(0.01, 0.99)) * (n*p0)/sqrt(n*p0*(1-p0)))
+> (IC.mu <- mu.est + qnorm(c(0.02, 0.98)) * (n*p0)/sqrt(n*p0*(1-p0)))
 \end{Sinput}
 \begin{Soutput}
-[1] 109.3155 180.6845
+[1] 113.4969 176.5031
 \end{Soutput}
 \end{Schunk}
 
@@ -1390,6 +1381,811 @@ mean of x
 [1] "Não rejeita-se H0 ao nível de 5% de significância"
 \end{Soutput}
 \end{Schunk}
+
+\item[23~]Uma empresa deseja estudar o efeito de uma pausa de dez minutos para um cafezinho sobre a produtividade de seus trabalhadores. Para isso, sorteou seis operários e contou o número de peças produzidas durante uma semana sem intervalo e uma semana com intervalo. Os resultados sugerem se há ou não melhora na produtividade? 
+Caso haja melhora, qual deve ser o acréscimo médio de produção para todos os trabalhadores da fábrica?
+
+\begin{tabular}{ccccccc}\hline
+ Operário & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+ Sem intervalo & 23 & 35 & 29 & 33 & 43 & 32 \\
+ Com intervalo & 28 & 38 & 29 & 37 & 42 & 30 \\ \hline
+\end{tabular}
+
+\begin{Schunk}
+\begin{Sinput}
+> (A <- SI <- c(23,35,29,33,43,32))
+\end{Sinput}
+\begin{Soutput}
+[1] 23 35 29 33 43 32
+\end{Soutput}
+\begin{Sinput}
+> (B <- CI <- c(28,38,29,37,42,30))
+\end{Sinput}
+\begin{Soutput}
+[1] 28 38 29 37 42 30
+\end{Soutput}
+\begin{Sinput}
+> #H0: d=0 (d=\muA-\muB=0)
+> #H1: d<0 (d=\muA-\muB!=0)
+> (d <- SI-CI)
+\end{Sinput}
+\begin{Soutput}
+[1] -5 -3  0 -4  1  2
+\end{Soutput}
+\begin{Sinput}
+> (n <- length(d))
+\end{Sinput}
+\begin{Soutput}
+[1] 6
+\end{Soutput}
+\begin{Sinput}
+> (df <- n-1)
+\end{Sinput}
+\begin{Soutput}
+[1] 5
+\end{Soutput}
+\begin{Sinput}
+> (bard <- mean(d))
+\end{Sinput}
+\begin{Soutput}
+[1] -1.5
+\end{Soutput}
+\begin{Sinput}
+> (Sd <- sd(d))
+\end{Sinput}
+\begin{Soutput}
+[1] 2.880972
+\end{Soutput}
+\begin{Sinput}
+> (tc <- (bard)/(Sd/sqrt(n)))
+\end{Sinput}
+\begin{Soutput}
+[1] -1.275345
+\end{Soutput}
+\begin{Sinput}
+> (alpha <- 0.05)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.05
+\end{Soutput}
+\begin{Sinput}
+> (tt <- qt(0.05,df)) #Teste unilateral
+\end{Sinput}
+\begin{Soutput}
+[1] -2.015048
+\end{Soutput}
+\begin{Sinput}
+> (pvalor <- pt(tc,df))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.129114
+\end{Soutput}
+\begin{Sinput}
+> t.test(d,alternative = "less")
+\end{Sinput}
+\begin{Soutput}
+	One Sample t-test
+
+data:  d
+t = -1.2753, df = 5, p-value = 0.1291
+alternative hypothesis: true mean is less than 0
+95 percent confidence interval:
+     -Inf 0.870003
+sample estimates:
+mean of x 
+     -1.5 
+\end{Soutput}
+\begin{Sinput}
+> RR <- "Rejeita-se H0 ao nível de 5% de significância"
+> RN <- "Não rejeita-se H0 ao nível de 5% de significância"
+> ##Resultado
+> ifelse(abs(tc)>abs(tt),RR,RN)
+\end{Sinput}
+\begin{Soutput}
+[1] "Não rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\begin{Sinput}
+> ##Ou, equivalentemente:
+> ifelse(pvalor > alpha, RN, RR)
+\end{Sinput}
+\begin{Soutput}
+[1] "Não rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\end{Schunk}
+
+\item[24~] Num levantamento feito com os operários da indústria mecânica, chegou-se aos seguintes números: salário médio $= 3,64$ salários mínimos e desvio padrão $= 0,85$ 
+salário mínimo. Suspeita-se que os salários de subclasse formada pelos torneiros mecânicos são diferentes dos salários do conjunto todo, tanto na média como na variância. Que conclusões você obteria se uma amostra de 25 torneiros apresentasse salário médio igual a $4,22$ salários mínimos e desvio padrão igual a $1,25$ salário mínimo?
+
+\begin{Schunk}
+\begin{Sinput}
+> #H0: \sigma =0.85
+> #H1: \sigma!=0.85
+> (barx=4.22)
+\end{Sinput}
+\begin{Soutput}
+[1] 4.22
+\end{Soutput}
+\begin{Sinput}
+> (S=1.25)
+\end{Sinput}
+\begin{Soutput}
+[1] 1.25
+\end{Soutput}
+\begin{Sinput}
+> (sigma=0.85)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.85
+\end{Soutput}
+\begin{Sinput}
+> (n <- 25)
+\end{Sinput}
+\begin{Soutput}
+[1] 25
+\end{Soutput}
+\begin{Sinput}
+> (df <- n-1)
+\end{Sinput}
+\begin{Soutput}
+[1] 24
+\end{Soutput}
+\begin{Sinput}
+> (alpha=0.05)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.05
+\end{Soutput}
+\begin{Sinput}
+> (qui_c <- ((n-1)*S^2)/(sigma^2))
+\end{Sinput}
+\begin{Soutput}
+[1] 51.90311
+\end{Soutput}
+\begin{Sinput}
+> (pvalor <- 2*pchisq((alpha/2),(n-1)))
+\end{Sinput}
+\begin{Soutput}
+[1] 6.006234e-32
+\end{Soutput}
+\begin{Sinput}
+> (qui_t1 <- qchisq((alpha/2),(n-1),lower.tail = TRUE))
+\end{Sinput}
+\begin{Soutput}
+[1] 12.40115
+\end{Soutput}
+\begin{Sinput}
+> (qui_t2 <- qchisq((1-(alpha/2)),(n-1),lower.tail = TRUE))
+\end{Sinput}
+\begin{Soutput}
+[1] 39.36408
+\end{Soutput}
+\begin{Sinput}
+> RR <- "Rejeita-se H0 ao nível de 5% de significância"
+> RN <- "Não rejeita-se H0 ao nível de 5% de significância"
+> ##Resultado
+> ifelse((qui_c<qui_t1 || qui_c>qui_t2),RR,RN)
+\end{Sinput}
+\begin{Soutput}
+[1] "Rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\begin{Sinput}
+> ##Ou, equivalentemente:
+> ifelse(pvalor > alpha, RN, RR)
+\end{Sinput}
+\begin{Soutput}
+[1] "Rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\begin{Sinput}
+> #Como, pelo teste qui-quadrado, a variância populacional é diferente da variância 
+> #do levantamento, faremos um teste t para média, supondo variância populacional #desconhecida 
+> #H0: \mu =3.64
+> #H1: \mu!=3.64
+> mu <- 3.64
+> (tc <- (barx-mu)/(S/sqrt(n)))
+\end{Sinput}
+\begin{Soutput}
+[1] 2.32
+\end{Soutput}
+\begin{Sinput}
+> (tt1 <- qt(0.025,df,lower.tail = TRUE)) #Teste bilateral
+\end{Sinput}
+\begin{Soutput}
+[1] -2.063899
+\end{Soutput}
+\begin{Sinput}
+> (tt2 <- qt(0.975,df,lower.tail = TRUE)) #Teste bilateral
+\end{Sinput}
+\begin{Soutput}
+[1] 2.063899
+\end{Soutput}
+\begin{Sinput}
+> (pvalor <- 2*(min(pt(tc,df),(1-pt(tc,df)))))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.02916553
+\end{Soutput}
+\begin{Sinput}
+> RR <- "Rejeita-se H0 ao nível de 5% de significância"
+> RN <- "Não rejeita-se H0 ao nível de 5% de significância"
+> ##Resultado
+> ifelse(abs(tc)>abs(tt1),RR,RN)
+\end{Sinput}
+\begin{Soutput}
+[1] "Rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\begin{Sinput}
+> ##Ou, equivalentemente:
+> ifelse(pvalor > alpha, RN, RR)
+\end{Sinput}
+\begin{Soutput}
+[1] "Rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\begin{Sinput}
+> #Logo, o salário médio dos torneiros mecânicos é diferente do salário médio dos operários!
+\end{Sinput}
+\end{Schunk}
+
+\item[26~] Um partido afirma que a porcentagem de votos masculinos a seu favor será de $10\%$ a mais do que a porcentagem de votos femininos. Numa pesquisa feita entre 
+400 homens, 170 votariam no partido, enquanto entre 625 mulheres, 194 lhe seriam favoráveis. A afirmação do partido é verdadeira ou não?
+
+\begin{Schunk}
+\begin{Sinput}
+> #H0: pH-pM=0.10
+> #H1: pH-pM>0.10
+> (p <- 0.10)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.1
+\end{Soutput}
+\begin{Sinput}
+> (pH_est <- 170/400)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.425
+\end{Soutput}
+\begin{Sinput}
+> (nH <- 400)
+\end{Sinput}
+\begin{Soutput}
+[1] 400
+\end{Soutput}
+\begin{Sinput}
+> (pM_est <- 194/625)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.3104
+\end{Soutput}
+\begin{Sinput}
+> (nM <- 625)
+\end{Sinput}
+\begin{Soutput}
+[1] 625
+\end{Soutput}
+\begin{Sinput}
+> (alpha <- 0.05)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.05
+\end{Soutput}
+\begin{Sinput}
+> (zc <- ((pH_est-pM_est)-(p))/sqrt(((pH_est*(1-pH_est))/nH)+((pM_est*(1-pM_est))/nM)))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.4728361
+\end{Soutput}
+\begin{Sinput}
+> (zt <- qnorm(1-alpha))
+\end{Sinput}
+\begin{Soutput}
+[1] 1.644854
+\end{Soutput}
+\begin{Sinput}
+> (pvalor <- pnorm(alpha,lower.tail = FALSE))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.4800612
+\end{Soutput}
+\begin{Sinput}
+> RR <- "Rejeita-se H0 ao nível de 5% de significância"
+> RN <- "Não rejeita-se H0 ao nível de 5% de significância"
+> ##Resultado
+> ifelse((zc>zt),RR,RN)
+\end{Sinput}
+\begin{Soutput}
+[1] "Não rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\begin{Sinput}
+> ##Ou, equivalentemente:
+> ifelse(pvalor > alpha, RN, RR)
+\end{Sinput}
+\begin{Soutput}
+[1] "Não rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\end{Schunk}
+
+\item[27~] De 400 moradores sorteados de uma grande cidade industrial, 300 são  favoráveis a um projeto governamental, e de uma amostra de 160 moradores de uma cidade 
+cuja principal atividade é o turismo, 120 são contra.
+\begin{tasks}
+\task Você diria que a diferença de opiniões nas duas cidades é estatisticamente significante? Sim, ver resultados abaixo:
+\end{tasks}
+
+\begin{Schunk}
+\begin{Sinput}
+> #H0: pI=pT
+> #H1: pI!=pT
+> (p <- 0)
+\end{Sinput}
+\begin{Soutput}
+[1] 0
+\end{Soutput}
+\begin{Sinput}
+> (pI_est <- 300/400)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.75
+\end{Soutput}
+\begin{Sinput}
+> (nI <- 400)
+\end{Sinput}
+\begin{Soutput}
+[1] 400
+\end{Soutput}
+\begin{Sinput}
+> (pT_est <- 40/160)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.25
+\end{Soutput}
+\begin{Sinput}
+> (nT <- 160)
+\end{Sinput}
+\begin{Soutput}
+[1] 160
+\end{Soutput}
+\begin{Sinput}
+> (alpha <- 0.05)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.05
+\end{Soutput}
+\begin{Sinput}
+> (zc <- ((pI_est-pT_est)-(p))/sqrt(((pI_est*(1-pI_est))/nI)+((pT_est*(1-pT_est))/nT)))
+\end{Sinput}
+\begin{Soutput}
+[1] 12.34427
+\end{Soutput}
+\begin{Sinput}
+> (zt1 <- qnorm((alpha/2),lower.tail = TRUE))
+\end{Sinput}
+\begin{Soutput}
+[1] -1.959964
+\end{Soutput}
+\begin{Sinput}
+> (zt2 <- qnorm(1-(alpha/2),lower.tail = TRUE))
+\end{Sinput}
+\begin{Soutput}
+[1] 1.959964
+\end{Soutput}
+\begin{Sinput}
+> (pvalor <- 2*min(pnorm(zc),1-pnorm(zc)))
+\end{Sinput}
+\begin{Soutput}
+[1] 0
+\end{Soutput}
+\begin{Sinput}
+> RR <- "Rejeita-se H0 ao nível de 5% de significância"
+> RN <- "Não rejeita-se H0 ao nível de 5% de significância"
+> ##Resultado
+> ifelse((zc>zt),RR,RN)
+\end{Sinput}
+\begin{Soutput}
+[1] "Rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\begin{Sinput}
+> ##Ou, equivalentemente:
+> ifelse(pvalor > alpha, RN, RR)
+\end{Sinput}
+\begin{Soutput}
+[1] "Rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\end{Schunk}
+
+\item[28~] Para verificar o grau de adesão de uma nova cola para vidros, preparam-se dois tipos de montagem: cruzado (A), onde a cola é posta em forma de X, e quadrado (B), onde a cola é posta apenas nas quatro bordas. Os resultados da resistência para as duas amostras de 10 cada estão abaixo. Que tipo de conclusão poderia ser tirada?
+
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c} \hline
+Método A & 16 & 14 & 19 & 18 & 19 & 20 & 15 & 18 & 17 & 18 \\ \hline
+Método B & 13 & 19 & 14 & 17 & 21 & 24 & 10 & 14 & 13 & 15 \\ \hline
+\end{tabular}
+
+\begin{Schunk}
+\begin{Sinput}
+> #H0: sigma_{A}^{2} =sigma_{B}^{2}
+> #H1: sigma_{A}^{2} !=sigma_{B}^{2}
+> (A <- c(16,14,19,18,19,20,15,18,17,18))
+\end{Sinput}
+\begin{Soutput}
+ [1] 16 14 19 18 19 20 15 18 17 18
+\end{Soutput}
+\begin{Sinput}
+> (B <- c(13,19,14,17,21,24,10,14,13,15))
+\end{Sinput}
+\begin{Soutput}
+ [1] 13 19 14 17 21 24 10 14 13 15
+\end{Soutput}
+\begin{Sinput}
+> (dpA <- sd(A))
+\end{Sinput}
+\begin{Soutput}
+[1] 1.897367
+\end{Soutput}
+\begin{Sinput}
+> (nA <- length(A))
+\end{Sinput}
+\begin{Soutput}
+[1] 10
+\end{Soutput}
+\begin{Sinput}
+> (dfA <- nA-1)
+\end{Sinput}
+\begin{Soutput}
+[1] 9
+\end{Soutput}
+\begin{Sinput}
+> (dpB <- sd(B))
+\end{Sinput}
+\begin{Soutput}
+[1] 4.242641
+\end{Soutput}
+\begin{Sinput}
+> (nB <- length(B))
+\end{Sinput}
+\begin{Soutput}
+[1] 10
+\end{Soutput}
+\begin{Sinput}
+> (dfB <- nB-1)
+\end{Sinput}
+\begin{Soutput}
+[1] 9
+\end{Soutput}
+\begin{Sinput}
+> (alpha <- 0.05)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.05
+\end{Soutput}
+\begin{Sinput}
+> (fc <- (dpA^2)/(dpB^2))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.2
+\end{Soutput}
+\begin{Sinput}
+> (ft1 <- qf((alpha/2),dfA,dfB,lower.tail = TRUE))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.2483859
+\end{Soutput}
+\begin{Sinput}
+> (ft2 <- qf(1-(alpha/2),dfA,dfB,lower.tail = TRUE))
+\end{Sinput}
+\begin{Soutput}
+[1] 4.025994
+\end{Soutput}
+\begin{Sinput}
+> (pvalor <- 2*min(pf(fc,dfA,dfB,lower.tail = TRUE),1-pf(fc,dfA,dfB,lower.tail = TRUE)))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.02507092
+\end{Soutput}
+\begin{Sinput}
+> (var.test(A,B,alternative = "two.sided"))
+\end{Sinput}
+\begin{Soutput}
+	F test to compare two variances
+
+data:  A and B
+F = 0.2, num df = 9, denom df = 9, p-value = 0.02507
+alternative hypothesis: true ratio of variances is not equal to 1
+95 percent confidence interval:
+ 0.04967717 0.80519883
+sample estimates:
+ratio of variances 
+               0.2 
+\end{Soutput}
+\begin{Sinput}
+> RR <- "Rejeita-se H0 ao nível de 5% de significância"
+> RN <- "Não rejeita-se H0 ao nível de 5% de significância"
+> ##Resultado
+> ifelse((fc<ft1 || fc>ft2),RR,RN)
+\end{Sinput}
+\begin{Soutput}
+[1] "Rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\begin{Sinput}
+> ##Ou, equivalentemente:
+> ifelse(pvalor > alpha, RN, RR)
+\end{Sinput}
+\begin{Soutput}
+[1] "Rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\begin{Sinput}
+> #H0: muA =muB
+> #H1: muA>muB
+> (barA <- mean(A))
+\end{Sinput}
+\begin{Soutput}
+[1] 17.4
+\end{Soutput}
+\begin{Sinput}
+> (barB <- mean(B))
+\end{Sinput}
+\begin{Soutput}
+[1] 16
+\end{Soutput}
+\begin{Sinput}
+> (df <- ((((dpA^2)/nA)+((dpB^2)/nB))^2)/(((((dpA^2)/nA)^2)/dfA)+((((dpB^2)/nB)^2)/dfB)))
+\end{Sinput}
+\begin{Soutput}
+[1] 12.46154
+\end{Soutput}
+\begin{Sinput}
+> (tc <- (barA-barB)/(sqrt(((dpA^2)/nA)+((dpB^2)/nB))))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.9525793
+\end{Soutput}
+\begin{Sinput}
+> (tt <- qt(1-alpha,df,lower.tail = TRUE))
+\end{Sinput}
+\begin{Soutput}
+[1] 1.776804
+\end{Soutput}
+\begin{Sinput}
+> (pvalor <- pt(tc,df,lower.tail = FALSE))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.1794578
+\end{Soutput}
+\begin{Sinput}
+> (t.test(A,B,alternative = "greater"))
+\end{Sinput}
+\begin{Soutput}
+	Welch Two Sample t-test
+
+data:  A and B
+t = 0.95258, df = 12.462, p-value = 0.1795
+alternative hypothesis: true difference in means is greater than 0
+95 percent confidence interval:
+ -1.211357       Inf
+sample estimates:
+mean of x mean of y 
+     17.4      16.0 
+\end{Soutput}
+\begin{Sinput}
+> RR <- "Rejeita-se H0 ao nível de 5% de significância"
+> RN <- "Não rejeita-se H0 ao nível de 5% de significância"
+> ##Resultado
+> ifelse((tc>tt),RR,RN)
+\end{Sinput}
+\begin{Soutput}
+[1] "Não rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\begin{Sinput}
+> ##Ou, equivalentemente:
+> ifelse(pvalor > alpha, RN, RR)
+\end{Sinput}
+\begin{Soutput}
+[1] "Não rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\end{Schunk}
+
+\item[29~] Em um estudo para comparar os efeitos de duas dietas, A e B, sobre o crescimento, 6 ratos foram submetidos à dieta A, e 9 ratos à dieta B. Após 5 semanas, os ganhos em peso foram:
+
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c} \hline
+Dieta A & 15 & 18 & 12 & 11 & 14 & 15 &  & &  \\ \hline
+Dieta B & 11 & 11 & 12 & 16 & 12 & 13 & 8 & 10 & 13  \\ \hline
+\end{tabular}
+\begin{tasks}
+\task Admitindo que temos duas amostras independentes de populações normais, teste a hipótese de que não há diferença entre as duas dietas, contra a alternativa que a 
+dieta A é mais eficaz, usando o teste $t$ de Student, no nível de $\alpha = 0,01$.
+\end{tasks}
+
+\begin{Schunk}
+\begin{Sinput}
+> #H0: sigma_{A}^{2} =sigma_{B}^{2}
+> #H1: sigma_{A}^{2} !=sigma_{B}^{2}
+> (A <- c(15,18,12,11,14,15))
+\end{Sinput}
+\begin{Soutput}
+[1] 15 18 12 11 14 15
+\end{Soutput}
+\begin{Sinput}
+> (B <- c(11,11,12,16,12,13,8,10,13))
+\end{Sinput}
+\begin{Soutput}
+[1] 11 11 12 16 12 13  8 10 13
+\end{Soutput}
+\begin{Sinput}
+> (dpA <- sd(A))
+\end{Sinput}
+\begin{Soutput}
+[1] 2.483277
+\end{Soutput}
+\begin{Sinput}
+> (nA <- length(A))
+\end{Sinput}
+\begin{Soutput}
+[1] 6
+\end{Soutput}
+\begin{Sinput}
+> (dfA <- nA-1)
+\end{Sinput}
+\begin{Soutput}
+[1] 5
+\end{Soutput}
+\begin{Sinput}
+> (dpB <- sd(B))
+\end{Sinput}
+\begin{Soutput}
+[1] 2.223611
+\end{Soutput}
+\begin{Sinput}
+> (nB <- length(B))
+\end{Sinput}
+\begin{Soutput}
+[1] 9
+\end{Soutput}
+\begin{Sinput}
+> (dfB <- nB-1)
+\end{Sinput}
+\begin{Soutput}
+[1] 8
+\end{Soutput}
+\begin{Sinput}
+> (alpha <- 0.01)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.01
+\end{Soutput}
+\begin{Sinput}
+> (fc <- (dpA^2)/(dpB^2))
+\end{Sinput}
+\begin{Soutput}
+[1] 1.247191
+\end{Soutput}
+\begin{Sinput}
+> (ft1 <- qf((alpha/2),dfA,dfB,lower.tail = TRUE))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.0716283
+\end{Soutput}
+\begin{Sinput}
+> (ft2 <- qf(1-(alpha/2),dfA,dfB,lower.tail = TRUE))
+\end{Sinput}
+\begin{Soutput}
+[1] 8.301799
+\end{Soutput}
+\begin{Sinput}
+> (pvalor <- 2*min(pf(fc,dfA,dfB,lower.tail = TRUE),1-pf(fc,dfA,dfB,lower.tail = TRUE)))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.7424555
+\end{Soutput}
+\begin{Sinput}
+> (var.test(A,B,alternative = "two.sided"))
+\end{Sinput}
+\begin{Soutput}
+	F test to compare two variances
+
+data:  A and B
+F = 1.2472, num df = 5, denom df = 8, p-value = 0.7425
+alternative hypothesis: true ratio of variances is not equal to 1
+95 percent confidence interval:
+ 0.2588997 8.4274842
+sample estimates:
+ratio of variances 
+          1.247191 
+\end{Soutput}
+\begin{Sinput}
+> RR <- "Rejeita-se H0 ao nível de 5% de significância"
+> RN <- "Não rejeita-se H0 ao nível de 5% de significância"
+> ##Resultado
+> ifelse((fc<ft1 || fc>ft2),RR,RN)
+\end{Sinput}
+\begin{Soutput}
+[1] "Não rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\begin{Sinput}
+> ##Ou, equivalentemente:
+> ifelse(pvalor > alpha, RN, RR)
+\end{Sinput}
+\begin{Soutput}
+[1] "Não rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\begin{Sinput}
+> #H0: muA =muB
+> #H1: muA!=muB
+> (barA <- mean(A))
+\end{Sinput}
+\begin{Soutput}
+[1] 14.16667
+\end{Soutput}
+\begin{Sinput}
+> (barB <- mean(B))
+\end{Sinput}
+\begin{Soutput}
+[1] 11.77778
+\end{Soutput}
+\begin{Sinput}
+> (df <- dfA+dfB)
+\end{Sinput}
+\begin{Soutput}
+[1] 13
+\end{Soutput}
+\begin{Sinput}
+> (Sc2 <- (dfA*dpA^2+dfB*dpB^2)/df)
+\end{Sinput}
+\begin{Soutput}
+[1] 5.41453
+\end{Soutput}
+\begin{Sinput}
+> (tc <- (barA-barB)/(sqrt(Sc2*(1/nA+1/nB))))
+\end{Sinput}
+\begin{Soutput}
+[1] 1.947901
+\end{Soutput}
+\begin{Sinput}
+> (tt1 <- qt(alpha/2,df,lower.tail = TRUE))
+\end{Sinput}
+\begin{Soutput}
+[1] -3.012276
+\end{Soutput}
+\begin{Sinput}
+> (tt2 <- qt(1-alpha/2,df,lower.tail = TRUE))
+\end{Sinput}
+\begin{Soutput}
+[1] 3.012276
+\end{Soutput}
+\begin{Sinput}
+> (pvalor <- 2*min(pt(tc,df,lower.tail = TRUE),1-pt(tc,df,lower.tail = TRUE)))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.07335015
+\end{Soutput}
+\begin{Sinput}
+> (t.test(A,B,alternative = "two.sided",var.equal = TRUE))
+\end{Sinput}
+\begin{Soutput}
+	Two Sample t-test
+
+data:  A and B
+t = 1.9479, df = 13, p-value = 0.07335
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.2605688  5.0383466
+sample estimates:
+mean of x mean of y 
+ 14.16667  11.77778 
+\end{Soutput}
+\begin{Sinput}
+> RR <- "Rejeita-se H0 ao nível de 5% de significância"
+> RN <- "Não rejeita-se H0 ao nível de 5% de significância"
+> ##Resultado
+> ifelse((tc<tt1||tc>tt2),RR,RN)
+\end{Sinput}
+\begin{Soutput}
+[1] "Não rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\begin{Sinput}
+> ##Ou, equivalentemente:
+> ifelse(pvalor > alpha, RN, RR)
+\end{Sinput}
+\begin{Soutput}
+[1] "Não rejeita-se H0 ao nível de 5% de significância"
+\end{Soutput}
+\end{Schunk}
+
 \end{ManualExercise}
 \end{Exercise}
 
