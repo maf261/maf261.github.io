@@ -35,8 +35,10 @@ description: Página com listas de exercícios.
 ---
 
 * [Lista 1][solucoes1] - Soluções dos exercícios da Lista 1.
+* [Morettin][solBussab] - Soluções dos Exercícios do livro do Bussab e Morettin no R.
 
 ---
    
 [testes]:https://rawgit.com/maf261/maf261.github.io/master/Exercicios/Teste_Hipotese.pdf
 [solucoes1]:https://rawgit.com/maf261/maf261.github.io/master/Exercicios/Solucoes/TH.pdf
+[solBussab]: https://www.ime.usp.br/~pam/scriptsR.html
