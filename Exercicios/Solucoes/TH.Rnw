@@ -703,15 +703,15 @@ ifelse(pvalor > 0.05, RN, RR)
 (nA <- 15)
 (nB <- 12)
 df <- nA+nB-2
-Sc2 <- ((nA-1)*(dpA^2)+(nB-1)*(dpB^2))/(nA+nB-2)
-(tc <- (barxA-barxB)/(Sc2*sqrt((1/nA)+(1/nB))))
+(Sc2 <- ((nA-1)*(dpA^2)+(nB-1)*(dpB^2))/(nA+nB-2))
+(tc <- (barxA-barxB)/(sqrt(Sc2*((1/nA)+(1/nB)))))
 (tt1 <- qt(0.025,df)) #Teste bilateral
 (tt2 <- qt(0.975,df)) #Teste bilateral
 (pvalor <- 2*(min(pt(tc,df),(1-pt(tc,df)))))
 RR <- "Rejeita-se H0 ao nível de 5% de significância"
 RN <- "Não rejeita-se H0 ao nível de 5% de significância"
 ##Resultado
-ifelse(abs(tc)>abs(tt),RR,RN)
+ifelse(abs(tc)>abs(tt1),RR,RN)
 ##Ou, equivalentemente:
 ifelse(pvalor > 0.05, RN, RR)
 @

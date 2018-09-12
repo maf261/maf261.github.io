@@ -1,2 +1,7 @@
 \babel@toc {brazil}{}
-\beamer@sectionintoc {1}{Experimentos Fatoriais}{3}{0}{1}
+\beamer@sectionintoc {1}{Delineamento Inteiramente Casualizado}{3}{0}{1}
+\beamer@sectionintoc {2}{Quadro de tabula\IeC {\c c}\IeC {\~a}o dos dados}{5}{0}{2}
+\beamer@sectionintoc {3}{Modelo Estat\IeC {\'\i }stico}{11}{0}{3}
+\beamer@sectionintoc {4}{An\IeC {\'a}lise de Vari\IeC {\^a}ncia}{13}{0}{4}
+\beamer@sectionintoc {5}{Coeficiente de Varia\IeC {\c c}\IeC {\~a}o}{43}{0}{5}
+\beamer@sectionintoc {6}{Exemplos}{48}{0}{6}
