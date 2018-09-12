@@ -14,6 +14,9 @@ description: Página com as aulas da disciplina.
 * [Aula 3][aula3]
 * [Aula 4][aula4]
 * [Aulas 5, 6 e 7][aulas567]
+* [Aula 8][aula8]
+* [Aula 9][aula9]
+* [Aula 10][aula10]
 
 ---
 
@@ -23,7 +26,10 @@ description: Página com as aulas da disciplina.
 
 [maf261-gh]:https://github.com/maf261
 [aula1]:    https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula1/Aula1.pdf
-[aula2]:   https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula2/Aula2.pdf
+[aula2]:    https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula2/Aula2.pdf
 [aula3]:    https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula3/Aula3.pdf
 [aula4]:    https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula4/Aula4.pdf
 [aulas567]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula5_6e7/Aula5_6e7.pdf
+[aula8]:    https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula8/Aula8.pdf
+[aula9]:    https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula9/Aula9.pdf
+[aula10]:   https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula10/Aula10.pdf
