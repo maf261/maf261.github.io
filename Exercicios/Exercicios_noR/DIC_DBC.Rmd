@@ -1,0 +1,451 @@
+---
+title: "Exercícios de Delineamento Inteiramente Casualizados"
+author: "Prof. Fernando de Souza Bastos"
+date: "26 de setembro de 2018"
+output:
+  slidy_presentation:
+    fig_caption: yes
+    force_captions: yes
+    highlight: pygments
+    keep_tex: yes
+    toc: yes
+    #Sumário flutuante
+    #toc_float: true
+    #numerar seções
+    number_sections: true
+    #Mostrar ou esconder os códigos (show ou hide)
+    code_folding: hide
+    #Diversos modelos de documentos ver outros em http://bootswatch.com/
+    theme: united
+    header-includes:
+       \usepackage{array}
+       \usepackage{multirow}
+bibliography: bibfile.bib 
+#output: html_document
+---
+
+```{r setup, include=FALSE}
+require(knitr)
+require(kfigr)
+library(kableExtra)
+options(knitr.table.format = "latex")
+knitr::opts_chunk$set(echo = TRUE,fig.align = "center",message=FALSE, warning=FALSE)
+```
+
+## Exercício 4.1
+<p style="text-align: justify;">
+Para comparar a produtividade de quatro variedades de milho, um agrônomo tomou 
+vinte parcelas similares e distribuiu, inteiramente ao acaso, cada uma das 4 variedades
+em 5 parcelas experimentais. A partir dos dados experimentais fornecidos abaixo, é
+possível concluir que existe diferença significativa entre as variedades com relação a
+produtividade, utilizando o nível de significância de 5%?
+</p>
+<!-- <p style="text-align: center;"> -->
+<!-- |   	 |   A	|  B 	|  C  	| D  	  | -->
+<!-- |---|---|---|---|---| -->
+<!-- |   	 |  25	| 31 	| 22  	|33   	| -->
+<!-- |   	 |  26	| 25 	| 26  	|29   	| -->
+<!-- |   	 |  20	| 28 	| 28  	|31   	| -->
+<!-- |   	 |  23	| 27 	| 25  	|34   	| -->
+<!-- |   	 |  21	| 24 	| 29  	|28   	| -->
+<!-- |Totais|  115	| 135 | 130  	|155   	| -->
+<!-- |Médias|  23 	| 27 	| 26  	|31   	| -->
+<!-- </p> -->
+
+
+\begin{array}{ccccc}
+\hline
+&&&Variedades&&\\
+\hline
+   	  &    A	&  B 	&  C  	& D  \\
+   	  \hline
+   	  &   25	& 31 	& 22  	&33 \\
+   	  &   26	& 25 	& 26  	&29 \\
+   	  &   20	& 28 	& 28  	&31 \\
+   	  &   23	& 27 	& 25  	&34 \\
+   	  &   21	& 24 	& 29  	&28 \\
+   	  \hline
+Totais&  115	& 135 & 130  	&155 \\
+\hline
+Médias&  23 	& 27 	& 26  	&31 \\
+\hline
+\end{array}
+
+
+```{r, echo = TRUE}
+library(readr)
+if(!is.null(dev.list())) dev.off()
+da <- read_delim("E:/Documentos/GitHub/MAF261/maf261.github.io/Exercicios/Exercicios_noR/Exer_4_1.txt", 
+                 "\t")
+da
+str(da)
+da$Var <- as.factor(da$Var)
+is.factor(da$Var)
+#Resumo total dos dados
+summary(da)
+#Média dos dados por variedade
+res <- aggregate(Prod ~ Var, data = da, FUN = mean);
+kable(res,format = "markdown",digits = 2, padding = 3,align = "c")
+```
+<p style="text-align: justify;">
+Sempre é interessante fazer uma análise descritiva dos dados para avaliar linearidade, independencia, 
+normalidade e homocedásticidade.
+</p>
+
+O pacote lattice de @lattice do R é valioso para tais análises:
+
+```{r}
+library(lattice)
+
+xyplot(Prod~Var, data=da, jitter.x=TRUE)
+xyplot(Prod~reorder(Var,Prod), data=da, jitter.x=TRUE)
+dotplot(Prod~Var, data=da, jitter.x=TRUE)
+dotplot(Prod~reorder(Var,Prod), data=da, jitter.x=TRUE)
+bwplot(Prod~Var, data=da, pch="|")
+bwplot(Prod~reorder(Var,Prod), data=da, pch="|")
+```
+
+- Plot 1 - Residuos vs Valores Ajustados
+
+<p style="text-align: justify;">
+ O gráfico dos resíduos versus valores ajustados (valores preditos) é uma
+ das principais técnicas utilizadas para verificar as suposições dos
+ resíduos. Além da detecção de heteroscedasticidade, esse gráfico pode
+ indicar que não existe uma relação linear entra as variáveis explicativas
+ com a variável resposta por meio de alguma tendência nos pontos. Por
+ exemplo, se os pontos do gráfico formam uma parábola, é indicativo que
+ termos de segundo grau sejam necessários.
+ </p>
+
+<p style="text-align: justify;">
+ Para o diagnóstico de heteroscedasticidade, tentamos encontrar alguma
+ tendência no gráfico. Por isso, se os pontos estão aleatoriamente
+ distribuídos em torno do 0, sem nenhum comportamento ou tendência, temos
+ indícios de que a variância dos resíduos é homoscedástica. Já a presença
+ de "funil" é um indicativo da presença de heteroscedasticidade.
+ </p>
+ 
+ - Plot 2 - Locação - Escala
+
+<p style="text-align: justify;">
+Para obtenção dos resíduos padronizados fazemos uma mudança de escala
+dos resíduos, tend uma linha horizontal temos que a variabilidade é
+constante
+</p>
+
+- Plot 3 - Normal Q-Q plot
+
+Pontos ao redor da linha significam normalidade.
+
+- Plot 4 - 
+
+Mesma avaliação do plot 1, mais utilizado quando utilizamos regressão linear
+ 
+```{r}
+m0 <- lm(Prod~Var, data=da)
+par(mfrow=c(2,2))
+plot(m0)
+layout(1)
+```
+
+
+$$
+\begin{align}
+H_{0}&:\mu_{1}=\mu_{2}=\mu_{3}=\mu_{4}\\
+H_{1}&: \textrm{Não}\  H_{0}\ (\textrm{Pelo menos uma média difere das demais})
+\end{align}
+$$
+ 
+- Primeira forma de fazer (Mais chata, menos direta e mais trabalhosa) 
+ 
+```{r}
+alpha <- 0.05
+#Variedades: A, B, C e D
+t1 <- c(25,26,20,23,21)
+t2 <- c(31,25,28,27,24)
+t3 <- c(22,26,28,25,29)
+t4 <- c(33,29,31,34,28)
+tab <- matrix(c(t1,t2,t3,t4),5,4)
+(n <- length(tab))
+(I <- dim(tab)[2])
+(J <- dim(tab)[1])
+(bart1 <- mean(t1))
+(bart2 <- mean(t2))
+(bart3 <- mean(t3))
+(bart4 <- mean(t4))
+(Tott1 <- sum(t1))
+(Tott2 <- sum(t2))
+(Tott3 <- sum(t3))
+(Tott4 <- sum(t4))
+(mu <- mean(tab))
+```
+
+- Somas de Quadrados 
+
+```{r}
+####################################
+difTot <- matrix(NA,dim(tab)[1],dim(tab)[2])
+for (j in 1:dim(tab)[2]) {
+  for (i in 1:dim(tab)[1]) {
+    difTot[i,j] <- ((tab[i,j]-mu)^2)
+  }
+  
+  }
+(SQTot <- sum(difTot))
+####################################
+difTrat <- matrix(NA,1,I)
+for (i in 1:I) {
+  difTrat[i] <- ((mean(tab[,i])-mu)^2)
+}
+(SQTrat <- 5*sum(difTrat))
+####################################
+difRes <- matrix(NA,dim(tab)[1],dim(tab)[2])
+for (i in 1:dim(tab)[2]) {
+  for (j in 1:dim(tab)[1]) {
+    difRes[j,i] <- (tab[j,i]-mean(tab[,i]))^2
+     }
+}
+(SQRes <- sum(difRes))
+####################################
+#Observem que:
+
+#Soma de quadrado totais = Soma de quadrados dos resíduos + Soma de quadrados de tratamentos
+
+```
+
+- Resultados
+
+```{r}
+FV <- cbind("Trat","Res","Total")
+GL <- cbind(I-1,I*(J-1),I*J-1)
+SQ <- cbind(SQTrat,SQRes,SQTot)
+QM <- cbind(SQTrat/GL[1],SQRes/GL[2],SQTot/GL[3])
+(Fcal <- QM[1,1]/QM[1,2])
+(Ftab <- qf(alpha,GL[1],GL[2],lower.tail = FALSE))
+(pvalor <- pf(Fcal,GL[1],GL[2],lower.tail = FALSE))
+RR <- "Rejeita-se H0 ao nível alpha de significancia"
+RNR <- "Não rejeita-se H0 ao nível alpha de significancia"
+dif <- "Pelo menos uma média difere das demais"
+ndif <- "Todas as médias são iguais"
+ifelse(Fcal>Ftab,RR,RNR)
+ifelse(Fcal>Ftab,dif,ndif)
+```
+
+
+- Primeira Forma mais direta 
+
+```{r}
+m0 <- lm(Prod~Var, data=da)
+anova(m0)
+```
+
+
+- Segunda forma também direta usando o pacote ExpDes.pt dos professores @expdes
+
+```{r}
+library(ExpDes.pt)
+dic <- dic(da$Var,
+  da$Prod,
+  quali = TRUE,
+  mcomp = "tukey",
+  nl = FALSE,
+  hvar = 'bartlett',
+  sigT = 0.05,
+  sigF = 0.05)
+#Gráficos de Resíduos do Pacote ExpDes.pt
+plotres(dic)
+```
+ 
+
+## Exercício 4.2
+<p style="text-align: justify;">
+Um treinador de corrida rústica, objetivando melhorar o desempenho de seus atletas,
+testou três novas técnicas de preparação. Para tanto trabalhou com um grupo de 15
+atletas completamente homogêneos para as características essenciais. A designação das
+técnicas de preparação aos atletas foi feita totalmente ao acaso e de tal forma que o
+número de atletas avaliados em cada uma das técnicas fosse o mesmo. Os resultados
+obtidos, após um determinado período de tempo de aprendizado da técnica pelos atletas,
+foram os seguintes (minutos / 25 Km):
+</p>
+
+
+\begin{array}{ccccc}
+\hline
+&&\textrm{Técnicas de Preparação}&&\\
+\hline
+\textrm{Repetições}	  &    1	&  2 	&  3  	\\
+   	  \hline
+   	 1 &   130	& 125 	& 135  	\\
+   	 2 &   129	& 131 	& 129  	\\
+   	 3 &   128	& 130 	& 131  	\\
+   	 4 &   126	& 129 	& 128  	\\
+   	 5 &   130	& 127 	& 130  	\\
+   	  \hline
+Totais&  643	& 642 & 653  	\\
+\hline
+\textrm{Médias}&  23 	& 27 	& 26  	\\
+\hline
+\end{array}
+
+
+```{r, echo = TRUE}
+library(readr)
+da <- read_delim("E:/Documentos/GitHub/MAF261/maf261.github.io/Exercicios/Exercicios_noR/Exer_4_2.txt", 
+                 "\t")
+da
+str(da)
+da$Tec <- as.factor(da$Tec)
+is.factor(da$Tec)
+#Resumo total dos dados
+summary(da)
+#Média dos dados por variedade
+res <- aggregate(Tempo ~ Tec, data = da, FUN = mean);
+kable(res,format = "markdown",digits = 2, padding = 3,align = "c")
+```
+
+Usando o pacote lattice de @lattice:
+
+```{r}
+library(lattice)
+
+xyplot(Tempo~Tec, data=da, jitter.x=TRUE)
+xyplot(Tempo~reorder(Tec,Tempo), data=da, jitter.x=TRUE)
+dotplot(Tempo~Tec, data=da, jitter.x=TRUE)
+dotplot(Tempo~reorder(Tec,Tempo), data=da, jitter.x=TRUE)
+bwplot(Tempo~Tec, data=da, pch="|")
+bwplot(Tempo~reorder(Tec,Tempo), data=da, pch="|")
+```
+
+```{r}
+m0 <- lm(Tempo~Tec, data=da)
+par(mfrow=c(2,2))
+plot(m0)
+layout(1)
+```
+
+
+$$
+\begin{align}
+H_{0}&:\mu_{1}=\mu_{2}=\mu_{3}\\
+H_{1}&: \textrm{Não}\  H_{0}\ (\textrm{Pelo menos uma média difere das demais})
+\end{align}
+$$
+- Usando a função interna do R
+
+```{r}
+m0 <- lm(Tempo~Tec, data=da)
+anova(m0)
+```
+
+
+- Usando o pacote ExpDes.pt dos professores @expdes
+
+```{r}
+library(ExpDes.pt)
+dic <- dic(da$Tec,
+  da$Tempo,
+  quali = TRUE,
+  mcomp = "tukey",
+  nl = FALSE,
+  hvar = 'bartlett',
+  sigT = 0.01,
+  sigF = 0.01)
+plotres(dic)
+```
+ 
+## Exercício do livro do Banzato (Exer 3.2.1)
+
+Agora vamos usar o pacote Labest data produzido pela  @labest
+
+```{r}
+# library(devtools)
+# 
+# # Do repositório de divulgação no GitHub.
+# install_github(repo = "labestData",
+#                username = "pet-estatistica",
+#                ref = "master", build_vignettes = TRUE)
+
+library(labestData)
+#labestDataView()
+str(BanzattoQd3.2.1)
+library(lattice)
+
+data(BanzattoQd3.2.1)
+
+aggregate(pulgoes ~ trat,  data = BanzattoQd3.2.1,
+          FUN = function(x) { c(mean = mean(x), var = var(x)) })
+
+ban <- BanzattoQd3.2.1
+
+xyplot(pulgoes ~ trat, data = ban,
+       xlab = "Tratamentos",
+       ylab = "Número de pulgões 36h após pulverização")
+
+xyplot(pulgoes ~ reorder(trat,pulgoes), data = ban,
+       xlab = "Tratamentos",
+       ylab = "Número de pulgões 36h após pulverização")
+
+
+
+m0 <- lm(pulgoes~trat,data = ban)
+plot(m0)
+#Suponha que esteja tudo bem!
+library(ExpDes.pt)
+dic <- dic(ban$trat,
+  ban$pulgoes,
+  quali = TRUE,
+  mcomp = "tukey",
+  nl = FALSE,
+  hvar = 'bartlett',
+  sigT = 0.05,
+  sigF = 0.05)
+#Avalie os resultados
+plotres(dic)
+```
+
+- Faremos uma transformação nos dados do tipo potência
+
+$$
+y_{ij}=\Biggl\{
+\begin{array}{c}
+\dfrac{y^{\lambda}-1}{\lambda},\ \textrm{se}\ \lambda\neq 0\\
+\log{(y)},\ \textrm{se}\ \lambda=0 
+\end{array}
+$$
+O valor de $\lambda$ será o valor que maxima a função log de verossimilhança (medida de compatibilidade) do modelo m0. Não precisa ser o valor exato, escolha um ponto aproximado entre as linhas mais externas abaixo:
+
+Escolha um número que seja próximo, o ideal é que seja um número do tipo $1/a,$ onde $a \in \mathbb{Z}.$
+
+```{r}
+MASS::boxcox(m0)
+```
+
+
+```{r}
+MASS::boxcox(m0)
+abline(v=0.2,col="red")
+abline(v=0.25,col="blue")
+```
+
+- Após a escolha de $\lambda=0.2,$ temos:
+
+```{r}
+m1 <- lm(pulgoes^0.2~trat,data = ban)
+plot(m1)
+#Suponha que esteja tudo bem!
+library(ExpDes.pt)
+dic <- dic(ban$trat,
+  ban$pulgoes^0.2,
+  quali = TRUE,
+  mcomp = "tukey",
+  nl = FALSE,
+  hvar = 'bartlett',
+  sigT = 0.05,
+  sigF = 0.05)
+#Avalie os resultados
+plotres(dic)
+```
+
+
+
+## Referências
