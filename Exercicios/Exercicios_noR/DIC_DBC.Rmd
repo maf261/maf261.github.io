@@ -75,7 +75,7 @@ Médias&  23 	& 27 	& 26  	&31 \\
 ```{r, echo = TRUE}
 library(readr)
 if(!is.null(dev.list())) dev.off()
-da <- read_delim("E:/Documentos/GitHub/MAF261/maf261.github.io/Exercicios/Exercicios_noR/Exer_4_1.txt", 
+da <- read_delim("https://raw.githubusercontent.com/maf261/maf261.github.io/master/Exercicios/Exercicios_noR/Exer_4_1.txt", 
                  "\t")
 da
 str(da)
@@ -290,7 +290,7 @@ Totais&  643	& 642 & 653  	\\
 
 ```{r, echo = TRUE}
 library(readr)
-da <- read_delim("E:/Documentos/GitHub/MAF261/maf261.github.io/Exercicios/Exercicios_noR/Exer_4_2.txt", 
+da <- read_delim("https://raw.githubusercontent.com/maf261/maf261.github.io/master/Exercicios/Exercicios_noR/Exer_4_2.txt", 
                  "\t")
 da
 str(da)
