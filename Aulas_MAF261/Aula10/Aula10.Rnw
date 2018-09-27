@@ -191,6 +191,14 @@ em que, $Y_{ij}$ é o valor observado para a variável resposta obtido para o $i
 \begin{block}{}
 \justifying
 O erro experimental ocorre em todos os experimentos, porque não é possível controlar o efeito de fontes de variações que ocorrem de forma aleatória e desconhecida. Este erro é o responsável pela variação observada entre as observações obtidas nas repetições para cada tratamento.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Figuras/fig2}
+    %\caption{}
+    %\label{figRotulo}
+  \end{figure}
+
 \end{block}
 \end{frame}
 
@@ -409,6 +417,55 @@ $$SQRes=SQTotal-SQTrat$$
 \end{block}
 \end{frame}
 
+\section{Análise de Variância}
+\begin{frame}{Análise de Variância}
+\frametitle{}
+\begin{block}{}
+\justifying
+O valor esperado da soma dos quadrados dos tratamentos é:
+
+$${\displaystyle E(SQTrat)=(I-1)\sigma^{2}+n\sum_{i=1}^{I}t_{i}^{2}}$$
+
+e o valor esperado da soma de quadrados do resíduo é:
+
+$$E(SQRes)=I(n-1)\sigma^{2}$$
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Existe também uma divisão do número de graus de liberdade que corresponde à identidade das somas de quadrados. Ou seja, há $IJ = n$ observações; assim, SQTot tem $IJ-1$ graus de liberdade. Existem $I$ níveis do fator; logo, SQTrat tem $I-1$ graus de liberdade. Finalmente, dentro de qualquer tratamento, existem replicatas (ou réplicas) fornecendo $J-1$ graus de liberdade, com os quais se estima o erro experimental. Já que há $I$ tratamentos, temos $I(J-1)$ graus de liberdade para o erro. Consequentemente, a divisão dos graus de liberdade é:
+
+$$IJ-1=I-1+I(J-1)$$
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+A razão
+$$QM_{Trat}=\dfrac{SQTrat}{I-1}$$
+é chamada de média quadrática dos tratamentos ou quadrado médio dos tratamentos. Assim, se a hipótese nula 
+$H_{0}: t_{1} = t_{2} = \cdots = t_{I} = 0$ for verdadeira, $QMTrat$ será um estimador não tendencioso de $\sigma^{2}$ porque ${\displaystyle \sum_{i=1}^{I}t_{i}=0}$. Entretanto, se $H_{1}$ for verdadeira, $QMTrat$ estimará $\sigma^{2}$ mais um termo positivo que incorpora a variação em razão da diferença sistemática nas médias dos tratamentos.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Notem que a média quadrática do erro ou quadrado médio dos resíduos, dada por $$QMRes=\dfrac{SQRes}{I(J-1)}$$ é um estimador não tendencioso de $\sigma^{2}$, independente de se $H_{0}$ é ou não verdadeira. Podemos mostrar também que QMTrat e QMRes são independentes. Consequentemente, podemos mostrar que, se a hipótese nula $H_{0}$ for verdadeira, a razão
+$$F_{cal}=\dfrac{QMTrat}{QMRes}$$
+Tem distribuição $F$ com $I-1$ e $I(J-1)$ graus de liberdade.
+\end{block}
+\end{frame}
+
 \begin{frame}{}
 \frametitle{}
 \begin{block}{}
@@ -456,12 +513,17 @@ variável aleatória F, de acordo com o nível de significância do teste, graus
 
 \begin{frame}{}
 \frametitle{}
-\begin{block}{}
-\justifying
+
 As hipóteses para o teste F da análise de variância para tratamentos são as
 seguintes:
+
+\begin{block}{}
+\justifying
 $H_{0}:\mu_{1}=\cdots=\mu_{I}=\mu$, o que equivale a dizer que todos os possíveis contrastes entre as médias dos tratamentos, são estatisticamente nulos, ao nível de
-probabilidade que foi executado o teste.\pause
+probabilidade que foi executado o teste.
+\end{block}\pause
+\begin{block}{}
+\justifying
 $H_{a}:\textrm{não}\ H_{0},$ o que equivale a dizer que existe pelo menos um contraste entre as médias dos tratamentos, estatisticamente diferentes de zero, ao nível de probabilidade que foi realizado o teste.
 \end{block}
 \end{frame}

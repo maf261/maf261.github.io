@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  10 SEP 2018 22:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  26 SEP 2018 22:03
 entering extended mode
 **./Aula10.tex
 (Aula10.tex
@@ -1889,7 +1889,7 @@ Package xypdf Info: Line width: 0.57597pt on input line 111.
 ] [4
 
 ]
-<Figuras/fig1.jpg, id=60, 398.23781pt x 197.23688pt>
+<Figuras/fig1.jpg, id=62, 398.23781pt x 197.23688pt>
 File: Figuras/fig1.jpg Graphic file (type jpg)
 <use Figuras/fig1.jpg>
 Package pdftex.def Info: Figuras/fig1.jpg  used on input line 160.
@@ -1913,9 +1913,15 @@ Overfull \vbox (4.43208pt too high) detected at line 187
 
 [11
 
-] [12
+]
+<Figuras/fig2.jpg, id=114, 399.74344pt x 103.88812pt>
+File: Figuras/fig2.jpg Graphic file (type jpg)
+<use Figuras/fig2.jpg>
+Package pdftex.def Info: Figuras/fig2.jpg  used on input line 203.
+(pdftex.def)             Requested size: 199.87122pt x 51.94392pt.
+ [12
 
-] [13
+ <./Figuras/fig2.jpg>] [13
 
 ] [14
 
@@ -1933,17 +1939,17 @@ Overfull \vbox (4.43208pt too high) detected at line 187
 
 ]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 248.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 256.
 
 
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <8> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 248.
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 256.
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <6> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 248.
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 256.
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <5> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 248.
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 256.
 
-Overfull \hbox (17.00493pt too wide) detected at line 248
+Overfull \hbox (17.00493pt too wide) detected at line 256
 \OMS/cmsy/m/n/14.4 ) []
  []
 
@@ -1956,7 +1962,7 @@ Overfull \hbox (17.00493pt too wide) detected at line 248
 ] [24
 
 ]
-Overfull \hbox (13.9257pt too wide) detected at line 284
+Overfull \hbox (13.9257pt too wide) detected at line 292
 [] \OT1/cmss/m/n/14.4 = []
  []
 
@@ -1973,7 +1979,7 @@ Overfull \hbox (13.9257pt too wide) detected at line 284
 ] [30
 
 ]
-Overfull \hbox (7.59651pt too wide) detected at line 348
+Overfull \hbox (7.59651pt too wide) detected at line 356
 []
  []
 
@@ -2012,13 +2018,21 @@ Overfull \hbox (7.59651pt too wide) detected at line 348
 
 ] [47
 
+] [48
+
+] [49
+
+] [50
+
+] [51
+
 ]
-Overfull \vbox (19.86598pt too high) detected at line 544
+Overfull \vbox (19.86598pt too high) detected at line 606
  []
 
-[48
+[52
 
-] (Aula10.bbl) [49
+] (Aula10.bbl) [53
 
 ]
 \tf@nav=\write7
@@ -2030,17 +2044,17 @@ Overfull \vbox (19.86598pt too high) detected at line 544
 \tf@snm=\write9
 \openout9 = `Aula10.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 551.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 551.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 613.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 613.
  (Aula10.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 551.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 551.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 613.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 613.
  ) 
 Here is how much of TeX's memory you used:
- 48814 strings out of 492973
- 1044752 string characters out of 3135932
+ 48840 strings out of 492973
+ 1045024 string characters out of 3135932
  1369983 words of memory out of 12000000
- 51662 multiletter control sequences out of 15000+200000
+ 51678 multiletter control sequences out of 15000+200000
  579726 words of font info for 118 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,17n,98p,3249b,836s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2057,9 +2071,9 @@ C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Aula10.pdf (49 pages, 305767 bytes).
+Output written on Aula10.pdf (53 pages, 330682 bytes).
 PDF statistics:
- 447 PDF objects out of 1000 (max. 8388607)
- 108 named destinations out of 1000 (max. 500000)
- 144 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 480 PDF objects out of 1000 (max. 8388607)
+ 117 named destinations out of 1000 (max. 500000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

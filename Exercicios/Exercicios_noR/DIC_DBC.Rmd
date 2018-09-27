@@ -1,5 +1,5 @@
 ---
-title: "Exercícios de Delineamento Inteiramente Casualizados"
+title: "Exercícios de Delineamento Inteiramente Casualizado"
 author: "Prof. Fernando de Souza Bastos"
 date: "26 de setembro de 2018"
 output:
