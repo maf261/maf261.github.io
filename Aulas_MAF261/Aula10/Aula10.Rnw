@@ -202,15 +202,12 @@ O erro experimental ocorre em todos os experimentos, porque não é possível co
 \end{block}
 \end{frame}
 
-\section{Análise de Variância}
-\begin{frame}{Análise de Variância}
+\section{Soma de quadrados}
+\begin{frame}{}
 \frametitle{}
 \begin{block}{}
 \justifying
-É uma técnica de análise estatística que permite decompor a variação total, ou
-seja, a variação existente entre todas as observações, na variação devido à diferença
-entre os efeitos dos tratamentos e na variação devido ao acaso, que também é
-denominada de erro experimental ou resíduo.
+Análise de Variância é uma técnica de análise estatística que permite decompor a variação total, ou seja, a variação existente entre todas as observações, na variação devido à diferença entre os efeitos dos tratamentos e na variação devido ao acaso, que também é denominada de erro experimental ou resíduo.
 \end{block}
 \end{frame}
 
