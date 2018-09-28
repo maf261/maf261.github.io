@@ -21,7 +21,7 @@ BUTTON DEFAULTS
 
   // hovering on the btn
   &:hover, &:focus {
-    color: $black;
+    color: $white;
     text-decoration: none;
     background-color: darken($primary-color, 10%);
   } // end hover
