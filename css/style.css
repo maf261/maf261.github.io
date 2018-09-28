@@ -804,7 +804,7 @@ HEADER STYLING
   background-image: url("../img/touring.jpg");
   background-size: cover;
   background-position: center center;
-  color: black;
+  color: white;
   padding: 0;
   height: 3em; }
   .header .container {
@@ -820,7 +820,7 @@ HEADER STYLING
     font-weight: 800;
     text-transform: uppercase; }
     .header h1 a {
-      color: black;
+      color: white;
       text-decoration: none; }
 
 /***************
@@ -858,7 +858,7 @@ POST STYLING
 
 .post .meta {
   text-align: center;
-  color: gray;
+  color: black;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 300; }
 
