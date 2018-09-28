@@ -34,5 +34,5 @@ description: Página com as aulas da disciplina.
 [aula8]:    https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula8/Aula8.pdf
 [aula9]:    https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula9/Aula9.pdf
 [aula10]:   https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula10/Aula10.pdf
-[aulaExer]: https://rawgit.com/maf261/maf261.github.io/master/Exercicios/Exercicios_noR/DIC_DBC.html
+[aulaExer]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula11/Aula11.html
 
