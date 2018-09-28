@@ -858,7 +858,7 @@ POST STYLING
 
 .post .meta {
   text-align: center;
-  color: black;
+  color: gray;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 300; }
 
@@ -930,7 +930,7 @@ POST NAV STYLING
       line-height: 1.4; }
     .postNav .prev.image, .postNav .next.image {
       text-decoration: none;
-      color: white;
+      color: black;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
       padding: 0 .5rem;
       position: relative;
