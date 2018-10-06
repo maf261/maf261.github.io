@@ -18,12 +18,12 @@ description: Página com listas de exercícios.
 * [Lista 6][subdivididas] - Lista sobre Parcelas Subdivididas.
 * [Lista 7][regressao] - Lista sobre regressão linear.
 
-<p class="intro">Bancos de dados utilizados na disciplina e na resolução dos exercícios:</p>
+<p class="intro">Trabalho 1:</p>
 
 ---
 
-* [dados 1][Introducao1] - 
-* [dados 2][Medidas1] - 
+* [dados 1][trab1] - Banco de dados para auxiliar a confecção do trabalho 1
+* [Orientações][orientacoes] - 
 * [dados 3][Probabilidade1] - 
 * [dados 4][Variaveis1] - 
 * [dados 5][Distribuicoes1] - 
@@ -42,3 +42,5 @@ description: Página com listas de exercícios.
 [testes]:https://rawgit.com/maf261/maf261.github.io/master/Exercicios/Teste_Hipotese.pdf
 [solucoes1]:https://rawgit.com/maf261/maf261.github.io/master/Exercicios/Solucoes/TH.pdf
 [solBussab]: https://www.ime.usp.br/~pam/scriptsR.html
+[trab1]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula11/Banco_de_Dados.rar
+[orientacoes]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula11/Trabalho1.html
