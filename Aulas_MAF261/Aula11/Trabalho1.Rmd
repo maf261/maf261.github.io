@@ -1,0 +1,269 @@
+---
+title: "Leitura de dados e outras funções"
+author: "Prof. Fernando de Souza Bastos"
+date: "06 de outubro de 2018"
+output:
+  slidy_presentation:
+    fig_caption: yes
+    force_captions: yes
+    highlight: pygments
+    keep_tex: yes
+    toc: yes
+    #Sumário flutuante
+    #toc_float: true
+    #numerar seções
+    number_sections: true
+    #Mostrar ou esconder os códigos (show ou hide)
+    code_folding: hide
+    #Diversos modelos de documentos ver outros em http://bootswatch.com/
+    theme: united
+    header-includes:
+       \usepackage{array}
+       \usepackage{multirow}
+bibliography: bibfile.bib 
+#output: html_document
+---
+
+```{r setup, include=FALSE}
+require(knitr)
+require(kfigr)
+library(kableExtra)
+options(knitr.table.format = "latex")
+knitr::opts_chunk$set(echo = TRUE,fig.align = "center",message=FALSE, warning=FALSE)
+```
+
+## Orientações
+
+O trabalho irá valer 30 pontos (10 na média)
+
+Vocês devem fazer todos os exercícios da apostila da parte de teste de hipóteses e 
+delineamento inteiramente casualizado no software R. Os scripts e os arquivos de dados devem ser enviados em formato .rar com seu nome e sua matricula (FulanodeTal_8978.rar) para o e-mail:
+
+<ufv.florestal.maf261@gmail.com> até o dia 27/10/2018. O assunto do e-mail deve ser: "Trabalho 1 - Estatística Experimental". 
+
+No interior do arquivo zip deve ter um script para todos os exercícios do mesmo teste de hipóteses (um script para o teste z, um script para o teste t, e assim por diante.) Os scripts devem ser nomeados como:
+
+* testeT.R
+
+* testeF.R
+
+* testeZ.R
+
+* AmostrasDependentes.R
+
+* DIC.R
+
+No interior do script deve conter cabeçalho com nome do acadêmico e matricula. Por exemplo:
+```{r}
+##########################
+#Nome: Fernando de Souza Bastos
+#Matrícula: 8978-8
+############################
+```
+
+O nome dos arquivos devem ser obrigatoriamente no formato acima e devem ser de extensão R (executável), não em txt, doc, pdf ou outro qualquer.
+
+* Para entender a leitura e confecção de exercícios de Delineamento Inteiramente Casualizado, baixem o arquivo Banco_de_Dados.rar e leiam as próximas páginas!
+
+
+## Comandos para leitura de dados (.txt):
+
+
+    Bloco de Notas (.txt)
+
+Podemos ler o banco de dados com o comando:
+
+da <- read.table("nome_do_arquivo.txt", header=T, dec=".", sep="") 
+
+ou também:
+
+da <- read.table(file.choose(),header=T,dec=".",sep="")
+
+attach(da) #Este comando serve para poder nos referirmos a uma coluna do banco de dados utilizando seu nome;
+
+Exemplo:
+
+Criei o banco de dados denominado teste.txt e deixei salvo na mesma pasta do script do software R. Assim, para ler os dados fazemos:
+
+```{r}
+da <- read.table("teste.txt", header=T, dec=".", sep="")
+names(da) <- c("Trat","Resp")
+attach(da)
+head(da)
+str(da)
+
+```
+
+$$
+\begin{align}
+H_{0}&:\mu_{A}=\mu_{B}=\mu_{C}\\
+H_{1}&: \textrm{Não}\  H_{0}\ (\textrm{Pelo menos uma média difere das demais})
+\end{align}
+$$
+- Usando o pacote ExpDes.pt dos professores @expdes
+
+```{r}
+library(ExpDes.pt)
+dic <- dic(Trat,
+  Resp,
+  quali = TRUE,
+  mcomp = "tukey",
+  nl = FALSE,
+  hvar = 'bartlett',
+  sigT = 0.01,
+  sigF = 0.01)
+plotres(dic)
+```
+
+## Comandos para leitura de dados (.csv):
+
+    Arquivo em formato csv
+
+Podemos ler o banco de dados com o comando:
+
+da <- read.table("nome_do_arquivo.csv", header=T, dec=",", sep=";") 
+
+ou também:
+
+da <- read.table(file.choose(),header=T,dec=",",sep=";")
+
+attach(da) #Este comando serve para poder nos referirmos a uma coluna do banco de dados utilizando seu nome;
+
+Exemplo:
+
+Criei o banco de dados denominado teste.csv e deixei salvo na mesma pasta do script do software R. Assim, para ler os dados fazemos:
+
+```{r}
+da <- read.table("teste.csv", header=T, dec=",", sep=";")
+names(da) <- c("Trat","Resp")
+attach(da)
+head(da)
+str(da)
+
+```
+
+$$
+\begin{align}
+H_{0}&:\mu_{A}=\mu_{B}=\mu_{C}\\
+H_{1}&: \textrm{Não}\  H_{0}\ (\textrm{Pelo menos uma média difere das demais})
+\end{align}
+$$
+- Usando o pacote ExpDes.pt dos professores @expdes
+
+```{r}
+library(ExpDes.pt)
+dic <- dic(Trat,
+  Resp,
+  quali = TRUE,
+  mcomp = "tukey",
+  nl = FALSE,
+  hvar = 'bartlett',
+  sigT = 0.01,
+  sigF = 0.01)
+plotres(dic)
+```
+
+
+## Comandos para leitura de dados (.xls):
+
+    Arquivo em formato xls
+
+Temos que usar o pacote:
+
+library(readxl)
+
+E, posteriormente, ler o banco de dados com o comando:
+
+da <- read_excel("teste.xls")
+
+attach(da) #Este comando serve para poder nos referirmos a uma coluna do banco de dados utilizando seu nome;
+
+Exemplo:
+
+Criei o banco de dados denominado teste.csv e deixei salvo na mesma pasta do script do software R. Assim, para ler os dados fazemos:
+
+```{r}
+library(readxl)
+da <- read_excel("teste.xls")
+names(da) <- c("Trat","Resp")
+attach(da)
+head(da)
+str(da)
+da$Trat <- as.factor(da$Trat)
+str(da)
+```
+
+$$
+\begin{align}
+H_{0}&:\mu_{A}=\mu_{B}=\mu_{C}\\
+H_{1}&: \textrm{Não}\  H_{0}\ (\textrm{Pelo menos uma média difere das demais})
+\end{align}
+$$
+- Usando o pacote ExpDes.pt dos professores @expdes
+
+```{r}
+library(ExpDes.pt)
+dic <- dic(Trat,
+  Resp,
+  quali = TRUE,
+  mcomp = "tukey",
+  nl = FALSE,
+  hvar = 'bartlett',
+  sigT = 0.01,
+  sigF = 0.01)
+plotres(dic)
+```
+
+
+## Comandos para leitura de dados (.xlsx):
+
+    Arquivo em formato .xlsx
+
+Temos que usar o pacote:
+
+library(readxl)
+
+E, posteriormente, ler o banco de dados com o comando:
+
+da <- read_excel("teste.xlsx")
+
+attach(da) #Este comando serve para poder nos referirmos a uma coluna do banco de dados utilizando seu nome;
+
+Exemplo:
+
+Criei o banco de dados denominado teste.csv e deixei salvo na mesma pasta do script do software R. Assim, para ler os dados fazemos:
+
+```{r}
+library(readxl)
+da <- read_excel("teste.xlsx")
+names(da) <- c("Trat","Resp")
+attach(da)
+head(da)
+str(da)
+da$Trat <- as.factor(da$Trat)
+str(da)
+```
+
+$$
+\begin{align}
+H_{0}&:\mu_{A}=\mu_{B}=\mu_{C}\\
+H_{1}&: \textrm{Não}\  H_{0}\ (\textrm{Pelo menos uma média difere das demais})
+\end{align}
+$$
+- Usando o pacote ExpDes.pt dos professores @expdes
+
+```{r}
+library(ExpDes.pt)
+dic <- dic(Trat,
+  Resp,
+  quali = TRUE,
+  mcomp = "tukey",
+  nl = FALSE,
+  hvar = 'bartlett',
+  sigT = 0.01,
+  sigF = 0.01)
+plotres(dic)
+```
+
+
+## Referências

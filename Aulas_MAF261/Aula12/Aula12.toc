@@ -1,2 +1,6 @@
 \babel@toc {brazil}{}
-\beamer@sectionintoc {1}{Regress\IeC {\~a}o}{3}{0}{1}
+\beamer@sectionintoc {1}{Testes de Compara\IeC {\c c}\IeC {\~o}es M\IeC {\'u}ltiplas}{3}{0}{1}
+\beamer@sectionintoc {2}{Teste de Tukey}{10}{0}{2}
+\beamer@sectionintoc {3}{Exemplo}{16}{0}{3}
+\beamer@sectionintoc {4}{Teste de Duncan}{17}{0}{4}
+\beamer@sectionintoc {5}{Exemplo}{23}{0}{5}

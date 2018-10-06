@@ -76,7 +76,7 @@
 \author{Prof. Fernando de Souza Bastos}
 \institute{Instituto de Ciências Exatas e Tecnológicas\texorpdfstring{\\ Universidade Federal de Viçosa}{}\texorpdfstring{\\ Campus UFV - Florestal}{}}
 \date{2018}
-\newcommand\mytext{Aula 1}
+\newcommand\mytext{Comparações Múltiplas}
 \newcommand\mytextt{Fernando de Souza Bastos}
 \makeatletter
 \setbeamertemplate{footline}
@@ -118,11 +118,341 @@
 \tableofcontents
 \end{frame}
 
-\section{Regressão}
+\section{Testes de Comparações Múltiplas}
 \begin{frame}{}
 \frametitle{}
 \begin{block}{}
 \justifying
+Como já vimos, a análise da variância serve para verificar se há alguma
+diferença significativa entre as médias dos níveis de um fator a um
+determinado nível de significância. No caso em que o teste F for 
+significativo, ou seja, a hipótese de nulidade for rejeitada, vimos que
+existe pelo menos um contraste entre médias estatisticamente diferente 
+de zero.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Os procedimentos de comparações múltiplas que veremos, visam identificar quais são estes contrastes de forma que possamos identificar qual é o nível do fator em estudo que apresentou maior média.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Dentre os vários procedimentos existentes para comparações múltiplas, veremos:
+
+\begin{enumerate}
+\item Procedimentos para testar todos os possíveis contrastes entre duas médias dos níveis do fator em estudo:
+\begin{itemize}
+\item Teste de Tukey;\pause
+\item Teste de Duncan;\pause
+\end{itemize}
+\item Prodedimentos para testar todos os possíveis contrastes entre médias dos níveis do fator em estudo:
+\begin{itemize}
+\item Teste t;\pause
+\item Teste de Scheffé.
+\end{itemize}
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Todos os procedimentos se baseiam no cálculo de uma diferença mínima
+significativa (dms). A dms representa o menor valor que a estimativa de um contraste deve apresentar para que se possa considerá-lo como significativo.
+\end{block}
+\end{frame}
+
+\section{Teste de Tukey}
+\begin{frame}{Teste de Tukey}
+\frametitle{}
+\begin{block}{}
+\justifying
+Usaremos o teste de Tukey para comparar a totalidade dos contrastes entre duas médias, ou seja, $C = \mu_i - \mu_u,\quad 1\leq i< u\leq I$. Este teste baseia-se na diferença mínima significativa (d.m.s.), dada por:
+\begin{eqnarray*}
+  \Delta &=& q\sqrt{\dfrac{1}{2}\hat{V}(\hat{C})},
+\end{eqnarray*}
+em que $q = q_{\alpha}(I, n_2)$ é o valor tabelado da amplitude total estudentizada, na qual $\alpha$ é o nível de significância, $I$ é o número de níveis do fator em estudo, $n_2$ são os graus de liberdade do resíduo e $\hat{V}(\hat{C}) = QMRes\bigg(\dfrac{1}{r_i} + \dfrac{1}{r_u}\bigg)$.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+No caso em que todos os tratamentos apresentarem o mesmo número de 
+repetições, ou seja, $r_i = r_u = K$, então o valor de $\Delta$ é 
+simplificado para a seguinte expressão:
+\begin{eqnarray*}
+  \Delta &=& q\sqrt{\dfrac{QMRes}{K}}
+\end{eqnarray*}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Para realizar o teste de Tukey, a um nível de signifiância $\alpha$, 
+deve-se seguir os seguintes passos:
+\begin{enumerate}
+  \item calcular $\Delta;$\pause
+  \item ordenar as médias do fator em estudo em ordem decrescente;\pause
+  \item montar grupos de comparação entre os contrastes e obter as 
+  estimativas dos contrastes, com base nos valores amostrais; \pause
+  \item concluir usando a seguinte relação: se $|\hat{C}| \geq \Delta$,
+  rejeita-se $H_0$ e se $|\hat{C}| < \Delta$, não rejeita-se $H_0$. No 
+  último caso, indicar as médias iguais, seguidas por uma mesma letra.
+\end{enumerate}
+
+\end{block}
+\end{frame}
+
+\section{Exemplo}
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Para comparar a produtividade de quatro variedades de milho, um agrônomo tomou
+vinte parcelas similares e distribuiu, inteiramente ao acaso, cada uma das 4 variedades em 5 parcelas experimentais. A partir dos dados experimentais fornecidos, é possível concluir que existe diferença significativa entre as variedades com relação a produtividade, utilizando o nível de significância de $5\%?$
+\vspace{-0.5cm}
+\begin{table}[!h]
+\scalebox{0.8}{%
+\setlength{\arrayrulewidth}{2pt}
+\begin{tabular}{ccccc}
+\hline
+\multicolumn{5}{c}{{\bf Variedades}}\\
+\hline
+&A&B&C&D\\
+\hline
+&25&31&22&33\\
+&26&25&26&29\\
+&20&28&28&31\\
+&23&27&25&34\\
+&21&24&29&28\\
+\hline
+Totais&115&135&130&155\\
+\hline
+Médias&23&27&26&31\\
+\hline
+\end{tabular}
+}
+\end{table}
+\end{block}
+\end{frame}
+
+\section{Teste de Duncan}
+\begin{frame}{Teste de Duncan}
+\frametitle{}
+\vspace{-0.3cm}
+\begin{block}{}
+\justifying
+Assim como o teste de Tukey, o teste de Duncan será válido para a totalidade dos contrastes de duas médias, ou seja, $C = m_i - m_u,\quad 1\leq i<u\leq I$. Este 
+teste baseia-se na amplitude total mínima significativa dada por:
+\vspace{-0.2cm}
+\begin{eqnarray*}
+  D_n &=& z_n\sqrt{\frac{1}{2}\hat{V}(\hat{C})},
+\end{eqnarray*}
+\vspace{-0.2cm}
+em que $z_n = z_{\alpha}(n, n_2)$ é o valor tabelado da amplitude total estudentizada, na qual $\alpha$ é o nível de significância, $n$ é o número de médias ordenadas 
+abrangidas pelo contraste entre os níveis do fator em estudo, $n_2$ são os graus de liberdade do resíduo e 
+$\hat{V}(\hat{C}) = QMRes \bigg(\dfrac{1}{r_i} + \dfrac{1}{r_u}\bigg)$.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+No caso em que todos os tratamentos apresentarem o mesmo número de repetições, ou seja, $r_i = r_u = K$, então o valor de $D_n$ é simplificado para a seguinte 
+expressão:
+\begin{eqnarray*}
+  D_n &=& z_n \sqrt{\dfrac{QMRes}{K}}
+\end{eqnarray*}
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Para realizar o teste de Duncan, a um nível de signifiância $\alpha$, deve-se 
+seguir os seguintes passos:
+\begin{enumerate}
+  \item calcular o valor $D_n$, para $n=2,\cdots, I;$\pause
+  \item ordenar as médias do fator em estudo em ordem decrescente;\pause
+  \item montar grupos de comparação entre os contrastes e obter as estimativas dos
+  contrastes, com base nos valores amostrais;\pause
+  \item concluir usando a seguinte relação: se $|\hat{C}| \geq D_n$, rejeita-se 
+  $H_0$ e se $|\hat{C}| < D_n$, não rejeita-se $H_0$. No último caso, indicar as
+  médias iguais, seguidas por uma mesma letra.
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\section{Exemplo}
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Para comparar a produtividade de quatro variedades de milho, um agrônomo tomou
+vinte parcelas similares e distribuiu, inteiramente ao acaso, cada uma das 4 variedades em 5 parcelas experimentais. A partir dos dados experimentais fornecidos, é possível concluir que existe diferença significativa entre as variedades com relação a produtividade, utilizando o nível de significância de $5\%?$
+\vspace{-0.5cm}
+\begin{table}[!h]
+\scalebox{0.8}{%
+\setlength{\arrayrulewidth}{2pt}
+\begin{tabular}{ccccc}
+\hline
+\multicolumn{5}{c}{{\bf Variedades}}\\
+\hline
+&A&B&C&D\\
+\hline
+&25&31&22&33\\
+&26&25&26&29\\
+&20&28&28&31\\
+&23&27&25&34\\
+&21&24&29&28\\
+\hline
+Totais&115&135&130&155\\
+\hline
+Médias&23&27&26&31\\
+\hline
+\end{tabular}
+}
+\end{table}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+
 
 \end{block}
 \end{frame}

@@ -283,7 +283,7 @@ foram os seguintes (minutos / 25 Km):
    	  \hline
 Totais&  643	& 642 & 653  	\\
 \hline
-\textrm{Médias}&  23 	& 27 	& 26  	\\
+\textrm{Médias}&  128.6 	& 128.4 	& 130.6  	\\
 \hline
 \end{array}
 
