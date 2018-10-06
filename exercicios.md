@@ -22,8 +22,8 @@ description: Página com listas de exercícios.
 
 ---
 
-* [dados 1][trab1] - Banco de dados para auxiliar a confecção do trabalho 1
-* [Orientações][orientacoes] - 
+* [dados 1][trab1] - Banco de dados para auxiliar a confecção do trabalho 1.
+* [Orientações][orientacoes] - Orientações para o trabalho 1.
 * [dados 3][Probabilidade1] - 
 * [dados 4][Variaveis1] - 
 * [dados 5][Distribuicoes1] - 
