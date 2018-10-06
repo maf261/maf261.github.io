@@ -24,11 +24,7 @@ description: Página com listas de exercícios.
 
 * [dados 1][trab1] - Banco de dados para auxiliar a confecção do trabalho 1.
 * [Orientações][orientacoes] - Orientações para o trabalho 1.
-* [dados 3][Probabilidade1] - 
-* [dados 4][Variaveis1] - 
-* [dados 5][Distribuicoes1] - 
-* [dados 6][Regressao1] - 
-* [dados 7][Testes1] - 
+
 
 <p class="intro">Resolução dos exercícios no R:</p>
 
