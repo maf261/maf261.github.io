@@ -73,7 +73,7 @@ title: Cronograma da Disciplina
 <tr>		
 <td valign="center" align="center">	09/08/2018	<BR></td>
 <td valign="center" align="center">	Quinta	<BR></td>
-<td valign="center" align="center">	Distribuição normal	<BR></td>
+<td valign="center" align="center">	Revisão sobre Distribuição Normal	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
@@ -122,28 +122,28 @@ title: Cronograma da Disciplina
 <tr>		
 <td valign="center" align="center">	04/09/2018	<BR></td>
 <td valign="center" align="center">	Terça	<BR></td>
-<td valign="center" align="center">	Princípios básicos da experimentação e Contrastes	<BR></td>
+<td valign="center" align="center">	Teste de hipótese de uma média populacional, Teste de hipótese que envolve diferença de médias populacionais, Teste de hipótese para o caso de dados emparelhados, testes para variância, Teste de hipóteses para proporções 	<BR></td>
 <td valign="center" align="center">	9	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	06/09/2018	<BR></td>
 <td valign="center" align="center">	Quinta	<BR></td>
-<td valign="center" align="center">	Princípios básicos da experimentação e Contrastes	<BR></td>
+<td valign="center" align="center">	Teste de hipótese de uma média populacional, Teste de hipótese que envolve diferença de médias populacionais, Teste de hipótese para o caso de dados emparelhados, testes para variância, Teste de hipóteses para proporções 	<BR></td>
 <td valign="center" align="center">	10	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	11/09/2018	<BR></td>
 <td valign="center" align="center">	Terça	<BR></td>
-<td valign="center" align="center">	Delineamento inteiramente casualizado, Exemplos de aplicação	<BR></td>
+<td valign="center" align="center">	Teste de hipótese de uma média populacional, Teste de hipótese que envolve diferença de médias populacionais, Teste de hipótese para o caso de dados emparelhados, testes para variância, Teste de hipóteses para proporções 	<BR></td>
 <td valign="center" align="center">	11	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	13/09/2018	<BR></td>
 <td valign="center" align="center">	Quinta	<BR></td>
-<td valign="center" align="center">	Procedimentos para comparações múltiplas: testes de Tukey, Duncan e Scheffé e t	<BR></td>
+<td valign="center" align="center">	Contrastes	<BR></td>
 <td valign="center" align="center">	12	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
@@ -171,28 +171,28 @@ title: Cronograma da Disciplina
 <tr>		
 <td valign="center" align="center">	27/09/2018	<BR></td>
 <td valign="center" align="center">	Quinta	<BR></td>
-<td valign="center" align="center">	Delineamento em Blocos casualizados	<BR></td>
+<td valign="center" align="center">	Princípios Básicos da Experimentação	<BR></td>
 <td valign="center" align="center">	16	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	02/10/2018	<BR></td>
 <td valign="center" align="center">	Terça	<BR></td>
-<td valign="center" align="center">	Aula prática: Delineamento em Blocos casualizados	<BR></td>
+<td valign="center" align="center">	Delineamento Inteiramente Casualizado	<BR></td>
 <td valign="center" align="center">	17	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	04/10/2018	<BR></td>
 <td valign="center" align="center">	Quinta	<BR></td>
-<td valign="center" align="center">	Quadrado latino	<BR></td>
+<td valign="center" align="center">	Aula prática: Delineamento Inteiramente Casualizado	<BR></td>
 <td valign="center" align="center">	18	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	09/10/2018	<BR></td>
 <td valign="center" align="center">	Terça	<BR></td>
-<td valign="center" align="center">	Experimento Fatorial	<BR></td>
+<td valign="center" align="center">	Não Haverá aula	<BR></td>
 <td valign="center" align="center">	19	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
@@ -206,7 +206,7 @@ title: Cronograma da Disciplina
 <tr>		
 <td valign="center" align="center">	16/10/2018	<BR></td>
 <td valign="center" align="center">	Terça	<BR></td>
-<td valign="center" align="center">	Simpósio de Integração Acadêmica - Não haverá aula	<BR></td>
+<td valign="center" align="center">	Procedimentos para comparações múltiplas: Testes de Tukey e Duncan	<BR></td>
 <td valign="center" align="center">	21	<BR></td>
 <td valign="center" align="center">	0	<BR></td>
 </tr>		
@@ -220,21 +220,21 @@ title: Cronograma da Disciplina
 <tr>		
 <td valign="center" align="center">	23/10/2018	<BR></td>
 <td valign="center" align="center">	Terça	<BR></td>
-<td valign="center" align="center">	Aula prática: Experimento Fatorial	<BR></td>
+<td valign="center" align="center">	Procedimentos para comparações múltiplas: testes Scheffé e t	<BR></td>
 <td valign="center" align="center">	23	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	25/10/2018	<BR></td>
 <td valign="center" align="center">	Quinta	<BR></td>
-<td valign="center" align="center">	Experimento em Parcelas Subdivididas	<BR></td>
+<td valign="center" align="center">	Delineamento em Blocos Casualizados	<BR></td>
 <td valign="center" align="center">	24	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	30/10/2018	<BR></td>
 <td valign="center" align="center">	Terça	<BR></td>
-<td valign="center" align="center">	Aula prática: Experimento em Parcelas Subdivididas	<BR></td>
+<td valign="center" align="center">	Delineamento Quadrado Latino	<BR></td>
 <td valign="center" align="center">	25	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
@@ -262,7 +262,7 @@ title: Cronograma da Disciplina
 <tr>		
 <td valign="center" align="center">	13/11/2018	<BR></td>
 <td valign="center" align="center">	Terça	<BR></td>
-<td valign="center" align="center">	Regressão linear	<BR></td>
+<td valign="center" align="center">	Experimento Fatorial	<BR></td>
 <td valign="center" align="center">	29	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
@@ -276,28 +276,28 @@ title: Cronograma da Disciplina
 <tr>		
 <td valign="center" align="center">	20/11/2018	<BR></td>
 <td valign="center" align="center">	Terça	<BR></td>
-<td valign="center" align="center">	Estimação. Análise de variância da regressão e testes de hipóteses	<BR></td>
+<td valign="center" align="center">	Experimento Fatorial e em Parcelas Subdivididas	<BR></td>
 <td valign="center" align="center">	31	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	22/11/2018	<BR></td>
 <td valign="center" align="center">	Quinta	<BR></td>
-<td valign="center" align="center">	Estimação. Análise de variância da regressão e testes de hipóteses	<BR></td>
+<td valign="center" align="center">	Experimentos em Parcelas Subdivididas	<BR></td>
 <td valign="center" align="center">	32	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	27/11/2018	<BR></td>
 <td valign="center" align="center">	Terça	<BR></td>
-<td valign="center" align="center">	Aula de Exercícios	<BR></td>
+<td valign="center" align="center">	Estimação. Análise de variância da regressão e testes de hipóteses	<BR></td>
 <td valign="center" align="center">	33	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	29/11/2018	<BR></td>
 <td valign="center" align="center">	Quinta	<BR></td>
-<td valign="center" align="center">	Aula de Exercícios	<BR></td>
+<td valign="center" align="center">	Aula de Exercícios 	<BR></td>
 <td valign="center" align="center">	34	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
@@ -315,6 +315,7 @@ title: Cronograma da Disciplina
 <td valign="center" align="center">	36	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
+		
 	
 
 </TABLE>

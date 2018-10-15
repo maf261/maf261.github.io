@@ -1,0 +1,319 @@
+\documentclass[14pt,aspectratio=1610]{beamer}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+%\UseRawInputEncoding
+\usepackage[T1]{fontenc}
+\usepackage{Sweave}
+\usepackage{animate}
+\usepackage{amsbsy}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[toc,page,title,titletoc]{appendix}
+\usepackage[fixlanguage]{babelbib}
+%\usepackage[pdftex]{color}
+\usepackage{dsfont}
+\usepackage{esvect}
+\usepackage[labelfont=bf]{caption}
+\usepackage{float}
+\usepackage[Glenn]{fncychap}%Sonny %Conny %Lenny %Glenn %Renje %Bjarne %Bjornstrup
+%\usepackage{geometry, calc, color, setspace}%
+%\geometry{a4paper, headsep=1.0cm, footskip=1cm, lmargin=3cm, rmargin=2cm, tmargin=3cm, bmargin=2cm}
+\usepackage{graphicx}
+\usepackage{indentfirst}%Para indentar os parágrafos automáticamente
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{mathtools}
+\usepackage{listings}%Inserir codigo do R no latex
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{natbib}
+\bibliographystyle{abbrvnat3}
+\usepackage[figuresright]{rotating}
+\usepackage{spalign}
+%\usepackage{pgfpages}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{color, colortbl}
+\usepackage{ragged2e}%para justificar o texto dentro de algum ambiente
+\definecolor{Gray}{gray}{0.9}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+
+
+\usepackage[all]{xy}
+\usepackage{hyperref,bookmark}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=red,
+  filecolor=blue,
+  urlcolor=blue,
+}
+
+\usetheme{Boadilla}
+%\usecolortheme[RGB={193,0,0}]{structure}
+
+%\setbeamertemplate{footline}[frame number]
+%\setbeamertemplate{footline}[text line]{%
+%  \parbox{\linewidth}{\vspace*{-8pt}\hfill\date{}\hfill\insertshortauthor\hfill\insertpagenumber}}
+\beamertemplatenavigationsymbolsempty
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Proposicao}{Proposição}
+\newtheorem{Definicao}{Definição}
+\newtheorem{Corolario}{Corolário}
+\newtheorem{Demonstracao}{Demonstração}
+\newcommand{\bx}{\ensuremath{\bar{x}}}
+\newcommand{\Ho}{\ensuremath{H_{0}}}
+\newcommand{\Hi}{\ensuremath{H_{1}}}
+
+
+\apptocmd{\frame}{}{\justifying}{} % Allow optional arguments after frame.
+
+\title{MAF 261 - Estatística Experimental}
+\author{Prof. Fernando de Souza Bastos}
+\institute{Instituto de Ciências Exatas e Tecnológicas\texorpdfstring{\\ Universidade Federal de Viçosa}{}\texorpdfstring{\\ Campus UFV - Florestal}{}}
+\date{2018}
+\newcommand\mytext{Aula 8}
+\newcommand\mytextt{Fernando de Souza Bastos}
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\mytext
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\mytextt
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+
+\providecommand{\arcsin}{} \renewcommand{\arcsin}{\hspace{2pt}\textrm{arcsen}}
+\providecommand{\sin}{} \renewcommand{\sin}{\hspace{2pt}\textrm{sen}}
+%\newtheorem{Teorema}{Teorema}
+%\newtheorem{Proposicao}{Proposição}
+%\newtheorem{Definicao}{Definição}
+%\newtheorem{Corolario}{Corolário}
+%\newtheorem{Demonstracao}{Demonstração}
+
+% Layout da pagina
+\hypersetup{pdfpagelayout=SinglePage}
+\begin{document}
+\input{Aula14-concordance}
+
+\frame{\titlepage}
+
+\begin{frame}{}
+\frametitle{\bf Sumário}
+\tableofcontents
+\end{frame}
+
+\section{Delineamento em Quadrado Latino}
+\begin{frame}{Delineamento em Quadrado Latino}
+\frametitle{}
+\begin{block}{}
+\justifying
+No Delineamento em Quadrado Latino (DQL), além dos princípios da repetição e
+da casualização, é utilizado também duas vezes o princípio do controle na casualização para controlar o efeito de dois fatores perturbadores que causam variabilidade entre as unidades experimentais. Para controlar esta variabilidade, é necessário dividir as unidades experimentais em blocos homogêneos de unidades experimentais em relação a cada fator perturbador.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+O número de blocos para cada fator perturbador deve ser igual ao número de tratamentos. Por exemplo, se no experimento estão sendo avaliados $I$ tratamentos, deve ser formado para cada fator perturbador $I$ blocos e cada um destes blocos deve conter $I$ unidades experimentais. Ao final são necessários $I^{2}$ unidades experimentais. Cada uma destas $I^{2}$ unidades experimentais é classificada segundo cada um dos dois fatores perturbadores.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Uma vez formados os blocos, distribui-se os tratamentos ao acaso com a restrição
+que cada tratamento seja designado uma única vez em cada um dos blocos dos dois
+fatores perturbadores.
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Geralmente, na configuração de um experimento instalado segundo o DQL, os níveis
+de um fator perturbador são identificados por linhas em uma tabela de dupla entrada e os níveis do outro fator perturbador são identificados por colunas na tabela.
+\end{block}
+\end{frame}
+
+\section{Exemplos}
+\begin{frame}{Exemplos}
+\frametitle{}
+\begin{block}{}
+\justifying
+Num experimento com suínos pretende-se testar as rações $A,B,C$ e $D$ em 4 raças e 4 idades de animais. Sendo interesse fundamental o comportamento dos 4 tipos de rações, toma-se a raça e a idade como blocos, ou seja:
+\begin{table}[!h]
+\begin{tabular}{ccccc}
+\hline
+&\multicolumn{4}{c}{Raça}\\
+\cline{2-5}
+Idade&$R_{1}$&$R_{2}$&$R_{3}$&$R_{4}$\\
+\hline
+$I_{1}$&A&B&D&C\\
+$I_{2}$&B&C&A&D\\
+$I_{3}$&D&A&C&B\\
+$I_{4}$&C&D&B&A\\
+\hline
+\end{tabular}
+\end{table}
+\end{block}
+\end{frame}
+
+\begin{frame}{Exemplos}
+\frametitle{}
+\begin{block}{}
+\justifying
+Num laboratório devem ser comparados 5 métodos de análise $(A, B, C, D, E),$ programados em 5 dias úteis e, em cada dia, é feita uma análise a cada hora, num
+período de 5 horas. O quadrado latino assegura que todos os métodos sejam
+processados, uma vez em cada período e em cada dia. O croqui abaixo ilustra a
+configuração a ser adotada.
+\vspace{-0.5cm}
+\begin{table}[!h]
+\begin{tabular}{cccccc}
+\hline
+&\multicolumn{5}{c}{Dia}\\
+\cline{2-6}
+Período&1&2&3&4&5\\
+\hline
+$1$&A&E&C&D&B\\
+$2$&C&B&E&A&D\\
+$3$&D&C&A&B&E\\
+$4$&E&D&B&C&A\\
+$5$&B&A&D&E&C\\
+\hline
+\end{tabular}
+\end{table}
+\vspace{-0.5cm}
+Note que os níveis de uma fonte formam as linhas e os níveis da outra fonte
+formam as colunas
+\end{block}
+\end{frame}
+
+\section{Modelo Estatístico}
+\begin{frame}{Modelo Estatístico}
+\frametitle{}
+\begin{block}{}
+\justifying
+Para o DQL o modelo estatístico é:
+\begin{eqnarray*}
+Y_{ij(k)} &=& \mu + I_i + c_j + t_k + e_{ij(k)}
+\end{eqnarray*}
+onde $Y_{ij(k)}$ é o valor esperado para a variável resposta obtido para o k-ésimo tratamento, na i-ésima linha e na j-ésima coluna, $\mu$ é a média de todos os valores possíveis da variável resposta, $I_i$ é o efeito da linha $i,\ c_j$ é o efeito da linha coluna $j,\ t_k$ é o efeito do tratamento $k$ e $e_{ij(k)}$ é o erro experimental.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Considerando $L_i$ o total da linha i, $C_j$ o total da coluna j, $T_k$ o total do tramento k, $G$ o total geral e $C = \frac{G^2}{I^2}$, temos:
+\begin{eqnarray*}
+SQTotal  &=& \sum_{i,j=1}^{I} Y_{ij}^2 - C \\
+SQLinhas &=& \frac{1}{I} \sum_{i=1}^{I} L_i^2 - C \\
+\end{eqnarray*}
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+\begin{eqnarray*}
+SQColunas &=& \frac{1}{I} \sum_{j=1}^{I} C_j^2 - C \\
+SQTrat    &=& \frac{1}{I} \sum_{j=1}^{I} T_i^2 - C \\
+SQRes     &=& SQTotal - SQLinhas - SQColunas - SQTrat
+\end{eqnarray*}
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Admitindo-se I tratamentos, conseqüentemente, I linhas e I colunas, o esquema da
+análise de variância fica:
+\begin{table}[!h]
+\scalebox{0.7}{%
+\setlength{\arrayrulewidth}{2pt}
+\begin{tabular}{cccccc}
+\hline
+FV&GL&SQ&QM&F&$F_{tab;\alpha}$\\
+\hline
+&&&&&\\
+ Linhas&$(I-1)$&SQLinhas & $-$ & $-$ & $-$\\
+&&&&&\\
+Colunas&$(I-1)$&SQColunas& $-$ & $-$ & $-$\\
+&&&&&\\
+Tratamentos&$(I-1)$&SQTrat&$\dfrac{SQTrat}{I-1}$&$\dfrac{QMTrat}{QMRes}$&$[(I-1);(I-1)(I-2)]$\\
+&&&&&\\
+Resíduo&$(I-1)(I-2)$&SQRes&$\dfrac{SQRes}{(I-1)(I-2)}$&$-$&$-$\\
+\hline
+Total&$I^{2}-1$&SQTotal&$-$&$-$&$-$\\
+\hline
+\end{tabular}
+}
+\end{table}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{Exemplo (Exercício 7.1, pág. 68):}
+\justifying
+Num experimento de competição de variedades de cana forrageira foram usadas 5 variedades: A, B, C, D e E, dispostas em um 
+quadrado latino de 5 por 5. O controle feito através de blocos horizontais e verticais teve por objetivo eliminar influências devidas a diferenças de fertilidade em duas direções. As produções, em kg por parcela, foram as seguintes:
+\begin{table}[!h]
+\begin{tabular}{ccccccc}
+\hline
+&\multicolumn{5}{c}{Colunas}\\
+\cline{2-6}
+Linhas&1&2&3&4&5&Totais\\
+\hline
+$1$&432(D)&518(A)&458(B)&583(C)&331(E)&2322\\
+$2$&724(C)&478(E)&524(A)&550(B)&400(D)&2676\\
+$3$&489(E)&384(B)&556(C)&297(D)&420(A)&2146\\
+$4$&494(B)&500(D)&313(E)&486(A)&501(C)&2294\\
+$5$&515(A)&660(C)&438(D)&394(E)&318(B)&2325\\
+\hline
+Totais&2654&2540&2289&2310&1970&11763\\
+\hline
+\end{tabular}
+\end{table}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Considerando $\alpha = 5\%$, pede-se:
+\begin{itemize}
+  \item Análise da variância
+  \item Qual a variedade a ser recomendada, utilizando o teste de Tukey, se necessário
+\end{itemize}
+\end{block}
+\end{frame}
+
+\end{document}

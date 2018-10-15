@@ -4,3 +4,5 @@
 \beamer@sectionintoc {3}{Exemplo}{16}{0}{3}
 \beamer@sectionintoc {4}{Teste de Duncan}{17}{0}{4}
 \beamer@sectionintoc {5}{Exemplo}{23}{0}{5}
+\beamer@sectionintoc {6}{Teste t}{24}{0}{6}
+\beamer@sectionintoc {7}{Teste de Scheff\IeC {\'e}}{29}{0}{7}

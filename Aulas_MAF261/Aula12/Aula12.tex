@@ -331,11 +331,104 @@ Médias&23&27&26&31\\
 \end{block}
 \end{frame}
 
+\section{Teste t}
 \begin{frame}{}
 \frametitle{}
 \begin{block}{}
 \justifying
+O teste t pode ser usado para testar contrastes envolvendo duas ou mais médias. 
+Porém, este teste exige:
+\begin{itemize}
+\item as comparações a serem realizadas devem ser determinadas antes dos dados serem examinados;
+\item podem-se testar no máximo, tantos contrastes quantos são os graus de liberdade para tratamentos e estes contrastes devem ser ortogonais;
+\end{itemize}
+\end{block}
+\end{frame}
 
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Consideremos um contraste entre médias, dado por:
+\begin{eqnarray*}
+C &=& a_1\mu_1 + \cdots + a_l\mu_l
+\end{eqnarray*}
+do qual obtemos a estimativa por meio do estimador
+\begin{eqnarray*}
+\hat{C} &=& a_1\hat{\mu}_1 + \cdots + a_l\hat{\mu}_l
+\end{eqnarray*}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Considere a estatística t, dada por:
+\begin{eqnarray*}
+t_{cal} &=& \frac{\hat{C} - C}{\sqrt{QMRes \cdot {\displaystyle \sum_{i=1}^{l}\frac{a_i^2}{r_i}}}}
+\end{eqnarray*}
+que tem distribuição t com $n_2$ graus de liberdade, sendo $n_2$ o número de graus de liberdade do resíduo.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Caso o número de repetições seja o mesmo para todos os tratamentos, ou seja, $r_1 = \cdots = r_l = K$, então a fórmula se resume a:
+\begin{eqnarray*}
+t_{cal} &=& \frac{\hat{C} - C}{\sqrt{\frac{QMRes}{K} \cdot {\displaystyle \sum_{i=1}^{l}a_i^2}}}
+\end{eqnarray*}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Quando aplicamos o teste t a um contraste $C$, geralmente o interesse é testar as hipóteses: $H_0: C = 0$ contra $H_a: C \neq 0$.
+
+O valor tabelado de t é obtido por $t_{tab} = t_{\alpha}(n_2)$ e a regra decisória é a seguinte:
+\begin{itemize}
+  \item se $|t_{cal}| \geq t_{tab}$, rejeita-se $H_0$
+  \item caso contrário, não rejeita-se $H_0$
+\end{itemize}
+
+\end{block}
+\end{frame}
+
+\section{Teste de Scheffé}
+\begin{frame}{Teste de Scheffé}
+\frametitle{}
+\begin{block}{}
+\justifying
+Este teste pode ser aplicado para testar todo e qualquer contraste entre médias, mesmo quando sugerido pelos dados. O teste de Scheffé não exige que os contrastes 
+sejam ortogonais e nem que estes contrastes sejam estabelecidos antes de se examinar os dados.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+A estatística do teste, denotada por $S$, é calculada por:
+\begin{eqnarray*}
+% \nonumber % Remove numbering (before each equation)
+  S_{cal} &=& \sqrt{(I-1)\cdot F_{tab} \cdot QMRes \cdot \sum_{i=1}^{l}\frac{a_i^2}{r_i}}
+\end{eqnarray*}
+em que $I$ é o número de níveis do fator em estudo, $F_{tab} = F_{\alpha}(I-1, n_2)$.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Caso o número de repetições seja o mesmo para todos os tratamentos, ou seja, $r_1 = \cdots = r_l = K$, então a fórmula se resume a:
+\begin{eqnarray*}
+S_{cal} &=& \sqrt{(I-1)\cdot F_{tab} \cdot \frac{QMRes}{K} \cdot \sum_{i=1}^{l}a_i^2}
+\end{eqnarray*}
 
 \end{block}
 \end{frame}
@@ -344,8 +437,28 @@ Médias&23&27&26&31\\
 \frametitle{}
 \begin{block}{}
 \justifying
+Prosseguindo, deve-se calcular a estimativa do contrates $C$, ou seja, $\hat{C}$, e verificar se $|\hat{C}| \ge S$, concluindo que o contraste é significativamente diferente de zero ao nível de $\alpha$ de probabilidade, indicando que os grupos de médias confrontados no contraste diferem entre si a esse nível de probabilidade.
+\end{block}
+\end{frame}
 
-
+\begin{frame}{}
+\frametitle{}
+\begin{block}{Exemplo 1 (Exercício 5.6, pág. 52):}
+\justifying
+Quatro padarias da cidade de São Paulo, foram fiscalizadas para verificar a quantidade de bromato de potássio existente nos pães 
+franceses que elas produzem. Com esta finalidade foi tomada uma amostra de pães, inteiramente ao acaso, de cada padaria e para cada um deles foi avaliado o teor 
+de bromato de potássio (mg de bromato de potássio por 1 kg de pão). O resumo da avaliação é fornecido a seguir:
+\begin{table}[h]
+\begin{tabular}{lcccc}
+\hline
+Padaria &1&2&3&4\\
+\hline
+Teor Médio &10&11&8&9\\
+\hline
+Núm. de pães avaliados&7&8&7&8\\
+\hline
+\end{tabular}
+\end{table}
 \end{block}
 \end{frame}
 
@@ -353,106 +466,11 @@ Médias&23&27&26&31\\
 \frametitle{}
 \begin{block}{}
 \justifying
-
-
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-
-
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-
-
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-
-
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-
-
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-
-
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-
-
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-
-
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-
-
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-
-
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-
-
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{}
-\begin{block}{}
-\justifying
-
+Usando $SQRes = 52$ e $\alpha = 5\%$:
+\begin{enumerate}
+\item Pode-se concluir que existe diferença significativa no teor médio de bromato de potássio no pão entre as padarias avaliadas?
+\item Suponha que as padarias 1 e 2 suprem a classe A, a padaria 3 a classe B e a 4 a classe C. Verifique, por meio de um contraste, pelos testes de Scheffé e t, se existe diferença no teor médio de bromato de potássio entre as padaria que suprem as classes A e C.
+\end{enumerate}
 
 \end{block}
 \end{frame}

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  15 OCT 2018 16:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  15 OCT 2018 18:12
 entering extended mode
-**./Aula12.tex
-(Aula12.tex
+**./Aula14.tex
+(Aula14.tex
 LaTeX2e <2018-04-01> patch level 5
 ("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamer.cls"
 Document Class: beamer 2018/02/20 v3.50 A class for typesetting presentations
@@ -1645,19 +1645,18 @@ File: bkm-pdftex.def 2016/05/17 v1.26 bookmark driver for pdfTeX (HO)
 ))
 Package hyperref Info: Option `colorlinks' set `true' on input line 53.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamerthemeCopenhagen.sty"
-("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamerouterthemesplit.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamerthemeBoadilla.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamercolorthemerose.sty")
 ("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamerinnerthemerounded.sty")
-("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamercolorthemewhale.sty")
-("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamercolorthemeorchid.sty"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamercolorthemedolphin.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamerouterthemeinfolines.sty"))
 \c@Teorema=\count393
 \c@Proposicao=\count394
 \c@Definicao=\count395
 \c@Corolario=\count396
 \c@Demonstracao=\count397
-
-(Aula12.aux)
-\openout1 = `Aula12.aux'.
+(Aula14.aux)
+\openout1 = `Aula14.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
 LaTeX Font Info:    ... okay on input line 111.
@@ -1694,14 +1693,14 @@ File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(28.45274pt, 398.3386pt, 28.45274pt)
+* h-part:(L,W,R)=(14.09749pt, 427.0491pt, 14.09749pt)
 * v-part:(T,H,B)=(0.0pt, 284.52756pt, 0.0pt)
 * \paperwidth=455.24408pt
 * \paperheight=284.52756pt
-* \textwidth=398.3386pt
+* \textwidth=427.0491pt
 * \textheight=256.07483pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
+* \oddsidemargin=-58.1725pt
+* \evensidemargin=-58.1725pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
@@ -1879,259 +1878,74 @@ LaTeX Font Info:    Font shape `T1/aess/m/it' in size <10> not available
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <7> not available
 (Font)              Font shape `T1/aess/m/sl' tried instead on input line 111.
 Package xypdf Info: Line width: 0.57597pt on input line 111.
- (Aula12.nav)
-Overfull \vbox (1.17564pt too high) detected at line 111
+ (Aula14.nav)
+(Aula14-concordance.tex) [1
+
+{C:/Users/fsbma/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Aula14.toc
+) [2
+
+] [3
+
+] [4
+
+] [5
+
+] [6
+
+] [7
+
+]
+Underfull \hbox (badness 4341) in paragraph at lines 210--210
+[]\T1/aess/m/n/14.4 Num la-bo-ra-tó-rio de-vem ser com-pa-ra-dos 5 mé-to-dos de
+ aná-lise
  []
 
-(Aula12-concordance.tex)
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
 
-
-[1{C:/Users/fsbma/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-]
-(Aula12.toc)
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[2
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[3
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[4
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[5
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[6
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[7
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
+Overfull \vbox (7.93861pt too high) detected at line 210
+ []
 
 [8
 
+] [9
+
+] [10
+
+] [11
+
+] [12
+
 ]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[9
-
-]
-Overfull \vbox (25.47398pt too high) detected at line 184
+Overfull \vbox (18.61223pt too high) detected at line 305
  []
-
-
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[10
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[11
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[12
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
 
 [13
 
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[14
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[15
-
-]
-Overfull \vbox (42.89142pt too high) detected at line 249
- []
-
-
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[16
-
-]
-Overfull \vbox (21.75061pt too high) detected at line 268
- []
-
-
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[17
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[18
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[19
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[20
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[21
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[22
-
-]
-Overfull \vbox (42.89142pt too high) detected at line 332
- []
-
-
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[23
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[24
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[25
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[26
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[27
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[28
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[29
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[30
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[31
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[32
-
-]
-Overfull \vbox (13.06679pt too high) detected at line 463
- []
-
-
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[33
-
-]
-Overfull \vbox (1.17564pt too high) has occurred while \output is active []
-
-
-[34
+] [14
 
 ]
 \tf@nav=\write7
-\openout7 = `Aula12.nav'.
+\openout7 = `Aula14.nav'.
 
 \tf@toc=\write8
-\openout8 = `Aula12.toc'.
+\openout8 = `Aula14.toc'.
 
 \tf@snm=\write9
-\openout9 = `Aula12.snm'.
+\openout9 = `Aula14.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 478.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 478.
- (Aula12.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 478.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 478.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 319.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 319.
+ (Aula14.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 319.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 319.
  ) 
 Here is how much of TeX's memory you used:
- 48728 strings out of 492973
- 1044416 string characters out of 3135932
- 1369207 words of memory out of 12000000
- 51626 multiletter control sequences out of 15000+200000
- 567018 words of font info for 94 fonts, out of 3000000 for 9000
+ 48600 strings out of 492973
+ 1042140 string characters out of 3135932
+ 1373126 words of memory out of 12000000
+ 51542 multiletter control sequences out of 15000+200000
+ 565667 words of font info for 93 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,19n,98p,3249b,914s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,15n,98p,3249b,730s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
@@ -2142,9 +1956,9 @@ c/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mssi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Aula12.pdf (34 pages, 243526 bytes).
+Output written on Aula14.pdf (14 pages, 146950 bytes).
 PDF statistics:
- 542 PDF objects out of 1000 (max. 8388607)
- 76 named destinations out of 1000 (max. 500000)
- 127 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 168 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
+ 107 words of extra memory for PDF output out of 10000 (max. 10000000)
 

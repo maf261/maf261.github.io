@@ -1,0 +1,6 @@
+\babel@toc {brazil}{}
+\beamer@sectionintoc {1}{Delineamento em Blocos Casualizados}{3}{0}{1}
+\beamer@sectionintoc {2}{Tabula\IeC {\c c}\IeC {\~a}o dos dados}{10}{0}{2}
+\beamer@sectionintoc {3}{Modelo Estat\IeC {\'\i }stico}{11}{0}{3}
+\beamer@sectionintoc {4}{An\IeC {\'a}lise de Vari\IeC {\^a}ncia}{14}{0}{4}
+\beamer@sectionintoc {5}{Exemplo}{18}{0}{5}
