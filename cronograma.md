@@ -87,7 +87,7 @@ title: Cronograma da Disciplina
 <tr>		
 <td valign="center" align="center">	16/08/2018	<BR></td>
 <td valign="center" align="center">	Quinta	<BR></td>
-<td valign="center" align="center">	Prodimentos Gerais para Testes de Hipóteses	<BR></td>
+<td valign="center" align="center">	Procedimentos Gerais para Testes de Hipóteses	<BR></td>
 <td valign="center" align="center">	4	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
@@ -194,7 +194,7 @@ title: Cronograma da Disciplina
 <td valign="center" align="center">	Terça	<BR></td>
 <td valign="center" align="center">	Não Haverá aula	<BR></td>
 <td valign="center" align="center">	19	<BR></td>
-<td valign="center" align="center">	2	<BR></td>
+<td valign="center" align="center">	0	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	11/10/2018	<BR></td>
@@ -208,7 +208,7 @@ title: Cronograma da Disciplina
 <td valign="center" align="center">	Terça	<BR></td>
 <td valign="center" align="center">	Procedimentos para comparações múltiplas: Testes de Tukey e Duncan	<BR></td>
 <td valign="center" align="center">	21	<BR></td>
-<td valign="center" align="center">	0	<BR></td>
+<td valign="center" align="center">	2	<BR></td>
 </tr>		
 <tr>		
 <td valign="center" align="center">	18/10/2018	<BR></td>
@@ -315,6 +315,7 @@ title: Cronograma da Disciplina
 <td valign="center" align="center">	36	<BR></td>
 <td valign="center" align="center">	2	<BR></td>
 </tr>		
+	
 		
 	
 
