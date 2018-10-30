@@ -54,4 +54,4 @@ description: Página com as aulas da disciplina.
 
 [DIC]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula12/Exercicios.html
 [DBC]: https://raw.githubusercontent.com/maf261/maf261.github.io/master/Exercicios/Exercicios_noR/DBC.R
-[DQL]: https://raw.githubusercontent.com/maf261/maf261.github.io/master/Exercicios/Exercicios_noR/DQL.R
+[DQL]: https://rawcdn.githack.com/maf261/maf261.github.io/8084a7799f29ffb74efd7a10ce5616743561cfdb/Exercicios/Exercicios_noR/DQL.R
