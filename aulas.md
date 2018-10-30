@@ -24,6 +24,15 @@ description: Página com as aulas da disciplina.
 
 ---
 
+<p class="intro">Material Auxiliar.</p>
+
+---
+
+* [DIC][DIC]
+* [DBC][DBC]
+* [DQL][DQL]
+---
+
 [Repositório das aulas][maf261-gh].
 
 ---
@@ -41,4 +50,7 @@ description: Página com as aulas da disciplina.
 [aula12]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula12/Aula12.pdf   
 [aula13]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula13/Aula13.pdf    
 [aula14]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula14/Aula14.pdf    
-   
+
+[DIC]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula12/Exercicios.html
+[DBC]: https://raw.githubusercontent.com/maf261/maf261.github.io/master/Exercicios/Exercicios_noR/DBC.R
+[DQL]: https://raw.githubusercontent.com/maf261/maf261.github.io/master/Exercicios/Exercicios_noR/DQL.R
