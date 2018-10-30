@@ -18,6 +18,9 @@ description: Página com as aulas da disciplina.
 * [Aula 9][aula9]
 * [Aula 10][aula10]
 * [Aula 11][aulaExer]
+* [Aula 12][aula12]
+* [Aula 13][aula13]
+* [Aula 14][aula14]
 
 ---
 
@@ -35,4 +38,7 @@ description: Página com as aulas da disciplina.
 [aula9]:    https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula9/Aula9.pdf
 [aula10]:   https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula10/Aula10.pdf
 [aulaExer]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula11/Aula11.html
-
+[aula12]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula12/Aula12.pdf   
+[aula13]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula13/Aula13.pdf    
+[aula14]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula14/Aula14.pdf    
+   
