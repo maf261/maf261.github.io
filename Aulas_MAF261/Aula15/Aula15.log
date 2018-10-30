@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  15 OCT 2018 22:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  16 OCT 2018 00:37
 entering extended mode
-**./Aula14.tex
-(Aula14.tex
+**./Aula15.tex
+(Aula15.tex
 LaTeX2e <2018-04-01> patch level 5
 ("C:\Program Files\MiKTeX 2.9\tex\latex\beamer\beamer.cls"
 Document Class: beamer 2018/02/20 v3.50 A class for typesetting presentations
@@ -1655,8 +1655,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 53.
 \c@Definicao=\count395
 \c@Corolario=\count396
 \c@Demonstracao=\count397
-(Aula14.aux)
-\openout1 = `Aula14.aux'.
+(Aula15.aux)
+\openout1 = `Aula15.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
 LaTeX Font Info:    ... okay on input line 111.
@@ -1878,10 +1878,10 @@ LaTeX Font Info:    Font shape `T1/aess/m/it' in size <10> not available
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <7> not available
 (Font)              Font shape `T1/aess/m/sl' tried instead on input line 111.
 Package xypdf Info: Line width: 0.57597pt on input line 111.
- (Aula14.nav)
-(Aula14-concordance.tex) [1
+ (Aula15.nav)
+(Aula15-concordance.tex) [1
 
-{C:/Users/fsbma/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Aula14.toc
+{C:/Users/fsbma/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Aula15.toc
 ) [2
 
 ] [3
@@ -1894,17 +1894,7 @@ Package xypdf Info: Line width: 0.57597pt on input line 111.
 
 ] [7
 
-]
-Underfull \hbox (badness 4341) in paragraph at lines 210--210
-[]\T1/aess/m/n/14.4 Num la-bo-ra-tó-rio de-vem ser com-pa-ra-dos 5 mé-to-dos de
- aná-lise
- []
-
-
-Overfull \vbox (7.93861pt too high) detected at line 210
- []
-
-[8
+] [8
 
 ] [9
 
@@ -1915,37 +1905,165 @@ Overfull \vbox (7.93861pt too high) detected at line 210
 ] [12
 
 ]
-Overfull \vbox (18.61223pt too high) detected at line 307
- []
-
 [13
 
 ] [14
 
 ]
+<Aula15-001.pdf, id=122, 433.62pt x 433.62pt>
+File: Aula15-001.pdf Graphic file (type pdf)
+<use Aula15-001.pdf>
+Package pdftex.def Info: Aula15-001.pdf  used on input line 243.
+(pdftex.def)             Requested size: 213.52455pt x 213.52768pt.
+ [15
+
+ <./Aula15-001.pdf>] [16
+
+]
+<Aula15-002.pdf, id=138, 433.62pt x 433.62pt>
+File: Aula15-002.pdf Graphic file (type pdf)
+<use Aula15-002.pdf>
+Package pdftex.def Info: Aula15-002.pdf  used on input line 273.
+(pdftex.def)             Requested size: 213.52455pt x 213.52768pt.
+ [17
+
+ <./Aula15-002.pdf>]
+<Figuras/Tabulacao.jpg, id=149, 666.99188pt x 204.01219pt>
+File: Figuras/Tabulacao.jpg Graphic file (type jpg)
+<use Figuras/Tabulacao.jpg>
+Package pdftex.def Info: Figuras/Tabulacao.jpg  used on input line 290.
+(pdftex.def)             Requested size: 333.49512pt x 102.00584pt.
+ [18
+
+ <./Figuras/Tabulacao.jpg>]
+<Figuras/Tabulacao2.jpg, id=155, 425.33907pt x 169.38281pt>
+File: Figuras/Tabulacao2.jpg Graphic file (type jpg)
+<use Figuras/Tabulacao2.jpg>
+Package pdftex.def Info: Figuras/Tabulacao2.jpg  used on input line 308.
+(pdftex.def)             Requested size: 212.669pt x 84.6912pt.
+ [19
+
+ <./Figuras/Tabulacao2.jpg>] [20
+
+] [21
+
+] [22
+
+] [23
+
+] [24
+
+]
+[25
+
+]
+
+LaTeX Warning: Command \' invalid in math mode on input line 409.
+
+Missing character: There is no í in font cmss12!
+
+LaTeX Warning: Command \' invalid in math mode on input line 409.
+
+Missing character: There is no í in font cmss12!
+
+Overfull \vbox (5.97954pt too high) detected at line 409
+ []
+
+[26
+
+]
+Overfull \vbox (23.75247pt too high) detected at line 448
+ []
+
+[27
+
+]
+Overfull \vbox (23.75247pt too high) detected at line 448
+ []
+
+[28
+
+] [29
+
+] [30
+
+] [31
+
+] [32
+
+] [33
+
+] [34
+
+] [35
+
+] [36
+
+] [37
+
+] [38
+
+] [39
+
+] [40
+
+] [41
+
+]
+<Figuras/A_dentro_B.jpg, id=281, 561.59813pt x 223.58531pt>
+File: Figuras/A_dentro_B.jpg Graphic file (type jpg)
+<use Figuras/A_dentro_B.jpg>
+Package pdftex.def Info: Figuras/A_dentro_B.jpg  used on input line 628.
+(pdftex.def)             Requested size: 280.79837pt x 111.79237pt.
+ [42
+
+ <./Figuras/A_dentro_B.jpg>] [43
+
+]
+<Figuras/B_dentro_A.jpg, id=293, 565.36218pt x 220.57407pt>
+File: Figuras/B_dentro_A.jpg Graphic file (type jpg)
+<use Figuras/B_dentro_A.jpg>
+Package pdftex.def Info: Figuras/B_dentro_A.jpg  used on input line 656.
+(pdftex.def)             Requested size: 282.68039pt x 110.28676pt.
+ [44
+
+ <./Figuras/B_dentro_A.jpg>] [45
+
+] [46
+
+] [47
+
+]
+[48
+
+] [49
+
+] [50
+
+]
 \tf@nav=\write7
-\openout7 = `Aula14.nav'.
+\openout7 = `Aula15.nav'.
 
 \tf@toc=\write8
-\openout8 = `Aula14.toc'.
+\openout8 = `Aula15.toc'.
 
 \tf@snm=\write9
-\openout9 = `Aula14.snm'.
+\openout9 = `Aula15.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 321.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 321.
- (Aula14.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 321.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 321.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 732.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 732.
+ (Aula15.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 732.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 732.
  ) 
 Here is how much of TeX's memory you used:
- 48610 strings out of 492973
- 1042218 string characters out of 3135932
- 1374126 words of memory out of 12000000
- 51550 multiletter control sequences out of 15000+200000
- 565667 words of font info for 93 fonts, out of 3000000 for 9000
+ 48787 strings out of 492973
+ 1044221 string characters out of 3135932
+ 1384124 words of memory out of 12000000
+ 51637 multiletter control sequences out of 15000+200000
+ 568642 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,15n,98p,3249b,730s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,19n,98p,3249b,731s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
@@ -1955,10 +2073,11 @@ e1/public/amsfonts/cm/cmss17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mssi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Aula14.pdf (14 pages, 148130 bytes).
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Aula15.pdf (50 pages, 478298 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 123 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 423 PDF objects out of 1000 (max. 8388607)
+ 110 named destinations out of 1000 (max. 500000)
+ 185 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -120,14 +120,18 @@ layout(1)
 #Plot 4 - Mesma avaliação do plot 1, mais utilizado quando 
 #utilizamos regressão linear
 
-dic(da$Var,
+DIC <- dic(da$Var,
   da$Prod,
   quali = TRUE,
   mcomp = "tukey",
   nl = FALSE,
   hvar = 'bartlett',
-  sigT = 0.05,
-  sigF = 0.05)
+  sigT = 0.0001,
+  sigF = 0.0001)
+
+plotres(DIC)
+
+
 
 ##---------------------------------------------------------------------
 ## Pacotes.

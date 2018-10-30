@@ -1,0 +1,16 @@
+﻿Bloco  Trat  Resp
+b1  A1  83
+b1  A2  86
+b1  A3  103
+b1  A4  116
+b1  A5  132
+b2  A1  63
+b2  A2  69
+b2  A3  79
+b2  A4  81
+b2  A5  98
+b3  A1  55
+b3  A2  61
+b3  A3  79
+b3  A4  79
+b3  A5  91

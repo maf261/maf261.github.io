@@ -1,0 +1,7 @@
+﻿Var Esp Resp
+V1 E1 8
+V1 E2 6
+V2 E1 10
+V2 E2 8
+V3 E1 12
+V3 E2 10

@@ -2,3 +2,5 @@
 \beamer@sectionintoc {1}{Delineamento em Quadrado Latino}{3}{0}{1}
 \beamer@sectionintoc {2}{Exemplos}{7}{0}{2}
 \beamer@sectionintoc {3}{Modelo Estat\IeC {\'\i }stico}{9}{0}{3}
+\beamer@sectionintoc {4}{An\IeC {\'a}lise de Vari\IeC {\^a}ncia}{12}{0}{4}
+\beamer@sectionintoc {5}{Exemplo}{13}{0}{5}

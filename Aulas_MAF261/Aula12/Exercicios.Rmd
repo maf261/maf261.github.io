@@ -1,0 +1,376 @@
+---
+title: "Exercícios de Delineamento Inteiramente Casualizado"
+author: "Prof. Fernando de Souza Bastos"
+date: "16 de outubro de 2018"
+output:
+  slidy_presentation:
+    fig_caption: yes
+    force_captions: yes
+    highlight: pygments
+    keep_tex: yes
+    toc: yes
+    #Sumário flutuante
+    #toc_float: true
+    #numerar seções
+    number_sections: true
+    #Mostrar ou esconder os códigos (show ou hide)
+    code_folding: hide
+    #Diversos modelos de documentos ver outros em http://bootswatch.com/
+    theme: united
+    header-includes:
+       \usepackage{array}
+       \usepackage{multirow}
+bibliography: bibfile.bib 
+#output: html_document
+---
+
+```{r setup, include=FALSE}
+require(knitr)
+require(kfigr)
+library(kableExtra)
+options(knitr.table.format = "latex")
+knitr::opts_chunk$set(echo = TRUE,fig.align = "center",message=FALSE, warning=FALSE)
+```
+
+## Exercício 4.1
+<p style="text-align: justify;">
+Para comparar a produtividade de quatro variedades de milho, um agrônomo tomou 
+vinte parcelas similares e distribuiu, inteiramente ao acaso, cada uma das 4 variedades
+em 5 parcelas experimentais. A partir dos dados experimentais fornecidos abaixo, é
+possível concluir que existe diferença significativa entre as variedades com relação a
+produtividade, utilizando o nível de significância de 5%?
+</p>
+<!-- <p style="text-align: center;"> -->
+<!-- |   	 |   A	|  B 	|  C  	| D  	  | -->
+<!-- |---|---|---|---|---| -->
+<!-- |   	 |  25	| 31 	| 22  	|33   	| -->
+<!-- |   	 |  26	| 25 	| 26  	|29   	| -->
+<!-- |   	 |  20	| 28 	| 28  	|31   	| -->
+<!-- |   	 |  23	| 27 	| 25  	|34   	| -->
+<!-- |   	 |  21	| 24 	| 29  	|28   	| -->
+<!-- |Totais|  115	| 135 | 130  	|155   	| -->
+<!-- |Médias|  23 	| 27 	| 26  	|31   	| -->
+<!-- </p> -->
+
+
+\begin{array}{ccccc}
+\hline
+&&&Variedades&&\\
+\hline
+   	  &    A	&  B 	&  C  	& D  \\
+   	  \hline
+   	  &   25	& 31 	& 22  	&33 \\
+   	  &   26	& 25 	& 26  	&29 \\
+   	  &   20	& 28 	& 28  	&31 \\
+   	  &   23	& 27 	& 25  	&34 \\
+   	  &   21	& 24 	& 29  	&28 \\
+   	  \hline
+Totais&  115	& 135 & 130  	&155 \\
+\hline
+Médias&  23 	& 27 	& 26  	&31 \\
+\hline
+\end{array}
+
+
+```{r, echo = TRUE}
+library(readr)
+if(!is.null(dev.list())) dev.off()
+da <- read_delim("https://raw.githubusercontent.com/maf261/maf261.github.io/master/Exercicios/Exercicios_noR/Exer_4_1.txt", 
+                 "\t")
+da
+str(da)
+da$Var <- as.factor(da$Var)
+is.factor(da$Var)
+#Resumo total dos dados
+summary(da)
+#Média dos dados por variedade
+res <- aggregate(Prod ~ Var, data = da, FUN = mean);
+kable(res,format = "markdown",digits = 2, padding = 3,align = "c")
+```
+<p style="text-align: justify;">
+Sempre é interessante fazer uma análise descritiva dos dados para avaliar linearidade, independencia, 
+normalidade e homocedásticidade.
+</p>
+
+O pacote lattice de @lattice do R é valioso para tais análises:
+
+```{r}
+library(lattice)
+
+xyplot(Prod~Var, data=da, jitter.x=TRUE)
+xyplot(Prod~reorder(Var,Prod), data=da, jitter.x=TRUE)
+dotplot(Prod~Var, data=da, jitter.x=TRUE)
+dotplot(Prod~reorder(Var,Prod), data=da, jitter.x=TRUE)
+bwplot(Prod~Var, data=da, pch="|")
+bwplot(Prod~reorder(Var,Prod), data=da, pch="|")
+
+#De outra forma
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(readr, dplyr, tibble, ggplot2, ggthemes, car, agricolae)
+ggplot(da, aes(Var, Prod)) +
+  geom_boxplot() +
+  theme_bw() +
+  theme_few()
+```
+
+- Plot 1 - Residuos vs Valores Ajustados
+
+<p style="text-align: justify;">
+ O gráfico dos resíduos versus valores ajustados (valores preditos) é uma
+ das principais técnicas utilizadas para verificar as suposições dos
+ resíduos. Além da detecção de heteroscedasticidade, esse gráfico pode
+ indicar que não existe uma relação linear entra as variáveis explicativas
+ com a variável resposta por meio de alguma tendência nos pontos. Por
+ exemplo, se os pontos do gráfico formam uma parábola, é indicativo que
+ termos de segundo grau sejam necessários.
+ </p>
+
+<p style="text-align: justify;">
+ Para o diagnóstico de heteroscedasticidade, tentamos encontrar alguma
+ tendência no gráfico. Por isso, se os pontos estão aleatoriamente
+ distribuídos em torno do 0, sem nenhum comportamento ou tendência, temos
+ indícios de que a variância dos resíduos é homoscedástica. Já a presença
+ de "funil" é um indicativo da presença de heteroscedasticidade.
+ </p>
+ 
+ - Plot 2 - Locação - Escala
+
+<p style="text-align: justify;">
+Para obtenção dos resíduos padronizados fazemos uma mudança de escala
+dos resíduos, tend uma linha horizontal temos que a variabilidade é
+constante
+</p>
+
+- Plot 3 - Normal Q-Q plot
+
+Pontos ao redor da linha significam normalidade.
+
+- Plot 4 - 
+
+Mesma avaliação do plot 1, mais utilizado quando utilizamos regressão linear
+ 
+```{r}
+m0 <- lm(Prod~Var, data=da)
+par(mfrow=c(2,2))
+plot(m0)
+layout(1)
+```
+
+
+$$
+\begin{align}
+H_{0}&:\mu_{1}=\mu_{2}=\mu_{3}=\mu_{4}\\
+H_{1}&: \textrm{Não}\  H_{0}\ (\textrm{Pelo menos uma média difere das demais})
+\end{align}
+$$
+ 
+- Primeira Forma mais direta 
+
+```{r}
+m0 <- aov(Prod~Var, data=da)
+anova(m0)
+tukey <- HSD.test(m0, "Var",alpha=0.05)
+tukey
+```
+
+Para deixar mais visual ainda, podemos construir um gráfico de barras com a média de cada tratamento e adicionar a sua letra correspondente ao teste de Tukey:
+
+```{r}
+tukey$groups %>% 
+  rownames_to_column(var = "trt") %>% 
+  ggplot(aes(reorder(trt, Prod, function(x) -mean(x)), Prod)) +
+    geom_bar(stat = "identity") +
+    geom_text(aes(label = groups), vjust = 1.8, size = 9, color = "white") +
+    labs(x = "Var", y = "Médias") +
+    theme_few()
+```
+
+- Teste de Duncan
+
+```{r}
+Duncan<- duncan.test(m0, "Var", alpha=0.05)
+Duncan
+```
+
+Para deixar mais visual ainda, podemos construir um gráfico de barras com a média de cada tratamento e adicionar a sua letra correspondente ao teste de Tukey:
+
+```{r}
+Duncan$groups %>% 
+  rownames_to_column(var = "trt") %>% 
+  ggplot(aes(reorder(trt, Prod, function(x) -mean(x)), Prod)) +
+    geom_bar(stat = "identity") +
+    geom_text(aes(label = groups), vjust = 1.8, size = 9, color = "white") +
+    labs(x = "Var", y = "Médias") +
+    theme_few()
+```
+
+- Segunda forma também direta usando o pacote ExpDes.pt dos professores @expdes
+
+```{r}
+library(ExpDes.pt)
+dic <- dic(da$Var,
+  da$Prod,
+  quali = TRUE,
+  mcomp = "tukey",
+  nl = FALSE,
+  hvar = 'bartlett',
+  sigT = 0.05,
+  sigF = 0.05)
+#Gráficos de Resíduos do Pacote ExpDes.pt
+plotres(dic)
+
+#Teste Duncan
+
+dic <- dic(da$Var,
+  da$Prod,
+  quali = TRUE,
+  mcomp = "duncan",
+  nl = FALSE,
+  hvar = 'bartlett',
+  sigT = 0.05,
+  sigF = 0.05)
+
+```
+ 
+
+## Exercício 4.2
+<p style="text-align: justify;">
+Um treinador de corrida rústica, objetivando melhorar o desempenho de seus atletas,
+testou três novas técnicas de preparação. Para tanto trabalhou com um grupo de 15
+atletas completamente homogêneos para as características essenciais. A designação das
+técnicas de preparação aos atletas foi feita totalmente ao acaso e de tal forma que o
+número de atletas avaliados em cada uma das técnicas fosse o mesmo. Os resultados
+obtidos, após um determinado período de tempo de aprendizado da técnica pelos atletas,
+foram os seguintes (minutos / 25 Km):
+</p>
+
+
+\begin{array}{ccccc}
+\hline
+&&\textrm{Técnicas de Preparação}&&\\
+\hline
+\textrm{Repetições}	  &    1	&  2 	&  3  	\\
+   	  \hline
+   	 1 &   130	& 125 	& 135  	\\
+   	 2 &   129	& 131 	& 129  	\\
+   	 3 &   128	& 130 	& 131  	\\
+   	 4 &   126	& 129 	& 128  	\\
+   	 5 &   130	& 127 	& 130  	\\
+   	  \hline
+Totais&  643	& 642 & 653  	\\
+\hline
+\textrm{Médias}&  128.6 	& 128.4 	& 130.6  	\\
+\hline
+\end{array}
+
+
+```{r, echo = TRUE}
+library(readr)
+da <- read_delim("https://raw.githubusercontent.com/maf261/maf261.github.io/master/Exercicios/Exercicios_noR/Exer_4_2.txt", 
+                 "\t")
+da
+str(da)
+da$Tec <- as.factor(da$Tec)
+is.factor(da$Tec)
+#Resumo total dos dados
+summary(da)
+#Média dos dados por variedade
+res <- aggregate(Tempo ~ Tec, data = da, FUN = mean);
+kable(res,format = "markdown",digits = 2, padding = 3,align = "c")
+```
+
+Usando o pacote lattice de @lattice:
+
+```{r}
+library(lattice)
+
+xyplot(Tempo~Tec, data=da, jitter.x=TRUE)
+xyplot(Tempo~reorder(Tec,Tempo), data=da, jitter.x=TRUE)
+dotplot(Tempo~Tec, data=da, jitter.x=TRUE)
+dotplot(Tempo~reorder(Tec,Tempo), data=da, jitter.x=TRUE)
+bwplot(Tempo~Tec, data=da, pch="|")
+bwplot(Tempo~reorder(Tec,Tempo), data=da, pch="|")
+```
+
+```{r}
+m0 <- lm(Tempo~Tec, data=da)
+par(mfrow=c(2,2))
+plot(m0)
+layout(1)
+```
+
+
+$$
+\begin{align}
+H_{0}&:\mu_{1}=\mu_{2}=\mu_{3}\\
+H_{1}&: \textrm{Não}\  H_{0}\ (\textrm{Pelo menos uma média difere das demais})
+\end{align}
+$$
+- Usando a função interna do R
+
+```{r}
+m0 <- lm(Tempo~Tec, data=da)
+anova(m0)
+```
+
+
+- Usando o pacote ExpDes.pt dos professores @expdes
+
+```{r}
+library(ExpDes.pt)
+dic <- dic(da$Tec,
+  da$Tempo,
+  quali = TRUE,
+  mcomp = "tukey",
+  nl = FALSE,
+  hvar = 'bartlett',
+  sigT = 0.01,
+  sigF = 0.01)
+plotres(dic)
+```
+ 
+## Exercício 4.4
+
+```{r}
+da = data.frame(Trat=rep(c("A","B","C"),each=8),
+                Resp=c(96,95,100,108,120,110.5,97  ,92.5,
+                  90,93,89 ,88 ,87 ,92.5 ,87.5,85  ,
+                  86,85,105,105,90 ,100  ,95  ,95))
+head(da)
+str(da)
+m0 <- lm(Resp~Trat,data=da)
+par(mfrow=c(2,2))
+plot(m0)
+layout(1)
+```
+
+Escolha um número que seja próximo, o ideal é que seja um número do tipo $1/a,$ onde $a \in \mathbb{Z}.$
+
+```{r}
+MASS::boxcox(m0)
+MASS::boxcox(lm(Resp~Trat,data=da),lambda=seq(-10,1,by=.1))
+```
+
+
+```{r}
+MASS::boxcox(lm(Resp~Trat,data=da),lambda=seq(-10,1,by=.1))
+abline(v=-4,col="red")
+abline(v=-4.25,col="blue")
+m1 <- lm(Resp^(-4)~Trat,data = da)
+plot(m1)
+library(ExpDes.pt)
+dic <- dic(da$Trat,
+  da$Resp^(-4),
+  quali = TRUE,
+  mcomp = "tukey",
+  nl = FALSE,
+  hvar = 'bartlett',
+  sigT = 0.05,
+  sigF = 0.05)
+#Avalie os resultados
+plotres(dic)
+```
+
+
+## Referências
