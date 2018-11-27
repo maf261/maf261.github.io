@@ -32,6 +32,7 @@ description: Página com as aulas da disciplina.
 * [DIC][DIC]
 * [DBC][DBC]
 * [DQL][DQL]
+* [Fatorial][Fatorial]
 
 ---
 
