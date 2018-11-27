@@ -316,7 +316,7 @@ ggplot(data=df2, aes(x=Var, y=Resp, group=Esp)) +
 \begin{block}{}
 \justifying
 Uma maneira de tabular os dados de um experimento fatorial, com dois fatores
-$A$ e $B,$ com $I$ e níveis, respectivamente, instalados segundo o DIC, com $K$
+$A$ e $B,$ com $I$ e $J$ níveis, respectivamente, instalados segundo o DIC, com $K$
 repetições, é fornecida a seguir:
 \begin{figure}[H]
     \centering
@@ -380,13 +380,13 @@ A análise de variância de um experimento fatorial é feita desdobrando-se a
 soma de quadrados de tratamentos nas partes devido aos efeitos principais de
 cada fator e na parte devido à interação entre os fatores.
 \end{block}
-\pause
-\begin{block}{}
-\justifying
-O quadro a seguir apresenta como seria a análise de um experimento
-fatorial, com 2 fatores A e B, com I e J níveis, respectivamente, e K repetições,
-instalado segundo o DIC.
-\end{block}
+% \pause
+% \begin{block}{}
+% \justifying
+% O quadro a seguir apresenta como seria a análise de um experimento
+% fatorial, com 2 fatores A e B, com I e J níveis, respectivamente, e K repetições,
+% instalado segundo o DIC.
+% \end{block}
 \end{frame}
 
 \begin{frame}{}
@@ -439,7 +439,7 @@ SQTrat&={\displaystyle \sum_{i=1,j=1}^{I,J}\dfrac{Y_{ij.}^{2}}{k}-C} &\quad&
 SQA={\displaystyle \sum_{i=1}^{I}\dfrac{A_{i}^{2}}{JK}-C}\\
 SQB&={\displaystyle \sum_{j=1}^{J}\dfrac{B_{j}^{2}}{IK}-C} &\quad& 
 SQInt=SQTrat-SQA-SQB\\
-SQResíduo&=SQTotal-SQTrat &\quad& 
+SQResiduo&=SQTotal-SQTrat &\quad& 
  \\
 \end{align*}
 

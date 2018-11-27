@@ -21,6 +21,7 @@ description: Página com as aulas da disciplina.
 * [Aula 12][aula12]
 * [Aula 13][aula13]
 * [Aula 14][aula14]
+* [Aula 15][aula15]
 
 ---
 
@@ -50,8 +51,10 @@ description: Página com as aulas da disciplina.
 [aulaExer]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula11/Aula11.html
 [aula12]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula12/Aula12.pdf   
 [aula13]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula13/Aula13.pdf    
-[aula14]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula14/Aula14.pdf    
+[aula14]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula14/Aula14.pdf   
+[aula15]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula15/Aula15.pdf
 
 [DIC]: https://rawgit.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula12/Exercicios.html
 [DBC]: https://raw.githubusercontent.com/maf261/maf261.github.io/master/Exercicios/Exercicios_noR/DBC.R
 [DQL]: https://rawcdn.githack.com/maf261/maf261.github.io/8084a7799f29ffb74efd7a10ce5616743561cfdb/Exercicios/Exercicios_noR/DQL.R
+[Fatorial]:   https://raw.githack.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula15/Exercicios/Exercicios.html

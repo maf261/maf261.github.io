@@ -4,7 +4,7 @@
 \beamer@sectionintoc {3}{Tabula\IeC {\c c}\IeC {\~a}o dos dados}{18}{0}{3}
 \beamer@sectionintoc {4}{Modelo Estat\IeC {\'\i }stico}{20}{0}{4}
 \beamer@sectionintoc {5}{An\IeC {\'a}lise de Vari\IeC {\^a}ncia}{22}{0}{5}
-\beamer@sectionintoc {6}{Intera\IeC {\c c}\IeC {\~a}o n\IeC {\~a}o-significativa}{33}{0}{6}
-\beamer@sectionintoc {7}{Intera\IeC {\c c}\IeC {\~a}o significativa}{39}{0}{7}
-\beamer@sectionintoc {8}{Conclus\IeC {\~o}es}{47}{0}{8}
-\beamer@sectionintoc {9}{Exemplo}{50}{0}{9}
+\beamer@sectionintoc {6}{Intera\IeC {\c c}\IeC {\~a}o n\IeC {\~a}o-significativa}{32}{0}{6}
+\beamer@sectionintoc {7}{Intera\IeC {\c c}\IeC {\~a}o significativa}{38}{0}{7}
+\beamer@sectionintoc {8}{Conclus\IeC {\~o}es}{46}{0}{8}
+\beamer@sectionintoc {9}{Exemplo}{49}{0}{9}

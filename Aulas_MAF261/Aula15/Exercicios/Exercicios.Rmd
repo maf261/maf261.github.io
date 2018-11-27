@@ -1,0 +1,274 @@
+---
+title: "Exercícios de Experimento Fatorial"
+author: "Prof. Fernando de Souza Bastos"
+date: "10 de Novembro de 2018"
+output:
+  slidy_presentation:
+    fig_caption: yes
+    force_captions: yes
+    highlight: pygments
+    keep_tex: yes
+    toc: yes
+    #Sumário flutuante
+    #toc_float: true
+    #numerar seções
+    number_sections: true
+    #Mostrar ou esconder os códigos (show ou hide)
+    code_folding: hide
+    #Diversos modelos de documentos ver outros em http://bootswatch.com/
+    theme: united
+    header-includes:
+       \usepackage{array}
+       \usepackage{multirow}
+#bibliography: bibfile.bib 
+#output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercício 8.1
+
+```{r}
+library("ExpDes.pt")
+#Experimento Fatorial - Exercício 8.1 da Apostila
+(croqui = expand.grid(rep=1:3, Cal=c("Cal0","Cal1"),Irrig=c("Ir0","Ir1")))
+#Fator 1 - Irrigação
+#Irrig<-gl(2,6,label=c(paste("A",0:1,sep="")))
+#Fator 2 - Calagem
+#Cal<-rep(gl(2,3,label=c(paste("B",0:1,sep=""))),2)
+#Variável Resposta - Dados
+Resp<-c(25,32,27,
+         35,28,33,
+         41,35,38,
+         60,67,59)
+#Tabela com os tratamentos e os dados
+#tab<-data.frame(Irrig,Cal,dados)
+(dados<-data.frame(croqui,Resp))
+attach(dados)
+
+(dados$trat = factor(rep(c('T1','T2','T3','T4'), each=3)))
+# ou
+(dados$Trat = with(dados, interaction(Irrig, Cal)))
+
+head(dados)
+tail(dados)
+str(dados)
+
+#---------------------------
+# Estatísticas descritivas -
+#---------------------------
+summary(dados)
+
+(medias.trat = with(dados, tapply(Resp, trat, mean)))
+(medias.Irrig = with(dados, tapply(Resp, Irrig, mean)))
+(medias.Cal = with(dados, tapply(Resp, Cal, mean)))
+
+(medias = with(dados, tapply(Resp, list(Irrig, Cal), mean)))
+(variancias = with(dados, tapply(Resp, list(Irrig, Cal), var)))
+(desvios = with(dados, tapply(Resp, list(Irrig, Cal), sd)))
+
+#--------------------------------------------------------------
+# Em experimentos fatoriais é importante verificar se existe  -
+# interação entre os fatores. Inicialmente vamos fazer isto   -
+# graficamente e mais a frente faremos um teste formal para   -
+# presença de interação. Os comandos a seguir são usados para -
+# produzir os gráficos.                                       -
+#--------------------------------------------------------------
+par(mai=c(1, 1, .2, .2))
+with(dados, interaction.plot(Irrig, Cal, Resp, las=1, xlab='Irrigação',
+                             ylab='Alturas médias (cm)', col=c('red','blue'), 
+                             bty='l', trace.label=deparse(substitute(Calagem)), 
+                             lwd=2.5))
+
+with(dados, interaction.plot(Cal, Irrig, Resp, las=1, xlab='Calagem',
+                             ylab='resp médias (cm)', col=c('red','blue'), 
+                             bty='l', trace.label=deparse(substitute(Irrigação)), 
+                             lwd=2.5))
+
+#-----------------------------------------------------------------
+# Seguindo o modelo adequado, o análise de variância para este   -
+# experimento inteiramente casualizado em esquema fatorial pode  -
+# ser obtida com o comando:                                      -
+#-----------------------------------------------------------------
+mod.1 = with(dados, aov(Resp ~ trat))
+summary(mod.1)
+anova(mod.1)
+
+mod.2 = with(dados, aov(Resp ~ Irrig + Cal + Irrig*Cal))
+summary(mod.2)
+
+#--------------------------------------------------------------
+# Entretanto o comando acima pode ser simplificado produzindo -
+# os mesmos resultados com o comando:                         -
+#--------------------------------------------------------------
+mod.2 = with(dados, aov(Resp ~ Irrig*Cal))
+summary(mod.2)
+
+(médias.fat = model.tables(mod.2, ty="means"))
+
+
+#------------------------------
+# Verificação de pressupostos -
+#------------------------------
+#
+# Normalidade dos erros
+plot(mod.2, which=c(2:2), pch=19, col='red', las=1)
+
+shapiro.test(mod.2$res)
+
+# Homogeneidade das variâncias
+with(dados, bartlett.test(mod.2$res ~ Trat))
+
+# Independência dos erros
+with(dados, plot(mod.2$res, las=1, pch=20, col='red', ylab='Resíduos'))
+
+#Comando para rodar a Anova
+fat2.dic(Cal,Irrig, Resp, quali = c(TRUE, TRUE), mcomp = "tukey", fac.names = c( "Cal","Irrig"), sigT = 0.05, sigF = 0.05)
+
+```
+
+
+# Exercício 8.2
+
+```{r}
+library("ExpDes")
+#Experimento Fatorial - Exercício 8.2 da Apostila 
+#Fator 1 - Nitrogênio
+Nit<-gl(2,10,label=c(paste("N",0:1,sep="")))
+#Fator 2 - Fósforo
+Fos<-rep(gl(2,5,label=c(paste("P",0:1,sep=""))),2)
+dados<-c(10.5,11,9.8,11.2,9.9,
+         11.2,11,10.4,13.1,10.6,
+         11.5,12.4,10.2,12.7,10.4,
+         14,14.1,13.8,13.5,14.2)
+#Tabela com os tratamentos e os dados
+tab<-data.frame(Nit,Fos,dados)
+#Comando para rodar a Anova
+fat2.crd(Nit, Fos, dados, quali = c(TRUE, TRUE), mcomp = "tukey", fac.names = c("F1", "F2"), sigT = 0.05, sigF = 0.05)
+
+```
+
+# Exercício 8.3
+
+```{r}
+#Experimento Fatorial - Exercício 8.3 da Apostila 
+#Fator 1 - Ração
+racao<-gl(2,12,label=c(paste("R",0:1,sep="")))
+#Fator 2 - Ambiente à noite
+luz<-rep(gl(2,6,label=c(paste("L",0:1,sep=""))),2)
+#Variável Resposta - Dados
+dados<-c(50,52,48,54,52,50,
+         49,52,50,48,46,45,
+         42,44,46,43,44,45,
+         40,40,38,39,41,43)
+#Tabela com os tratamentos e os dados
+tab<-data.frame(racao,luz,dados)
+#Comando para rodar a Anova
+fat2.crd(racao, luz, dados, quali = c(TRUE, TRUE), mcomp = "tukey", fac.names = c("F1", "F2"), sigT = 0.05, sigF = 0.05)
+
+```
+
+# Exercício 8.10
+
+```{r}
+#Experimento Fatorial - Exercício 8.10 da Apostila 
+#Fator 1 - B
+b<-gl(3,12,label=c(paste("B",1:3,sep="")))
+#Fator 2 - A
+a<-rep(gl(4,3,label=c(paste("A",1:4,sep=""))),3)
+#Variável Resposta - Dados
+dados<-c(12,14,16,
+         15,17,18,20,21,23,23,24,26,
+         18,17,20,22,23,23,25,26,28,29,30,32,
+         22,21,20,30,31,32,29,32,32,34,35,37)
+#Tabela com os tratamentos e os dados
+tab<-data.frame(b,a,dados)
+#Comando para rodar a Anova
+fat2.crd(b, a, dados, quali = c(TRUE, TRUE), mcomp = "tukey", fac.names = c("F1", "F2"), sigT = 0.05, sigF = 0.05)
+
+```
+
+# Exercício 8.17
+
+```{r}
+#Experimento Fatorial - Exercício 8.17 da Apostila 
+#Fator 1 - A
+a<-gl(2,9,label=c(paste("A",1:2,sep="")))
+#Fator 2 - B
+b<-rep(gl(3,3,label=c(paste("B",1:3,sep=""))),2)
+#Variável resposta - dados
+dados<-c(12,14,16,15,17,18,12,11,13,
+         14,13,16,11,12,11,12,12,13)
+#Comando para rodar a Anova
+fat2.crd(a, b, dados, quali = c(TRUE, TRUE), mcomp = "tukey", fac.names = c("F1", "F2"), sigT = 0.05, sigF = 0.05)
+
+```
+
+# Exercício 8.19
+
+```{r}
+#Experimento Fatorial - Exercício 8.19 da Apostila 
+#Fator 1 - Tipos de Colhetadeira
+t<-gl(2,15,label=c(paste("T",1:2,sep="")))
+#Fator 2 - Horários de Colheita
+h<-rep(gl(3,5,label=c(paste("H",1:3,sep=""))),2)
+#Variável Resposta - dados
+dados<-c(35,40,45,49,39,
+         43,41,47,38,48,
+         52,57,58,56,59,
+         54,58,56,61,59,
+         67,59,62,65,64,
+         71,73,74,77,75)
+#Tabela com os niveis dos fatores e os dados
+tab<-data.frame(t,h,dados)
+#Comando para rodar a Anova
+fat2.crd(t, h, dados, quali = c(TRUE, TRUE), mcomp = "tukey", fac.names = c("F1", "F2"), sigT = 0.05, sigF = 0.05)
+
+```
+
+# Exercício 8.23
+
+```{r}
+#Experimento Fatorial - Exercício 8.23 da Apostila 
+#Fator 1 - Suplementos Minerais
+a<-gl(3,8,label=c(paste("A",1:3,sep="")))
+#Fator 2 - Suplementos Vegetais
+b<-rep(gl(2,4,label=c(paste("B",1:2,sep=""))),3)
+#Variável Resposta - dados
+dados<-c(35.2,36,35,35.4,
+         32.8,34.6,36.7,35.2,
+         34.7,36.3,35.1,36.4,
+         28.6,31.1,29,28.6,
+         33.8,29.4,28.8,29.2,
+         30.8,31.4,32.8,31.3)
+#Tabela com os niveis dos fatores e os dados
+tab<-data.frame(a,b,dados)
+#Comando para rodar a Anova
+fat2.crd(a, b, dados, quali = c(TRUE, TRUE), mcomp = "tukey", fac.names = c("F1", "F2"), sigT = 0.05, sigF = 0.05)
+
+```
+
+# Exercício 8.25
+
+```{r}
+#Experimento Fatorial - Exercício 8.25 da Apostila 
+#Fator 1 - Recipiente
+rec<-gl(3,8,label=c(paste("R",1:3,sep="")))
+#Fator 2 - Espécie
+esp<-rep(gl(2,4,label=c(paste("E",1:2))),3)
+#Variável Resposta - dados
+dados<-c(26.2,26,25,25.4,
+         24.8,24.6,26.7,25.2,
+         25.7,26.3,25.1,26.4,
+         19.6,21.1,19,18.6,
+         22.8,19.4,18.8,19.2,
+         19.8,21.4,22.8,21.3)
+#Tabela com os niveis dos fatores e os dados
+tab<-data.frame(rec,esp,dados)
+#Comando para rodar a Anova
+fat2.crd(rec, esp, dados, quali = c(TRUE, TRUE), mcomp = "tukey", fac.names = c("F1", "F2"), sigT = 0.05, sigF = 0.05)
+
+```
+

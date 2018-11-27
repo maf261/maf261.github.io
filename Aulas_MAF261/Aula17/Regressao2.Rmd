@@ -1,0 +1,280 @@
+---
+title: "Regressão"
+author: "Fernando Bastos"
+date: "20 de novembro de 2018"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exemplo 10.1
+
+Verificar, utilizando os dados amostrais fornecidos abaixo, se a temperatura tem
+influência significativa sobre o comprimento de uma barra de aço. Utilize o modelo linear
+de $1^{\circ}$ grau e o nível de $5\%$ de significância.
+
+|Temperatura $(^{\circ}C)$|10|15|20|25|30|
+|:-:	|:-:	|:-:	|:-:	|:-:	|:-:	|
+|Comprimento|1003|1005|1010|1011|1014|
+
+```{r}
+### Dados do Exercicio: Temperatura x Comprimento
+### x = Temperatura e y = Comprimento
+############################################
+
+# Entrada de Dados
+x <- c(10,15,20,25,30)
+y <- c(1003,1005,1010,1011,1014)
+
+```
+
+### Calculando as expressões sem usar funções do R:
+
+```{r}
+plot(x,y, pch=19, col="red3") # Temperatura x Comprimento
+(n <- length(x)) # tamanho da amostra
+(xbar <- mean(x)) # média das Temperaturas
+(ybar <- mean(y)) # média dos Comprimentos
+(s2x <- var(x)) # variância das Temperaturas
+(s2y <- var(y)) # variância dos Comprimentos
+(sxy <- (sum(x*y)-n*xbar*ybar)/(n-1)) # covariância entre Comprimento e Temperatura
+(rxy <- cor(x,y)) # correlação entre Comprimento e Temperatura
+```
+
+```{r}
+## Ajuste de mínimos quadrados
+## estimativas dos coeficientes
+(beta1 <- sxy/s2x)
+(beta0 <- ybar-xbar*beta1)
+(c(beta0,beta1))
+
+```
+
+```{r}
+## Coeficiente de determinação
+R2 <- (sxy^2)/(s2y*s2x)
+R2
+(rxy)^2 # relação de R2 com rxy
+beta1*sxy/s2y # relação de R2 com beta1
+```
+
+```{r}
+## Valores ajustados e resíduos
+ych <- beta0 + beta1*x # valores ajustados
+ei <- y - ych # resíduos
+
+```
+
+```{r}
+## plotando a reta ajustada
+plot(x,y, pch=19, col="red3", main="Gráfico de pontos", xlab="Temperatura",
+ylab="Comprimento")
+lines(x[order(x)], ych[order(x)],col="blue3", lwd=2)
+```
+
+
+```{r}
+## Análise gráfica para verificação das suposições
+## do modelo (normalidade e igualdade de variâncias)
+# histograma
+hist(ei, col="bisque", main="Histograma dos resíduos", xlab="Resíduos",
+ylab="Frequência", cex.main=1.25)
+# normal qq-plot dos resíduos
+qqnorm(ei)
+qqline(ei)
+# resíduos x valores ajustados
+plot(ych,ei, main="Resíduos x Ajustados", pch=19, col="red3")
+# resíduos x ordem (timeplot)
+plot(ei, main="Resíduos x ordem", pch=19, col="red3")
+lines(ei, lwd=2, col="blue3")
+```
+
+### Explorando os recursos do R:
+
+```{r}
+# Usando o comando - lm
+reta <- lm(y~x) # guardando os resultados do ajuste
+reta
+```
+
+```{r}
+summary(reta) # sumário do ajuste
+## O commando summary fornece:
+## i) descritivas dos resíduos;
+## ii) coeficientes estimados com respectivos testes de siginificância;
+## iii) erro padrão dos resíduos (estimativa do desvio padrão sigma);
+## iv) coef. de determinação R2 e R2-ajustado;
+## v) teste F da tabela ANOVA, para testar Ho:beta1=0.
+aov(reta) # somas de quadrado dos resíduos e do modelo
+res <- reta$residuals # resíduos
+sdres <- rstandard(reta) # resíduos padronizados
+ajus <- reta$fitted # valores ajustados
+
+```
+
+```{r}
+# traçando a reta de regressão
+plot(x,y, pch=19, col="red3", main="Gráfico de pontos", xlab="Temperatura",
+ylab="Comprimento")
+abline(coef(reta), col="blue3", lwd=2)
+```
+
+```{r}
+# verificação das suposições do modelo:
+# teste de normalidade de Kolmogorov-Smirnov
+ks.test(sdres,pnorm,0,1)
+## Análise gráfica para verificação das suposições
+## do modelo (normalidade e igualdade de variâncias)
+## gráfico 4x1
+#par(mfrow = c(2,2)) # esse comando divide a janela gráfica numa matriz 2x2
+# histograma dos resíduos
+hist(sdres, col = "bisque", xlab="Resíduos padronizados", ylab=" ",
+main="Histograma dos Resíduos", cex.main=1)
+# gráfico normal qq-plot dos resíduos
+qqnorm(sdres, pch=19, col="red", xlab="Quantis teóricos", ylab="Quantis
+amostrais", main="Normal Q-Q plot dos Resíduos", cex.main=1)
+qqline(sdres, col="blue3")
+# gráfico resíduos x valores ajustados
+plot(ajus,sdres,pch=19,col="red", xlab="Valores ajustados", ylab="Resíduos
+padronizados", main="Resíduos x Ajustados", cex.main=1)
+lines(c(0,max(ajus)),c(0,0),lty=2)
+# resíduos x ordem (timeplot)
+plot(sdres, main="Resíduos x ordem", ylab="Resíduos padronizados", pch=19,
+col="red3", cex.main=1)
+lines(sdres, col="blue3")
+lines(c(0,max(ajus)),c(0,0),lty=2)
+```
+
+__________________________________________________________________________________
+
+
+## Exemplo 2
+
+```{r}
+### Exemplo dados dos alunos: altura x peso
+### x = altura e y = peso
+############################################
+# Entrada de Dados
+x <- c(1.61,1.57,1.77,1.75,1.83,1.69,1.91,1.75,1.72,1.68,1.92,1.58,1.77)
+y <- c(54.5,43.0,72.0,77.0,76.0,83.0,78.0,90.0,59.0,75.4,120.0,43.0,88.0)
+```
+
+
+### Calculando as expressões sem usar funções do R:
+
+```{r}
+plot(x,y, pch=19, col="red3") # Altura x Peso
+(n <- length(x)) # tamanho da amostra
+(xbar <- mean(x)) # média das Alturas
+(ybar <- mean(y)) # média dos Pesos
+(s2x <- var(x)) # variância das Alturas
+(s2y <- var(y)) # variância dos Pesos
+(sxy <- (sum(x*y)-n*xbar*ybar)/(n-1)) # covariância entre Peso e Altura
+(rxy <- cor(x,y)) # correlação entre Peso e Altura
+```
+
+```{r}
+## Ajuste de mínimos quadrados
+## estimativas dos coeficientes
+(beta1 <- sxy/s2x)
+(beta0 <- ybar-xbar*beta1)
+(c(beta0,beta1))
+
+```
+
+```{r}
+## Coeficiente de determinação
+R2 <- (sxy^2)/(s2y*s2x)
+R2
+(rxy)^2 # relação de R2 com rxy
+beta1*sxy/s2y # relação de R2 com beta1
+```
+
+```{r}
+## Valores ajustados e resíduos
+ych <- beta0 + beta1*x # valores ajustados
+ei <- y - ych # resíduos
+
+```
+
+```{r}
+## plotando a reta ajustada
+plot(x,y, pch=19, col="red3", main="Gráfico de pontos", xlab="Altura",
+     ylab="Peso")
+lines(x[order(x)], ych[order(x)],col="blue3", lwd=2)
+```
+
+
+```{r}
+## Análise gráfica para verificação das suposições
+## do modelo (normalidade e igualdade de variâncias)
+# histograma
+hist(ei, col="bisque", main="Histograma dos resíduos", xlab="Resíduos",
+     ylab="Frequência", cex.main=1.25)
+# normal qq-plot dos resíduos
+qqnorm(ei)
+qqline(ei)
+# resíduos x valores ajustados
+plot(ych,ei, main="Resíduos x Ajustados", pch=19, col="red3")
+# resíduos x ordem (timeplot)
+plot(ei, main="Resíduos x ordem", pch=19, col="red3")
+lines(ei, lwd=2, col="blue3")
+```
+
+### Explorando os recursos do R:
+
+```{r}
+# Usando o comando - lm
+reta <- lm(y~x) # guardando os resultados do ajuste
+reta
+```
+
+```{r}
+summary(reta) # sumário do ajuste
+## O commando summary fornece:
+## i) descritivas dos resíduos;
+## ii) coeficientes estimados com respectivos testes de siginificância;
+## iii) erro padrão dos resíduos (estimativa do desvio padrão sigma);
+## iv) coef. de determinação R2 e R2-ajustado;
+## v) teste F da tabela ANOVA, para testar Ho:beta1=0.
+aov(reta) # somas de quadrado dos resíduos e do modelo
+res <- reta$residuals # resíduos
+sdres <- rstandard(reta) # resíduos padronizados
+ajus <- reta$fitted # valores ajustados
+
+```
+
+```{r}
+# traçando a reta de regressão
+plot(x,y, pch=19, col="red3", main="Gráfico de pontos", xlab="Altura",
+     ylab="Peso")
+abline(coef(reta), col="blue3", lwd=2)
+```
+
+```{r}
+# verificação das suposições do modelo:
+# teste de normalidade de Kolmogorov-Smirnov
+ks.test(sdres,pnorm,0,1)
+## Análise gráfica para verificação das suposições
+## do modelo (normalidade e igualdade de variâncias)
+## gráfico 4x1
+#par(mfrow = c(2,2)) # esse comando divide a janela gráfica numa matriz 2x2
+# histograma dos resíduos
+hist(sdres, col = "bisque", xlab="Resíduos padronizados", ylab=" ",
+     main="Histograma dos Resíduos", cex.main=1)
+# gráfico normal qq-plot dos resíduos
+qqnorm(sdres, pch=19, col="red", xlab="Quantis teóricos", ylab="Quantis
+       amostrais", main="Normal Q-Q plot dos Resíduos", cex.main=1)
+qqline(sdres, col="blue3")
+# gráfico resíduos x valores ajustados
+plot(ajus,sdres,pch=19,col="red", xlab="Valores ajustados", ylab="Resíduos
+     padronizados", main="Resíduos x Ajustados", cex.main=1)
+lines(c(0,max(ajus)),c(0,0),lty=2)
+# resíduos x ordem (timeplot)
+plot(sdres, main="Resíduos x ordem", ylab="Resíduos padronizados", pch=19,
+     col="red3", cex.main=1)
+lines(sdres, col="blue3")
+lines(c(0,max(ajus)),c(0,0),lty=2)
+```

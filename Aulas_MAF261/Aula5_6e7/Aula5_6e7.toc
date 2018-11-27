@@ -6,7 +6,7 @@
 \beamer@subsectionintoc {2}{1}{Teste F para Compara\IeC {\c c}\IeC {\~a}o de Vari\IeC {\^a}ncias de Duas Popula\IeC {\c c}\IeC {\~o}es}{20}{0}{2}
 \beamer@subsectionintoc {2}{2}{Vari\IeC {\^a}ncias populacionais conhecidas}{24}{0}{2}
 \beamer@subsectionintoc {2}{3}{Vari\IeC {\^a}ncias Desconhecidas e Desiguais}{26}{0}{2}
-\beamer@subsectionintoc {2}{4}{Vari\IeC {\^a}ncias Desconhecidas, por\IeC {\'e}m iguais}{27}{0}{2}
-\beamer@sectionintoc {3}{Teste de hip\IeC {\'o}teses para o caso de duas amostras dependentes}{33}{0}{3}
-\beamer@sectionintoc {4}{Teste $\chi ^{2}$ para a vari\IeC {\^a}ncia}{42}{0}{4}
-\beamer@sectionintoc {5}{Testes para a Propor\IeC {\c c}\IeC {\~a}o de uma Popula\IeC {\c c}\IeC {\~a}o}{46}{0}{5}
+\beamer@subsectionintoc {2}{4}{Vari\IeC {\^a}ncias Desconhecidas, por\IeC {\'e}m iguais}{28}{0}{2}
+\beamer@sectionintoc {3}{Teste de hip\IeC {\'o}teses para o caso de duas amostras dependentes}{34}{0}{3}
+\beamer@sectionintoc {4}{Teste $\chi ^{2}$ para a vari\IeC {\^a}ncia}{43}{0}{4}
+\beamer@sectionintoc {5}{Testes para a Propor\IeC {\c c}\IeC {\~a}o de uma Popula\IeC {\c c}\IeC {\~a}o}{47}{0}{5}

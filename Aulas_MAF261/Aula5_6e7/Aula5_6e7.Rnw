@@ -499,8 +499,12 @@ Contudo, nas situações de interesse prático, as variâncias não são conheci
 \begin{block}{}
 \justifying
 Quando a hipótese de igualdade de variâncias for rejeitada pelo teste F, devemos usar a estatística $$t_{cal}=\dfrac{\bar{X}-\bar{Y}}{\sqrt{\dfrac{S_{1}^{2}}{n}+\dfrac{S_{2}^{2}}{m}}}$$ o número de graus de liberdade é dado aproximadamente por:
+\vspace{-0.2cm}
 $$df=\dfrac{(A+B)^{2}}{\dfrac{A^{2}}{n-1}+\dfrac{B^{2}}{m-1}},\ 
 A=\dfrac{S_{1}^{2}}{n},\ B=\dfrac{S_{2}^{2}}{m}$$
+\end{block}\pause
+\vspace{-0.5cm}
+\begin{block}{}
 Como esse valor é geralmente fracionário, arredonde para o inteiro mais próximo
 para obter o número de graus de liberdade.
 \end{block}
@@ -566,6 +570,7 @@ Concreto 2 & 50 & 54 & 56 & 52 & 53
 \begin{frame}{}
 \frametitle{Exemplo}
 \begin{block}{}
+{\bf *}Procedemos o teste F e não rejeitamos $\Ho:\sigma_{1}^{2}=\sigma_{2}^{2}$
 \justifying
 \begin{align*}
 H_{0}: \mu_{1}&=\mu_{2} \\ 

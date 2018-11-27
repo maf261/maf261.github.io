@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  16 OCT 2018 00:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  13 NOV 2018 09:33
 entering extended mode
 **./Aula15.tex
 (Aula15.tex
@@ -684,7 +684,7 @@ Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-(C:/PROGRA~1/R/R-34~1.3/share/texmf/tex/latex\Sweave.sty
+(C:/PROGRA~1/R/R-3.5.1/share/texmf/tex/latex\Sweave.sty
 Package: Sweave 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
@@ -1954,19 +1954,13 @@ Package pdftex.def Info: Figuras/Tabulacao2.jpg  used on input line 308.
 ] [24
 
 ]
+Overfull \vbox (5.97954pt too high) detected at line 409
+ []
+
 [25
 
 ]
-
-LaTeX Warning: Command \' invalid in math mode on input line 409.
-
-Missing character: There is no í in font cmss12!
-
-LaTeX Warning: Command \' invalid in math mode on input line 409.
-
-Missing character: There is no í in font cmss12!
-
-Overfull \vbox (5.97954pt too high) detected at line 409
+Overfull \vbox (23.75247pt too high) detected at line 448
  []
 
 [26
@@ -1977,11 +1971,7 @@ Overfull \vbox (23.75247pt too high) detected at line 448
 
 [27
 
-]
-Overfull \vbox (23.75247pt too high) detected at line 448
- []
-
-[28
+] [28
 
 ] [29
 
@@ -2007,38 +1997,36 @@ Overfull \vbox (23.75247pt too high) detected at line 448
 
 ] [40
 
-] [41
-
 ]
-<Figuras/A_dentro_B.jpg, id=281, 561.59813pt x 223.58531pt>
+<Figuras/A_dentro_B.jpg, id=276, 561.59813pt x 223.58531pt>
 File: Figuras/A_dentro_B.jpg Graphic file (type jpg)
 <use Figuras/A_dentro_B.jpg>
 Package pdftex.def Info: Figuras/A_dentro_B.jpg  used on input line 628.
 (pdftex.def)             Requested size: 280.79837pt x 111.79237pt.
- [42
+ [41
 
- <./Figuras/A_dentro_B.jpg>] [43
+ <./Figuras/A_dentro_B.jpg>] [42
 
 ]
-<Figuras/B_dentro_A.jpg, id=293, 565.36218pt x 220.57407pt>
+<Figuras/B_dentro_A.jpg, id=287, 565.36218pt x 220.57407pt>
 File: Figuras/B_dentro_A.jpg Graphic file (type jpg)
 <use Figuras/B_dentro_A.jpg>
 Package pdftex.def Info: Figuras/B_dentro_A.jpg  used on input line 656.
 (pdftex.def)             Requested size: 282.68039pt x 110.28676pt.
- [44
+ [43
 
- <./Figuras/B_dentro_A.jpg>] [45
+ <./Figuras/B_dentro_A.jpg>] [44
+
+] [45
 
 ] [46
 
-] [47
-
 ]
-[48
+[47
+
+] [48
 
 ] [49
-
-] [50
 
 ]
 \tf@nav=\write7
@@ -2057,9 +2045,9 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 732.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 732.
  ) 
 Here is how much of TeX's memory you used:
- 48787 strings out of 492973
- 1044221 string characters out of 3135932
- 1384124 words of memory out of 12000000
+ 48785 strings out of 492973
+ 1044199 string characters out of 3135932
+ 1383126 words of memory out of 12000000
  51637 multiletter control sequences out of 15000+200000
  568642 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2075,9 +2063,9 @@ s/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mssi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Aula15.pdf (50 pages, 478298 bytes).
+Output written on Aula15.pdf (49 pages, 475817 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
- 110 named destinations out of 1000 (max. 500000)
+ 416 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
  185 words of extra memory for PDF output out of 10000 (max. 10000000)
 

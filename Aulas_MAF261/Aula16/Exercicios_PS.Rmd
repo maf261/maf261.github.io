@@ -1,0 +1,34 @@
+---
+title: "Exercicios de Parcelas Subdivididas"
+author: "Fernando Bastos"
+date: "25 de novembro de 2018"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercício 9.1
+
+```{r}
+dados <- read.table("Exer_9_1.txt", header=T)
+head(dados)
+dim(dados)
+names(dados) <- c("Parcelas","Sub","blocos","Resp")
+str(dados)
+dados$Parcelas <- as.factor(dados$Parcelas)
+dados$Sub <- as.factor(dados$Sub)
+dados$blocos <- as.factor(dados$blocos)
+str(dados)
+summary(dados)
+dados.av <- aov(Resp ~ blocos + Parcelas*Sub + Error(blocos/Parcelas), data=dados)
+plot(dados.av)
+summary(dados.av)
+library("ExpDes.pt")
+a <- psub2.dbc(dados$Parcelas, dados$Sub, dados$blocos, dados$Resp, quali = c(TRUE, TRUE), mcomp = "tukey", fac.names = c("Parcelas", "Sub"), sigT = 0.05, sigF = 0.05)
+plotres(a)
+graficos(a)
+```
+
+

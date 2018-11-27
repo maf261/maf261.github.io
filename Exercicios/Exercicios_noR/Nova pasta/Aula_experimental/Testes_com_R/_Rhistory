@@ -1,0 +1,76 @@
+rm(list=ls())
+cat("\014")
+rm(list=ls())
+cat("\014")
+install.packages("ExpDes.pt")
+library("ExpDes.pt")
+#Experimento Fatorial - Exercício 8.1 da Apostila
+#Fator 1 - Irrigação
+Irrig<-gl(2,6,label=c(paste("A",0:1,sep="")))
+#Fator 2 - Calagem
+Cal<-rep(gl(2,3,label=c(paste("B",0:1,sep=""))),2)
+#Variável Resposta - Dados
+dados<-c(25,32,27,
+35,28,33,
+41,35,38,
+60,67,59)
+#Tabela com os tratamentos e os dados
+tab<-data.frame(Irrig,Cal,dados)
+tab
+#Comando para rodar a Anova
+fat2.crd(Irrig, Cal, dados, quali = c(TRUE, TRUE), mcomp = "tukey", fac.names = c("F1", "F2"), sigT = 0.05, sigF = 0.05)
+#Comando para rodar a Anova
+fat2.dic(Irrig, Cal, dados, quali = c(TRUE, TRUE), mcomp = "tukey", fac.names = c("F1", "F2"), sigT = 0.05, sigF = 0.05)
+rm(list=ls())
+cat("\014")
+library("ExpDes.pt")
+#Experimento Fatorial - Exercício 8.1 da Apostila
+#Fator 1 - Irrigação
+Irrig<-gl(2,6,label=c(paste("A",0:1,sep="")))
+#Fator 2 - Calagem
+Cal<-rep(gl(2,3,label=c(paste("B",0:1,sep=""))),2)
+#Variável Resposta - Dados
+dados<-c(25,32,27,
+35,28,33,
+41,35,38,
+60,67,59)
+#Tabela com os tratamentos e os dados
+tab<-data.frame(Irrig,Cal,dados)
+tab
+#Comando para rodar a Anova
+fat2.dic(Irrig, Cal, dados, quali = c(TRUE, TRUE), mcomp = "tukey", fac.names = c("F1", "F2"), sigT = 0.05, sigF = 0.05)
+rm(list=ls())
+cat("\014")
+library("ExpDes.pt")
+#Experimento Fatorial - Exercício 8.1 da Apostila
+#Fator 1 - Irrigação
+Irrig<-gl(2,6,label=c(paste("A",0:1,sep="")))
+#Fator 2 - Calagem
+Cal<-rep(gl(2,3,label=c(paste("B",0:1,sep=""))),2)
+#Variável Resposta - Dados
+dados<-c(25,32,27,
+35,28,33,
+41,35,38,
+60,67,59)
+#Tabela com os tratamentos e os dados
+tab<-data.frame(Irrig,Cal,dados)
+#Comando para rodar a Anova
+fat2.dic(Irrig, Cal, dados, quali = c(TRUE, TRUE), mcomp = "tukey", fac.names = c("F1", "F2"), sigT = 0.05, sigF = 0.05)
+install.packages("ExpDes")
+rm(list=ls())
+cat("\014")
+library("ExpDes")
+#Experimento Fatorial - Exercício 8.1 da Apostila
+#Fator 1 - Irrigação
+Irrig<-gl(2,6,label=c(paste("A",0:1,sep="")))
+#Fator 2 - Calagem
+Cal<-rep(gl(2,3,label=c(paste("B",0:1,sep=""))),2)
+#Variável Resposta - Dados
+dados<-c(25,32,27,
+35,28,33,
+41,35,38,
+60,67,59)
+#Tabela com os tratamentos e os dados
+tab<-data.frame(Irrig,Cal,dados)
+#Comando para rodar a Anova
+fat2.crd(Irrig, Cal, dados, quali = c(TRUE, TRUE), mcomp = "tukey", fac.names = c("F1", "F2"), sigT = 0.05, sigF = 0.05)
