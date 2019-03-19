@@ -1,0 +1,789 @@
+\documentclass[14pt,aspectratio=1610]{beamer}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\mathchardef\hyphenmathcode=\mathcode`\-
+\usepackage{listings}
+%\usepackage{xr-hyper}
+
+\usepackage{sansmathaccent}
+\pdfmapfile{+sansmathaccent.map}
+\usepackage{amsbsy}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[toc,page,title,titletoc]{appendix}
+\usepackage[fixlanguage]{babelbib}
+%\usepackage[pdftex]{color}
+\usepackage{dsfont}
+\usepackage{esvect}
+\usepackage[labelfont=bf]{caption}
+\usepackage{float}
+\usepackage[Glenn]{fncychap}%Sonny %Conny %Lenny %Glenn %Renje %Bjarne %Bjornstrup
+%\usepackage{geometry, calc, color, setspace}%
+%\geometry{a4paper, headsep=1.0cm, footskip=1cm, lmargin=3cm, rmargin=2cm, tmargin=3cm, bmargin=2cm}
+\usepackage{graphicx}
+\usepackage{indentfirst}%Para indentar os parágrafos automáticamente
+\usepackage{lipsum}
+\usepackage{longtable}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{natbib}
+\bibliographystyle{abbrvnat3}
+\usepackage[figuresright]{rotating}
+\usepackage{spalign}
+%\usepackage{pgfpages}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{color, colortbl}
+\usepackage{ragged2e}%para justificar o texto dentro de algum ambiente
+\definecolor{Gray}{gray}{0.9}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+
+
+\usepackage[all]{xy}
+\usepackage{hyperref,bookmark}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=red,
+  filecolor=blue,
+  urlcolor=blue,
+}
+
+
+%\setcitestyle{authoryear, open={(},close={)}}
+%\usepackage{pgf}
+%\usepackage[small,bf,singlelinecheck=off]{caption}
+%\usepackage[figuresright]{rotating}
+
+%\usepackage[font=Times,timeinterval=10, timeduration=2.0, timedeath=0, fillcolorwarningsecond=white!60!yellow,
+%timewarningfirst=50,timewarningsecond=80,resetatpages=2]{tdclock}
+\usetheme{Madrid}
+\usecolortheme[RGB={193,0,0}]{structure}
+
+%\setbeamertemplate{footline}[frame number]
+%\setbeamertemplate{footline}[text line]{%
+%  \parbox{\linewidth}{\vspace*{-8pt}\hfill\date{}\hfill\insertshortauthor\hfill\insertpagenumber}}
+\beamertemplatenavigationsymbolsempty
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Proposicao}{Proposição}
+\newtheorem{Definicao}{Definição}
+\newtheorem{Corolario}{Corolário}
+\newtheorem{Demonstracao}{Demonstração}
+\newcommand{\bx}{\ensuremath{\bar{x}}}
+\newcommand{\Ho}{\ensuremath{H_{0}}}
+\newcommand{\Hi}{\ensuremath{H_{1}}}
+
+
+\apptocmd{\frame}{}{\justifying}{} % Allow optional arguments after frame.
+
+\title{MAF 261 - Estatística Experimental}
+\author{Prof. Fernando de Souza Bastos}
+\institute{Instituto de Ciências Exatas e Tecnológicas\texorpdfstring{\\ Universidade Federal de Viçosa}{}\texorpdfstring{\\ Campus UFV - Florestal}{}}
+\date[\today]{}
+\newcommand\mytext{Aula 2}
+\newcommand\mytextt{Fernando de Souza Bastos}
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\mytext
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\mytextt
+  \end{beamercolorbox}%
+  %\begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    %\usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    %\insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  %\end{beamercolorbox}
+	}%
+  \vskip0pt%
+}
+\makeatother
+
+
+\providecommand{\arcsin}{} \renewcommand{\arcsin}{\hspace{2pt}\textrm{arcsen}}
+\providecommand{\sin}{} \renewcommand{\sin}{\hspace{2pt}\textrm{sen}}
+%\newtheorem{Teorema}{Teorema}
+%\newtheorem{Proposicao}{Proposição}
+%\newtheorem{Definicao}{Definição}
+%\newtheorem{Corolario}{Corolário}
+%\newtheorem{Demonstracao}{Demonstração}
+
+% Layout da pagina
+\hypersetup{pdfpagelayout=SinglePage}
+\begin{document}
+
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+
+
+\frame{\titlepage}
+
+\begin{frame}{}
+\frametitle{\bf Sumário}
+\tableofcontents
+\end{frame}
+
+\section{Teste de Hipóteses}
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{Exemplo prático (\cite{montgomery2016}):}
+\justifying
+Suponha que um engenheiro esteja projetando um sistema de escape da tripulação de uma aeronave, que consiste em um assento de ejeção e um motor de foguete 
+que energiza o assento. O motor de foguete contém um propelente. Para o assento de ejeção funcionar apropriadamente, o propelente deve ter uma taxa mínima de 
+queima de $50$ cm/s. Se a taxa de queima for muito baixa, o assento de ejeção poderá não funcionar apropriadamente, levando a uma ejeção não segura. Taxas maiores 
+de queima podem implicar instabilidade no propelente ou um assento de ejeção muito potente, levando outra vez a insegurança da injeção. Dessa maneira, a questão 
+prática de engenharia que tem de ser respondida é: a taxa média de queima do propelente é igual a $50$ cm/s ou é igual a algum outro valor 
+(maior ou menor)?
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{Hipótese Estatística:}
+Uma hipótese estatística é uma afirmação sobre os parâmetros de uma ou mais populações.
+ \end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Considere o sistema de escape da tripulação descrito no exemplo anterior. Suponha que estejamos interessados na taxa de queima do propelente sólido. Agora, a taxa de 
+queima é uma variável aleatória que pode ser descrita por uma distribuição de probabilidades. Suponha que nosso interesse esteja focado na taxa média de queima 
+(um parâmetro dessa distribuição). Especificamente, estamos interessados em decidir se a taxa média de queima é ou não 50 centímetros por segundo. Podemos 
+expressar isso formalmente como:
+\begin{align}\label{H0eH1}
+\centering
+H_{0}: \mu&=50 cm/s\\
+\nonumber H_{1}:\mu &\neq 50 cm/s
+\end{align}
+ \end{block}
+\end{frame}
+%\begin{frame}{}
+%\frametitle{Testes de hipóteses}
+%\begin{block}{}
+%Em algumas situações, podemos desejar formular uma hipótese alternativa unilateral, como em:
+%\begin{align}
+%\centering
+%\nonumber  H_{0}: \mu=50 cm/s  &&                  &&H_{0}: \mu&=50 cm/s\\
+                    %H_{1}:\mu> 50 cm/s  &&\textrm{ou}&&H_{1}:\mu &< 50 cm/s
+%\end{align}
+%\end{block}
+%\end{frame}
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+A afirmação $H_{0}: \mu=50$ centímetros por segundo na Equação \ref{H0eH1} é chamada de hipótese nula, e a afirmação $H_{1}:\mu \neq 50$ centímetros por segundo 
+é chamada de hipótese alternativa. Uma vez que a hipótese alternativa especifica valores de $\mu$ que poderiam ser maiores ou menores do que $50$ centímetros por 
+segundo, ela é chamada de hipótese alternativa bilateral.
+\end{block}
+\pause
+\begin{block}{}
+Em algumas situações, podemos desejar formular uma hipótese alternativa unilateral, como em:
+\begin{flalign}
+\begin{aligned} 
+	\begin{cases}
+H_{0}: \mu=50 cm/s\\
+H_{1}:\mu> 50 cm/s
+\end{cases}
+\end{aligned}
+\quad\textrm{ou}\quad
+\begin{aligned}
+\begin{cases}
+H_{0}: \mu=50 cm/s\\
+H_{1}:\mu< 50 cm/s
+\end{cases} \\
+\end{aligned}
+\end{flalign}
+ \end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+
+\begin{block}{}
+\justifying
+Sempre estabeleceremos a hipótese nula como uma reivindicação de igualdade. Entretanto, quando a hipótese alternativa for estabelecida com o sinal $<,$ a reivindicação 
+implícita na hipótese nula será $\geq$ e quando a hipótese alternativa for estabelecida com o sinal $>,$ a reivindicação implícita na hipótese nula será $\leq.$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+É importante lembrar que hipóteses são sempre afirmações sobre a população ou distribuição sob estudo, não afirmações sobre a amostra. O valor do parâmetro 
+especificado da população na hipótese nula (50 centímetros por segundo no exemplo anterior) é geralmente determinado em uma das três maneiras. 
+\begin{enumerate}
+\item experiência passada, conhecimento do processo ou experimentos prévios. O objetivo nesse caso é determinar se o valor do parâmetro variou;\pause
+\item alguma teoria ou modelo relativo ao processo sob estudo. Aqui, o objetivo do teste é verificar a teoria ou modelo;\pause
+\item considerações externas, tais como projeto ou especificações de engenharia, ou a partir de obrigações contratuais. Nessa situação, o objetivo usual é avaliar a 
+correção das especificações.
+\end{enumerate}
+ \end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+\textbf{Teste de hipóteses se apoiam no uso de informações de uma amostra aleatória proveniente da população de interesse}. É importante ressaltar que a verdade ou 
+falsidade de uma hipótese particular pode nunca ser conhecida com certeza, a menos que possamos examinar a população inteira. Testar uma hipótese envolve: 
+\begin{itemize}
+\item considerar uma amostra aleatória; \pause
+\item computar uma estatística de teste a partir de dados amostrais \pause
+\item e então usar a estatística de teste para tomar uma decisão a respeito da hipótese nula.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{ Testes de Hipóteses Estatísticas}
+\begin{block}{}
+\justifying
+A hipótese nula corresponde à taxa média de queima ser igual a 50 centímetros por segundo e a alternativa corresponde a essa taxa não ser igual a $50$ centímetros 
+por segundo. Ou seja, desejamos testar
+\begin{align*}
+\centering
+H_{0}: \mu=50 cm/s &&\textrm{contra}&& H_{1}:\mu \neq 50 cm/s
+\end{align*}
+Suponha que uma amostra de $n = 10$ espécimes seja testada e que a taxa média $\bar{x}$ seja observada. A média amostral é uma estimativa de $\mu.$ Um valor de 
+$\bar{x}$ que caia próximo a $\mu = 50$ cm/s é uma evidência de que $\mu$ é realmente $50$ cm/s. Por outro lado, 
+uma média amostral que seja consideravelmente diferente de $50$ cm/s evidencia a validade da hipótese alternativa $H_{1}.$ Assim, a média amostral 
+é a estatística de teste nesse caso.
+\end{block}
+\end{frame}
+
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+A média amostral pode assumir muitos valores diferentes. Suponha que se $48,5 \leq \bar{x}\leq 51,5,$ não rejeitaremos a hipótese nula $H_{0}:\mu = 50$ e se 
+$\bar{x} < 48,5$ ou $\bar{x} > 51,5,$ rejeitaremos a hipótese nula em favor da hipótese alternativa $H_{1}:\mu \neq 50.$ Isso é ilustrado na Figura abaixo:
+ \end{block}\pause
+\begin{block}{}
+\begin{figure}
+\centering
+\begin{tikzpicture}[xscale=1.5, yscale=1.5, <->=triangle 45]
+\draw [>=stealth] (-5,0) -- (5,0);
+\node [below right] at (4.7,0) {$\bar{x}$} ;
+\draw [-] (-2,0) -- (-2,1.5) ;
+\node [below] at (-2,0) {$48.5$} ;
+\node [above] at (-3.5,0.7) {Rejeita $H_{0}$};
+\node [above] at (-3.5,0.2) {$\mu\neq 50$ cm/s};
+\draw [-] (0,0) -- (0,0.1) ;
+\node [below] at (0,0) {$50$} ;
+\node [above] at (0,0.7) {Falha em rejeitar $H_{0}$};
+\node [above] at (0,0.2) {$\mu= 50$ cm/s};
+\draw [-] (2,0) -- (2,1.5) ;
+\node [below] at (2,0) {$51.5$} ;
+\node [above] at (3.5,0.7) {Rejeita $H_{0}$};
+\node [above] at (3.5,0.2) {$\mu\neq 50$ cm/s};
+\end{tikzpicture}
+\caption{Critérios de decisão para testar $H_{0}:\mu = 50$ cm/s versus $H_{1}: \mu \neq 50$ cm/s.} \label{fig:M1}
+\end{figure}
+ \end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Os valores de $\bar{x}$ que forem menores do que $48,5$ e maiores do que $51,5$ constituem a \textbf{região crítica} para o teste, enquanto todos os valores que estejam 
+no intervalo $48,5 \leq \bar{x}\leq 51,5$ formam uma região para a qual falharemos em rejeitar a hipótese nula. Por convenção, ela geralmente é chamada de 
+\textbf{região de não rejeição}. Os limites entre as regiões críticas e a região de aceitação são chamados de valores críticos. 
+ \end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Em nosso exemplo, os valores críticos são $48,5$ e $51,5.$ É comum estabelecer conclusões relativas à hipótese nula $H_{0}.$ Logo, rejeitaremos $H_{0}$ em favor 
+de $H_{1}$, se a estatística de teste cair na região crítica e falhamos em rejeitar $H_{0}$ por sua vez se a estatística de teste cair na região de aceitação.
+ \end{block}
+\end{frame}
+
+\section{Nível de significância}
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Esse procedimento pode levar a duas conclusões erradas. Por exemplo, a taxa média verdadeira de queima do propelente poderia ser igual a 50 centímetros por segundo. 
+Entretanto, para as amostras de propelente, selecionados aleatoriamente, que são testados, poderíamos observar um valor de estatística de teste $\bar{x}$ que 
+caísse na região crítica. Rejeitaríamos então a hipótese nula $H_{0}$ em favor da alternativa $H_{1},$ quando, de fato, $H_{0}$ seria realmente verdadeira. Esse tipo de 
+conclusão errada é chamado de \textbf{erro tipo I}.
+ \end{block}
+\pause
+\begin{block}{Erro Tipo I}
+\begin{tikzpicture}
+\node[draw,align=center, fill=gray!30] at (0,-1) {A rejeição da hipótese nula $H_{0}$ quando ela for verdadeira é definida como\\ \textbf{erro tipo I}.};
+\end{tikzpicture}
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Agora, suponha que a taxa média verdadeira de queima seja diferente de 50 centímetros por segundo, mesmo que a média amostral $\bar{x}$ caia na região de 
+aceitação. Nesse caso, falharíamos em rejeitar $H_{0}$, quando ela fosse falsa. Esse tipo de conclusão errada é chamado de \textbf{erro tipo II}.
+\end{block}
+\pause
+\begin{block}{Erro Tipo II}
+\begin{tikzpicture}
+\node[draw,align=center, fill=gray!30] at (0,-1) {A falha em rejeitar a hipótese nula, quando ela é falsa, é definida como\\ \textbf{erro tipo II}.};
+\end{tikzpicture}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Assim, testando qualquer hipótese estatística, quatro situações diferentes determinam se a decisão final está correta ou errada. Pelo fato de a nossa decisão estar 
+baseada em variáveis aleatórias, probabilidades podem ser associadas aos erros tipo I e tipo II. A probabilidade de cometer o erro tipo I é denotada pela letra grega 
+$\alpha$.
+ \end{block}
+
+\begin{block}{}
+\begin{center}
+\begin{table}[]
+\begin{tabular}{c|c|c}
+&&\\
+                          \textbf{Decisão}                   &\textbf{$H_{0}\,$ é verdadeira}                         &\textbf{$H_{0}$ é falsa}\\ \hline
+ \multirow{2}{*}{\textbf{Não rejeita $H_{0}$}}&Correta                                                               &Erro Tipo II\\
+                                                                        &\textbf{Probabilidade $=\left(1-\alpha \right)$} &\textbf{Probabilidade $=\beta$}\\ \hline
+\multirow{2}{*}{\textbf{Rejeita $H_{0}$}}       &Erro Tipo I                                                          &  Correta\\
+                                                                        &\textbf{Nível de significância $\alpha$}            &\textbf{Poder $=\left( 1-\beta\right)$}\\ \hline
+\end{tabular}
+\end{table}
+\end{center}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+A probabilidade do erro tipo I é chamada de \textbf{nível de significância}, ou \textbf{erro $\alpha$}, ou \textbf{tamanho do teste}. No exemplo da taxa de queima de 
+propelente, um \textbf{erro tipo I} ocorrerá quando $ \bx> 51,5$ ou $\bx < 48,5,$ quando a taxa média verdadeira de queima do propelente for $\mu = 50$ cm/s. 
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+\justifying
+Suponha que o desvio-padrão da taxa de queima seja $\sigma = 2,5$ centímetros por segundo e que a taxa de queima tenha uma distribuição para a qual as condições do 
+\textbf{teorema central do limite} se aplicam; logo, a distribuição da média amostral é aproximadamente normal, com média $\mu = 50$ e desvio-padrão 
+$\dfrac{\sigma}{\sqrt{n}}=\dfrac{2.5}{\sqrt{10}}=0.79$.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Testes de hipóteses}
+\begin{block}{}
+A probabilidade de cometer o \textbf{erro tipo I} (ou o nível de significância de nosso teste) é igual à soma das 
+áreas sombreadas nas extremidades da distribuição normal na Figura abaixo:
+\end{block}
+\vspace{-0.5cm}
+\begin{figure}
+\centering
+\begin{tikzpicture}[xscale=1.5, yscale=7, declare function={stdnorm(\x) = 1/(sqrt(2*pi))*exp(-0.5*(pow(\x,2)));}]
+\fill[gray!30] (-2.5,0) -- plot [domain=-2.5:-3/2, samples=50] (\x, {stdnorm(\x)}) -- (-3/2,0) -- cycle;
+\fill[gray!30] (3/2,0) -- plot [domain=3/2:5/2, samples=50] (\x, {stdnorm(\x)}) -- (5/2,0) -- cycle;
+\draw [thick, domain=-2.5:2.5, samples=50] plot (\x, {stdnorm(\x)});
+\draw [->] (-3,0) -- (3,0) ;
+\node [below right] at (3,0) {$\bar{x}$} ;
+\draw [dashed] (0,0) -- (0,{stdnorm(0)}) ;
+\draw [dashed] (-3/2,0) -- (-3/2,{stdnorm(-3/2)}) ;
+\draw [dashed] (3/2,0) -- (3/2,{stdnorm(3/2)}) ;
+\node [below] at (0,0) {$50$};
+\node [below] at (-3/2,0) {$48.5$};
+\node [below] at (3/2,0) {$51.5$};
+\node [above] at (-3,0.1) {\small{$\alpha/2=0.0287$}};
+\node [above] at (3,0.1) {\small{$\alpha/2=0.0287$}};
+%\draw[->] (-2.7,0.15) .. controls (.-2,.2) .. (-1.9, 0.03);
+\draw[->] (-2.2,0.15) to [out=20,in=90] (-1.9,0.02);
+\draw[->] (2.2,0.15) to [out=160,in=90] (1.9,0.02);
+%\draw [->,thick] (2.7,0.15) to [out=120,in=0] (2.3,0.3)
+%to [out=0,in=90] (1.9,0.03);
+%\draw (0,0) .. controls (0,4) and (4,0) .. (4,4)
+%\draw[->] ( 3,0.15) .. controls (. 30,.2) .. (1.9, 0.03);
+%\node at (1.8,{stdnorm(2.3)}) {\small{$\alpha/2$}};
+%\node at (-1.8,{stdnorm(2.3)}){\small{$\alpha/2$}};
+\end{tikzpicture}
+\caption{Região crítica para $\Ho: \mu = 50$ versus $\Hi: \mu \neq 50$ e $n = 10$}
+\end{figure}
+\vspace{-0.5cm}
+\pause
+\begin{tikzpicture}
+\node[draw,align=center, fill=gray!30] at (0,-1) {$\alpha=P(\bar{X}<48.5\quad \textrm{quando}\quad \mu=50)+P(\bar{X}>51.5\quad \textrm{quando}\quad \mu=50)$.};
+\end{tikzpicture}
+%\begin{block}{}
+%$$\alpha=P(\bar{X}<48.5\quad \textrm{quando}\quad \mu=50)+P(\bar{X}>51.5\quad \textrm{quando}\quad \mu=50)$$
+%\end{block}
+\end{frame}
+
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Os valores de z que correspondem aos valores críticos $48,5$ e $51,5$ são
+
+\begin{align*}
+z_{1}=\dfrac{\bx-\mu}{\dfrac{\sigma}{\sqrt{n}}}=\dfrac{48.5-50}{0.79}=-1.9\quad \textrm{e}\quad z_{2}=\dfrac{\bx-\mu}{\dfrac{\sigma}{\sqrt{n}}}=\dfrac{51.5-50}{0.79}=1.9
+\end{align*}
+Logo,
+
+$$\alpha=P(z<-1.90)+P(z>1.90)=0.0287+0.0287=0.0574$$
+
+Essa é a probabilidade do erro tipo I. Isso implica que $5,74\%$ de todas as amostras aleatórias conduziriam à rejeição da hipótese $\Ho: \mu = 50$ cm/s, quando a 
+taxa média verdadeira de queima fosse realmente 50 centímetros por segundo.Da inspeção da Figura anterior, notamos que podemos reduzir $\alpha$ alargando a 
+região de aceitação.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Por exemplo, se considerarmos os valores críticos $48$ e $52,$ o valor de $\alpha$ será:
+\begin{align*}
+\alpha&=P\Biggl(z<-\dfrac{48-50}{0.79}\Biggl)+P\Biggl(z>\dfrac{52-50}{0.79}\Biggl)\\
+&=P(z<-2.53)+P(z>2.53)\\
+&=0.0057+0.0057=0.0114
+\end{align*}
+\end{block}
+\pause
+\begin{block}{}
+Poderíamos também reduzir $\alpha,$ \textbf{aumentando o tamanho da amostra.} Se $n = 16,$ então $\dfrac{\sigma}{\sqrt{n}}=\dfrac{2.5}{\sqrt{16}}=0.625.$ Logo,
+\begin{align*}
+z_{1}=\dfrac{48.5-50}{0.625}=-2.40\quad \textrm{e}\quad z_{2}=\dfrac{51.5-50}{0.625}=2.40
+\end{align*}
+e, $\alpha=P(z<-2.40)+P(z>2.40)=0.0082+0.0082=0.0164.$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+No entanto, na avaliação de um procedimento de teste de hipóteses, também é importante examinar a probabilidade do \textbf{erro tipo II}, que é denotado por $\beta.$ 
+Lembremos que, $$ \beta=P(\textrm{Erro tipo II})=P(\textrm{Não rejeitar}\ \Ho\ \textrm{dado que}\ \Ho\ \textrm{é falsa})$$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Para calcular $\beta$ (algumas vezes chamado de erro $\beta$), temos de ter uma hipótese alternativa específica fixada; ou seja, temos de ter um valor particular de 
+$\mu$. Por exemplo, suponha que seja importante rejeitar a hipótese nula $\Ho: \mu = 50$ toda vez que a taxa média de queima $\mu$ seja maior do que 52 cm/s ou 
+menor do que 48 cm/s.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Poderíamos calcular a probabilidade de um erro tipo II, $\beta$, para os valores $\mu = 52$ e $\mu = 48$ e usar esse resultado para nos dizer 
+alguma coisa acerca de como seria o desempenho do procedimento de teste. Por causa da simetria, só é necessário avaliar um dos dois casos. Isto é, encontrar a 
+probabilidade de não rejeitar a hipótese nula $\Ho: \mu = 50$ cm/s, quando a média verdadeira, por exemplo, for $\mu = 52$ cm/s.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+A próxima Figura nos ajudará a calcular a probabilidade do erro tipo II, $\beta.$
+\end{block}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  xmin=42,xmax=60,
+  ymin=0,ymax=0.21,
+  no markers, domain=42:60, samples=100,
+  axis lines=left, xlabel=$\bar{x}$, ylabel=Densidade de Probabilidade,
+  %every axis y label/.style={at=(current axis.above origin),anchor=south},
+  %every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  height=8cm, width=14cm,
+  ticks=both,
+  xtick={44,46,48,49,50,51, 52,54,56,58}, ytick=\empty,
+  enlargelimits=false, axis on top, %clip=false, 
+  %grid = major
+  ]
+  \addplot [fill=cyan!20, draw=none, domain=48.5:51.5] {gauss(52,2)} \closedcycle;
+  \addplot [very thick,cyan!50!black] {gauss(50,2)};
+  \node [right] at (axis cs: 43, 0.15) {Sujeita a };
+  \node [right] at (axis cs: 43, 0.13) {$H_{0}:\mu=50$ };
+  \draw[very thick] (axis cs:48.5,0) -- (axis cs:48.5,0.15);
+  \addplot [dashed,cyan!50!black] {gauss(52,2)};
+  \node [right] at (axis cs: 55, 0.15) {Sujeita a };
+  \node [right] at (axis cs: 55, 0.13) {$H_{1}:\mu=52$ };
+  \draw[dashed] (axis cs:51.5,0) -- (axis cs:51.5,0.19);
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Um erro tipo II será cometido, se a média amostral $\bx$ cair entre 48,5 e 51,5, quando $\mu = 52.$ Como visto na Figura anterior, essa é apenas a probabilidade de 
+$48,5 \leq \bar{X} \leq 51,5,$ quando a média verdadeira for $\mu = 52,$ ou a área sombreada sob a distribuição normal centralizada em $\mu = 52.$ Consequentemente, 
+referindo-se à anterior, encontramos que $$\beta=P(48.5\leq\bar{X}\leq 51.5,\ \textrm{quando}\ \mu=52)$$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+Os valores $z,$ correspondentes a $48,5$ e $51,5$, quando $\mu = 52,$ são
+\begin{align*}
+z_{1}=\dfrac{48.5-52}{0.79}=-4.43\quad \textrm{e}\quad z_{2}=\dfrac{51.5-52}{0.79}=-0.63
+\end{align*}
+logo, $$\beta=P(-4.43\leq z\leq -0.63)=0.2643.$$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Assim, se estivermos testando $\Ho: \mu = 50$ contra $\Hi: \mu \neq 50,$ com $n = 10$ e o valor verdadeiro da média for $\mu = 52,$ a probabilidade de falharmos em 
+rejeitar a falsa hipótese nula é $0,2643.$ Por simetria, se o valor verdadeiro da média for $\mu = 48,$ o valor de $\beta$ será também $0,2643.$ A probabilidade de 
+cometer o erro tipo II, $\beta,$ aumenta rapidamente à medida que o valor verdadeiro de $\mu$ se aproxima do valor da hipótese feita. Por exemplo, veja a próxima 
+Figura, em que o valor verdadeiro da média é $\mu = 50,5$ e o valor da hipótese é $\Ho: \mu = 50.$ O valor verdadeiro de $\mu$ está muito perto de 50 e o valor para 
+$\beta$ é $$\beta=P(48.5\leq\bar{X}\leq 51.5,\ \textrm{quando}\ \mu=50.5)$$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Os valores $z,$ correspondentes a $48,5$ e $51,5$, quando $\mu = 50.5,$ são
+\begin{align*}
+z_{1}=\dfrac{48.5-50.5}{0.79}=-2.53\quad \textrm{e}\quad z_{2}=\dfrac{51.5-50.5}{0.79}=1.27
+\end{align*}
+logo, $$\beta=P(-2.53\leq z\leq 1.27)=0.8923.$$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  xmin=42,xmax=60,
+  ymin=0,ymax=0.21,
+  no markers, domain=42:60, samples=100,
+  axis lines=left, xlabel=$\bar{x}$, ylabel=Densidade de Probabilidade,
+  %every axis y label/.style={at=(current axis.above origin),anchor=south},
+  %every axis x label/.style={at=(current axis.right of origin),anchor=west},
+  height=8cm, width=14cm,
+  ticks=both,
+  xtick={44,46,48,50, 52,54,56,58}, ytick=\empty,
+  enlargelimits=false, axis on top, %clip=false, 
+  %grid = major
+  ]
+  \addplot [fill=cyan!20, draw=none, domain=48.5:51.5] {gauss(50.5,2)} \closedcycle;
+  \addplot [very thick,cyan!50!black] {gauss(50,2)};
+  \node [right] at (axis cs: 43, 0.15) {Sujeita a };
+  \node [right] at (axis cs: 43, 0.13) {$H_{0}:\mu=50$ };
+  \draw[dashed] (axis cs:48.5,0) -- (axis cs:48.5,0.125);
+  \addplot [dashed,cyan!50!black] {gauss(50.5,2)};
+  \node [right] at (axis cs: 55, 0.15) {Sujeita a };
+  \node [right] at (axis cs: 55, 0.13) {$H_{1}:\mu=50.5$ };
+  \draw[dashed] (axis cs:51.5,0) -- (axis cs:51.5,0.18);
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Assim, a probabilidade do erro tipo II é muito maior para o caso em que a média verdadeira é 50,5 centímetros por segundo do que para o caso em que a média é 
+52 cm/s. Naturalmente, em muitas situações práticas, não estaríamos preocupados em cometer o erro tipo II se a média fosse “próxima” do valor utilizado na hipótese. 
+Estaríamos muito mais interessados em detectar grandes diferenças entre a média verdadeira e o valor especificado na hipótese nula.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+A probabilidade do erro tipo II depende também do tamanho da amostra, $n.$ Suponha que a hipótese nula seja $\Ho: \mu = 50$ centímetros por segundo e que o valor 
+verdadeiro da média seja $\mu = 52.$ Se o tamanho da amostra for aumentado de $n = 10$ para $n = 16,$ temos que o desvio-padrão de $\bar{X}$ é 
+$\dfrac{\sigma}{\sqrt{n}}=\dfrac{2.5}{\sqrt{16}}=0.625.$ Logo,
+\begin{align*}
+z_{1}=\dfrac{48.5-52}{0.625}=-5.60\quad \textrm{e}\quad z_{2}=\dfrac{51.5-52}{0.625}=-0.80
+\end{align*}
+e, $\beta=P(-5.60\leq z\leq-0.80)=0.2119.$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Lembre-se de que quando $n = 10$ e $\mu = 52,$ encontramos que $\beta = 0,2643;$ consequentemente, o aumento do tamanho da amostra resulta em uma diminuição 
+na probabilidade de erro tipo II. Os resultados vistos até agora e outros poucos cálculos similares estão sumarizados na tabela abaixo. Os valores críticos são ajustados 
+para manter $\alpha's$ iguais para n = 10 e n = 16. Esse tipo de cálculo é discutido mais adiante nas aulas.
+\end{block}
+\begin{table}[]
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ RNR$\Ho$                                & n    & $\alpha$ & $\beta$ em $\mu=52$ & $\beta$ em $\mu=50.5$ \\ \hline
+ $48.5\leq \bar{X}\leq 51.5$     & 10 & 0.0576 & 0.2643 & 0.8923 \\ \hline
+ $48\leq \bar{X}\leq 52$           & 10 & 0.0114 & 0.5000 & 0.9705 \\ \hline
+ $48.81\leq \bar{X}\leq 51.19$& 16 & 0.0576 & 0.0966 & 0.8606 \\ \hline
+ $48.42\leq \bar{X}\leq 51.58$& 16 & 0.0114 & 0.2515 & 0.9578 \\ \hline
+\end{tabular}
+\end{table}
+
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+A tabela anterior e a discussão anterior revelam quatro pontos importantes:
+\begin{enumerate}
+\item O tamanho da região crítica, e consequentemente a probabilidade do erro tipo I, $\alpha,$ pode sempre ser reduzido por meio da seleção apropriada dos valores 
+críticos. \pause
+\item Os erros tipo I e tipo II estão relacionados. Uma diminuição na probabilidade de um tipo de erro sempre resulta em um aumento da probabilidade do outro, desde 
+que o tamanho da amostra, n, não varie. \pause
+\item Um aumento no tamanho da amostra reduzirá $\beta,$ desde que $\alpha$ seja mantido constante. \pause
+\item Quando a hipótese nula é falsa, $\beta$ aumenta à medida que o valor verdadeiro do parâmetro se aproxima do valor usado na hipótese nula. O valor de $\beta$ 
+diminui à medida que aumenta a diferença entre a média verdadeira e o valor utilizado na hipótese.
+\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Geralmente, o(a) analista controla a probabilidade $\alpha$ do erro tipo I quando ele ou ela seleciona os valores críticos. Assim, geralmente é fácil para o analista 
+estabelecer a probabilidade de erro tipo I em (ou perto de) qualquer valor desejado. 
+\end{block}
+\pause
+\begin{block}{}
+\justifying
+Uma vez que o analista pode controlar diretamente a probabilidade de rejeitar erroneamente $\Ho,$ sempre pensamos na rejeição da hipótese nula $\Ho$ como uma 
+\textbf{conclusão forte.}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Uma vez que podemos controlar a probabilidade de cometer um erro tipo I (ou nível de significância), uma questão lógica é que valor deve ser usado?
+\end{block}
+\pause
+\begin{block}{}
+\justifying
+A probabilidade do \textbf{erro tipo I} é uma medida de risco, especificamente o risco de concluir que a hipótese nula é falsa quando ela realmente não é. Assim, o valor 
+de $\alpha$ deve ser escolhido para refletir as consequências (econômicas, sociais etc.) de rejeitar incorretamente a hipótese nula. Frequentemente, isso é difícil de fazer, 
+e o que tem evoluído muito na prática científica e de engenharia é usar o valor $\alpha = 0,05$ na maioria das situações, a menos que haja alguma informação disponível 
+que indique que essa é uma escolha não apropriada. 
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Por outro lado, a probabilidade $\beta$ do erro tipo II não é constante, mas depende do valor verdadeiro do parâmetro. Ela depende também do tamanho da amostra 
+que tenhamos selecionado. Pelo fato de a probabilidade $\beta$ do erro tipo II ser uma função do tamanho da amostra e da extensão com que a hipótese nula $\Ho$ 
+seja falsa, costuma-se pensar na aceitação de $\Ho$ como uma conclusão fraca, a menos que saibamos que $\beta$ seja aceitavelmente pequena. 
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Consequentemente, em vez de dizer ``aceitar $\Ho$'', preferimos a terminologia ``\textbf{Não rejeitar }$\Ho$''. Falhar em rejeitar $\Ho$ implica que não encontramos evidência 
+suficiente para rejeitar $\Ho,$ ou seja, para fazer uma afirmação forte. Falhar em rejeitar $\Ho$ não significa necessariamente que haja uma alta probabilidade de que 
+$\Ho$ seja verdadeira. Isso pode significar simplesmente que mais dados são requeridos para atingir uma conclusão forte, o que pode ter implicações importantes para 
+a formulação das hipóteses.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Existe uma analogia útil entre teste de hipóteses e um julgamento por jurados. Em um julgamento, o réu é considerado inocente (isso é como considerar a hipótese 
+nula verdadeira). Se forte evidência for encontrada do contrário, o réu é declarado culpado (rejeitamos a hipótese nula). Se não houver \textbf{suficiente} evidência, o réu é 
+declarado não culpado. Isso não é o mesmo de provar a inocência do réu; assim, tal qual falhar em rejeitar a hipótese nula, essa é uma conclusão fraca.
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+Um importante conceito de que faremos uso é a \textbf{potência} ou \textbf{poder} de um teste estatístico:
+\end{block}
+\begin{tikzpicture}
+\node[draw,align=center, fill=gray!30] at (0,-1) {A potência ou poder de um teste estatístico é a probabilidade de rejeitar\\ a hipótese nula H0, quando a hipótese alternativa 
+for verdadeira.};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+A potência é calculada como $1-\beta,$ e pode ser interpretada como a probabilidade de rejeitar corretamente uma hipótese nula falsa. Frequentemente, 
+comparamos testes estatísticos por meio da comparação de suas propriedades de potência. Por exemplo, considere o problema da taxa de queima de propelente, quando 
+estamos testando $\Ho: \mu = 50$ cm/s contra $\Hi: \mu \neq 50$ cm/s. Suponha que o valor verdadeiro da média seja $\mu = 52.$ Quando $n = 10,$ encontramos 
+que $\beta = 0.2643;$ logo, a potência desse teste é $1-\beta = 1 - 0.2643 = 0.7357,$ quando $\mu = 52.$
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{}
+\begin{block}{}
+\justifying
+A potência é uma medida muito descritiva e concisa da sensibilidade de um teste estatístico, em que por sensibilidade entendemos a habilidade do teste de detectar 
+diferenças. Nesse caso, a sensibilidade do teste para detectar a diferença entre a taxa média de queima de 50 centímetros por segundo e 52 centímetros por segundo é 
+$0.7357.$ Isto é, se a média verdadeira for realmente 52 centímetros por segundo, esse teste rejeitará corretamente $\Ho: \mu = 50$ e ``detectará'' essa diferença em 
+$73,57\%$ das vezes. Se esse valor de potência for julgado como muito baixo, o analista poderá aumentar tanto $\alpha$ como o tamanho da amostra $n.$
+
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Referências Bibliográficas}
+\bibliography{bibliografia}
+\end{frame}
+
+\end{document}
+
+

@@ -75,7 +75,7 @@
 \title{MAF 261 - Estatística Experimental}
 \author{Prof. Fernando de Souza Bastos}
 \institute{Instituto de Ciências Exatas e Tecnológicas\texorpdfstring{\\ Universidade Federal de Viçosa}{}\texorpdfstring{\\ Campus UFV - Florestal}{}}
-\date{09/08/2018}
+\date{}
 \newcommand\mytext{Aula sobre Distribuição Normal}
 \newcommand\mytextt{Fernando de Souza Bastos}
 \makeatletter
@@ -89,10 +89,11 @@
   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
     \usebeamerfont{title in head/foot}\mytextt
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
-    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
-    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
-  \end{beamercolorbox}}%
+  % \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+  %   \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+  %   \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  % \end{beamercolorbox}
+  }%
   \vskip0pt%
 }
 \makeatother
@@ -131,7 +132,7 @@ Considere o peso, em kg, de 2000 jovens selecionados ao acaso entre todos os alu
 \setkeys{Gin}{width=0.5\linewidth}
 <<echo=FALSE,fig=TRUE, results=hide>>=
 #-----------------------------------------------
-setwd("E:/Documentos/GitHub/MAF261/maf261.github.io/Aulas_MAF261/Aula_Normal")
+setwd("E:/Documentos/GitHub/MAF261/maf261.github.io/Aulas_MAF261/Aula3")
 library(readr)
 dados <- read_table2("Peso.txt")
 as.numeric(dados$Peso)
