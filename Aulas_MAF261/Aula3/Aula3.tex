@@ -274,7 +274,7 @@ Embora a Equação possa parecer complicada, as probabilidades da variável alea
     node[pos=0.6, pin={45:$\mu=0,\sigma^2=2$}] {};
     \addplot [smooth, red] {normalpdf(x,-2,1)}
     node[pos=0.25, pin={[text centered, text width=8ex]
-      200:$\mu=-1$, $\sigma^2=1$}] {};
+      200:$\mu=-2$, $\sigma^2=1$}] {};
 
     \addplot [hplot, samples at={0}] {normalpdf(x,0,1)};
     \addplot [hplot, samples at={0}, blue] {normalpdf(x,0,2)};
@@ -342,7 +342,7 @@ $$X=\mu+Z\sigma$$
 \frametitle{Exemplos}
 \begin{block}{}
 \justifying
-Dado $Z\sim N(0,1),$ calcule $P(Z\leq 0.5)$
+Dado $Z\sim N(0,1),$ calcule $P(Z\leq 0)$
 \end{block}
 \begin{center}
 \begin{tikzpicture}[scale=0.8]
@@ -389,7 +389,7 @@ Dado $Z\sim N(0,1),$ calcule $P(Z\leq 0.5)$
   domain=-10:10, samples=100,
   axis y line*=left,
   y axis line style={draw opacity=0},
-  axis x line=left, xlabel={$P(Z\leq 0)=0.6255$}, %ylabel=Densidade de Probabilidade,
+  axis x line=left, xlabel={$P(Z\leq 0.32)=0.6255$}, %ylabel=Densidade de Probabilidade,
   %every axis y label/.style={at=(current axis.above origin),anchor=south},
   %%every axis x label/.style={at=(current axis.right of origin),anchor=west},
   height=8cm, width=10cm,
@@ -540,7 +540,7 @@ Seja $X\sim N(10,64).$ Calcule:
 \small\addtolength{\tabcolsep}{-3pt}
 {\footnotesize
 % latex table generated in R 3.5.2 by xtable 1.8-3 package
-% Mon Mar 18 22:59:41 2019
+% Wed Mar 20 21:52:57 2019
 \begin{tabular}{rrrrrrrrrrr}
   \hline
  & 0 & 0,01 & 0,02 & 0,03 & 0,04 & 0,05 & 0,06 & 0,07 & 0,08 & 0,09 \\ 
@@ -578,7 +578,7 @@ Seja $X\sim N(10,64).$ Calcule:
 \small\addtolength{\tabcolsep}{-3pt}
 {\footnotesize
 % latex table generated in R 3.5.2 by xtable 1.8-3 package
-% Mon Mar 18 22:59:41 2019
+% Wed Mar 20 21:52:57 2019
 \begin{tabular}{rrrrrrrrrrr}
   \hline
  & 0 & 0,01 & 0,02 & 0,03 & 0,04 & 0,05 & 0,06 & 0,07 & 0,08 & 0,09 \\ 
