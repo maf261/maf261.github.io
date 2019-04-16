@@ -22,6 +22,7 @@ description: Página com as aulas da disciplina.
 * [Aula 13][aula13]
 * [Aula 14][aula14]
 * [Aula 15][aula15]
+* [Aula no R][aulaR]
 
 ---
 
@@ -61,3 +62,4 @@ description: Página com as aulas da disciplina.
 [DQL]: https://rawcdn.githack.com/maf261/maf261.github.io/8084a7799f29ffb74efd7a10ce5616743561cfdb/Exercicios/Exercicios_noR/DQL.R
 [Fatorial]:   https://raw.githack.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula15/Exercicios/Exercicios.html
 [PSub]:   https://raw.githack.com/maf261/maf261.github.io/master/Aulas_MAF261/Aula16/Exercicios_PS.html
+[aulaR]:   https://raw.githack.com/maf105/maf105.github.io/master/Aulas_MAF105/Curso_R/Aula1_Slidy.html

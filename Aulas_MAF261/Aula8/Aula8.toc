@@ -1,5 +1,5 @@
 \babel@toc {brazil}{}
-\beamer@sectionintoc {1}{Princ\IeC {\'\i }pios B\IeC {\'a}sicos da Experimenta\IeC {\c c}\IeC {\~a}o e Contrastes}{3}{0}{1}
+\beamer@sectionintoc {1}{Contrastes}{3}{0}{1}
 \beamer@sectionintoc {2}{Estimador do Contraste}{5}{0}{2}
 \beamer@sectionintoc {3}{Vari\IeC {\^a}ncia do Estimador de um Contraste}{10}{0}{3}
 \beamer@sectionintoc {4}{Contrastes Ortogonais}{13}{0}{4}
