@@ -660,7 +660,7 @@ ifelse(pvalor > 0.1, RN, RR)
 (alpha <- 0.05)
 (zc <- (barxA-barxB)/(sigma*sqrt((1/nA)+(1/nB))))
 (zt <- qnorm(0.025)) #Teste bilateral
-(pvalor <- 2*pnorm(zc))
+(pvalor <- 2*pnorm(-zc))
 RR <- "Rejeita-se H0 ao nível de 5% de significância"
 RN <- "Não rejeita-se H0 ao nível de 5% de significância"
 ##Resultado

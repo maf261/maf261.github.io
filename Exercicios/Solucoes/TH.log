@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  1 SEP 2018 19:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.7.26)  30 APR 2019 15:28
 entering extended mode
 **./TH.tex
 (TH.tex
@@ -59,7 +59,7 @@ Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-(C:/PROGRA~1/R/R-34~1.3/share/texmf/tex/latex\Sweave.sty
+(C:/PROGRA~1/R/R-3.5.2/share/texmf/tex/latex\Sweave.sty
 Package: Sweave 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
@@ -1854,146 +1854,146 @@ File: TH-011.pdf Graphic file (type pdf)
 Package pdftex.def Info: TH-011.pdf  used on input line 659.
 (pdftex.def)             Requested size: 233.96161pt x 233.96605pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 
 [1
 
 {C:/Users/fsbma/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Figuras/b
 rasaoufv-eps-converted-to.pdf> <./TH-001.pdf>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [2]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [3 <./TH-003.pdf>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 
 [4 <./TH-005.pdf>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [5]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [6 <./TH-007.pdf>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [7]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [8 <./TH-009.pdf>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [9 <./TH-011.pdf>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [10]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [11]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [12]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [13]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [14]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [15]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [16]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [17]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [18]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [19]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [20]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [21]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [22]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
  [23]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2191.
+(babel)             in language  on input line 2196.
 
 [24]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2192.
+(babel)             in language  on input line 2197.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2192.
+(babel)             in language  on input line 2197.
  [25]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2192.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2192.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2197.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2197.
  (TH.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2192.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2192.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2197.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2197.
  ) 
 Here is how much of TeX's memory you used:
  47192 strings out of 492973
- 1005057 string characters out of 3135932
- 1438952 words of memory out of 12000000
+ 1005054 string characters out of 3135932
+ 1439965 words of memory out of 12000000
  50226 multiletter control sequences out of 15000+200000
  557749 words of font info for 79 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2008,7 +2008,7 @@ e1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 cm/cmsltt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
 y10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
 
-Output written on TH.pdf (25 pages, 228998 bytes).
+Output written on TH.pdf (25 pages, 229030 bytes).
 PDF statistics:
  214 PDF objects out of 1000 (max. 8388607)
  27 named destinations out of 1000 (max. 500000)

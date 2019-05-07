@@ -879,10 +879,10 @@ Comandos em R para soluções:
 [1] -1.959964
 \end{Soutput}
 \begin{Sinput}
-> (pvalor <- 2*pnorm(zc))
+> (pvalor <- 2*pnorm(-zc))
 \end{Sinput}
 \begin{Soutput}
-[1] 1.944865
+[1] 0.05513463
 \end{Soutput}
 \begin{Sinput}
 > RR <- "Rejeita-se H0 ao nível de 5% de significância"
@@ -1017,11 +1017,16 @@ B & 12 & 52 & 15 \\ \hline
 \end{Soutput}
 \begin{Sinput}
 > df <- nA+nB-2
-> Sc2 <- ((nA-1)*(dpA^2)+(nB-1)*(dpB^2))/(nA+nB-2)
-> (tc <- (barxA-barxB)/(Sc2*sqrt((1/nA)+(1/nB))))
+> (Sc2 <- ((nA-1)*(dpA^2)+(nB-1)*(dpB^2))/(nA+nB-2))
 \end{Sinput}
 \begin{Soutput}
-[1] -0.06663197
+[1] 155
+\end{Soutput}
+\begin{Sinput}
+> (tc <- (barxA-barxB)/(sqrt(Sc2*((1/nA)+(1/nB)))))
+\end{Sinput}
+\begin{Soutput}
+[1] -0.8295614
 \end{Soutput}
 \begin{Sinput}
 > (tt1 <- qt(0.025,df)) #Teste bilateral
@@ -1039,13 +1044,13 @@ B & 12 & 52 & 15 \\ \hline
 > (pvalor <- 2*(min(pt(tc,df),(1-pt(tc,df)))))
 \end{Sinput}
 \begin{Soutput}
-[1] 0.9474047
+[1] 0.4146381
 \end{Soutput}
 \begin{Sinput}
 > RR <- "Rejeita-se H0 ao nível de 5% de significância"
 > RN <- "Não rejeita-se H0 ao nível de 5% de significância"
 > ##Resultado
-> ifelse(abs(tc)>abs(tt),RR,RN)
+> ifelse(abs(tc)>abs(tt1),RR,RN)
 \end{Sinput}
 \begin{Soutput}
 [1] "Não rejeita-se H0 ao nível de 5% de significância"

@@ -360,7 +360,7 @@ C_{2}&=(T_{1},T_{2},T_{3})\ vs\ T_{4}\\
 C_{3}&=(T_{1},T_{2})\ vs\ T_{3}\\
 C_{4}&=(T_{1})\ vs\ T_{2}\\
 \end{align*}
-Em que $T_{1}$ possui 6 repetições, $T_{2}$ possui 6, $T_{3}$ possui 4, $T_{4}$ possui 5 e $T_{6}$ possui 6.
+Em que $T_{1}$ possui 6 repetições, $T_{2}$ possui 6, $T_{3}$ possui 4, $T_{4}$ possui 5 e $T_{5}$ possui 6.
 \end{block}
 \end{frame}
 
