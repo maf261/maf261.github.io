@@ -78,7 +78,7 @@
 \title{MAF 261 - Estatística Experimental}
 \author{Prof. Fernando de Souza Bastos}
 \institute{Instituto de Ciências Exatas e Tecnológicas\texorpdfstring{\\ Universidade Federal de Viçosa}{}\texorpdfstring{\\ Campus UFV - Florestal}{}}
-\date{21/08/2018}
+\date[\today]{}
 \newcommand\mytext{Aula 17}
 \newcommand\mytextt{Fernando de Souza Bastos}
 \makeatletter
@@ -92,10 +92,11 @@
   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
     \usebeamerfont{title in head/foot}\mytextt
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
-    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
-    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
-  \end{beamercolorbox}}%
+  % \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+  %   \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+  %   \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  % \end{beamercolorbox}
+  }%
   \vskip0pt%
 }
 \makeatother
@@ -223,7 +224,7 @@ Sob dois pontos de vista:
 \frametitle{ }
 \begin{block}{Importante:}
 \justifying
-Uma relação estatística por sí propria não implica uma causa, para atribuir causa, devemos invocar a alguma teoría!
+Uma relação estatística por sí propria não implica uma causa, para atribuir causa, devemos invocar alguma teoría!
 \end{block}
 \pause
 \begin{block}{}
@@ -314,7 +315,7 @@ De forma geral, um modelo estatístico pode ser escrito da seguinte forma:
 
 $$Y=\textrm{componente determinística}+\textrm{componente aleatória}$$
 
-existem diversas maneiras de específicar essas componentes. Começaremos com o caso mais simples de uma regressão linear simples.
+existem diversas maneiras de específicar essas componentes. Começaremos com uma regressão linear simples.
 
 \end{block}
 \end{frame}
@@ -510,7 +511,7 @@ A medida de erro mais comumente usada para aferir a qualidade do ajuste de um mo
 \justifying
 Representa a porcentagem de variação na resposta que é explicada pelo modelo. Ele é calculado como 1 menos a razão da soma dos quadrados dos erros (que é a variação que não é explicada pelo modelo) pela soma total dos quadrados (que é a variação total no modelo). 
 
-Use R2 para determinar se o modelo ajusta bem os dados. Quanto mais alto o valor de R2 melhor o modelo ajusta seus dados. O valor de R2 está sempre entre 0 e 100%.
+Use $R^{2}$ para determinar se o modelo ajusta bem os dados. Quanto mais alto o valor de $R^{2}$ melhor o modelo ajusta seus dados. O valor de $R^{2}$ está sempre entre 0 e 100%.
 \end{block}\pause
 \begin{block}{$R^2$}
 \justifying
@@ -640,7 +641,7 @@ As variâncias dentro de cada grupo é igual (ou pelo menos aproximadamente) àq
 \frametitle{ }
 \begin{block}{}
 \justifying
-Se os pressupostos forem atendidos fica mais fácil afirma que os resultados da análise são devido aos efeitos testados. Além disso, a confiabilidade do teste aumenta, já que se terá certeza que não há tendências nos resultados.
+Se os pressupostos forem atendidos fica mais fácil afirmar que os resultados da análise são devido aos efeitos testados. Além disso, a confiabilidade do teste aumenta, já que se terá certeza que não há tendências nos resultados.
 \end{block}
 \end{frame}
 
