@@ -1,0 +1,203 @@
+---
+title: "Análise de Resíduos"
+author: "Prof. Fernando de Souza Bastos"
+date: "2019"
+output:
+  slidy_presentation:
+    fig_caption: yes
+    force_captions: yes
+    highlight: pygments
+    keep_tex: yes
+    toc: yes
+    #Sumário flutuante
+    #toc_float: true
+    #numerar seções
+    number_sections: true
+    #Mostrar ou esconder os códigos (show ou hide)
+    code_folding: hide
+    #Diversos modelos de documentos ver outros em http://bootswatch.com/
+    theme: united
+    header-includes:
+       \usepackage{array}
+       \usepackage{multirow}
+bibliography: bibfile.bib 
+#output: html_document
+---
+
+```{r setup, include=FALSE}
+require(knitr)
+require(kfigr)
+library(kableExtra)
+options(knitr.table.format = "latex")
+knitr::opts_chunk$set(echo = TRUE,fig.align = "center",message=FALSE, warning=FALSE)
+```
+
+## Exercício 4.1
+
+
+```{r}
+#-----------------------------------------------------------------------------
+# q-q vs histograma vs ecdf
+set.seed(0) 
+y <- rnorm(50)
+par(mfrow=c(1,3))
+qqnorm(y); qqline(y)
+plot(density(y))
+curve(dnorm(x, mean(y), sd(y)), add=TRUE, col=2)
+plot(ecdf(y))
+curve(pnorm(x, mean(y), sd(y)), add=TRUE, col=2)
+ 
+# qual você sente mais segurança para verificar adequação?
+# nossos olhos têm mais habilidade para comparar alinhamentos
+#-----------------------------------------------------------------------------
+```
+
+
+<p style="text-align: justify;">
+A normalidade dos resíduos é um dos pressupostos da análise de regressão. São os resíduos e não os dados que devem apresentar normalidade. Se a distribuição dos dados, ou melhor, da sua variável resposta $(Y)$ condicional ao efeito das suas variáveis explicativas for normal, os resíduos terão distribuição normal. Porém, se você aplica um teste de normalidade aos dados $(Y)$ você não está considerando os efeitos das variáveis explicativas, ou seja, você está aplicando um teste na distribuição marginal de Y que não tem porque atender a normalidade. Todo teste de normalidade supõe que os dados têm uma média e uma variância e só os resíduos atendem essa premissa porque os dados $(Y)$ têm média dependente do efeito das variáveis explicativas
+</p>
+
+```{r}
+#-----------------------------------------------------------------------------
+# distribuição condicional vs distribuição marginal
+ 
+layout(1)
+x <- rep(1:4, e=50)
+y <- rnorm(x, mean=0+0.75*x, sd=0.1)
+da <- data.frame(x, y)
+plot(y~x, da)
+```
+
+
+
+```{r}
+db <- split(da, f=da$x)
+#png("f046.png", 400, 300); par(mar=c(1,1,1,1))
+plot(y~x, da, xlim=c(1,6), xaxt="n", yaxt="n", xlab="", ylab="")
+abline(a=0, b=0.75)
+lapply(db,
+       function(d){
+         dnst <- density(d$y)
+         lines(d$x[1]+dnst$y*0.1, dnst$x)
+         abline(v=d$x[1], lty=2)
+       })
+points(rep(5, length(y)), da$y, col=2)
+abline(v=5, lty=2, col=2)
+dnst <- density(da$y)
+lines(5+dnst$y*2, dnst$x, col=2)
+text(3, 1, "distribuição\ncondicional")
+text(5.5, 1, "distribuição\nmarginal", col=2)
+#dev.off()
+ 
+
+ 
+#-----------------------------------------------------------------------------
+```
+
+```{r}
+par(mfrow=c(1,2))
+qqnorm(da$y)
+qqnorm(residuals(lm(y~x, da)))
+layout(1)
+```
+
+## Fuga da normalidade
+
+Muitos usuários preferem aplicar um teste de normalidade do que olhar para o gráfico q-q. Isso têm duas razões: (1) costume, o usuário sempre usou aplicativos para análise de dados que não dispõem de recursos gráficos, eles conduzem toda análise sem sequer ver os dados em um gráfico, (2) consideram subjetiva a análise gráfica. Do meu ponto de vista, a subjetividade está presente ao aplicar um teste também pois o usuário é quem escolhe o teste e o nível de significância. Outro ponto é que os testes de normalidade assumem independência entre as observações e os resíduos não são independentes e foram obtidos após a estimação de p parâmetros, o que não é considerado por nenhum teste. Ou seja, qualquer teste aplicado fornece um resultado aproximado. Mas o que de fato eu defendo é que a análise gráfica é indiscutivelmente mais informativa. Veja, se o teste rejeita a normalidade é porque os dados não apresentam distribuição normal por algum motivo. Quando você visualiza o q-q é possível explicar a fuga de normalidade que pode ser sistemática: (1) devido à desvio de assimetria, (2) de curtose, (3) à mistura de distribuições, (4) à presença de um outlier e (5) ao dados serem discretos. Essas são as principais causas de afastamento. Cada uma delas sugere uma alternativa para corrigir a fuga: tranformação, modelagem da variância, deleção de outlier, etc. Nesse sentido, como identificar esses padrões de fuga? É o que os gráficos animados vão mostrar.
+
+#
+
+```{r,echo=FALSE}
+#-----------------------------------------------------------------------------
+# assimetria
+library("magic") 
+dir.create("frames")
+setwd("frames")
+png(file="assimet%03d.png", width=600, height=300)
+par(mar=c(1,1,1,1))
+par(mfrow=c(1,2))
+for(i in 10*sin(seq(0.01, pi-0.01, l=100))){
+  curve(dbeta(x, i, 10-i), 0, 1, xaxt="n", yaxt="n", xlab="", ylab="")
+  y <- rbeta(100, i, 10-i)
+  qqnorm(y, xaxt="n", yaxt="n", main=NULL, xlab="", ylab=""); qqline(y)
+}
+invisible(dev.off())
+ 
+# converte os pngs para um gif usando ImageMagick
+system('"C:\\Program Files\\ImageMagick-7.0.8-Q16\\convert.exe" -delay 10 assimet*.png assimet.gif')
+# remove os arquivos png
+invisible(file.remove(list.files(pattern=".png")))
+#-----------------------------------------------------------------------------
+```
+
+Fuga de normalidade por assimetria representada pelo gráfico quantil-quantil. A assimetria no q-q aparece com pontos dispostos em forma de arco.
+
+`r knitr::include_graphics("frames/assimet.gif")`
+
+#
+
+```{r,echo=FALSE}
+#-----------------------------------------------------------------------------
+# mistura de distribuições
+library("magic") 
+dir.create("frames")
+setwd("frames") 
+png(file="mistura%03d.png", width=600, height=300)
+par(mar=c(1,1,1,1))
+par(mfrow=c(1,2))
+for(i in sin(seq(0, pi, l=100))){
+  curve(i*dnorm(x,0,1)+(1-i)*dnorm(x,0,6), -20, 20,
+        xaxt="n", yaxt="n", xlab="", ylab="")
+  y <- c(rnorm(ceiling(500*i),0,1), rnorm(floor(500*(1-i)),0,6))
+  qqnorm(y, xaxt="n", yaxt="n", main=NULL, xlab="", ylab=""); qqline(y)
+}
+invisible(dev.off())
+ 
+# converte os pngs para um gif usando ImageMagick
+system('"C:\\Program Files\\ImageMagick-7.0.8-Q16\\convert.exe" -delay 10 mistura*.png mistura.gif')
+
+# remove os arquivos png
+invisible(file.remove(list.files(pattern=".png")))
+ 
+#-----------------------------------------------------------------------------
+```
+
+Fuga de normalidade por mistura de distribuições (alteração de curtose) representada pelo gráfico quantil-quantil. Mistura de distribuições geram fugas nos extremos.
+
+`r knitr::include_graphics("frames/mistura.gif")`
+
+#
+
+```{r,echo=FALSE}
+#-----------------------------------------------------------------------------
+# discreticidade
+library("magic") 
+dir.create("frames")
+setwd("frames") 
+png(file="discret%03d.png", width=600, height=300)
+par(mar=c(1,1,1,1))
+par(mfrow=c(1,2))
+for(i in c(1:100, 99:1)){
+  x <- 0:i
+  px <- dbinom(x, i, 0.5)
+  plot(px~x, type="h", xaxt="n", yaxt="n", xlab="", ylab="")
+  y <- rbinom(100, i, 0.5)
+  qqnorm(y, xaxt="n", yaxt="n", main=NULL, xlab="", ylab=""); qqline(y)
+}
+invisible(dev.off())
+ 
+# converte os pngs para um gif usando ImageMagick
+system('"C:\\Program Files\\ImageMagick-7.0.8-Q16\\convert.exe" -delay 10 discret*.png discret.gif') 
+# remove os arquivos png
+invisible(file.remove(list.files(pattern=".png")))
+ 
+#-----------------------------------------------------------------------------
+```
+
+Fuga de normalidade devido dados serem discretos (padrão escada) representada pelo gráfico quantil-quantil.
+
+`r knitr::include_graphics("frames/discret.gif")`
+
+#
+
+## Referências
